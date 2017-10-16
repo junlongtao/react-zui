@@ -1,0 +1,29 @@
+{
+  "name": "react-zui",
+  "version": "1.0.1",
+  "description": "mobile web app components library based on react",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalentao/react-zui.git"
+  },
+  "keywords": [
+    "mobile",
+    "web",
+    "app",
+    "components",
+    "react"
+  ],
+  "author": "junlongtao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jalentao/react-zui/issues"
+  },
+  "homepage": "https://github.com/jalentao/react-zui#readme"
+}
