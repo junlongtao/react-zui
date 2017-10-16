@@ -1,0 +1,30 @@
+@import '../../style/mixinx';
+
+@prefix: weui;
+
+.@{prefix}-confirm {
+    .@{prefix}-confirm-wrap{
+        top: 30%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: fixed;
+        z-index: 2;
+        max-width: 410px;
+        width: 85%;
+        background: #fff;
+        .@{prefix}-confirm-content{
+            padding: 25px 25px;
+        }
+        .@{prefix}-confirm-footer{
+            border-top: 1px solid #6ac2b6;
+            .@{prefix}-confirm-button{
+                margin: 0;
+                width: 50%;
+                float: left;
+                border: none;
+                border-radius: 0;
+            }
+        }
+    }
+}

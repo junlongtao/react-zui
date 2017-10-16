@@ -6,7 +6,7 @@
 import './less/tag-picker.less'
 import React from 'react'
 import Icon from './Icon'
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class TagPicker extends React.Component {
 

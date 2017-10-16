@@ -4,7 +4,7 @@
 import './less/carousel.less'
 import React from 'react'
 import Swipe from './Swipe'
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class Carousel extends React.Component {
     static propTypes = {

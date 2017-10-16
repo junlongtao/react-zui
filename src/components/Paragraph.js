@@ -1,7 +1,7 @@
 'use strict'
 
 import React from 'react'
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class Paragraph extends React.Component {
 

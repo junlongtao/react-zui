@@ -2,7 +2,7 @@
 
 import './less/label.less'
 import React from 'react'
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class Label extends React.Component {
     static defaultProps = {

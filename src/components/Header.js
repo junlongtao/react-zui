@@ -6,7 +6,7 @@
 import './less/header.less'
 import React from 'react'
 import Icon from './Icon'
-import Util from '../../Util'
+import Util from '../Util'
 
 import 'antd-mobile/lib/action-sheet/style'
 import ActionSheet from 'antd-mobile/lib/action-sheet'

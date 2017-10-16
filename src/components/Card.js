@@ -4,7 +4,7 @@
 import './less/card.less'
 import React from 'react'
 import Icon from './Icon'
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class Card extends React.Component {
 

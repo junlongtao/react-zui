@@ -15,7 +15,7 @@ import ConsultPatch from './ConsultPatch'
 import DownloadPatch from './DownloadPatch'
 import networkimg from './img/network.jpg'
 
-import Util from '../../Util'
+import Util from '../Util'
 import UserService from '../../../services/UserService'
 import WeixinService from '../../../services/WeixinService'
 import ConversationType from '../../../constants/ConversationType'

@@ -1,0 +1,109 @@
+@import '../../style/mixinx';
+
+@prefixCls: weui-city-picker;
+
+.@{prefixCls} {
+    width: 100%;
+    max-width: 480px;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 1000px;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+    z-index: 5;
+    opacity: 0;
+    &.close {
+        animation: picker-close 1s ease forwards;
+        @keyframes picker-close {
+            0% {
+                left: 0;
+                opacity: 1;
+            }
+            100% {
+                left: 1000px;
+                opacity: 0;
+            }
+        }
+        .@{prefixCls}-letter-list {
+            opacity: 0;
+        }
+    }
+    &.open {
+        animation: picker-open .4s ease forwards;
+        @keyframes picker-open {
+            0% {
+                left: 1000px;
+                opacity: 0;
+            }
+            100% {
+                left: 0;
+                opacity: 1;
+            }
+        }
+        .@{prefixCls}-letter-list {
+            opacity: 1;
+        }
+    }
+    .@{prefixCls}-name {
+        text-align: center;
+        font-size: 16px;
+        line-height: 40px;
+        .icon {
+            top: 0;
+            left: -10px;
+            font-size: 14px;
+            position: absolute;
+            padding: 0 20px;
+        }
+    }
+    .@{prefixCls}-list{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        .@{prefixCls}-set {
+            .@{prefixCls}-first-word {
+                background: #eee;
+                line-height: 40px;
+                padding: 0 10px;
+            }
+            .@{prefixCls}-item {
+                border-bottom: 1px solid #eee;
+                font-size: 14px;
+                line-height: 39px;
+                padding-left: 10px;
+                &:last-child {
+                    border-bottom: none;
+                    line-height: 40px;
+                }
+                &:active, &:hover{
+                    background: #eee;
+                    -webkit-tap-highlight-color: transparent;
+                }
+                .icon {
+                    position: absolute;
+                    right: 10px;
+                    font-size: 14px;
+                    color: #00a0e3;
+                }
+            }
+        }
+    }
+    .@{prefixCls}-letter-list {
+        position: fixed;
+        top: 50%;
+        margin-top: -184px;
+        left: 50%;
+        transition: opacity 1s ease;
+        .@{prefixCls}-letter-item {
+            padding: 0px 10px;
+            font-size: 14px;
+            letter-spacing: 0;
+            text-align: center;
+        }
+    }
+
+}

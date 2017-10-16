@@ -5,7 +5,7 @@
 import '../style/widget/weui_button/weui_button.less';
 import React from 'react';
 import classNames from 'classnames';
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class Button extends React.Component {
     static propTypes = {

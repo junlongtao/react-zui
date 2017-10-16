@@ -2,7 +2,7 @@
 
 import './less/tab-bar.less'
 import React from 'react'
-import Util from '../../Util'
+import Util from '../Util'
 
 class TabBarItem extends React.Component {
     static defaultProps = {

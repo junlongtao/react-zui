@@ -5,7 +5,7 @@
 
 import './less/percent.less'
 import React from 'react'
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class Percent extends React.Component {
     render = () => {

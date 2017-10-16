@@ -6,7 +6,7 @@
 import './less/notify.less'
 import React from 'react'
 import Icon from './Icon'
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class Notify extends React.Component {
 

@@ -6,7 +6,7 @@
 import './less/consult_patch.less'
 import React from 'react'
 import Icon from './Icon'
-import Util from '../../Util'
+import Util from '../Util'
 
 export default class ConsultPatch extends React.Component {
 
@@ -17,7 +17,7 @@ export default class ConsultPatch extends React.Component {
         //     document.write(unescape("%3Cscript id='aikfWebMainJs' src='"+((window.location.protocol=="file:")?"http:":window.location.protocol)+"//www.aikf.com/ask/resources/app/ask/webMain.js?_="+Math.random()+"' type='text/javascript'%3E%3C/script%3E"))
         // }
     }
-    
+
     render = () => {
         const isMobile = Util.os.android||Util.os.iPhone
         return isMobile ? <div className="weui_consult_patch" onClick={()=>{

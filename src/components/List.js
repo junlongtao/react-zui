@@ -12,7 +12,7 @@ import TagPicker from './TagPicker'
 import CityPicker from './CityPicker'
 import MonthPicker from './MonthPicker'
 import InfiniteDatePicker from './InfiniteDatePicker'
-import Util from '../../Util'
+import Util from '../Util'
 
 class Header extends React.Component {
     static defaultProps = {

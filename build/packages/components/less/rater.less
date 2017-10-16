@@ -1,0 +1,41 @@
+.weui_rater {
+    color: #f59107;
+    span{
+        float:left;
+        min-width:30px;
+        font-size:14px;
+        display:inline-block;
+    }
+    .star{
+        float:left;
+        width: 10px;
+        overflow: hidden;
+        position: relative;
+        height: 26px;
+        .icon{
+            font-size:20px;
+            color:#868686;
+            margin-right: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+    }
+    .star.left{
+        .icon{
+            left:0;
+        }
+    }
+    .star.right{
+        margin-right:0;
+        .icon{
+            left:-10px;
+        }
+    }
+    .star.active{
+        .icon{        
+            color: #f59107;
+        }
+    }
+}

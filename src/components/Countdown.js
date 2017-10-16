@@ -4,7 +4,7 @@
 "use strict"
 import './less/countdown.less'
 import React from 'react'
-import Util from '../../Util'
+import Util from '../Util'
 export default class Countdown extends React.Component {
     state = {
         leftsec: 0
