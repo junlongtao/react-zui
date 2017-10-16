@@ -5,7 +5,6 @@
 
 import './less/page.less'
 import React from 'react'
-import classNames from 'classnames'
 import Header from './Header'
 import Button from './Button'
 import Notify from './Notify'
@@ -13,12 +12,9 @@ import Loading from './Loading'
 import ReturnTop from './ReturnTop'
 import ConsultPatch from './ConsultPatch'
 import DownloadPatch from './DownloadPatch'
-import networkimg from './img/network.jpg'
 
 import Util from '../Util'
-import UserService from '../../../services/UserService'
-import WeixinService from '../../../services/WeixinService'
-import ConversationType from '../../../constants/ConversationType'
+import classNames from '../utils/classnames'
 
 export default class Page extends React.Component {
 

@@ -1,7 +1,7 @@
 
 import './less/mask.less'
 import React from 'react'
-import classNames from 'classnames'
+import classNames from '../utils/classnames'
 
 export default class Mask extends React.Component {
     static propTypes = {

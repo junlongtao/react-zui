@@ -54,8 +54,6 @@ var ReturnTop = function (_React$Component) {
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = ReturnTop.__proto__ || (0, _getPrototypeOf2.default)(ReturnTop)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             cls: '',
             visible: false
-
-            //滚动条在Y轴上的滚动距离
         }, _this.getScrollTop = function () {
             var scrollTop = 0,
                 bodyScrollTop = 0,
@@ -101,6 +99,9 @@ var ReturnTop = function (_React$Component) {
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
+
+    //滚动条在Y轴上的滚动距离
+
 
     return ReturnTop;
 }(_react2.default.Component);

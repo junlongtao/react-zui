@@ -35,10 +35,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 var _Header = require('./Header');
 
 var _Header2 = _interopRequireDefault(_Header);
@@ -67,25 +63,13 @@ var _DownloadPatch = require('./DownloadPatch');
 
 var _DownloadPatch2 = _interopRequireDefault(_DownloadPatch);
 
-var _network = require('./img/network.jpg');
-
-var _network2 = _interopRequireDefault(_network);
-
 var _Util = require('../Util');
 
 var _Util2 = _interopRequireDefault(_Util);
 
-var _UserService = require('../../../services/UserService');
+var _classnames = require('../utils/classnames');
 
-var _UserService2 = _interopRequireDefault(_UserService);
-
-var _WeixinService = require('../../../services/WeixinService');
-
-var _WeixinService2 = _interopRequireDefault(_WeixinService);
-
-var _ConversationType = require('../../../constants/ConversationType');
-
-var _ConversationType2 = _interopRequireDefault(_ConversationType);
+var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -198,7 +182,7 @@ var Page = function (_React$Component) {
 
             //配置微信jssdk
             if (_Util2.default.os.wechat) {
-                _WeixinService2.default.config();
+                WeixinService.config();
             }
 
             //更新标题
@@ -226,7 +210,7 @@ var Page = function (_React$Component) {
             }, 1000);
 
             //更新login_at
-            _UserService2.default.updateActiveAt({ loading: false });
+            UserService.updateActiveAt({ loading: false });
         }, _this.clearMemoryStorage = function () {
             var hash = window.location.hash.split('?')[0];
             var excluded = ['#/task/list', '#/task/detail', '#/task/project_detail', '#/task/applicant'];
@@ -278,7 +262,7 @@ var Page = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { className: 'network_error' },
-                        _react2.default.createElement('img', { src: _network2.default }),
+                        _react2.default.createElement('img', { src: networkimg }),
                         _react2.default.createElement(
                             'div',
                             { className: 'tip_text' },

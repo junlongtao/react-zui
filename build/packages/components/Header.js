@@ -39,12 +39,6 @@ var _Util = require('../Util');
 
 var _Util2 = _interopRequireDefault(_Util);
 
-require('antd-mobile/lib/action-sheet/style');
-
-var _actionSheet = require('antd-mobile/lib/action-sheet');
-
-var _actionSheet2 = _interopRequireDefault(_actionSheet);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = function (_React$Component) {
@@ -61,24 +55,15 @@ var Header = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Header.__proto__ || (0, _getPrototypeOf2.default)(Header)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            wechatInstalled: false
-        }, _this.componentDidMount = function () {
-            _actionSheet2.default.close();
-            _Util2.default.wechatInstalled(function (installed) {
-                _this.setState({
-                    wechatInstalled: installed
-                });
-            });
-        }, _this.onBackClick = function () {
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Header.__proto__ || (0, _getPrototypeOf2.default)(Header)).call.apply(_ref, [this].concat(args))), _this), _this.onBackClick = function () {
             if (_this.props.prev) {
-                _Util2.default.assign(_this.props.prev);
+                location.assign(_this.props.prev);
             } else {
                 history.back();
             }
         }, _this.showShareActionSheet = function () {
             var icons = [{ iconName: 'icon iconfont icon-weixin', title: '微信好友' }, { iconName: 'icon iconfont icon-pengyouquan', title: '朋友圈' }];
-            _actionSheet2.default.showShareActionSheetWithOptions({
+            ActionSheet.showShareActionSheetWithOptions({
                 options: icons,
                 message: '分享',
                 cancelButtonText: '取消'
@@ -108,38 +93,24 @@ var Header = function (_React$Component) {
                     });
                 }
             });
-        }, _this.renderTitle = function () {
-            return _this.props.title;
-        }, _this.renderBack = function () {
-            return _this.props.back ? _react2.default.createElement(
-                'div',
-                { onClick: _this.onBackClick, className: 'back_wrap cursor' },
-                _react2.default.createElement(_Icon2.default, { type: 'pullleft', width: '10', height: '20' })
-            ) : null;
-        }, _this.renderShare = function () {
-            return _this.props.shareContent.link && _Util2.default.os.apicloud && _this.state.wechatInstalled ? _react2.default.createElement(
-                'div',
-                { onClick: _this.showShareActionSheet, className: 'share_wrap' },
-                _react2.default.createElement(_Icon2.default, { type: 'fenxiang', width: '10', height: '20' })
-            ) : null;
         }, _this.render = function () {
+            //只有微信pc版显示header,微信手机端不显示header
             if (_Util2.default.os.wechat && _Util2.default.os.ios) {
                 return null;
             }
             if (_Util2.default.os.wechat && _Util2.default.os.android) {
                 return null;
             }
-            window.headerSlideDownCount = (window.headerSlideDownCount || 0) + 1;
-            var cls = window.headerSlideDownCount > 1 ? '' : 'slide_down';
+
+            var prefix = _this.props.prefix;
             return _react2.default.createElement(
                 'div',
-                { className: 'weui_header' },
+                { className: prefix + '-header ' + _this.props.className },
                 _react2.default.createElement(
                     'div',
-                    { className: "wrap " + cls },
-                    _this.renderBack(),
-                    _this.renderTitle(),
-                    _this.renderShare()
+                    { className: prefix + '-header-wrap' },
+                    _this.props.back ? _react2.default.createElement(_Icon2.default, { type: 'back', className: 'cursor', onClick: _this.onBackClick }) : null,
+                    _this.props.children
                 )
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
@@ -150,7 +121,9 @@ var Header = function (_React$Component) {
 
 Header.defaultProps = {
     prev: '',
-    shareContent: {}
+    back: false,
+    title: null,
+    prefix: 'weui'
 };
 exports.default = Header;
 module.exports = exports['default'];

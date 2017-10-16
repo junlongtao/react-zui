@@ -1,0 +1,185 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/taojunlong/.nvm/versions/node/v5.4.0/bin/node',
+1 verbose cli   '/Users/taojunlong/.nvm/versions/node/v5.4.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.3.12
+3 info using node@v5.4.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/taojunlong/www/react-zui',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/taojunlong/.npm/react-zui/1.0.3/package.tgz not in flight; packing
+9 info lifecycle react-zui@1.0.3~prepublish: react-zui@1.0.3
+10 silly lifecycle react-zui@1.0.3~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/taojunlong/.npm/react-zui/1.0.3/package.tgz',
+11 verbose tar pack   '/Users/taojunlong/www/react-zui' ]
+12 verbose tarball /Users/taojunlong/.npm/react-zui/1.0.3/package.tgz
+13 verbose folder /Users/taojunlong/www/react-zui
+14 verbose addLocalTarball adding from inside cache /Users/taojunlong/.npm/react-zui/1.0.3/package.tgz
+15 silly cache afterAdd react-zui@1.0.3
+16 verbose afterAdd /Users/taojunlong/.npm/react-zui/1.0.3/package/package.json not in flight; writing
+17 verbose afterAdd /Users/taojunlong/.npm/react-zui/1.0.3/package/package.json written
+18 silly publish { name: 'react-zui',
+18 silly publish   version: '1.0.3',
+18 silly publish   description: 'weui for react',
+18 silly publish   main: './build/packages/index.js',
+18 silly publish   scripts:
+18 silly publish    { start: 'webpack-dev-server',
+18 silly publish      'start:doc': 'webpack-dev-server --config webpack.config.doc.js --progress --colors --port 8080',
+18 silly publish      build: 'node scripts/build.js -p',
+18 silly publish      lint: 'eslint \'src/**/*.js\'',
+18 silly publish      pretest: 'npm run lint',
+18 silly publish      test: 'mocha --compilers js:babel-core/register --recursive -r ignore-styles -r jsdom-global/register',
+18 silly publish      'test:watch': 'npm run test -- --watch',
+18 silly publish      coverage: 'npm run lint & nyc --require babel-core/register mocha -r ignore-styles -r jsdom-global/register && nyc report --reporter=lcov' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+ssh://git@github.com/jalentao/react-zui.git' },
+18 silly publish   keywords: [ 'mobile', 'ui', 'framework', 'weui', 'react', 'wechat' ],
+18 silly publish   author: { name: 'wechat ui team' },
+18 silly publish   license: 'MIT',
+18 silly publish   bugs: { url: 'https://github.com/weui/react-weui/issues' },
+18 silly publish   homepage: 'https://github.com/jalentao/react-zui',
+18 silly publish   dependencies:
+18 silly publish    { 'babel-runtime': '^6.18.0',
+18 silly publish      'prop-types': '^15.5.10',
+18 silly publish      weui: '^1.1.0' },
+18 silly publish   devDependencies:
+18 silly publish    { autoprefixer: '^6.3.5',
+18 silly publish      babel: '^6.0.0',
+18 silly publish      'babel-cli': '^6.18.0',
+18 silly publish      'babel-core': '^6.0.0',
+18 silly publish      'babel-eslint': '^6.0.0',
+18 silly publish      'babel-loader': '^6.0.0',
+18 silly publish      'babel-plugin-add-module-exports': '^0.2.1',
+18 silly publish      'babel-plugin-external-helpers': '^6.22.0',
+18 silly publish      'babel-plugin-istanbul': '^3.0.0',
+18 silly publish      'babel-plugin-transform-class-properties': '^6.18.0',
+18 silly publish      'babel-plugin-transform-require-ignore': '0.0.2',
+18 silly publish      'babel-plugin-transform-runtime': '^6.15.0',
+18 silly publish      'babel-polyfill': '^6.16.0',
+18 silly publish      'babel-preset-es2015': '^6.18.0',
+18 silly publish      'babel-preset-es2017': '^6.16.0',
+18 silly publish      'babel-preset-react': '^6.16.0',
+18 silly publish      'babel-preset-stage-2': '^6.18.0',
+18 silly publish      'babel-standalone': '^6.18.2',
+18 silly publish      chalk: '^1.1.3',
+18 silly publish      codemirror: '^5.20.2',
+18 silly publish      'css-loader': '^0.28.4',
+18 silly publish      enzyme: '^2.6.0',
+18 silly publish      eslint: '^3.17.1',
+18 silly publish      'eslint-plugin-react': '^3.11.3',
+18 silly publish      'extract-text-webpack-plugin': '^3.0.0',
+18 silly publish      fastclick: '^1.0.6',
+18 silly publish      'file-loader': '^0.8.5',
+18 silly publish      'gh-pages': '^1.0.0',
+18 silly publish      'github-markdown-css': '^2.4.1',
+18 silly publish      'highlight.js': '^9.8.0',
+18 silly publish      history: '^4.5.1',
+18 silly publish      'html-webpack-plugin': '^2.14.0',
+18 silly publish      'ignore-styles': '^5.0.1',
+18 silly publish      'image-webpack-loader': '^3.4.2',
+18 silly publish      jsdom: '9.8.3',
+18 silly publish      'jsdom-global': '2.1.0',
+18 silly publish      'json-loader': '^0.5.4',
+18 silly publish      less: '^2.7.2',
+18 silly publish      'less-loader': '^4.0.5',
+18 silly publish      minimist: '^1.2.0',
+18 silly publish      mocha: '^2.3.4',
+18 silly publish      nyc: '^9.0.1',
+18 silly publish      'open-browser-webpack-plugin': '0.0.1',
+18 silly publish      'postcss-loader': '^2.0.6',
+18 silly publish      'raw-loader': '^0.5.1',
+18 silly publish      react: '^16.0.0',
+18 silly publish      'react-addons-test-utils': '^0.14.3 || ^15.0.0-0 || 15.x',
+18 silly publish      'react-codemirror': '^0.2.6',
+18 silly publish      'react-docgen': '^2.16.0',
+18 silly publish      'react-dom': '^16.0.0',
+18 silly publish      'react-fontawesome': '^1.3.1',
+18 silly publish      'react-remarkable': '^1.1.1',
+18 silly publish      'react-router': '^4.1.1',
+18 silly publish      'react-router-dom': '^4.1.1',
+18 silly publish      'react-split-pane': '^0.1.52',
+18 silly publish      'react-transition-group': '^2.0.2',
+18 silly publish      rimraf: '^2.4.3',
+18 silly publish      rollup: '^0.41.6',
+18 silly publish      'rollup-plugin-babel': '^2.7.1',
+18 silly publish      'rollup-plugin-commonjs': '^8.0.2',
+18 silly publish      'rollup-plugin-less': '^0.1.3',
+18 silly publish      'rollup-plugin-node-resolve': '^3.0.0',
+18 silly publish      'rollup-plugin-progress': '^0.2.1',
+18 silly publish      'rollup-plugin-replace': '^1.1.1',
+18 silly publish      'rollup-plugin-uglify': '^1.0.1',
+18 silly publish      sinon: '^1.17.2',
+18 silly publish      'style-loader': '^0.13.0',
+18 silly publish      'uglify-loader': '^1.2.0',
+18 silly publish      'url-loader': '^0.5.7',
+18 silly publish      webpack: '^3.2.0',
+18 silly publish      'webpack-dev-server': '^2.5.1' },
+18 silly publish   peerDependencies:
+18 silly publish    { react: '0.14.x || ^15.0.0-0 || 15.x',
+18 silly publish      'react-dom': '^0.14.x || ^15.0.0-0 || 15.x' },
+18 silly publish   directories: { doc: 'docs', example: 'example', test: 'test' },
+18 silly publish   readme: '# React-WeUI [![Build Status](https://travis-ci.org/weui/react-weui.svg?branch=master)](https://travis-ci.org/weui/react-weui) [![npm version](https://img.shields.io/npm/v/react-weui.svg)](https://www.npmjs.org/package/react-weui)\n\n[WeUI](https://github.com/weui/weui) Components build with [React](http://facebook.github.io/react/).\n\n[![Coverage Status](https://coveralls.io/repos/github/weui/react-weui/badge.svg?branch=master)](https://coveralls.io/github/weui/react-weui?branch=master)  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests) [![QQ](http://pub.idqqimg.com/wpa/images/group.png)](http://jq.qq.com/?_wv=1027&k=413HLfV)\n\n## Docs\n\n1.0.x [documentation](https://weui.github.io/react-weui/docs/) with live examples.\n0.4.x [documentation](https://n7best.github.io/react-weui-doc-0.4.0) with live examples.\n\n## Installation\n\nWith [npm](http://npmjs.com/):\n\nIf React is not installed\n\n```\nnpm install --save react react-dom\nnpm install --save weui@1.1.0 react-weui\n```\n\nWith React Installed\n\n```\nnpm install weui@1.1.0 react-weui --save\n```\n\nTo use the development version (`API might changes on realese version`)\n\n```\nnpm install react-weui@alpha --save\n```\n\nWith browser (CDN by [unpkg](http://unpkg.com/))\n\nJavacript\n```\nhttps://unpkg.com/react-weui@1.1.2\n```\n\nCSS\n```\nhttps://unpkg.com/react-weui@1.1.1/build/dist/react-weui.css\n```\n## Example\n\nWe have several examples on the documentation. Here is the first one to get you started:\n```javascript\n// app.js\n\nimport React from \'react\';\nimport ReactDOM from \'react-dom\';\nimport { Button } from \'react-weui\';\n//import styles\nimport \'weui\';\nimport \'react-weui/build/packages/react-weui.css\';\n\nconst App = () => <Button>hello wechat</Button>;\n\nReactDOM.render((\n    <App/>\n), document.getElementById(\'container\'));\n\n```\n\n## Contributing\n\nWelcome and send the PR in! Development of components will happen in this github repo.\n\nSee the [contributing guidelines](https://github.com/n7best/react-weui-1/blob/master/CONTRIBUTING.md) for details.\n\n## Mobile Demo\n\n![react-weui](./docs/qrcode.png)\n\n[1.0.0](https://weui.github.io/react-weui)\n\n## License\n\nThe MIT License([http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT))\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '55da82c74565fd160811949c1aa55e3140b3d2c5',
+18 silly publish   _id: 'react-zui@1.0.3',
+18 silly publish   _shasum: '8acae7eecc582131887c7fd09a9f9c5886df961a',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name react-zui
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry http://registry.npmjs.org/
+23 silly mapToRegistry uri http://registry.npmjs.org/react-zui
+24 verbose publish registryBase http://registry.npmjs.org/
+25 silly publish uploading /Users/taojunlong/.npm/react-zui/1.0.3/package.tgz
+26 verbose request uri http://registry.npmjs.org/react-zui
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 9:13:09 PM
+29 verbose request using bearer token for auth
+30 verbose request id 1d9fc2a76ab484ad
+31 http request PUT http://registry.npmjs.org/react-zui
+32 http 403 http://registry.npmjs.org/react-zui
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '91',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Mon, 16 Oct 2017 13:13:16 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-nrt6127-NRT',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1508159590.076144,VS0,VE6461',
+33 verbose headers   vary: 'Accept-Encoding, Accept' }
+34 verbose request invalidating /Users/taojunlong/.npm/registry.npmjs.org/react-zui on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You cannot publish over the previously published version 1.0.3. : react-zui
+36 verbose stack     at makeError (/Users/taojunlong/.nvm/versions/node/v5.4.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/Users/taojunlong/.nvm/versions/node/v5.4.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at Request._callback (/Users/taojunlong/.nvm/versions/node/v5.4.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/Users/taojunlong/.nvm/versions/node/v5.4.0/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at emitTwo (events.js:87:13)
+36 verbose stack     at Request.emit (events.js:172:7)
+36 verbose stack     at Request.<anonymous> (/Users/taojunlong/.nvm/versions/node/v5.4.0/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+36 verbose stack     at emitOne (events.js:82:20)
+36 verbose stack     at Request.emit (events.js:169:7)
+36 verbose stack     at IncomingMessage.<anonymous> (/Users/taojunlong/.nvm/versions/node/v5.4.0/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+37 verbose statusCode 403
+38 verbose pkgid react-zui
+39 verbose cwd /Users/taojunlong/www/react-zui
+40 error Darwin 16.7.0
+41 error argv "/Users/taojunlong/.nvm/versions/node/v5.4.0/bin/node" "/Users/taojunlong/.nvm/versions/node/v5.4.0/bin/npm" "publish"
+42 error node v5.4.0
+43 error npm  v3.3.12
+44 error code E403
+45 error You cannot publish over the previously published version 1.0.3. : react-zui
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]

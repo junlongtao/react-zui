@@ -31,15 +31,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _checkbox_checked = require('./checkbox_checked.png');
-
-var _checkbox_checked2 = _interopRequireDefault(_checkbox_checked);
-
-var _checkbox_uncheck = require('./checkbox_uncheck.png');
-
-var _checkbox_uncheck2 = _interopRequireDefault(_checkbox_uncheck);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//import chcked from './checkbox_checked.png'
+//import uncheck from './checkbox_uncheck.png'
 
 var Checkbox = function (_React$Component) {
     (0, _inherits3.default)(Checkbox, _React$Component);
@@ -71,7 +66,7 @@ var Checkbox = function (_React$Component) {
     (0, _createClass3.default)(Checkbox, [{
         key: 'render',
         value: function render() {
-            var checkImg = this.state.checked ? _checkbox_checked2.default : _checkbox_uncheck2.default;
+            var checkImg = this.state.checked ? checked : uncheck;
             return _react2.default.createElement(
                 'div',
                 { className: 'weui_checkbox', onClick: this.toggleCheck },

@@ -8,32 +8,18 @@ import React from 'react'
 import Icon from './Icon'
 import Util from '../Util'
 
-import 'antd-mobile/lib/action-sheet/style'
-import ActionSheet from 'antd-mobile/lib/action-sheet'
-
 export default class Header extends React.Component {
 
     static defaultProps = {
         prev: '',
-        shareContent: {}
-    }
-
-    state = {
-        wechatInstalled: false
-    }
-
-    componentDidMount = () => {
-        ActionSheet.close()
-        Util.wechatInstalled((installed) => {
-            this.setState({
-                wechatInstalled: installed
-            })
-        })
+        back: false,
+        title: null,
+        prefix: 'weui'
     }
 
     onBackClick = () => {
         if (this.props.prev) {
-            Util.assign(this.props.prev)
+            location.assign(this.props.prev)
         } else {
             history.back()
         }
@@ -76,37 +62,20 @@ export default class Header extends React.Component {
         });
     }
 
-    renderTitle = () => {
-        return this.props.title
-    }
-
-    renderBack = () => {
-        return this.props.back ? <div onClick={this.onBackClick} className="back_wrap cursor">
-            <Icon type="pullleft" width="10" height="20"/>
-        </div> : null
-    }
-
-    renderShare = () => {
-        return (this.props.shareContent.link && Util.os.apicloud && this.state.wechatInstalled) ?
-            <div onClick={this.showShareActionSheet} className="share_wrap">
-                <Icon type="fenxiang" width="10" height="20"/>
-            </div> : null
-    }
-
     render = () => {
+        //只有微信pc版显示header,微信手机端不显示header
         if (Util.os.wechat && Util.os.ios) {
             return null
         }
         if (Util.os.wechat && Util.os.android) {
             return null
         }
-        window.headerSlideDownCount = (window.headerSlideDownCount || 0) + 1
-        const cls = window.headerSlideDownCount > 1 ? '' : 'slide_down'
-        return <div className='weui_header'>
-            <div className={"wrap "+cls}>
-                {this.renderBack()}
-                {this.renderTitle()}
-                {this.renderShare()}
+
+        const prefix = this.props.prefix
+        return <div className={prefix+'-header '+this.props.className}>
+            <div className={prefix+'-header-wrap'}>
+                {this.props.back ? <Icon type="back" className="cursor" onClick={this.onBackClick}/> : null}
+                {this.props.children}
             </div>
         </div>
     }

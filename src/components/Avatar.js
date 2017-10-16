@@ -5,7 +5,7 @@
 
 import './less/avatar.less'
 import React from 'react'
-import defaultAvatar from './avatar_default.png'
+//import defaultAvatar from './avatar_default.png'
 
 export default class Avatar extends React.Component {
     render = () => {

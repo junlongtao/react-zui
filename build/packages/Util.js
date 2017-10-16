@@ -538,7 +538,8 @@ Util.os = {
     iPad: userAgent.indexOf('iPad') > -1, //是否iPad
     webApp: userAgent.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
     wechat: userAgent.indexOf('MicroMessenger') > -1,
-    apicloud: window.location.href.indexOf('file://') === -1 ? false : true };
+    apicloud: window.location.href.indexOf('file://') === -1 ? false : true
+};
 
 Util.extend = function (o, n) {
     for (var p in n) {

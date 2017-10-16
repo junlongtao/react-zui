@@ -24,11 +24,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _network = require('./img/network.jpg');
-
-var _network2 = _interopRequireDefault(_network);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//import networkimg from './img/network.jpg'
 
 var NetworkStatusCheck = function (_React$Component) {
     (0, _inherits3.default)(NetworkStatusCheck, _React$Component);
@@ -65,7 +63,7 @@ var NetworkStatusCheck = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     { className: 'network_error' },
-                    _react2.default.createElement('img', { src: _network2.default }),
+                    _react2.default.createElement('img', { src: networkimg }),
                     _react2.default.createElement(
                         'div',
                         { className: 'tip_text' },

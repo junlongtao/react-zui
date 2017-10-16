@@ -27,11 +27,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _avatar_default = require('./avatar_default.png');
-
-var _avatar_default2 = _interopRequireDefault(_avatar_default);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//import defaultAvatar from './avatar_default.png'
 
 var Avatar = function (_React$Component) {
     (0, _inherits3.default)(Avatar, _React$Component);
@@ -48,9 +46,9 @@ var Avatar = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Avatar.__proto__ || (0, _getPrototypeOf2.default)(Avatar)).call.apply(_ref, [this].concat(args))), _this), _this.render = function () {
-            var src = _this.props.src || _avatar_default2.default;
+            var src = _this.props.src || defaultAvatar;
             if (src == 'http://zcrun.com/images/head.png') {
-                src = _avatar_default2.default;
+                src = defaultAvatar;
             }
             var width = _this.props.width || '70px';
             var style = {

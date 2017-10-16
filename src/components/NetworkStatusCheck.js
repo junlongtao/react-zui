@@ -2,7 +2,7 @@
 
 import './less/network_status_check.less'
 import React from 'react'
-import networkimg from './img/network.jpg'
+//import networkimg from './img/network.jpg'
 
 export default class NetworkStatusCheck extends React.Component {
 

@@ -1,6 +1,6 @@
 {
   "name": "react-zui",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "weui for react",
   "main": "./build/packages/index.js",
   "scripts": {
@@ -11,12 +11,11 @@
     "pretest": "npm run lint",
     "test": "mocha --compilers js:babel-core/register --recursive -r ignore-styles -r jsdom-global/register",
     "test:watch": "npm run test -- --watch",
-    "coverage": "npm run lint & nyc --require babel-core/register mocha -r ignore-styles -r jsdom-global/register && nyc report --reporter=lcov",
-    "postpublish": "gh-pages -d ./build/demo"
+    "coverage": "npm run lint & nyc --require babel-core/register mocha -r ignore-styles -r jsdom-global/register && nyc report --reporter=lcov"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jalentao/react-zui.git"
+    "url": "git+ssh://git@github.com/jalentao/react-zui.git"
   },
   "keywords": [
     "mobile",
@@ -71,6 +70,7 @@
     "history": "^4.5.1",
     "html-webpack-plugin": "^2.14.0",
     "ignore-styles": "^5.0.1",
+    "image-webpack-loader": "^3.4.2",
     "jsdom": "9.8.3",
     "jsdom-global": "2.1.0",
     "json-loader": "^0.5.4",

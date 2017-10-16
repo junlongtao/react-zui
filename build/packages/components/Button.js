@@ -11,10 +11,6 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
-
-var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
 var _objectWithoutProperties2 = require('babel-runtime/helpers/objectWithoutProperties');
 
 var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
@@ -39,30 +35,22 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _Util = require('../Util');
-
-var _Util2 = _interopRequireDefault(_Util);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Button = function (_React$Component) {
     (0, _inherits3.default)(Button, _React$Component);
 
     function Button() {
-        var _ref,
-            _arguments = arguments;
+        var _ref;
 
         var _temp, _this, _ret;
+
+        (0, _classCallCheck3.default)(this, Button);
 
         for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
         }
 
-        (0, _classCallCheck3.default)(this, Button);
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Button.__proto__ || (0, _getPrototypeOf2.default)(Button)).call.apply(_ref, [this].concat(args))), _this), _this.componentDidMount = function () {
             var opacityCurve11 = mojs.easing.path('M0,0 C0,87 27,100 40,100 L40,0 L100,0');
             var scaleCurve11 = mojs.easing.path('M0,0c0,80,39.2,100,39.2,100L40-100c0,0-0.7,106,60,106');
@@ -100,10 +88,12 @@ var Button = function (_React$Component) {
             _this.timeline && _this.timeline.replay();
 
             if (_this.props.href) {
-                _Util2.default.assign(_this.props.href);
+                if (_this.props.href.indexOf('tel:') === -1) {
+                    location.assign(_this.props.href);
+                }
                 return false;
             }
-            _this.props.onClick && _this.props.onClick.apply(_this, _arguments);
+            _this.props.onClick && _this.props.onClick(e);
         }, _this.render = function () {
             var _this$props = _this.props,
                 type = _this$props.type,
@@ -117,7 +107,7 @@ var Button = function (_React$Component) {
                 others = (0, _objectWithoutProperties3.default)(_this$props, ['type', 'size', 'plain', 'className', 'children', 'disabled', 'padding', 'position']);
 
             var Component = _this.props.href ? 'a' : 'button';
-            var cls = (0, _classnames2.default)((0, _defineProperty3.default)({
+            var cls = classNames({
                 weui_btn: true,
                 cursor: true,
 
@@ -132,8 +122,7 @@ var Button = function (_React$Component) {
 
                 weui_btn_mini: size === 'small',
                 weui_btn_bottom: position === 'bottom'
-
-            }, className, className));
+            });
             if (padding) {
                 return _react2.default.createElement(
                     'div',
@@ -157,12 +146,6 @@ var Button = function (_React$Component) {
     return Button;
 }(_react2.default.Component);
 
-Button.propTypes = {
-    disabled: _react2.default.PropTypes.bool,
-    type: _react2.default.PropTypes.string,
-    size: _react2.default.PropTypes.string,
-    padding: _react2.default.PropTypes.string
-};
 Button.defaultProps = {
     disabled: false,
     type: 'primary',

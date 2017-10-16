@@ -4,7 +4,8 @@
 "use strict"
 import './less/range_select.less'
 import React from 'react'
-import classNames from 'classnames'
+import classNames from '../utils/classnames'
+
 export default class RangeSelect extends React.Component {
     static propTypes = {
         min: React.PropTypes.number,

@@ -5,8 +5,8 @@
 
 import './less/checkbox.less'
 import React from 'react'
-import checked from './checkbox_checked.png'
-import uncheck from './checkbox_uncheck.png'
+//import chcked from './checkbox_checked.png'
+//import uncheck from './checkbox_uncheck.png'
 
 export default class Checkbox extends React.Component {
 

@@ -46,135 +46,137 @@ const rules = [
     }, {
         test: /\.css/,
         loader: [
-        'style-loader',
-        { loader: 'css-loader', options: { sourceMap: !isProduction, importLoaders: 1 } },
-        {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: !isProduction,
-            plugins: (loader) => [
-                autoprefixer({
-                    browsers: [
-                        'last 3 version',
-                        'ie >= 10',
-                        'iOS >= 7',
-                        'Android >= 4.1'
-                    ],
-                })
-            ]
-          }
-        }]
+            'style-loader',
+            {loader: 'css-loader', options: {sourceMap: !isProduction, importLoaders: 1}},
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: !isProduction,
+                    plugins: (loader) => [
+                        autoprefixer({
+                            browsers: [
+                                'last 3 version',
+                                'ie >= 10',
+                                'iOS >= 7',
+                                'Android >= 4.1'
+                            ],
+                        })
+                    ]
+                }
+            }]
     }, {
-      test: /\.less$/,
-      exclude: /node_modules/,
-      use: [
-        'style-loader',
-        // Using source maps breaks urls in the CSS loader
-        // https://github.com/webpack/css-loader/issues/232
-        // This comment solves it, but breaks testing from a local network
-        // https://github.com/webpack/css-loader/issues/232#issuecomment-240449998
-        // 'css-loader?sourceMap',
-        { loader: 'css-loader', options: { sourceMap: !isProduction, importLoaders: 2 } },
-        {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: !isProduction,
-            plugins: (loader) => [
-                autoprefixer({
-                    browsers: [
-                        'last 3 version',
-                        'ie >= 10',
-                        'iOS >= 7',
-                        'Android >= 4.1'
-                    ],
-                })
-            ]
-          }
-        },
-        {
-            loader: 'less-loader',
-            options: {
-                sourceMap: !isProduction
+        test: /\.less$/,
+        exclude: /node_modules/,
+        use: [
+            'style-loader',
+            // Using source maps breaks urls in the CSS loader
+            // https://github.com/webpack/css-loader/issues/232
+            // This comment solves it, but breaks testing from a local network
+            // https://github.com/webpack/css-loader/issues/232#issuecomment-240449998
+            // 'css-loader?sourceMap',
+            {loader: 'css-loader', options: {sourceMap: !isProduction, importLoaders: 2}},
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: !isProduction,
+                    plugins: (loader) => [
+                        autoprefixer({
+                            browsers: [
+                                'last 3 version',
+                                'ie >= 10',
+                                'iOS >= 7',
+                                'Android >= 4.1'
+                            ],
+                        })
+                    ]
+                }
+            },
+            {
+                loader: 'less-loader',
+                options: {
+                    sourceMap: !isProduction
+                }
             }
-        }
-      ],
-  },
-    {
-        test: /\.(png|gif|jpg|svg)$/,
-        use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
+        ],
+    }, {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+            'file?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
     }
 ];
 
 if (!isProduction) {
-  plugins.push(
+    plugins.push(
         new webpack.HotModuleReplacementPlugin()
     );
 } else {
     plugins.push(
         new webpack.optimize.UglifyJsPlugin({
-          compress: {
-            warnings: false,
-            screw_ie8: true,
-            conditionals: true,
-            unused: true,
-            comparisons: true,
-            sequences: true,
-            dead_code: true,
-            evaluate: true,
-            if_return: true,
-            join_vars: true,
-          },
-          output: {
-            comments: false,
-          },
+            compress: {
+                warnings: false,
+                screw_ie8: true,
+                conditionals: true,
+                unused: true,
+                comparisons: true,
+                sequences: true,
+                dead_code: true,
+                evaluate: true,
+                if_return: true,
+                join_vars: true,
+            },
+            output: {
+                comments: false,
+            },
         })
-  );
+    );
 }
 
 module.exports = {
-  devtool: isProduction ? false : 'source-map',
-  context: jsSourcePath,
-  entry: {
-    js: './app.js',
-  },
-  output: {
-    path: buildPath,
-    publicPath: '',
-    filename: 'app-[hash].js',
-  },
-  module: {
-    rules,
-  },
-  resolve: {
-    extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx', '.less'],
-    modules: [
-      path.resolve(__dirname, 'node_modules'),
-      jsSourcePath,
-    ],
-  },
-  plugins,
-  devServer: {
-    contentBase: isProduction ? buildPath : sourcePath,
-    historyApiFallback: true,
-    port: 3000,
-    compress: isProduction,
-    inline: !isProduction,
-    hot: !isProduction,
-    host: '0.0.0.0',
-    disableHostCheck: true,
-    stats: {
-      assets: true,
-      children: false,
-      chunks: false,
-      hash: false,
-      modules: false,
-      publicPath: false,
-      timings: true,
-      version: false,
-      warnings: true,
-      colors: {
-        green: '\u001b[32m',
-      },
+    devtool: isProduction ? false : 'source-map',
+    context: jsSourcePath,
+    entry: {
+        js: './app.js',
     },
-  },
+    output: {
+        path: buildPath,
+        publicPath: '',
+        filename: 'app-[hash].js',
+    },
+    module: {
+        rules,
+    },
+    resolve: {
+        extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx', '.less'],
+        modules: [
+            path.resolve(__dirname, 'node_modules'),
+            jsSourcePath,
+        ],
+    },
+    plugins,
+    devServer: {
+        contentBase: isProduction ? buildPath : sourcePath,
+        historyApiFallback: true,
+        port: 3000,
+        compress: isProduction,
+        inline: !isProduction,
+        hot: !isProduction,
+        host: '0.0.0.0',
+        disableHostCheck: true,
+        stats: {
+            assets: true,
+            children: false,
+            chunks: false,
+            hash: false,
+            modules: false,
+            publicPath: false,
+            timings: true,
+            version: false,
+            warnings: true,
+            colors: {
+                green: '\u001b[32m',
+            },
+        },
+    },
 };

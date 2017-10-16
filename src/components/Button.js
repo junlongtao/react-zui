@@ -4,17 +4,8 @@
 "use strict"
 import '../style/widget/weui_button/weui_button.less';
 import React from 'react';
-import classNames from 'classnames';
-import Util from '../Util'
 
 export default class Button extends React.Component {
-    static propTypes = {
-        disabled: React.PropTypes.bool,
-        type: React.PropTypes.string,
-        size: React.PropTypes.string,
-        padding: React.PropTypes.string
-    }
-
     static defaultProps = {
         disabled: false,
         type: 'primary',
@@ -62,10 +53,12 @@ export default class Button extends React.Component {
         this.timeline && this.timeline.replay()
 
         if (this.props.href) {
-            Util.assign(this.props.href)
+            if (this.props.href.indexOf('tel:') === -1) {
+                location.assign(this.props.href)
+            }
             return false
         }
-        this.props.onClick && this.props.onClick.apply(this, arguments)
+        this.props.onClick && this.props.onClick(e)
     }
 
     render = () => {
@@ -86,8 +79,6 @@ export default class Button extends React.Component {
 
             weui_btn_mini: size === 'small',
             weui_btn_bottom: position === 'bottom',
-
-            [className]: className
         });
         if (padding) {
             return <div style={{'padding':this.props.padding}}>

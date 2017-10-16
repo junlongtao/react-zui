@@ -32,7 +32,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
+var _classnames = require('../utils/classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
