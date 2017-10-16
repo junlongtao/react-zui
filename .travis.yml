@@ -4,6 +4,5 @@ node_js:
 script:
 
 before_install:
-    npm install --save react@15.4.0 react-dom@15.4.0
+
 after_script:
-    npm install coveralls && nyc report --reporter=text-lcov | coveralls

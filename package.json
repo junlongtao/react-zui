@@ -7,11 +7,6 @@
         "start": "webpack-dev-server",
         "start:doc": "webpack-dev-server --config webpack.config.doc.js --progress --colors --port 8080",
         "build": "node scripts/build.js -p",
-        "lint": "eslint 'src/**/*.js'",
-        "pretest": "npm run lint",
-        "test": "",
-        "test:watch": "npm run test -- --watch",
-        "coverage": "npm run lint & nyc --require babel-core/register mocha -r ignore-styles -r jsdom-global/register && nyc report --reporter=lcov"
     },
     "repository": {
         "type": "git",
