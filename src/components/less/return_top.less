@@ -1,0 +1,60 @@
+.weui_return_top {
+    position: fixed;
+    bottom: 60px;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    -webkit-animation: return_top_visible .3s ease-in-out;
+    @keyframes return_top_visible {
+        0% {
+            -webkit-transform: translate(40px, 0);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+    .iconfont {
+        position: absolute;
+        right: 7px;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        color: #6ac2b6;
+        font-size: 40px;
+        line-height: 38px;
+        text-align: center;
+        border-radius: 50%;
+        margin-right: 0;
+    }
+    &.fly_out {
+        -webkit-animation: return_top_fly_out 1s linear;
+        @keyframes return_top_fly_out {
+            0% {
+                bottom: 3%;
+                .iconfont {
+                    -webkit-transform: scale(1, 1);
+                }
+            }
+            10% {
+                bottom: 5%;
+            }
+            20% {
+                bottom: 8%;
+            }
+            30% {
+                bottom: 12%;
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+                .iconfont {
+                    -webkit-transform: scale(.5, .5);
+                }
+            }
+        }
+    }
+}

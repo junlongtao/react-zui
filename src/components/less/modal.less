@@ -1,0 +1,152 @@
+@import '../../style/mixinx';
+
+@prefixCls: weui;
+
+.@{prefixCls}-modal {
+    .@{prefixCls}_mask {
+        visibility: hidden;
+    }
+    .@{prefixCls}-modal-content {
+        max-width: 440px;
+        margin: auto auto;
+        z-index: 3;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 20px 10px;
+        position: fixed;
+        top: 200%;
+        left: 50%;
+        width: 90%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        .@{prefixCls}-modal-close {
+            .line {
+                width: 2px;
+                margin: 0 auto;
+                background: #fff;
+                position: absolute;
+                bottom: -30px;
+                left: 0;
+                right: 0;
+            }
+            .icon {
+                width: 36px;
+                height: 34px;
+                font-size: 32px;
+                color: #fff;
+                left: 0;
+                right: 0;
+                bottom: -60px;
+                position: absolute;
+                margin: 0 auto;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    &.open {
+        .@{prefixCls}_mask {
+            visibility: visible;
+        }
+        .@{prefixCls}-modal-content {
+            animation: modal-content-slide-up .5s ease forwards;
+            @keyframes modal-content-slide-up {
+                0% {
+                    top: 100%;
+                    opacity: 0;
+                }
+                100% {
+                    top: 50%;
+                    opacity: 1;
+                }
+            }
+        }
+        .@{prefixCls}-modal-close {
+            .line {
+                animation: line-increase-in .5s ease forwards;
+                animation-delay: .5s;
+                @keyframes line-increase-in {
+                    0% {
+                        height: 0;
+                    }
+                    100% {
+                        height: 40px;
+                    }
+                }
+            }
+            .icon {
+                animation: icon-rotate-in .5s linear forwards;
+                @keyframes icon-rotate-in {
+                    0% {
+                        opacity: 0;
+                        -webkit-transform: rotate(0deg);
+                    }
+                    100% {
+                        opacity: 1;
+                        -webkit-transform: rotate(720deg);
+                    }
+                }
+            }
+        }
+    }
+    &.close {
+        .@{prefixCls}_mask {
+            visibility: visible;
+            animation: modal-mask-fade-out .5s ease forwards;
+            animation-delay: .5s;
+            @keyframes modal-mask-fade-out {
+                0% {
+                    visibility: visible;
+                }
+                100% {
+                    visibility: hidden;
+                }
+            }
+        }
+        .@{prefixCls}-modal-content {
+            top: 50%;
+            animation: modal-content-slide-down .5s ease forwards;
+            animation-delay: .5s;
+            @keyframes modal-content-slide-down {
+                0% {
+                    top: 50%;
+                    opacity: 1;
+                }
+                100% {
+                    top: 200%;
+                    opacity: 0;
+                }
+            }
+
+            .@{prefixCls}-modal-close {
+                .line {
+                    animation: modal-line-decrease .5s ease forwards;
+                    @keyframes modal-line-decrease {
+                        0% {
+                            height: 40px;
+                        }
+                        100% {
+                            height: 0;
+                        }
+                    }
+                }
+                .icon {
+                    animation: modal-close-rotate-out .5s linear forwards;
+                    @keyframes modal-close-rotate-out {
+                        0% {
+                            -webkit-transform: rotate(0deg);
+                            opacity: 1;
+                        }
+                        100% {
+                            -webkit-transform: rotate(-720deg);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
