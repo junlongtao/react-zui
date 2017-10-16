@@ -10,7 +10,6 @@
         "lint": "eslint 'src/**/*.js'",
         "pretest": "npm run lint",
         "test": "",
-        //"test": "mocha --compilers js:babel-core/register --recursive -r ignore-styles -r jsdom-global/register",
         "test:watch": "npm run test -- --watch",
         "coverage": "npm run lint & nyc --require babel-core/register mocha -r ignore-styles -r jsdom-global/register && nyc report --reporter=lcov"
     },
