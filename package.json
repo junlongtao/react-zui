@@ -1,5 +1,5 @@
 {
-  "name": "react-weui",
+  "name": "react-zui",
   "version": "1.0.0",
   "description": "weui for react",
   "main": "./build/packages/index.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/weui/react-weui.git"
+    "url": "git@github.com:jalentao/react-zui.git"
   },
   "keywords": [
     "mobile",
@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/weui/react-weui/issues"
   },
-  "homepage": "https://github.com/weui/react-weui",
+  "homepage": "https://github.com/jalentao/react-zui",
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "prop-types": "^15.5.10",
@@ -112,5 +112,10 @@
   "peerDependencies": {
     "react": "0.14.x || ^15.0.0-0 || 15.x",
     "react-dom": "^0.14.x || ^15.0.0-0 || 15.x"
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "example",
+    "test": "test"
   }
 }
