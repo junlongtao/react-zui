@@ -326,8 +326,7 @@ Page.propTypes = {
 Page.defaultProps = {
     blank: false,
     onlyWx: false,
-    returnTop: true,
-    title: _Util2.default.conf('appName')
+    returnTop: true
 };
 exports.default = Page;
 module.exports = exports['default'];

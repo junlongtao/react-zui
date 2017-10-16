@@ -1,6 +1,6 @@
 {
     "name": "react-zui",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "weui for react",
     "main": "./build/packages/index.js",
     "scripts": {

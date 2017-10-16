@@ -5335,8 +5335,7 @@ Page.propTypes = {
 Page.defaultProps = {
     blank: false,
     onlyWx: false,
-    returnTop: true,
-    title: Util.conf('appName')
+    returnTop: true
 };
 
 var Paragraph = function (_React$Component) {

@@ -25,8 +25,7 @@ export default class Page extends React.Component {
     static defaultProps = {
         blank: false,
         onlyWx: false,
-        returnTop: true,
-        title: Util.conf('appName')
+        returnTop: true
     }
 
     state = {
