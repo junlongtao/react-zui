@@ -39,8 +39,8 @@ export default class IndexPage extends React.Component {
                 <List.Item href="#tag" arrow="right">
                     Tag 标签
                 </List.Item>
-                <List.Item href="#bookmark" arrow="right">
-                    Bookmark 书签
+                <List.Item href="#label" arrow="right">
+                    Label 书签
                 </List.Item>
                 <List.Item href="#notice-bar" arrow="right">
                     NoticeBar 通告栏

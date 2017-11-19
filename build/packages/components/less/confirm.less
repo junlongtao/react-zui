@@ -1,0 +1,50 @@
+@import './base/mixin';
+
+.@{prefix}-confirm {
+    .@{prefix}-confirm-wrap {
+        top: 40%;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        width: 85%;
+        max-width: 410px;
+        margin: 0 auto;
+        position: fixed;
+        background: #fff;
+        animation: confirmWrapSlideUp .3s ease forwards;
+        @keyframes confirmWrapSlideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(.5);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+            }
+        }
+        .@{prefix}-confirm-header{
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 0;
+            text-align: center;
+            background: @colorMain;
+        }
+        .@{prefix}-confirm-content {
+            padding: 25px 25px;
+            text-align: center;
+        }
+        .@{prefix}-confirm-footer {
+            border-top: 1px solid #6ac2b6;
+            .@{prefix}-confirm-button {
+                margin: 0;
+                width: 50%;
+                float: left;
+                button{
+                    border: none;
+                    border-radius: 0;
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+}

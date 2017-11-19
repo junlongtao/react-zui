@@ -4,10 +4,12 @@ import {Page, List, Tag} from '../../../src'
 
 export default class IndexPage extends React.Component {
     render = () => {
-        return <Page title="头像">
-            <Tag>测试标签一</Tag>
-            <Tag>测试标签二</Tag>
-            <Tag>测试标签三</Tag>
+        return <Page title="标签" className="tag-page">
+            <div className="tag-list">
+                <Tag>测试标签一</Tag>
+                <Tag>测试标签二</Tag>
+                <Tag>测试标签三</Tag>
+            </div>
             <List>
                 <List.Header>
                     使用说明
@@ -44,6 +46,12 @@ export default class Example extends React.Component {
                 </List.Item>
                 <List.Item extra="标签内容">
                     children
+                </List.Item>
+                <List.Header>
+                    事件
+                </List.Header>
+                <List.Item extra="点击事件的回调函数">
+                    onClick
                 </List.Item>
             </List>
         </Page>

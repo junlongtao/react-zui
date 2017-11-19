@@ -7,17 +7,17 @@ export default class IndexPage extends React.Component {
         return <Page title="标签页">
             <Tabs active="1">
                 <Tabs.TabPane name="项目管理">
-                    <div style={{margin: '50px auto', textAlign: 'center'}}>
+                    <div style={{padding: '50px 0', textAlign: 'center'}}>
                         项目管理内容...
                     </div>
                 </Tabs.TabPane>
                 <Tabs.TabPane name="服务管理">
-                    <div style={{margin: '50px auto', textAlign: 'center'}}>
+                    <div style={{padding: '50px 0', textAlign: 'center'}}>
                         服务管理内容...
                     </div>
                 </Tabs.TabPane>
                 <Tabs.TabPane name="需求管理">
-                    <div style={{margin: '50px auto', textAlign: 'center'}}>
+                    <div style={{padding: '50px 0', textAlign: 'center'}}>
                         需求管理内容...
                     </div>
                 </Tabs.TabPane>

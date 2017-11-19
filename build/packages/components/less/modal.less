@@ -1,0 +1,85 @@
+@import './base/mixin';
+
+.@{prefix}-modal {
+    .@{prefix}-mask {
+        visibility: hidden;
+    }
+    .@{prefix}-modal-content {
+        width: 90%; 
+        top: 200%;
+        left: 50%;
+        z-index: 1;
+        margin: auto auto;
+        position: fixed;
+        background: #fff;
+        border-radius: 5px;
+        border: 1px solid #eee; 
+        transform: translateX(-50%) translateY(-50%);
+
+
+        .@{prefix}-modal-header{
+            color: @colorMain;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .@{prefix}-modal-close {
+            .@{prefix}-modal-close-line {
+                width: 2px;
+                margin: 0 auto;
+                background: #fff;
+                position: absolute;
+                bottom: -30px;
+                left: 0;
+                right: 0;
+                height: 30px; 
+            }
+            .@{prefix}-icon { 
+                font-size: 32px;
+                color: #fff;
+                left: 0;
+                right: 0;
+                bottom: -60px;
+                position: absolute;
+                margin: 0 auto; 
+                text-align: center;
+            }
+        }
+    }
+    &.open {  
+        .@{prefix}-mask {
+            visibility: visible;
+        }
+        .@{prefix}-modal-content {
+            animation: modal-content-slide-up .5s ease forwards;
+            @keyframes modal-content-slide-up {
+                0% {
+                    top: 100%;
+                    opacity: 0;
+                }
+                100% {
+                    top: 50%;
+                    opacity: 1;
+                }
+            } 
+        }
+    }
+    &.close {  
+        .@{prefix}-mask {
+            visibility: hidden;
+        }
+        .@{prefix}-modal-content {  
+            animation: modal-content-slide-down .5s ease forwards;
+            @keyframes modal-content-slide-down {
+                0% {
+                    top: 50%;
+                    opacity: 1;
+                }
+                100% {
+                    top: 200%;
+                    opacity: 0;
+                }
+            } 
+        } 
+    }
+}

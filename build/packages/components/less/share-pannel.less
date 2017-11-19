@@ -1,0 +1,107 @@
+@import './base/mixin';
+
+.@{prefix}-share-pannel {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+
+    position: fixed;
+    background: #f4f2f5;
+    animation: share-pannel-slide-up .5s ease forwards;
+    @keyframes share-pannel-slide-up {
+        0% {
+            bottom: -150px;
+        }
+        100% {
+            bottom: 0;
+        }
+    }
+    h4 {
+        color: @colorMain;
+        position: relative;
+        padding: 14px 0 10px 20px;
+        border-top: 1px solid #dcdcdc;
+        .icon {
+            top: 0;
+            right: 0;
+            color: #dcdcdc;
+            font-size: 12px;
+            margin-right: 0;
+            position: absolute;
+            padding: 14px 14px;
+            display: inline-block;
+        }
+    }
+    ul {
+        width: 100%;
+        .float-clear();
+        li {
+            float: left;
+            width: 20%;
+            height: 125px;
+            color: @colorMain;
+            font-size: 12px;
+            text-align: center;
+            padding-top: 38px;
+            .icon {
+                display: block;
+                font-size: 25px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .@{prefix}-share-pannel-mask {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        p {
+            color: #fff;
+            font-size: 16px;
+            padding: 0 20px;
+            text-align: center;
+            top: 50px;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            position: fixed;
+            user-select: all;
+        }
+        .icon-close {
+            color: #fff;
+            bottom: 20px;
+            font-size: 20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            position: absolute;
+            z-index: 2;
+        }
+        .icon-wanjiantou {
+            top: 35px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            position: absolute;
+            z-index: 2;
+        }
+        .zui-qr-code {
+            top: 33%;
+            left: 0;
+            right: 0;
+            width: 219px;
+            display: block;
+            margin: 0 auto;
+            position: fixed;
+            z-index: 2;
+        }
+    }
+
+}

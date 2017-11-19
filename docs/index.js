@@ -13,10 +13,11 @@ ReactDOM.render(
 
 
             <Route exact path='/tag' component={asyncComponent(() => import('./pages/tag'))}/>
+            <Route exact path='/icon' component={asyncComponent(() => import('./pages/icon'))}/>
             <Route exact path='/card' component={asyncComponent(() => import('./pages/card'))}/>
+            <Route exact path='/label' component={asyncComponent(() => import('./pages/label'))}/>
             <Route exact path='/avatar' component={asyncComponent(() => import('./pages/avatar'))}/>
-            <Route exact path='/bookmark' component={asyncComponent(() => import('./pages/avatar'))}/>
-            <Route exact path='/notice-bar' component={asyncComponent(() => import('./pages/avatar'))}/>
+            <Route exact path='/notice-bar' component={asyncComponent(() => import('./pages/notice-bar'))}/>
 
 
             <Route exact path='/checkbox' component={asyncComponent(() => import('./pages/checkbox'))}/>

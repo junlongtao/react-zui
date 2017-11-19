@@ -3,19 +3,27 @@ import React from 'react'
 import {Page, List, Icon, TabBar} from '../../../build/packages'
 
 export default class IndexPage extends React.Component {
+
+    state = {
+        active: 0
+    }
+
     render = () => {
+        const active = this.state.active
         return <Page title="标签栏" className="tab-bar-page">
-            <TabBar>
-                <TabBar.Item>
+            <TabBar onChange={index=>{
+                this.setState({active: index})
+            }}>
+                <TabBar.Item active={active==0}>
                     <Icon type="home"/>首页
                 </TabBar.Item>
-                <TabBar.Item>
+                <TabBar.Item active={active==1}>
                     <Icon type="haoyou"/>社区
                 </TabBar.Item>
-                <TabBar.Item>
+                <TabBar.Item active={active==2}>
                     <Icon type="xiaoxi"/>消息
                 </TabBar.Item>
-                <TabBar.Item>
+                <TabBar.Item active={active==3}>
                     <Icon type="wode"/>我的
                 </TabBar.Item>
             </TabBar>
@@ -29,18 +37,26 @@ export default class IndexPage extends React.Component {
 import React from 'react'
 import {TabBar} from "react-zui"
 export default class TabBarExample extends React.Component {
+    
+    state = {
+        active: 0
+    }
+
     render = () => {
-        return <TabBar>
-            <TabBar.Item>
+        const active = this.state.active 
+        return <TabBar onChange={index=>{
+            this.setState({active: index})
+        }}>
+            <TabBar.Item active={active==0}>
                 <Icon type="home"/>首页
             </TabBar.Item>
-            <TabBar.Item>
+            <TabBar.Item active={active==1}>
                 <Icon type="haoyou"/>社区
             </TabBar.Item>
-            <TabBar.Item>
+            <TabBar.Item active={active==2}>
                 <Icon type="xiaoxi"/>消息
             </TabBar.Item>
-            <TabBar.Item>
+            <TabBar.Item active={active==3}>
                 <Icon type="wode"/>我的
             </TabBar.Item>
         </TabBar>
@@ -55,7 +71,7 @@ export default class TabBarExample extends React.Component {
                     属性
                 </List.Header>
                 <List.Item  extra="当前激活的tab index">
-                    activeIndex
+                    active
                 </List.Item>
             </List>
 
@@ -63,7 +79,7 @@ export default class TabBarExample extends React.Component {
                 <List.Header>
                     事件
                 </List.Header>
-                <List.Item extra="activeIndex发生改变时的回调事件">
+                <List.Item extra="active index发生改变时的回调事件">
                     onChange(index)
                 </List.Item>
             </List>

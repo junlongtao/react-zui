@@ -14,7 +14,7 @@ module.exports = {
     output: {
         path: __dirname + '/build/docs',
         filename: '[name].min.js',
-        chunkFilename: '[id].[chunkHash].min.js',
+        chunkFilename: '[name].min.js?[chunkHash]',
         publicPath: './'
     },
 
@@ -41,7 +41,9 @@ module.exports = {
             hash: true
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendors', filename: 'vendors.min.js'}),
+            name: 'vendors', 
+            filename: 'vendors.min.js'
+        }),
         new webpack.DefinePlugin({
             ENV: `'dev'`,
             'process.env.NODE_ENV': '"dev"'

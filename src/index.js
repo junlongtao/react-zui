@@ -34,7 +34,7 @@ import Tabs from './components/Tabs'
 import Tag from './components/Tag'
 import TagPicker from './components/TagPicker'
 import TextTip from './components/TextTip'
-import TopNotice from './components/TopNotice'
+import NoticeBar from './components/NoticeBar'
 import SearchBar from './components/SearchBar'
 
 export {
@@ -74,6 +74,6 @@ export {
     Tag,
     TagPicker,
     TextTip,
-    TopNotice,
+    NoticeBar,
     SearchBar,
 }

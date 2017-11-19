@@ -3,7 +3,7 @@
   "scripts": {
     "babel": "rm -rf ./build/packages && NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files --watch",
     "build": "rm -rf ./build/packages && webpack --progress --config ./webpack.config.js",
-    "build-docs": "rm -rf ./docs/build && webpack --progress --config ./webpack.config.dev.js --watch"
+    "build-docs": "rm -rf ./docs/build && webpack --progress --config ./webpack.config.docs.js --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
