@@ -10,23 +10,22 @@ import Button from './Button'
 import Switch from './Switch'
 import TagPicker from './TagPicker'
 import CityPicker from './CityPicker'
+import DatePicker from './DatePicker'
 import MonthPicker from './MonthPicker'
-import InfiniteDatePicker from './InfiniteDatePicker'
-import Util from '../Util'
 
 class Header extends React.Component {
     static defaultProps = {
         className: '',
-        prefixCls: 'weui-list'
+        prefix: 'zui-list'
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-header "+this.props.className} onClick={this.props.onClick}>
-            <div className={prefixCls+"-content"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-header "+this.props.className} onClick={this.props.onClick}>
+            <div className={prefix+"-content"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-extra"}>
+            <div className={prefix+"-extra"}>
                 {this.props.extra}
                 <Icon type={this.props.arrow}/>
             </div>
@@ -37,16 +36,16 @@ class Header extends React.Component {
 class Footer extends React.Component {
     static defaultProps = {
         className: '',
-        prefixCls: 'weui-list'
+        prefix: 'zui-list'
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-footer "+this.props.className} onClick={this.props.onClick}>
-            <div className={prefixCls+"-content"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-footer "+this.props.className} onClick={this.props.onClick}>
+            <div className={prefix+"-content"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-extra"}>
+            <div className={prefix+"-extra"}>
                 {this.props.extra}
                 <Icon type={this.props.arrow}/>
             </div>
@@ -61,26 +60,41 @@ class ListItem extends React.Component {
         arrow: '',
         className: '',
         onClick: null,
-        prefixCls: 'weui-list'
+        prefix: 'zui-list'
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
+        const prefix = this.props.prefix
         const checkCls = this.props.arrow === 'check' ? 'active ' : ' '
-        return <div className={prefixCls+"-item "+checkCls+this.props.className} style={this.props.style} onClick={()=>{
+        return <div className={prefix+"-item "+checkCls+this.props.className} style={this.props.style} onClick={()=>{
             if(this.props.href){
-                Util.slideIn(this.props.href)
+                location.assign(this.props.href)
                 return false
             }
             this.props.onClick && this.props.onClick()
         }}>
-            <div className={prefixCls+"-content"}>
+            <div className={prefix+"-content"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-extra"}>
+            <div className={prefix+"-extra"}>
                 {this.props.extra}
                 <Icon type={this.props.arrow}/>
             </div>
+        </div>
+    }
+}
+
+class PreItem extends React.Component {
+    static defaultProps = {
+        prefix: 'zui-list'
+    }
+
+    render = () => {
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-pre-item"}>
+            <pre className={prefix+'-content'}>
+                {this.props.children}
+            </pre>
         </div>
     }
 }
@@ -90,17 +104,27 @@ class SwitchItem extends React.Component {
         value: 1,
         onClick: null,
         onChange: null,
-        prefixCls: 'weui-list',
+        prefix: 'zui-list',
+    }
+
+    state = {
+        value: ''
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value
+        })
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+'-switch-item'}>
-            <div className={prefixCls+"-content"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+'-switch-item'}>
+            <div className={prefix+"-content"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-extra"}>
-                <Switch value={this.props.value} onChange={(value)=>{
+            <div className={prefix+"-extra"}>
+                <Switch value={this.state.value} onChange={(value)=>{
                     this.props.onChange && this.props.onChange(value)
                 }}/>
             </div>
@@ -110,26 +134,36 @@ class SwitchItem extends React.Component {
 
 class FileItem extends React.Component {
     static defaultProps = {
-        prefixCls: 'weui-list',
-        value: '请选择',
+        value: '',
+        prefix: 'zui-list',
+    }
+
+    state = {
+        value: ''
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value
+        })
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+"-file-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-file-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
+            <div className={prefix+"-control"}>
                 <div>
                     <input type="file" onChange={(e)=>{
                         if (e.target.files[0].size > (8 * 1024 * 1024)) {
-                            Util.errorTip('最大支持上传8MB大小的文件')
+                            alert('最大支持上传8MB大小的文件')
                             return false
                         }
                         this.props.onChange(e.target.files[0])
                     }}/>
-                    {this.props.value == '请选择' ? <span>请选择</span> : <img src={this.props.value}/>}
+                    {this.state.value? <img src={this.state.value}/> : <span>请选择</span>}
                     <Icon type="horizontal"/>
                 </div>
             </div>
@@ -139,21 +173,37 @@ class FileItem extends React.Component {
 
 class InputItem extends React.Component {
     static defaultProps = {
-        prefixCls: 'weui-list',
-        placeholder: '请输入',
+        value: '',
         type: 'text',
+        prefix: 'zui-list',
+        placeholder: '请输入',
+        onChange: () => {},
+        onClick: () => {}, 
+        onBlur: () => {},
+    }
+
+    state = {
         value: ''
     }
 
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value
+        })
+    }
+
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item " +prefixCls+"-input-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item " +prefix+"-input-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
-                <input type={this.props.type} value={this.props.value} onChange={(e)=>{
+            <div className={prefix+"-control"}>
+                <input type={this.props.type} value={this.state.value} onChange={(e)=>{
+                    this.setState({value: e.target.value})
                     this.props.onChange(e.target.value)
+                }} onClick={this.props.onClick} onBlur={e => {
+                    this.props.onBlur(e.target.value)
                 }} placeholder={this.props.placeholder}/>
             </div>
         </div>
@@ -165,14 +215,23 @@ class CodeInputItem extends React.Component {
         value: '',
         mobile: '',
         type: 'text',
-        prefixCls: 'weui-list',
+        prefix: 'zui-list',
         placeholder: '请输入验证码',
+        onChange: () => {
+        },
         onButtonClick: () => {
         }
     }
 
     state = {
+        value: '',
         countdown: 30
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value
+        })
     }
 
     onButtonClick = ()=> {
@@ -197,17 +256,18 @@ class CodeInputItem extends React.Component {
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
+        const prefix = this.props.prefix
         const buttonCls = this.renderButtonCls()
-        return <div className={prefixCls+"-item " +prefixCls+"-code-input-item"}>
-            <div className={prefixCls+"-label"}>
+        return <div className={prefix+"-item " +prefix+"-code-input-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
-                <input type={this.props.type} value={this.props.value} onChange={(e)=>{
+            <div className={prefix+"-control"}>
+                <input type={this.props.type} value={this.state.value} onChange={(e)=>{
                     this.props.onChange(e.target.value)
+                    this.setState({value: e.target.value})
                 }} placeholder={this.props.placeholder}/>
-                <Button className={prefixCls+"-code-button "+buttonCls} onClick={this.onButtonClick}>
+                <Button className={prefix+"-code-button "+buttonCls} onClick={this.onButtonClick}>
                     {this.state.countdown === 30 ? '获取验证码' : (this.state.countdown + 's')}
                 </Button>
             </div>
@@ -218,38 +278,42 @@ class CodeInputItem extends React.Component {
 class TextAreaItem extends React.Component {
     static defaultProps = {
         rows: 5,
-        count: 1000,
         value: '',
+        count: 1000,
+        prefix: 'zui-list',
+        textAlign: 'left',
         placeholder: '请输入',
-        prefixCls: 'weui-list',
+        onChange: () => {
+        },
     }
 
-    componentDidMount = () => {
-        const value = localStorage.getItem(this.props.prefixCls + '-textarea-item-value')
-        value && this.props.onChange(value)
+    state = {
+        value: ''
     }
 
-    componentWillUnmount = () => {
-        localStorage.removeItem(this.props.prefixCls + '-textarea-item-value')
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value
+        })
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item " +prefixCls+"-textarea-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item " +prefix+"-textarea-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
-                <textarea ref="textarea" rows={this.props.rows} value={this.props.value} onChange={(e)=>{
-                    const textarea = this.refs.textarea
-                    textarea.style.height = textarea.scrollHeight + 'px'
-
+            <div className={prefix+"-control"}>
+                <textarea rows={this.props.rows} value={this.state.value} onChange={(e)=>{  
                     const value = e.target.value.substr(0, this.props.count)
-                    localStorage.setItem(this.props.prefixCls+'-textarea-item-value', value)
+                    localStorage.setItem(this.props.prefix+'-textarea-item-value', value)
+                    this.setState({value: value})
                     this.props.onChange(value)
+                }} style={{
+                    textAlign: this.props.textAlign
                 }} placeholder={this.props.placeholder}/>
-                <p className={prefixCls+'-textarea-counter'}>
-                    {this.props.value.length} / {this.props.count}
+                <p className={prefix+'-textarea-counter'}>
+                    {this.state.value.length} / {this.props.count}
                 </p>
             </div>
         </div>
@@ -259,16 +323,16 @@ class TextAreaItem extends React.Component {
 class SelectItem extends React.Component {
     static defaultProps = {
         data: [],
-        prefixCls: 'weui-list'
+        prefix: 'zui-list'
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item " +prefixCls+"-select-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item " +prefix+"-select-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
+            <div className={prefix+"-control"}>
                 <select onChange={()=>{
                     this.props.onChange
                 }}>
@@ -292,7 +356,7 @@ class SelectItem extends React.Component {
 class DoubleSelectItem extends React.Component {
     static defaultProps = {
         data: [],
-        prefixCls: 'weui-list',
+        prefix: 'zui-list',
         onMaxChange: ()=> {
 
         },
@@ -301,20 +365,28 @@ class DoubleSelectItem extends React.Component {
         }
     }
 
+    state = {
+        value: ''
+    }
+
+    componentWillReceiveProps = nextProps => {
+        this.setState({value: nextProps.value})
+    }
+
     render = () => {
-        const prefixCls = this.props.prefixCls
-        const minValue = (this.props.value || '~').split('~')[0]
-        const maxValue = (this.props.value || '~').split('~')[1]
-        return <div className={prefixCls+"-item " +prefixCls+"-double-select-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        const minValue = (this.state.value || '~').split('~')[0]
+        const maxValue = (this.state.value || '~').split('~')[1]
+        return <div className={prefix+"-item " +prefix+"-double-select-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
+            <div className={prefix+"-control"}>
                 <Icon type="right"/>
                 <select className="max-select" value={maxValue} onChange={(e)=>{
                     this.props.onMaxChange(e.target.value)
 
-                    const value = this.props.value||'~'
+                    const value = this.state.value||'~'
                     this.props.onChange(value.split('~')[0]+'~'+e.target.value)
                 }}>
                     <option value=''>请选择</option>
@@ -326,7 +398,7 @@ class DoubleSelectItem extends React.Component {
                 <select className="min-select" value={minValue} onChange={(e)=>{
                     this.props.onMinChange(e.target.value)
 
-                    const value = this.props.value||'~'
+                    const value = this.state.value||'~'
                     this.props.onChange(e.target.value+'~'+value.split('~')[1])
                 }}>
                     <option value=''>请选择</option>
@@ -341,69 +413,82 @@ class DoubleSelectItem extends React.Component {
 
 class PickerItem extends React.Component {
     static defaultProps = {
-        prefixCls: 'weui-list',
-        value: '请选择',
+        data: [],
         name: '请选择',
-        data: []
+        value: '',
+        prefix: 'zui-list',
+        onChange: () => {}
     }
 
     state = {
-        pickerStatus: ''
+        value: '',
+        status: ''
     }
 
-    onPickerBackClick = () => {
+    componentWillReceiveProps = (nextProps) => {
         this.setState({
-            pickerStatus: 'close'
+            value: nextProps.value
         })
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+"-picker-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-picker-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
+            <div className={prefix+"-control"}>
                 <div onClick={()=>{
-                    this.setState({
-                        pickerStatus: 'open'
-                    })
+                    this.setState({status: 'open'})
                 }}>
-                    {this.props.value || '请选择'}
+                    {this.state.value || '请选择'}
                     <Icon type="horizontal"/>
                 </div>
             </div>
             <Picker name={this.props.name}
                     data={this.props.data}
-                    value={this.props.value}
-                    status={this.state.pickerStatus}
-                    onChange={this.props.onChange}
-                    onBackClick={this.onPickerBackClick}/>
+                    value={this.state.value}
+                    status={this.state.status}
+                    onBackClick={()=>{
+                        this.setState({status: 'close'})
+                    }}
+                    onChange={(value)=>{
+                        this.props.onChange(value)
+                        this.setState({value: value})
+                    }}/>
         </div>
     }
 }
 
 class RadioItem extends React.Component {
     static defaultProps = {
-        prefixCls: 'weui-list',
+        data: [],
         value: '',
-        data: []
+        prefix: 'zui-list',
+        onChange: () => {}
+    }
+
+    state = {
+        value: ''
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value||this.props.data[0]
+        })
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+"-radio-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-radio-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
-                <Radio onChange={this.props.onChange} value={this.props.value}>
-                    {this.props.data.map((item, key)=> {
-                        return <Radio.Item key={key} value={item} active={this.props.value===item?true: false}>
-                            {item}
-                        </Radio.Item>
-                    })}
-                </Radio>
+            <div className={prefix+"-control"}>
+                <Radio data={this.props.data} value={this.state.value} onChange={(value)=>{
+                    this.setState({value: value})
+                    this.props.onChange(value)
+                }}/>
             </div>
         </div>
     }
@@ -411,42 +496,47 @@ class RadioItem extends React.Component {
 
 class CityPickerItem extends React.Component {
     static defaultProps = {
-        prefixCls: 'weui-list',
         value: '请选择',
-        name: '选择城市'
+        name: '选择城市',
+        prefix: 'zui-list',
+        onChange: () => {}
     }
 
     state = {
-        pickerStatus: ''
+        status: '',
+        value: ''
     }
 
-    onPickerBackClick = () => {
+    componentWillReceiveProps = (nextProps) => {
         this.setState({
-            pickerStatus: 'close'
+            value: nextProps.value
         })
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+"-picker-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-picker-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
+            <div className={prefix+"-control"}>
                 <div onClick={()=>{
-                    this.setState({
-                        pickerStatus: 'open'
-                    })
+                    this.setState({status: 'open'})
                 }}>
-                    {this.props.value || '请选择'}
+                    {this.state.value || '请选择'}
                     <Icon type="horizontal"/>
                 </div>
             </div>
             <CityPicker name={this.props.name}
-                        value={this.props.value}
-                        status={this.state.pickerStatus}
-                        onChange={this.props.onChange}
-                        onBackClick={this.onPickerBackClick}/>
+                        value={this.state.value}
+                        status={this.state.status}
+                        onChange={(value)=>{
+                            this.setState({value: value})
+                            this.props.onChange(value)
+                        }}
+                        onBackClick={()=>{
+                            this.setState({status: 'close'})
+                        }}/>
         </div>
     }
 }
@@ -455,23 +545,30 @@ class TagPickerItem extends React.Component {
     static defaultProps = {
         value: '',
         name: '选择标签',
-        prefixCls: 'weui-list',
+        prefix: 'zui-list',
     }
 
     state = {
-        pickerStatus: ''
+        value: '', 
+        status: ''
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value
+        })
     }
 
     onPickerBackClick = () => {
         this.setState({
-            pickerStatus: 'close'
+            status: 'close'
         })
     }
 
     renderTags = () => {
         let value = {}
         try {
-            value = JSON.parse(this.props.value)
+            value = JSON.parse(this.state.value)
         } catch (e) {
             value = {}
         }
@@ -487,14 +584,14 @@ class TagPickerItem extends React.Component {
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+"-tag-picker-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-tag-picker-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
+            <div className={prefix+"-control"}>
                 <div onClick={()=>{
-                    this.setState({pickerStatus: 'open'})
+                    this.setState({status: 'open'})
                 }}>
                     {this.renderTags()}
                     <Icon type="horizontal"/>
@@ -502,8 +599,8 @@ class TagPickerItem extends React.Component {
             </div>
             <TagPicker name={this.props.name}
                        data={this.props.data}
-                       value={this.props.value}
-                       status={this.state.pickerStatus}
+                       value={this.state.value}
+                       status={this.state.status}
                        onChange={this.props.onChange}
                        onBackClick={this.onPickerBackClick}/>
         </div>
@@ -514,35 +611,42 @@ class MonthPickerItem extends React.Component {
     static defaultProps = {
         value: '',
         name: '选择日期',
-        prefixCls: 'weui-list',
+        prefix: 'zui-list',
+        onChange: () => {}
     }
 
     state = {
-        pickerStatus: ''
+        status: '',
+        value: ''
     }
 
-    onPickerBackClick = () => {
+    componentWillReceiveProps = (nextProps) => {
         this.setState({
-            pickerStatus: 'close'
+            value: nextProps.value
         })
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+"-tag-picker-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-tag-picker-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"}>
+            <div className={prefix+"-control"}>
                 <div onClick={()=>{
-                    this.setState({pickerStatus: 'open'})
+                    this.setState({status: 'open'})
                 }}>
-                    {this.props.value || '请选择'}
+                    {this.state.value || '请选择'}
                     <Icon type="horizontal"/>
                 </div>
             </div>
-            <MonthPicker value={this.props.value} status={this.state.pickerStatus}
-                         onChange={this.props.onChange} onBackClick={this.onPickerBackClick}/>
+            <MonthPicker value={this.state.value} status={this.state.status}
+                         onChange={(value)=>{
+                            this.setState({value: value})
+                            this.props.onChange(value)
+                         }} onBackClick={()=>{
+                            this.setState({status: 'close'})
+                         }}/>
         </div>
     }
 }
@@ -551,7 +655,7 @@ class DatePickerItem extends React.Component {
     static defaultProps = {
         value: '',
         name: '选择日期',
-        prefixCls: 'weui-list',
+        prefix: 'zui-list',
     }
 
     state = {
@@ -559,27 +663,23 @@ class DatePickerItem extends React.Component {
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+"-date-picker-item"}>
-            <div className={prefixCls+"-label"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-date-picker-item"}>
+            <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-control"} onClick={()=>{
+            <div className={prefix+"-control"} onClick={()=>{
                 this.setState({datePickerVisible: true})
             }}>
                 <div>
-                    {this.props.value || '请选择'}
+                    {this.state.value || '请选择'}
                     <Icon type="horizontal"/>
                 </div>
             </div>
-            <InfiniteDatePicker visible={this.state.datePickerVisible} onClose={()=>{
-                this.setState({
-                    datePickerVisible: false
-                })
-            }} selected={new Date(this.props.value)} onChange={(val)=>{
-                this.setState({
-                    datePickerVisible: false
-                })
+            <DatePickerItem visible={this.state.datePickerVisible} onBackClick={()=>{
+                this.setState({datePickerVisible: false})
+            }} value={this.state.value} onChange={(val)=>{
+                this.setState({datePickerVisible: false})
                 this.props.onChange(val)
             }}/>
         </div>
@@ -590,17 +690,31 @@ class RaterItem extends React.Component {
 
     static defaultProps = {
         value: '',
-        prefixCls: 'weui-list',
+        prefix: 'zui-list',
+        onChange: () => {}
+    }
+
+    state = {
+        value: ''
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value
+        })
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+"-item "+prefixCls+"-rater-item"}>
-            <div className={prefixCls+"-content"}>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-rater-item"}>
+            <div className={prefix+"-content"}>
                 {this.props.children}
             </div>
-            <div className={prefixCls+"-extra"}>
-                <Rater value={this.props.value} onChange={this.props.onChange}/>
+            <div className={prefix+"-extra"}>
+                <Rater value={this.state.value} onChange={(value)=>{
+                    this.setState({value: value})
+                    this.props.onChange(value)
+                }}/>
             </div>
         </div>
     }
@@ -610,11 +724,11 @@ class List extends React.Component {
     static defaultProps = {
         style: {},
         className: '',
-        prefixCls: 'weui',
+        prefix: 'zui',
     }
 
     render = () => {
-        return <div className={this.props.prefixCls+"-list "+this.props.className} style={this.props.style}>
+        return <div className={this.props.prefix+"-list "+this.props.className} style={this.props.style}>
             {this.props.children}
         </div>
     }
@@ -623,6 +737,7 @@ class List extends React.Component {
 List.Header = Header
 List.Footer = Footer
 List.Item = ListItem
+List.PreItem = PreItem
 List.FileItem = FileItem
 List.InputItem = InputItem
 List.CodeInputItem = CodeInputItem

@@ -1,18 +1,22 @@
 /**
  * iconfont组件
  */
-'use strict'
-
+'use strict' 
 import React from 'react'
-
+import './less/iconfont.css'
 export default class Icon extends React.Component {
-    render = () => {
-        const cls = 'weui-icon icon iconfont icon-'+this.props.type+' '+this.props.className
-        let style = this.props.style || {}
-        if (this.props.type == 'blank') {
-            style['margin-right'] = '22px'
+
+    static defaultProps = {
+        type: '',
+        className: '',
+        prefix: 'zui',
+        onClick: () => {
         }
-        return <i id={this.props.id} className={cls} style={style}
-            onClick={this.props.onClick} onMouseOver={this.props.onMouseOver}/>
+    }
+
+    render = () => {
+        const prefix = this.props.prefix
+        return <i className={prefix+'-icon iconfont icon-'+this.props.type+' '+this.props.className}
+                  onClick={this.props.onClick}></i>
     }
 }

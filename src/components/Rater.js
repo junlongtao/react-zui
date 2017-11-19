@@ -9,9 +9,10 @@ import Icon from './Icon'
 export default class Rater extends React.Component {
 
     static defaultProps = {
-        value: 0,
         max: 5,
-        static: false
+        value: 0,
+        static: false,
+        prefix: 'zui'
     }
 
     onChange = (value) => {
@@ -51,7 +52,8 @@ export default class Rater extends React.Component {
     }
 
     render = () => {
-        return <div className="weui_rater clear">
+        const prefix = this.props.prefix
+        return <div className={prefix+"-rater clear"}>
             <div className={"star left "+(this.props.value>0?'active':'')} onClick={this.onFirstClick}
                  onMouseEnter={()=>{
                     this.onChange(1)

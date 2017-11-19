@@ -1,12 +1,9 @@
-.weui_checkbox {
-  padding:10px;
-  display:inline-block;
-  img {
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-    position: relative;
-    top: 3px;
-    left: 5px;
-  }
+@import './base/mixin';
+
+.@{prefix}-checkbox {
+    color: #fff;
+    border: 1px solid @colorMain;
+    .@{prefix}-icon {
+        font-size: 14px;
+    }
 }

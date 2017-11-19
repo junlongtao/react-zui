@@ -1,38 +1,23 @@
-.weui_tabs {
-    position: relative;
-    .tabs_nav{
-        background: #fff;
-        border-bottom: 1px solid #dcdcdc;
-        li{
-            text-align: center;
-            font-size: 14px;
-            color: #999;
+@import './base/mixin';
+ 
+.@{prefix}-tabs {
+    background: #fff;
+    .@{prefix}-tabs-nav {
+        .display-box();
+        .@{prefix}-tabs-nav-item {
+            .box-flex();
+            .cursor();
+            font-size: 12px;
             line-height: 40px;
-            &.active{
-                color: #6ac2b6;
+            text-align: center;
+            border-bottom: 1px solid #dcdcdc;
+            &.active {
+                color: @colorMain;
+                border-bottom: 1px solid @colorMain;
             }
         }
     }
-    .active_line {
-        transition: left .5s ease;
-        position: absolute;
-        background: #6ac2b6;
-        height: 2px;
-        top: 39px;
-        left: 0;
-    }
-    .tab_pane {
-        //-webkit-animation: slide_in .5s ease; /* Safari and Chrome */
-        //@-webkit-keyframes slide_in /* Safari and Chrome */
-        //{
-        //    0% {
-        //        opacity: 0;
-        //        -webkit-transform: translate(100px, 0);
-        //    }
-        //    100% {
-        //        opacity: 1;
-        //        -webkit-transform: translate(0, 0);
-        //    }
-        //}
+    .@{prefix}-tabs-content {
+
     }
 }

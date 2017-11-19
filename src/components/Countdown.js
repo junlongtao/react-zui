@@ -4,11 +4,18 @@
 "use strict"
 import './less/countdown.less'
 import React from 'react'
-import Util from '../Util'
+import {preZero} from '../util'
+
 export default class Countdown extends React.Component {
+
+    static defaultProps = {
+        prefix: 'zui'
+    }
+
     state = {
         leftsec: 0
     }
+
     componentDidMount = () => {
         Util.setInterval(()=> {
             let current = (new Date()).getTime()
@@ -19,7 +26,8 @@ export default class Countdown extends React.Component {
             });
         }, 1000);
     }
-    render() {
+
+    render = () => {
         let day, hour, minute, second
         const leftsecond = this.state.leftsec
         if (leftsecond < 0) {
@@ -30,10 +38,10 @@ export default class Countdown extends React.Component {
             minute = Math.floor((leftsecond - day * 24 * 60 * 60 - hour * 3600) / 60);
             second = Math.floor(leftsecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60);
         }
-        return day > 0 ? <span className="weui_countdown">
-            {Util.preZero(day)}天{Util.preZero(hour)}小时
-        </span> : <span className="weui_countdown">
-            {Util.preZero(hour)}:{Util.preZero(minute)}:{Util.preZero(second)}
+
+        const prefix = this.props.prefix
+        return <span className={prefix+"countdown "+this.props.className}>
+            {preZero(day)}天 {preZero(hour)}:{Util.preZero(minute)}:{Util.preZero(second)}
         </span>
     }
 }

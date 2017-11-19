@@ -3,18 +3,22 @@
  */
 "use strict"
 
-import './less/text_tip.less'
+import './less/text-tip.less'
 import React from 'react'
 import Icon from './Icon'
-import Link from './Link'
 
 export default class TextTip extends React.Component {
+
+    static defaultProps = {
+        prefix: 'zui'
+    }
+
     state = {
         visible: false
     }
 
     renderContent = () => {
-        return this.state.visible?<div className="content">
+        return this.state.visible ? <div className="content">
             <div className="title">
                 {this.props.title}
                 <Icon type="close" onClick={()=>{
@@ -22,15 +26,16 @@ export default class TextTip extends React.Component {
                 }}/>
             </div>
             <div className="details">{this.props.children}</div>
-        </div>:null
+        </div> : null
     }
 
     render = () => {
-        return <Link href="javascript: void(0)" className="weui_text_tip">
+        const prefix = this.props.prefix
+        return <a href="javascript: void(0)" className={prefix+"text-tip"}>
             <span className="clear" onClick={()=>{
                 this.setState({visible: true})
             }}>{this.props.title}</span>
             {this.renderContent()}
-        </Link>
+        </a>
     }
 }

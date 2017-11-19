@@ -5,20 +5,44 @@
 
 import './less/avatar.less'
 import React from 'react'
-//import defaultAvatar from './avatar_default.png'
+import AvatarMale from './img/avatar-male.svg'
+import AvatarFemale from './img/avatar-female.svg'
+import AvatarDefault from './img/avatar-default.png'
 
 export default class Avatar extends React.Component {
+
+    static defaultProps = {
+        sex: '',
+        style: {},
+        prefix: 'zui',
+        width: '70px',
+        className: '',
+        src: AvatarDefault,
+        onClick: () => {
+        }
+    }
+
+    renderSrc = () => {
+        if(this.props.src){
+            return this.props.src
+        }
+        if(this.props.sex==='male'){
+            return AvatarMale
+        }
+        if(this.props.sex==='female'){
+            return AvatarFemale
+        }
+
+        return AvatarDefault
+    }
+
     render = () => {
-        let src = this.props.src || defaultAvatar
-        if (src == 'http://zcrun.com/images/head.png') {
-            src = defaultAvatar
-        }
-        const width = this.props.width || '70px'
-        const style = {
-            width: width,
-            height: width
-        }
-        return <img className={"weui_avatar "+this.props.className} style={style}
-                    onClick={this.props.onClick} src={src}/>
+        const prefix = this.props.prefix 
+        return <img src={this.renderSrc()} 
+                    style={this.props.style}
+                    width={this.props.width} 
+                    height={this.props.width||this.props.height} 
+                    className={prefix+"-avatar "+this.props.className}
+                    onClick={this.props.onClick} />
     }
 }

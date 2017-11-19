@@ -6,13 +6,12 @@
 import './less/tag-picker.less'
 import React from 'react'
 import Icon from './Icon'
-import Util from '../Util'
 
 export default class TagPicker extends React.Component {
 
     static defaultProps = {
         status: '',
-        prefix: 'weui',
+        prefix: 'zui',
         name: '请选择标签',
         multiCategory: false,
         data: {

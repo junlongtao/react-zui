@@ -1,57 +1,50 @@
-@import '../../style/mixinx';
+@import './base/mixin';
 
-@prefixCls: weui-city-picker;
-
-.@{prefixCls} {
-    width: 100%;
-    max-width: 480px;
-    height: 100%;
-    overflow: hidden;
-    position: fixed;
+.@{prefix}-city-picker {
+    width: 100%; 
+    height: 100%; 
     top: 0;
-    left: 1000px;
+    left: 0;
     right: 0;
-    margin: 0 auto;
-    background: #fff;
     z-index: 5;
     opacity: 0;
-    &.close {
+    margin: 0 auto;
+    position: fixed;
+    background: #fff;
+    transform: translateX(600px);
+    &.close { 
         animation: picker-close 1s ease forwards;
         @keyframes picker-close {
             0% {
-                left: 0;
-                opacity: 1;
+                opacity: 1; 
+                transform: translateX(0);
             }
             100% {
-                left: 1000px;
-                opacity: 0;
-            }
-        }
-        .@{prefixCls}-letter-list {
-            opacity: 0;
+                opacity: 0; 
+                transform: translateX(600px);
+            } 
         }
     }
-    &.open {
+    &.open { 
         animation: picker-open .4s ease forwards;
         @keyframes picker-open {
             0% {
-                left: 1000px;
-                opacity: 0;
-            }
+                opacity: 0;  
+                transform: translateX(600px);
+            } 
             100% {
-                left: 0;
                 opacity: 1;
+                transform: translateX(0);
             }
-        }
-        .@{prefixCls}-letter-list {
-            opacity: 1;
         }
     }
-    .@{prefixCls}-name {
-        text-align: center;
+    .@{prefix}-city-picker-name {
+        color: #fff;
         font-size: 16px;
         line-height: 40px;
-        .icon {
+        text-align: center;
+        background: @colorMain;
+        .@{prefix}-icon {
             top: 0;
             left: -10px;
             font-size: 14px;
@@ -59,18 +52,17 @@
             padding: 0 20px;
         }
     }
-    .@{prefixCls}-list{
+    .@{prefix}-city-picker-city-list {
         width: 100%;
         height: 100%;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        .@{prefixCls}-set {
-            .@{prefixCls}-first-word {
+        .overflow-scroll();
+        .@{prefix}-city-picker-city-set {
+            .@{prefix}-city-picker-city-letter {
                 background: #eee;
                 line-height: 40px;
                 padding: 0 10px;
             }
-            .@{prefixCls}-item {
+            .@{prefix}-city-picker-city-item {
                 border-bottom: 1px solid #eee;
                 font-size: 14px;
                 line-height: 39px;
@@ -79,11 +71,11 @@
                     border-bottom: none;
                     line-height: 40px;
                 }
-                &:active, &:hover{
+                &:active, &:hover {
                     background: #eee;
                     -webkit-tap-highlight-color: transparent;
                 }
-                .icon {
+                .@{prefix}-icon {
                     position: absolute;
                     right: 10px;
                     font-size: 14px;
@@ -92,13 +84,13 @@
             }
         }
     }
-    .@{prefixCls}-letter-list {
-        position: fixed;
+    .@{prefix}-city-picker-letter-list {
         top: 50%;
-        margin-top: -184px;
         left: 50%;
+        margin-top: -184px;
+        position: fixed;
         transition: opacity 1s ease;
-        .@{prefixCls}-letter-item {
+        .@{prefix}-city-picker-letter-item {
             padding: 0px 10px;
             font-size: 14px;
             letter-spacing: 0;

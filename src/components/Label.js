@@ -1,12 +1,11 @@
 'use strict'
 
 import './less/label.less'
-import React from 'react'
-import Util from '../Util'
+import React from 'react' 
 
 export default class Label extends React.Component {
     static defaultProps = {
-        prefix: 'weui',
+        prefix: 'zui',
         className: ''
     }
 

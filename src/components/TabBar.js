@@ -2,20 +2,19 @@
 
 import './less/tab-bar.less'
 import React from 'react'
-import Util from '../Util'
 
 class TabBarItem extends React.Component {
     static defaultProps = {
         active: false,
-        prefixCls: 'weui-tab-bar'
+        prefix: 'zui-tab-bar',
+        onClick: () => {
+        }
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
+        const prefix = this.props.prefix
         const active = this.props.active ? 'active' : ''
-        return <div className={prefixCls+'-item '+active} onClick={()=>{
-            Util.replace(this.props.url)
-        }}>
+        return <div className={prefix+'-item '+active} onClick={this.props.onClick}>
             {this.props.children}
         </div>
     }
@@ -23,13 +22,22 @@ class TabBarItem extends React.Component {
 
 class TabBar extends React.Component {
     static defaultProps = {
-        prefixCls: 'weui'
-    }
+        prefix: 'zui',
+        className: '',
+        onChange: ()=> {
+        }
+    } 
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+'-tab-bar'}>
-            {this.props.children}
+        const prefix = this.props.prefix
+        return <div className={prefix+'-tab-bar '+this.props.className} style={this.props.style}>
+            {this.props.children.map((item, key)=> { 
+                return <TabBarItem key={key} active={item.props.active} onClick={()=>{ 
+                    this.props.onChange(key)
+                }}>
+                    {item.props.children}
+                </TabBarItem>
+            })}
         </div>
     }
 }

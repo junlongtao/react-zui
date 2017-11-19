@@ -1,60 +1,29 @@
-.weui_card {
-    border: 1px solid #efefef;
-    border-radius: 5px;
-    background: #fff;
-    padding: 15px 12px;
-    margin-bottom: 10px;
+@import './base/mixin';
+
+.@{prefix}-card {
+    .cursor();
+    width: 100%;
+    background: #fff; 
+    margin: 0 0 10px 0;
     position: relative;
-    width:100%;
-    .wrap{
-        overflow: hidden;
-        max-height: 200px;
-        -webkit-transition: max-height .2s;
-        transition: max-height .2s;
-        >.triangle{
-            width: 0;
-            height: 0;
-            border-top: 12px solid #20b0cb;
-            border-right: 12px solid transparent;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .weui_card_title{
-            font-size: 14px;
-            line-height: 14px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #dcdcdc;
-        }
-        >.content{
-            padding-top:12px;
-        }
-        .arrow{
-            top: 50%;
-            right: 10px;
-            margin: -10px 0 0 0;
-            position: absolute;
-        }
+    .@{prefix}-card-header {
+        color: @colorMain;
+        font-size: 15px;
+        padding: 10px 0;
+        border-bottom: 1px solid #E6E6E6;
     }
-    .icon-shouqi, .icon-xiala{
+    .@{prefix}-card-content {
+        padding: 10px;
+        overflow: hidden;
+        position: relative; 
+        transition: max-height .2s;
+        -webkit-transition: max-height .2s;
+    }
+    .icon-shouqi, .icon-xiala {
         display: block;
+        margin: 0 auto;
+        padding: 5px 0;
         line-height: 16px;
         text-align: center;
-        margin: 10px auto 0 auto;
-    }
-}
-.weui_card.arrow{
-    padding-right: 30px;
-}
-.weui_card.uncollapse{
-    .wrap{
-        max-height: 10000px;
-    }
-    .icon-xiala, .icon-shouqi{
-        transform:rotate(180deg);
-        -ms-transform:rotate(180deg); 	/* IE 9 */
-        -moz-transform:rotate(180deg); 	/* Firefox */
-        -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-        -o-transform:rotate(180deg);
     }
 }

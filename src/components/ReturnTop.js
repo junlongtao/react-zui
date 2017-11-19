@@ -3,62 +3,51 @@
  */
 'use strict'
 
-import './less/return_top.less'
+import './less/return-top.less'
 import React from 'react'
 import Icon from './Icon'
-import Util from '../Util'
+import {onWindowScroll} from '../util'
 
 export default class ReturnTop extends React.Component {
 
-    state = {
-        cls: '',
-        visible: false
+    static defaultProps = {
+        prefix: 'zui', 
+        className: '',
     }
 
-    //滚动条在Y轴上的滚动距离
-    getScrollTop = () => {
-        var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
-        if (document.body) {
-            bodyScrollTop = document.body.scrollTop;
-        }
-        if (document.documentElement) {
-            documentScrollTop = document.documentElement.scrollTop;
-        }
-        scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
-        return scrollTop
-    }
+    state = { 
+        status: ''
+    } 
 
     componentDidMount = () => {
-        Util.onScrollBottom('setReturnTopVisible', () => {
-            const visible = this.getScrollTop() > 500 ? true : false
-            this.setState({
-                visible: visible
-            })
+        this.returnTopMounted = true
+        onWindowScroll(()=>{
+            this.returnTopMounted && this.setState({status: ''})
+        }, () => {  
+            this.returnTopMounted && this.setState({status: 'ready'})
         })
     }
 
-    onClick = () => {
-        this.setState({
-            cls: 'fly_out'
-        })
+    componentWillUnmount = () => {
+        this.returnTopMounted = false
+    }
 
-        const timer = setInterval(()=> {
-            const currentPosition = document.documentElement.scrollTop || document.body.scrollTop
-            window.scrollTo(0, currentPosition - 200)
-        }, 1)
-        setTimeout(()=> {
-            window.scrollTo(0, 0)
-            clearInterval(timer)
-            this.setState({
-                visible: false,
-                cls: ''
-            })
-        }, 1000)
+    onClick = () => { 
+        window.returnTopInterval = setInterval(()=> { 
+            const currentPosition = document.documentElement.scrollTop || document.body.scrollTop  
+            window.scrollTo(0, currentPosition-100)
+            if(currentPosition-100<=0){
+                clearInterval(window.returnTopInterval)
+            }
+        }, 1) 
+        this.setState({status: 'fly-out'})
     }
 
     render = () => {
-        return <div id="return_top" className={"weui_return_top cursor "+this.state.cls}
-                    style={{display: this.state.visible?'block':'none'}} onClick={this.onClick}>
+        const prefix = this.props.prefix  
+        const cls = this.props.className
+        const status = this.state.status
+        return <div className={prefix+"-return-top "+cls+' '+status} onClick={this.onClick}>
             <Icon type="rocket"/>
         </div>
     }

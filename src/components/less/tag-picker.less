@@ -1,43 +1,41 @@
-@import '../../style/mixinx';
+@import './base/mixin';
 
-@prefix: weui;
-
-.@{prefix}-tag-picker{
+.@{prefix}-tag-picker {
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    position: fixed;
+    height: 100%; 
     top: 0;
-    left: 1000px;
+    left: 0;
     right: 0;
-    margin: 0 auto;
-    max-width: 480px;
-    background: #fff;
     z-index: 5;
     opacity: 0;
-    &.close {
+    margin: 0 auto;
+    position: fixed; 
+    background: #fff;
+    transform: translateX(600px);
+    .overflow-scroll();
+    &.close { 
         animation: picker-close 1s ease forwards;
         @keyframes picker-close {
             0% {
-                left: 0;
-                opacity: 1;
+                opacity: 1; 
+                transform: translateX(0);
             }
             100% {
-                left: 1000px;
-                opacity: 0;
-            }
+                opacity: 0; 
+                transform: translateX(600px);
+            } 
         }
     }
-    &.open {
+    &.open { 
         animation: picker-open .4s ease forwards;
         @keyframes picker-open {
             0% {
-                left: 1000px;
-                opacity: 0;
-            }
+                opacity: 0;  
+                transform: translateX(600px);
+            } 
             100% {
-                left: 0;
                 opacity: 1;
+                transform: translateX(0);
             }
         }
     }
@@ -54,10 +52,10 @@
             padding: 0 20px;
         }
     }
-    .@{prefix}-tag-picker-content{
+    .@{prefix}-tag-picker-content {
         .float-clear();
         height: 100%;
-        .@{prefix}-tag-picker-category-list{
+        .@{prefix}-tag-picker-category-list {
             width: 30%;
             float: left;
             height: 100%;
@@ -69,13 +67,13 @@
                 font-size: 14px;
                 line-height: 20px;
                 background: #f6f4f5;
-                &.active{
-                    border-left: 2px solid #32ADC6;
+                &.active {
+                    border-left: 2px solid @colorMain;
                     background: #fff;
                 }
             }
         }
-        .@{prefix}-tag-picker-tag-list{
+        .@{prefix}-tag-picker-tag-list {
             width: 70%;
             float: left;
             padding: 10px;
@@ -85,14 +83,14 @@
                 margin: 5px;
                 padding: 0 5px;
                 border-radius: 5px;
-                border: 1px solid #32adc6;
-                color: #32adc6;
+                border: 1px solid @colorMain;
+                color: @colorMain;
                 font-size: 12px;
                 line-height: 24px;
                 background: #fff;
-                &.active{
+                &.active {
                     color: #fff;
-                    background: #32ADC6;
+                    background: @colorMain;
                 }
             }
         }

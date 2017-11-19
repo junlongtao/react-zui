@@ -1,68 +1,68 @@
-@import '../../style/mixinx';
+@import './base/mixin';
 
-@listPrefixCls: weui-picker;
-
-.@{listPrefixCls} {
+.@{prefix}-picker {
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    position: fixed;
+    height: 100%;  
     top: 0;
-    left: 1000px;
+    left: 0;
     right: 0;
-    margin: 0 auto;
-    max-width: 480px;
-    background: #fff;
-    z-index: 5;
     opacity: 0;
-    &.close {
+    z-index: 5;
+    margin: 0 auto; 
+    position: fixed;
+    background: #fff;
+    transform: translateX(600px);
+    .overflow-scroll();
+    &.close { 
         animation: picker-close 1s ease forwards;
         @keyframes picker-close {
             0% {
-                left: 0;
-                opacity: 1;
+                opacity: 1; 
+                transform: translateX(0);
             }
             100% {
-                left: 1000px;
-                opacity: 0;
-            }
+                opacity: 0; 
+                transform: translateX(600px);
+            } 
         }
     }
-    &.open {
+    &.open { 
         animation: picker-open .4s ease forwards;
         @keyframes picker-open {
             0% {
-                left: 1000px;
-                opacity: 0;
-            }
+                opacity: 0;  
+                transform: translateX(600px);
+            } 
             100% {
-                left: 0;
                 opacity: 1;
+                transform: translateX(0);
             }
         }
     }
-    .@{listPrefixCls}-name {
-        text-align: center;
+    .@{prefix}-picker-name {
+        color: #fff;
         font-size: 16px;
         line-height: 40px;
-        .icon {
+        text-align: center;
+        background: @colorMain;
+        .@{prefix}-icon {
             top: 0;
             left: -10px;
             font-size: 14px;
-            position: absolute;
             padding: 0 20px;
+            position: absolute;
         }
     }
-    .@{listPrefixCls}-option {
+    .@{prefix}-picker-option {
         border-bottom: 1px solid #dcdcdc;
         font-size: 14px;
         line-height: 40px;
         padding-left: 10px;
-        &:active, &:hover{
+        &:active, &:hover {
             background: #eee;
             -webkit-tap-highlight-color: transparent;
         }
-        .icon{
+        .@{prefix}-icon {
             position: absolute;
             right: 10px;
             font-size: 14px;

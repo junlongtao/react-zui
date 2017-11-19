@@ -1,17 +1,17 @@
-@import '../../style/mixinx';
-
-@prefix: weui;
+@import './base/mixin';
 
 .@{prefix}-list {
     width: 100%;
     margin: 0 0 10px 0;
+    background: #fff;
     border-top: 1px solid #f2f2f2;
     border-bottom: 1px solid #f2f2f2;
     .@{prefix}-list-header, .@{prefix}-list-footer {
+        padding: 10px;
         min-height: 40px;
         background: #f2f2f2;
         border-bottom: 1px solid #efefef;
-        padding: 10px;
+        -webkit-tap-highlight-color: transparent;
         .cursor();
         .display-box;
         .box-align(center);
@@ -34,49 +34,57 @@
         }
     }
     .@{prefix}-list-item {
-        padding: 0 10px;
+        margin: 0 0 0 10px;
+        padding: 0 10px 0 0;
         min-height: 45px;
         background: #fff;
         border-bottom: 1px solid #efefef;
+        -webkit-tap-highlight-color: transparent;
         &:last-child {
             border-bottom: none;
-        }
-        &.active{
-            background: #D9EEF2;
-        }
+        } 
         .cursor();
         .display-box;
         .box-align(center);
+        .@{prefix}-list-label{
+            font-size: 14px;
+        }
         .@{prefix}-list-content {
             font-size: 14px;
             line-height: 20px;
         }
-        .@{prefix}-list-extra {
+        .@{prefix}-list-control, .@{prefix}-list-extra {
             font-size: 14px;
             line-height: 20px;
             text-align: right;
             position: relative;
             .box-flex(1);
-            .icon-horizontal, .icon-check{
+            .icon-horizontal, .icon-check {
                 float: right;
-                margin: 0 0 0 5px;
                 font-size: 12px;
+                margin: 0 0 0 5px;
             }
-            .icon-check{
-                color: #6ac2b6;
+            .icon-check {
+                color: @colorMain;
                 font-size: 16px;
             }
         }
     }
-    .@{prefix}-list-file-item{
+    .@{prefix}-list-pre-item {
+        .@{prefix}-list-content {
+            overflow-x: scroll;
+            max-width: 100%;
+        }
+    }
+    .@{prefix}-list-file-item {
         .@{prefix}-list-control {
             .box-flex(1);
             text-align: right;
             position: relative;
-            >div{
+            > div {
                 position: relative;
                 padding-right: 20px;
-                input{
+                input {
                     top: 0;
                     right: 0;
                     opacity: 0;
@@ -87,15 +95,15 @@
                     position: absolute;
                     .cursor();
                 }
-                img{
+                img {
                     width: 50px;
                     height: auto;
                     margin: 10px 0;
                     display: inline-block;
                 }
-                .icon {
+                .@{prefix}-icon {
                     top: 50%;
-                    right: -5px;
+                    right: 0;
                     margin-top: -9px;
                     position: absolute;
                 }
@@ -122,19 +130,23 @@
                 text-align: right;
                 padding-right: 110px;
             }
-            .@{prefix}-list-code-button{
+            .@{prefix}-list-code-button {
                 top: 50%;
                 right: 0;
-                width: auto;
-                color: #fff;
-                font-size: 12px;
-                min-width: 100px;
-                line-height: 35px;
                 position: absolute;
                 margin: -18px 0 0 0;
-                background: #CCCCCC;
-                &.active{
-                    background: #6ac2b6;
+                button{
+                    width: auto;
+                    color: #fff;
+                    font-size: 12px;
+                    min-width: 100px;
+                    line-height: 35px; 
+                    background: #CCCCCC;
+                }
+                &.active {
+                    button{
+                        background: @colorMain;
+                    }
                 }
             }
         }
@@ -153,7 +165,7 @@
                 max-height: 400px;
                 border-radius: 0;
             }
-            .@{prefix}-list-textarea-counter{
+            .@{prefix}-list-textarea-counter {
                 text-align: right;
                 font-size: 12px;
                 line-height: 14px;
@@ -204,7 +216,7 @@
                 float: right;
                 margin-left: 20px;
             }
-            .icon {
+            .@{prefix}-icon {
                 float: right;
                 margin-right: 0;
                 font-size: 12px;
@@ -232,7 +244,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            max-width: 480px;
+
             background: #fff;
             z-index: 5;
             .@{prefix}-list-option-name {
@@ -259,15 +271,15 @@
             .box-flex(1);
             div {
                 text-align: right;
-                span{
+                span {
                     padding: 2px;
                     margin: 0 0 5px 5px;
-                    color: #32adc6;
+                    color: @colorMain;
                     font-size: 12px;
                     line-height: 12px;
                     display: inline-block;
                     border-radius: 5px;
-                    border: 1px solid #6ac2b6;
+                    border: 1px solid @colorMain;
                 }
                 .icon {
                     margin: 0 0 0 5px;
@@ -292,9 +304,8 @@
         .@{prefix}-list-control {
             .box-flex(1);
             .float-clear();
-            .@{prefix}-radio{
-                margin: 22px 0 10px 15px;
-                max-width: 260px;
+            .@{prefix}-radio {
+                margin: 10px 0 0 20px;
             }
         }
     }

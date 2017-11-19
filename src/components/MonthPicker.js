@@ -22,7 +22,7 @@ export default class MonthPicker extends React.Component {
 
     static defaultProps = {
         status: '',
-        prefix: 'weui',
+        prefix: 'zui',
         name: '选择日期',
     }
 

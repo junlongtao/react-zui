@@ -5,31 +5,29 @@
 
 import './less/checkbox.less'
 import React from 'react'
-//import chcked from './checkbox_checked.png'
-//import uncheck from './checkbox_uncheck.png'
+import Icon from './Icon'
 
 export default class Checkbox extends React.Component {
 
+    static defaultProps = {
+        prefix: 'zui',
+        value: false,
+        onChange: () => {}
+    }
+
     componentWillMount = () => {
         this.setState({
-            checked: this.props.checked
+            value: this.props.value
         })
     }
 
-    toggleCheck = () => {
-        const checked = !this.state.checked
-        this.setState({
-            checked: checked
-        })
-        this.props.onChange(checked)
-    }
-
-    render() {
-        const checkImg = this.state.checked ? checked : uncheck
-        return (
-            <div className="weui_checkbox" onClick={this.toggleCheck}>
-                <img src={checkImg}/>
-            </div>
-        )
+    render = () => {
+        const prefix = this.props.prefix
+        return <span className={prefix+'-checkbox '+this.props.className} onClick={()=>{
+            this.props.onChange(!this.state.value)
+            this.setState({value: !this.state.value})
+        }}>
+            {this.state.value ? <Icon type="xuanze"/> : '■'}
+        </span>
     }
 }

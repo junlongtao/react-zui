@@ -7,7 +7,7 @@ export default class Switch extends React.Component {
 
     static defaultProps = {
         value: true,
-        prefix: 'weui',
+        prefix: 'zui',
         onChange: null
     }
 

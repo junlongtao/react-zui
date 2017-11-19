@@ -1,68 +1,34 @@
-.weui_header {
-    position: relative;
+@import './base/mixin';
+
+.@{prefix}-header {
     height: 42px;
-    .wrap{
+    .@{prefix}-header-content {
         z-index: 1;
-        height: 42px;
-        background: #6ac2b6;
+        color: #fff;
         font-size: 16px;
         line-height: 42px;
-        color: #fff;
         text-align: center;
-        position: fixed;
         width: 100%;
-        max-width: 480px;
+        height: 42px;
+
+        padding: 0 45px;
+        background: @colorMain;
         top: 0;
         left: 0;
         right: 0;
         margin: 0 auto;
+        position: fixed;
         overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
-        padding: 0 45px;
-        .back_wrap {
-            position: absolute;
-            padding: 0 12px;
+        text-overflow: ellipsis;
+
+        .@{prefix}-header-back {
             top: 0;
             left: 0;
-        }
-        .back_wrap:hover, .back_wrap:visited, .share_wrap:hover, .share_wrap:visited {
-            cursor: pointer;
-            background: #0b97c4;
-        }
-        .share_wrap {
             position: absolute;
-            right: 0;
-            top: 0;
-            padding: 0 12px;
-        }
-        .iconfont {
-            font-size: 25px;
-            line-height: 25px;
-            vertical-align: middle;
-        }
-    }
-}
-.am-action-sheet {
-    .am-action-sheet-content {
-        .am-action-sheet-body {
-            .am-action-sheet-share {
-                .am-action-sheet-share-message {
-                    color: #6ac2b6;
-                }
-                .am-action-sheet-share-content {
-                    width: 100%;
-                    li {
-                        width: 50%;
-                        p {
-                            margin-left: auto;
-                            margin-right: auto;
-                            text-align: center;
-                            color: #6ac2b6;
-                        }
-                    }
-                }
-            }
+            color: #fff;
+            font-size: 16px;
+            padding: 0 20px 0 10px;
         }
     }
 }

@@ -6,9 +6,12 @@
 import './less/notify.less'
 import React from 'react'
 import Icon from './Icon'
-import Util from '../Util'
 
 export default class Notify extends React.Component {
+
+    static defaultProps = {
+        prefix: 'zui'
+    }
 
     state = {
         visible: false
@@ -31,11 +34,12 @@ export default class Notify extends React.Component {
     }
 
     render = () => {
+        const prefix = this.props.prefix
         const top = this.state.visible ? '0' : '-100px'
         const visibility = this.state.visible ? 'visible' : 'hidden'
-        return <div className='weui_notify' style={{top: top, visibility: visibility}}>
-            <Icon type="notice" className="fade_in"/>
-            <Icon type="close" className="fade_in cursor" onClick={this.onCloseClick}/>
+        return <div className={prefix+'-notify'} style={{top: top, visibility: visibility}}>
+            <Icon type="notice" className="fade-in"/>
+            <Icon type="close" className="fade-in cursor" onClick={this.onCloseClick}/>
             <div onClick={this.onClick}>{this.props.content}</div>
         </div>
     }

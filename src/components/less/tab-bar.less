@@ -1,43 +1,35 @@
-@import '../../style/mixinx';
+@import './base/mixin';
 
-@prefixCls: weui-tab-bar;
-
-.@{prefixCls} {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    max-width: 480px;
-    border-top: 1px solid #eee;
-    background: #000;
-    animation: tab-bar-slide-up .5s ease forwards;
-    @keyframes tab-bar-slide-up {
-        0% {
-            bottom: -50px;
-            -webkit-transform: scale(0.8);
-        }
-        100% {
-            bottom: 0;
-            -webkit-transform: scale(1);
-        }
-    }
+.@{prefix}-tab-bar {
+    width: 100%; 
+    background: #fff;
     .display-box();
-    .@{prefixCls}-item {
+    .@{prefix}-tab-bar-item {
         .cursor();
         .box-flex(1);
         .box-align(center);
-        text-align: center;
-        line-height: 20px;
-        color: #c8c8c8;
-        height: 50px;
+        color: #787878;
         font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        min-height: 35px;
         padding-top: 8px;
-        .icon {
-            display: block;
-            font-size: 25px;
-            margin-right: 0;
+        &.active {
+            color: @colorMain;
+            animation: tab-bar-item-scale-in .5s ease forward;
+            @keyframes tab-bar-item-scale-in{
+                0%{
+                    transform: scale(.5) translate(0, 50px);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
         }
-        &.active{
-            color: #6ac2b6;
+        .@{prefix}-icon {
+            display: block;
+            font-size: 20px;
+            margin-right: 0;
         }
     }
 }

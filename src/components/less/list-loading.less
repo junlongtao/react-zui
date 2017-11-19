@@ -1,20 +1,17 @@
-@import '../../style/mixinx';
+@import './base/mixin';
 
-@listPrefixCls: weui;
-
-.@{listPrefixCls}-list-loading {
+.@{prefix}-list-loading {
     width: 100%;
-    max-width: 480px;
     height: 50px;
-    .icon {
-        width: 50px;
-        height: 30px;
-        display: block;
+    padding: 10px 0;
+    .circle {
+        width: 25px;
+        height: 25px;
+        border: 2px solid @colorMain;
+        border-radius: 50%;
         margin: 0 auto;
-        margin-right: auto !important;
-        font-size: 28px;
-        text-align: center;
         animation: listLoadingRotate .5s linear infinite;
+        border-color: @colorMain transparent @colorMain transparent;
         @keyframes listLoadingRotate {
             0% {
                 -webkit-transform: rotate(0deg);
@@ -24,8 +21,7 @@
             }
         }
     }
-    .no_more {
+    .no-more {
         text-align: center;
-        line-height: 30px;
     }
 }

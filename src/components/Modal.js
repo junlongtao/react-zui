@@ -8,7 +8,8 @@ import Icon from './Icon'
 export default class Modal extends React.Component {
 
     static defaultProps = {
-        prefixCls: 'weui'
+        prefix: 'zui',
+        visible: false,
     }
 
     state = {
@@ -17,31 +18,30 @@ export default class Modal extends React.Component {
 
     componentWillReceiveProps = (nextProps) => {
         this.setState({
-            status: nextProps.status
+            status: nextProps.visible?'open':''
         })
     }
 
-    render = () => {
-        const cls = this.props.className
-        const status = this.state.status
-        const prefixCls = this.props.prefixCls
-        return <div className={prefixCls+'-modal '+cls+' '+status}>
-            <div className={prefixCls+'-modal-content'} ref={prefixCls+'-modal-content'}>
-                {this.props.children}
-                <div className={prefixCls+'-modal-close'} onClick={()=>{
-                    this.setState({
-                        status: 'close'
-                    })
+    render = () => { 
+        const prefix = this.props.prefix
+        return <div className={prefix+'-modal '+this.props.className+' '+this.state.status}>
+            <Mask onClick={()=>{
+                this.setState({status: 'close'})
+            }}/>
+            <div className={prefix+'-modal-content'}>
+                <div className={prefix+'-modal-header'}>
+                    {this.props.title}
+                </div>
+                <div>
+                    {this.props.children}
+                </div>
+                <div className={prefix+'-modal-close'} onClick={()=>{
+                    this.setState({status: 'close'})
                 }}>
-                    <div className="line"></div>
+                    <div className={prefix+"-modal-close-line"}></div>
                     <Icon type="guanbi"/>
                 </div>
             </div>
-            <Mask onClick={()=>{
-                this.setState({
-                    status: 'close'
-                })
-            }}/>
         </div>
     }
 }

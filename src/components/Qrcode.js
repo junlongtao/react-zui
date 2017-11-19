@@ -2,7 +2,7 @@
  *二维码图片组件
  */
 
-import './less/qr_code.less'
+import './less/qr-code.less'
 import React from 'react'
 import qrcode from 'qrcode-generator'
 
@@ -18,7 +18,7 @@ export default class Qrcode extends React.Component {
         var qr = qrcode(typeNumber, errorCorrectionLevel);
         qr.addData(this.props.text);
         qr.make();
-        return <div className="weui_qr_code" dangerouslySetInnerHTML={{
+        return <div className="zui-qr-code" dangerouslySetInnerHTML={{
             __html: qr.createImgTag(4, 10)
         }}></div>
     }

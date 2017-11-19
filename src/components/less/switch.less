@@ -1,8 +1,6 @@
-@import '../../style/mixinx';
+@import './base/mixin';
 
-@prefixCls: weui;
-
-.@{prefixCls}-switch {
+.@{prefix}-switch {
     background: #fff;
     border-radius: 20px;
     border: 1px solid #dcdcdc;
@@ -11,7 +9,7 @@
     padding: 1px;
     display: inline-block;
     position: relative;
-    .@{prefixCls}-switch-circle {
+    .@{prefix}-switch-circle {
         width: 20px;
         height: 20px;
         background: #dcdcdc;
@@ -21,10 +19,10 @@
         left: 1px;
         position: absolute;
     }
-    &.active{
-        border-color: #32abc6;
-        .@{prefixCls}-switch-circle{
-            background: #32abc6;
+    &.active {
+        border-color: @colorMain;
+        .@{prefix}-switch-circle {
+            background: @colorMain;
             left: unset;
             right: 1px;
         }

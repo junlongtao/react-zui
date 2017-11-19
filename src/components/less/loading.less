@@ -1,24 +1,20 @@
-.weui_loading {
-    position: fixed;
-    margin: auto;
+@import './base/mixin';
+
+.@{prefix}-loading {
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     width: 3em;
     height: 3em;
-    .loading {
-        width: 3em;
-        height: 3em;
-        z-index: 4;
-        margin: auto;
-        display: block;
+    margin: auto;
+    position: fixed; 
 
-        -webkit-animation: rotate .8s linear infinite;
-        -moz-animation: rotate .8s linear infinite;
-        -o-animation: rotate .8s linear infinite;
-        animation: rotate .8s linear infinite;
-    }
+    -webkit-animation: rotate .8s linear infinite;
+    -moz-animation: rotate .8s linear infinite;
+    -o-animation: rotate .8s linear infinite;
+    animation: rotate .8s linear infinite;
     .loading .white {
         top: 0;
         bottom: 0;

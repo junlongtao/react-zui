@@ -1,14 +1,14 @@
 /**
  *顶部提示
  */
-import './less/top_notice.less'
+import './less/top-notice.less'
 import React from 'react'
 import Icon from './Icon'
 
 export default class TopNotice extends React.Component {
 
     static defaultProps = {
-        mode: 'closable'
+        prefix: 'zui',
     }
 
     state = {
@@ -22,12 +22,11 @@ export default class TopNotice extends React.Component {
     }
 
     render = () => {
-        const closeIcon = this.props.mode === 'closable' ?
-            <Icon type="guanbi" className="cursor" onClick={this.onCloseClick}/> : null
-        return this.state.visible ? <div className="weui_top_notice yellow_color">
+        const prefix = this.props.prefix
+        return this.state.visible ? <div className={prefix+'-top-notice'}>
             <Icon type="tishi"/>
             {this.props.children}
-            {closeIcon}
+            <Icon type="guanbi" onClick={this.onCloseClick}/>
         </div> : null
     }
 }

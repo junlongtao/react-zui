@@ -1,22 +1,21 @@
 'use strict'
 
+import './less/paragraph.less'
 import React from 'react'
-import Util from '../Util'
+import Util from '../util'
 
 export default class Paragraph extends React.Component {
 
     static defaultProps = {
-        prefixCls: 'weui',
+        prefix: 'zui',
         className: '',
-        max: ''
+        children: ''
     }
 
     render = () => {
-        const prefixCls = this.props.prefixCls
-        const children = Util.replaceWrap(this.props.children)
-        const text = this.props.max ? Util.maxLength(children, this.props.max) : children
-        return <p className={prefixCls+'-paragraph '+this.props.className} dangerouslySetInnerHTML={{
-            __html: text
+        const prefix = this.props.prefix
+        return <p className={prefix+'-paragraph '+this.props.className} dangerouslySetInnerHTML={{
+            __html: this.props.children.replace(/(\r)*\n/g, "<br/>")
         }}></p>
     }
 }

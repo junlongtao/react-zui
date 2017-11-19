@@ -8,12 +8,17 @@ import React from 'react'
 
 export default class Image extends React.Component {
 
+    static defaultProps = {
+        prefix: 'zui'
+    }
+
     state = {
         status: 'loading'
     }
 
     render = () => {
-        const cls = "weui_image_"+this.state.status+' '+this.props.className
+        const prefix = this.props.prefix
+        const cls = prefix+"-image "+this.state.status+" "+this.props.className
         return <img title="加载中" className={cls} src={this.props.src} onLoad={()=>{
             this.setState({
                 status: 'done'

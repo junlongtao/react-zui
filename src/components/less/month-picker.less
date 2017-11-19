@@ -1,43 +1,40 @@
-@import '../../style/mixinx';
+@import './base/mixin';
 
-@prefix: weui;
-
-.@{prefix}-month-picker{
+.@{prefix}-month-picker {
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    position: fixed;
+    height: 100%; 
     top: 0;
-    left: 1000px;
+    left: 0;
     right: 0;
-    margin: 0 auto;
-    max-width: 480px;
-    background: #fff;
     z-index: 5;
     opacity: 0;
-    &.close {
+    margin: 0 auto; 
+    position: fixed;
+    background: #fff;
+    transform: translateX(600px);
+    &.close { 
         animation: picker-close 1s ease forwards;
         @keyframes picker-close {
             0% {
-                left: 0;
-                opacity: 1;
+                opacity: 1; 
+                transform: translateX(0);
             }
             100% {
-                left: 1000px;
-                opacity: 0;
-            }
+                opacity: 0; 
+                transform: translateX(600px);
+            } 
         }
     }
-    &.open {
+    &.open { 
         animation: picker-open .4s ease forwards;
         @keyframes picker-open {
             0% {
-                left: 1000px;
-                opacity: 0;
-            }
+                opacity: 0;  
+                transform: translateX(600px);
+            } 
             100% {
-                left: 0;
                 opacity: 1;
+                transform: translateX(0);
             }
         }
     }
@@ -54,43 +51,43 @@
             padding: 0 20px;
         }
     }
-    .@{prefix}-month-picker-content{
-        .float-clear();
+    .@{prefix}-month-picker-content {
         height: 100%;
-        .@{prefix}-month-picker-year-list{
+        .float-clear();
+        .@{prefix}-month-picker-year-list {
             width: 30%;
             float: left;
             height: 100%;
-            max-height: 100%;
-            overflow-y: scroll;
+            max-height: 100%; 
             background: #f6f4f5;
+            .overflow-scroll();
             .@{prefix}-month-picker-year-list-item {
                 padding: 10px;
                 font-size: 14px;
                 line-height: 20px;
                 background: #f6f4f5;
-                &.active{
-                    border-left: 2px solid #32ADC6;
+                &.active {
+                    border-left: 2px solid @colorMain;
                     background: #fff;
                 }
             }
         }
-        .@{prefix}-month-picker-month-list{
+        .@{prefix}-month-picker-month-list {
             width: 70%;
             float: left;
             .@{prefix}-month-picker-month-list-item {
                 padding: 10px;
-                border-radius: 5px;
-                border-bottom: 1px solid #f4f4f4;
                 font-size: 14px;
                 line-height: 24px;
                 background: #fff;
+                border-radius: 5px;
+                border-bottom: 1px solid #f4f4f4;
                 .float-clear();
-                .icon{
+                .@{prefix}-icon {
                     float: right;
                 }
-                &.active{
-                    color: #32adc6;
+                &.active {
+                    color: @colorMain;
                 }
             }
         }

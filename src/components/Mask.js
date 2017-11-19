@@ -1,24 +1,15 @@
 
 import './less/mask.less'
 import React from 'react'
-import classNames from '../utils/classnames'
 
 export default class Mask extends React.Component {
-    static propTypes = {
-        transparent: React.PropTypes.bool
-    }
 
     static defaultProps = {
-        transparent: false
+        prefix: 'zui'
     }
 
     render = () => {
-        const {transparent, ...others} = this.props
-        const className = classNames({
-            'weui_mask': !transparent,
-            'weui_mask_transparent': transparent
-        })
-
-        return <div className={className} {...others}></div>
+        const prefix = this.props.prefix
+        return <div className={prefix+"-mask"}></div>
     }
 }
