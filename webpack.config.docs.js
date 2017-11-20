@@ -1,13 +1,12 @@
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-module.exports = {
+var config = {
 
     entry: {
         index: './docs/index.js',
         vendors: [
-            'react',
-            'react-dom',
-            'react-router',
+            'react', 
+            './build/packages'
         ]
     },
 
@@ -30,23 +29,33 @@ module.exports = {
             test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
             loader: 'url-loader?limit=50000&name=[path][name].[ext]'
         }]
-    },
-
-    plugins: [
-        new HtmlWebpackPlugin({
-            env: 'dev',
-            filename: __dirname+'/build/docs/index.html',
-            template: './docs/index.html',
-            inject: 'body',
-            hash: true
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendors', 
-            filename: 'vendors.min.js'
-        }),
-        new webpack.DefinePlugin({
-            ENV: `'dev'`,
-            'process.env.NODE_ENV': '"dev"'
-        })
-    ]
+    } 
 }
+
+config.plugins = [
+    new HtmlWebpackPlugin({
+        env: 'dev',
+        filename: __dirname+'/build/docs/index.html',
+        template: './docs/index.html',
+        inject: 'body',
+        hash: true
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendors', 
+        filename: 'vendors.min.js'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        },
+        output: {
+            comments: false
+        }
+    }),
+    new webpack.DefinePlugin({
+        ENV: `'dev'`,
+        'process.env.NODE_ENV': '"dev"'
+    })
+]
+
+module.exports = config
