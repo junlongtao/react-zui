@@ -1,98 +1,41 @@
 @import './base/mixin';
 
 .@{prefix}-month-picker {
-    width: 100%;
-    height: 100%; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    opacity: 0;
-    margin: 0 auto; 
-    position: fixed;
-    background: #fff;
-    transform: translateX(600px);
-    &.close { 
-        animation: picker-close 1s ease forwards;
-        @keyframes picker-close {
-            0% {
-                opacity: 1; 
-                transform: translateX(0);
-            }
-            100% {
-                opacity: 0; 
-                transform: translateX(600px);
-            } 
-        }
-    }
-    &.open { 
-        animation: picker-open .4s ease forwards;
-        @keyframes picker-open {
-            0% {
-                opacity: 0;  
-                transform: translateX(600px);
-            } 
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-    }
-    .@{prefix}-month-picker-name {
-        color: #fff;
-        font-size: 16px;
-        line-height: 40px;
-        text-align: center;
-        background: @colorMain;
-        border-bottom: 1px solid #dcdcdc;
-        .@{prefix}-icon {
-            top: 0;
-            left: -10px;
-            font-size: 14px;
-            padding: 0 20px;
-            position: absolute;
-        }
-    }
-    .@{prefix}-month-picker-content {
+    .@{prefix}-month-picker-year-list {
+        width: 30%;
+        float: left;
         height: 100%;
-        .float-clear();
-        .@{prefix}-month-picker-year-list {
-            width: 30%;
-            float: left;
-            height: 100%;
-            max-height: 100%; 
+        max-height: 100%;
+        background: #f6f4f5;
+        .overflow-scroll();
+        .@{prefix}-month-picker-year-list-item {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 20px;
             background: #f6f4f5;
-            .overflow-scroll();
-            .@{prefix}-month-picker-year-list-item {
-                padding: 10px;
-                font-size: 14px;
-                line-height: 20px;
-                background: #f6f4f5;
-                &.active {
-                    border-left: 2px solid @colorMain;
-                    background: #fff;
-                }
-            }
-        }
-        .@{prefix}-month-picker-month-list {
-            width: 70%;
-            float: left;
-            .@{prefix}-month-picker-month-list-item {
-                padding: 10px;
-                font-size: 14px;
-                line-height: 24px;
+            &.active {
+                border-left: 2px solid @colorMain;
                 background: #fff;
-                border-radius: 5px;
-                border-bottom: 1px solid #f4f4f4;
-                .float-clear();
-                .@{prefix}-icon {
-                    float: right;
-                }
-                &.active {
-                    color: @colorMain;
-                }
             }
         }
     }
-
+    .@{prefix}-month-picker-month-list {
+        width: 70%;
+        float: left;
+        .@{prefix}-month-picker-month-list-item {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 24px;
+            background: #fff;
+            border-radius: 5px;
+            border-bottom: 1px solid #f4f4f4;
+            .float-clear();
+            .@{prefix}-icon {
+                float: right;
+            }
+            &.active {
+                color: @colorMain;
+            }
+        }
+    }
 }

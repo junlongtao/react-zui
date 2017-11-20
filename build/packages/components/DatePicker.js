@@ -26,9 +26,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Icon = require('./Icon');
+var _Picker = require('./Picker');
 
-var _Icon2 = _interopRequireDefault(_Icon);
+var _Picker2 = _interopRequireDefault(_Picker);
 
 var _util = require('../util');
 
@@ -60,7 +60,8 @@ var DatePicker = function (_React$Component) {
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DatePicker.__proto__ || (0, _getPrototypeOf2.default)(DatePicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             year: '',
-            days: []
+            days: [],
+            status: ''
         }, _this.componentDidMount = function () {
             var year = new Date().getFullYear();
             _this.setState({
@@ -68,9 +69,9 @@ var DatePicker = function (_React$Component) {
                 days: _this.getMonthDays(year)
             });
         }, _this.componentWillReceiveProps = function (nextProps) {
-            var value = nextProps.value;
-            value && _this.setState({
-                year: value.split('-')[0]
+            _this.setState({
+                status: nextProps.status,
+                year: nextProps.value ? nextProps.value.split('-')[0] : ''
             });
         }, _this.getMonthDays = function (year) {
             var days = [];
@@ -103,57 +104,47 @@ var DatePicker = function (_React$Component) {
             });
         }, _this.render = function () {
             var prefix = _this.props.prefix;
-            var status = _this.props.visible ? 'open' : '';
+            var status = _this.state.status;
             return _react2.default.createElement(
-                'div',
-                { className: prefix + '-date-picker ' + status },
+                _Picker2.default,
+                { className: prefix + '-date-picker', status: status },
                 _react2.default.createElement(
-                    'div',
-                    { className: prefix + "-date-picker-name" },
-                    _react2.default.createElement(_Icon2.default, { type: 'back', onClick: _this.props.onBackClick }),
-                    _this.props.name
+                    'ul',
+                    { className: prefix + '-date-picker-year-list' },
+                    YearData.map(function (item, key) {
+                        var cls = item == _this.state.year ? 'active' : '';
+                        return _react2.default.createElement(
+                            'li',
+                            { className: prefix + '-date-picker-year-item ' + cls, key: key, onClick: function onClick() {
+                                    _this.setState({
+                                        year: item,
+                                        days: _this.getMonthDays(item)
+                                    });
+                                } },
+                            item
+                        );
+                    })
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: prefix + '-date-picker-content' },
-                    _react2.default.createElement(
-                        'ul',
-                        { className: prefix + '-date-picker-year-list' },
-                        YearData.map(function (item, key) {
-                            var cls = item == _this.state.year ? 'active' : '';
-                            return _react2.default.createElement(
-                                'li',
-                                { className: prefix + '-date-picker-year-item ' + cls, key: key, onClick: function onClick() {
-                                        _this.setState({
-                                            year: item,
-                                            days: _this.getMonthDays(item)
-                                        });
-                                    } },
-                                item
-                            );
-                        })
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: prefix + '-date-picker-month-list' },
-                        MonthData.map(function (item, key) {
-                            return _react2.default.createElement(
+                    { className: prefix + '-date-picker-month-list' },
+                    MonthData.map(function (item, key) {
+                        return _react2.default.createElement(
+                            'div',
+                            { className: prefix + '-date-picker-month-item', key: key },
+                            _react2.default.createElement(
                                 'div',
-                                { className: prefix + '-date-picker-month-item', key: key },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: prefix + '-date-picker-month-name' },
-                                    item,
-                                    '\u6708'
-                                ),
-                                _react2.default.createElement(
-                                    'ul',
-                                    { className: prefix + '-date-picker-day-list' },
-                                    _this.renderMonthDays(item)
-                                )
-                            );
-                        })
-                    )
+                                { className: prefix + '-date-picker-month-name' },
+                                item,
+                                '\u6708'
+                            ),
+                            _react2.default.createElement(
+                                'ul',
+                                { className: prefix + '-date-picker-day-list' },
+                                _this.renderMonthDays(item)
+                            )
+                        );
+                    })
                 )
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
@@ -165,6 +156,7 @@ var DatePicker = function (_React$Component) {
 DatePicker.defaultProps = {
     status: '',
     prefix: 'zui',
-    name: '选择日期'
+    name: '选择日期',
+    onChange: function onChange() {}
 };
 exports.default = DatePicker;

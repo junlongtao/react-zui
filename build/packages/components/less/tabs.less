@@ -3,10 +3,13 @@
 .@{prefix}-tabs {
     background: #fff;
     .@{prefix}-tabs-nav {
+        width: 100%;
+        overflow-x: scroll;
         .display-box();
         .@{prefix}-tabs-nav-item {
-            .box-flex();
             .cursor();
+            .box-flex();
+            min-width: 100px;
             font-size: 12px;
             line-height: 40px;
             text-align: center;

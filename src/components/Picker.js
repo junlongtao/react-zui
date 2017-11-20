@@ -9,27 +9,36 @@ export default class Picker extends React.Component {
     static defaultProps = {
         status: '',
         prefix: 'zui',
-        onChange: () => {}
+        name: '请选择',
+        onChange: () => {
+        }
+    }
+
+    state = {
+        status: ''
+    }
+
+    componentWillReceiveProps = nextProps => {
+        this.setState({status: nextProps.status})
+    }
+
+    onBackClick = () => {
+        this.setState({status: 'close'})
+        this.props.onBackClick()
     }
 
     render = () => {
-        const status = this.props.status
+        const status = this.state.status
         const prefix = this.props.prefix
-        const value = this.props.value ? this.props.value : this.props.data[0]
-        return <div className={prefix+'-picker '+status}>
+        const className = this.props.className
+        return <div className={prefix+'-picker '+className+' '+status}>
             <div className={prefix+"-picker-name"}>
-                <Icon type="back" onClick={this.props.onBackClick}/>
+                <Icon type="back" onClick={this.onBackClick}/>
                 {this.props.name}
             </div>
-            {this.props.data.map((item, key)=> {
-                return <div key={key} className={prefix+"-picker-option"} onClick={()=>{
-                    this.props.onChange(item)
-                    this.props.onBackClick()
-                }}>
-                    {item}
-                    {item == value ? <Icon type="xuanze"/> : null}
-                </div>
-            })}
+            <div className={prefix+"-picker-content"}>
+                {this.props.children}
+            </div>
         </div>
     }
 }

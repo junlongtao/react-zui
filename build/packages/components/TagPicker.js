@@ -33,9 +33,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Icon = require('./Icon');
+var _Picker = require('./Picker');
 
-var _Icon2 = _interopRequireDefault(_Icon);
+var _Picker2 = _interopRequireDefault(_Picker);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -85,57 +85,47 @@ var TagPicker = function (_React$Component) {
             var status = _this.props.status;
             var categoryList = _this.getCategoryList();
             return _react2.default.createElement(
-                'div',
-                { className: prefix + '-tag-picker ' + status },
+                _Picker2.default,
+                { className: prefix + '-tag-picker', status: status },
                 _react2.default.createElement(
-                    'div',
-                    { className: prefix + "-tag-picker-name" },
-                    _react2.default.createElement(_Icon2.default, { type: 'back', onClick: _this.props.onBackClick }),
-                    _this.props.name
+                    'ul',
+                    { className: prefix + '-tag-picker-category-list' },
+                    categoryList.map(function (item, key) {
+                        var cls = item === _this.state.category ? 'active' : '';
+                        return _react2.default.createElement(
+                            'li',
+                            { className: prefix + '-tag-picker-category-list-item ' + cls, key: key, onClick: function onClick() {
+                                    _this.setState({
+                                        category: item,
+                                        tagList: _this.props.data[item]
+                                    });
+                                } },
+                            item
+                        );
+                    })
                 ),
                 _react2.default.createElement(
-                    'div',
-                    { className: prefix + '-tag-picker-content' },
-                    _react2.default.createElement(
-                        'ul',
-                        { className: prefix + '-tag-picker-category-list' },
-                        categoryList.map(function (item, key) {
-                            var cls = item === _this.state.category ? 'active' : '';
-                            return _react2.default.createElement(
-                                'li',
-                                { className: prefix + '-tag-picker-category-list-item ' + cls, key: key, onClick: function onClick() {
-                                        _this.setState({
-                                            category: item,
-                                            tagList: _this.props.data[item]
-                                        });
-                                    } },
-                                item
-                            );
-                        })
-                    ),
-                    _react2.default.createElement(
-                        'ul',
-                        { className: prefix + '-tag-picker-tag-list' },
-                        _this.state.tagList.map(function (item, key) {
-                            var tags = _this.getActiveTags();
-                            var cls = tags.indexOf(item) === -1 ? '' : 'active';
-                            return _react2.default.createElement(
-                                'li',
-                                { className: prefix + '-tag-picker-tag-list-item ' + cls, key: key, onClick: function onClick() {
-                                        var value = _this.getValue();
-                                        var tags = _this.getActiveTags();
-                                        if (tags.indexOf(item) === -1) {
-                                            tags.push(item);
-                                        } else {
-                                            tags.splice(tags.indexOf(item), 1);
-                                        }
-                                        value[_this.state.category] = tags;
-                                        _this.props.onChange((0, _stringify2.default)(value));
-                                    } },
-                                item
-                            );
-                        })
-                    )
+                    'ul',
+                    { className: prefix + '-tag-picker-tag-list' },
+                    _this.state.tagList.map(function (item, key) {
+                        var tags = _this.getActiveTags();
+                        var cls = tags.indexOf(item) === -1 ? '' : 'active';
+                        return _react2.default.createElement(
+                            'li',
+                            { className: prefix + '-tag-picker-tag-list-item ' + cls, key: key, onClick: function onClick() {
+                                    var value = _this.getValue();
+                                    var tags = _this.getActiveTags();
+                                    if (tags.indexOf(item) === -1) {
+                                        tags.push(item);
+                                    } else {
+                                        tags.splice(tags.indexOf(item), 1);
+                                    }
+                                    value[_this.state.category] = tags;
+                                    _this.props.onChange((0, _stringify2.default)(value));
+                                } },
+                            item
+                        );
+                    })
                 )
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);

@@ -2,7 +2,7 @@
 
 import './less/city-picker.less'
 import React from 'react'
-import Icon from './Icon'
+import Picker from './Picker'
 
 export default class CityPicker extends React.Component {
 
@@ -18,6 +18,7 @@ export default class CityPicker extends React.Component {
     componentWillReceiveProps = (nextProps) => {
         const prefix = this.props.prefix
         this.setState({
+            status: nextProps.status,
             cityData: CityData.slice(0, 2),
             letterListMarginLeft: document.getElementById(prefix + '-city-picker').scrollWidth / 2 - 40 + 'px'
         })
@@ -34,16 +35,12 @@ export default class CityPicker extends React.Component {
     render = () => {
         let scrollTop = 0
         const scrollMap = {}
-        const status = this.props.status
+        const status = this.state.status
         const prefix = this.props.prefix
         const letters = ['★', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
             'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T',
             'W', 'X', 'Y', 'Z']
-        return <div id={prefix+'-city-picker'} className={prefix+'-city-picker '+status}>
-            <div className={prefix+"-city-picker-name"}>
-                <Icon type="back" onClick={this.props.onBackClick}/>
-                {this.props.name}
-            </div>
+        return <Picker id={prefix+'-city-picker'} className={prefix+'-city-picker'} status={status}>
             <div className={prefix+"-city-picker-city-list"} id={prefix+'-city-picker-city-list'}>
                 {this.state.cityData.map((item, key)=> {
                     scrollMap[item.initial] = scrollTop
@@ -56,7 +53,6 @@ export default class CityPicker extends React.Component {
                             scrollTop = scrollTop + 40
                             return <div key={key} className={prefix+"-city-picker-city-item"} onClick={()=>{
                                 this.props.onChange(item.name)
-                                this.props.onBackClick()
                             }}>
                                 {item.name}
                             </div>
@@ -71,6 +67,6 @@ export default class CityPicker extends React.Component {
                     }}>{item}</div>
                 })}
             </div>
-        </div>
+        </Picker>
     }
 }

@@ -20,7 +20,7 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-require('./less/picker.less');
+require('./less/option-picker.less');
 
 var _react = require('react');
 
@@ -30,58 +30,62 @@ var _Icon = require('./Icon');
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
+var _Picker = require('./Picker');
+
+var _Picker2 = _interopRequireDefault(_Picker);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Picker = function (_React$Component) {
-    (0, _inherits3.default)(Picker, _React$Component);
+var OptionPicker = function (_React$Component) {
+    (0, _inherits3.default)(OptionPicker, _React$Component);
 
-    function Picker() {
+    function OptionPicker() {
         var _ref;
 
         var _temp, _this, _ret;
 
-        (0, _classCallCheck3.default)(this, Picker);
+        (0, _classCallCheck3.default)(this, OptionPicker);
 
         for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Picker.__proto__ || (0, _getPrototypeOf2.default)(Picker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = OptionPicker.__proto__ || (0, _getPrototypeOf2.default)(OptionPicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             status: ''
         }, _this.componentWillReceiveProps = function (nextProps) {
             _this.setState({ status: nextProps.status });
-        }, _this.onBackClick = function () {
-            _this.setState({ status: 'close' });
-            _this.props.onBackClick();
         }, _this.render = function () {
-            var status = _this.state.status;
             var prefix = _this.props.prefix;
-            var className = _this.props.className;
+            var status = _this.state.status;
+            var value = _this.props.value;
             return _react2.default.createElement(
-                'div',
-                { className: prefix + '-picker ' + className + ' ' + status },
+                _Picker2.default,
+                { className: prefix + '-option-picker', name: '\u8BF7\u9009\u62E9', status: status },
                 _react2.default.createElement(
                     'div',
-                    { className: prefix + "-picker-name" },
-                    _react2.default.createElement(_Icon2.default, { type: 'back', onClick: _this.onBackClick }),
-                    _this.props.name
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: prefix + "-picker-content" },
-                    _this.props.children
+                    { className: prefix + '-option-picker-option-list' },
+                    _this.props.data.map(function (item, key) {
+                        return _react2.default.createElement(
+                            'div',
+                            { key: key, className: prefix + "-option-picker-option-item", onClick: function onClick() {
+                                    _this.props.onChange(item);
+                                } },
+                            item,
+                            item == value ? _react2.default.createElement(_Icon2.default, { type: 'check' }) : null
+                        );
+                    })
                 )
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
-    return Picker;
+    return OptionPicker;
 }(_react2.default.Component);
 
-Picker.defaultProps = {
+OptionPicker.defaultProps = {
+    data: [],
     status: '',
     prefix: 'zui',
-    name: '请选择',
     onChange: function onChange() {}
 };
-exports.default = Picker;
+exports.default = OptionPicker;

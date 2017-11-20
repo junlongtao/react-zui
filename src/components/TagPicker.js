@@ -5,7 +5,7 @@
 
 import './less/tag-picker.less'
 import React from 'react'
-import Icon from './Icon'
+import Picker from './Picker'
 
 export default class TagPicker extends React.Component {
 
@@ -73,41 +73,35 @@ export default class TagPicker extends React.Component {
         const prefix = this.props.prefix
         const status = this.props.status
         const categoryList = this.getCategoryList()
-        return <div className={prefix+'-tag-picker '+status}>
-            <div className={prefix+"-tag-picker-name"}>
-                <Icon type="back" onClick={this.props.onBackClick}/>
-                {this.props.name}
-            </div>
-            <div className={prefix+'-tag-picker-content'}>
-                <ul className={prefix+'-tag-picker-category-list'}>
-                    {categoryList.map((item, key)=> {
-                        const cls = item === this.state.category ? 'active' : ''
-                        return <li className={prefix+'-tag-picker-category-list-item '+cls} key={key} onClick={()=>{
-                            this.setState({
-                                category: item,
-                                tagList: this.props.data[item]
-                            })
-                        }}>{item}</li>
-                    })}
-                </ul>
-                <ul className={prefix+'-tag-picker-tag-list'}>
-                    {this.state.tagList.map((item, key)=> {
+        return <Picker className={prefix+'-tag-picker'} status={status}>
+            <ul className={prefix+'-tag-picker-category-list'}>
+                {categoryList.map((item, key)=> {
+                    const cls = item === this.state.category ? 'active' : ''
+                    return <li className={prefix+'-tag-picker-category-list-item '+cls} key={key} onClick={()=>{
+                        this.setState({
+                            category: item,
+                            tagList: this.props.data[item]
+                        })
+                    }}>{item}</li>
+                })}
+            </ul>
+            <ul className={prefix+'-tag-picker-tag-list'}>
+                {this.state.tagList.map((item, key)=> {
+                    const tags = this.getActiveTags()
+                    const cls = tags.indexOf(item) === -1 ? '' : 'active'
+                    return <li className={prefix+'-tag-picker-tag-list-item '+cls} key={key} onClick={()=>{
+                        const value = this.getValue()
                         const tags = this.getActiveTags()
-                        const cls = tags.indexOf(item) === -1 ? '' : 'active'
-                        return <li className={prefix+'-tag-picker-tag-list-item '+cls} key={key} onClick={()=>{
-                            const value = this.getValue()
-                            const tags = this.getActiveTags()
-                            if(tags.indexOf(item)===-1){
-                                tags.push(item)
-                            }else{
-                                tags.splice(tags.indexOf(item),1)
-                            }
-                            value[this.state.category] = tags
-                            this.props.onChange(JSON.stringify(value))
-                        }}>{item}</li>
-                    })}
-                </ul>
-            </div>
-        </div>
+                        if(tags.indexOf(item)===-1){
+                            tags.push(item)
+                        }else{
+                            tags.splice(tags.indexOf(item),1)
+                        }
+                        value[this.state.category] = tags
+                        this.props.onChange(JSON.stringify(value))
+                    }}>{item}</li>
+                })}
+            </ul>
+        </Picker>
     }
 }

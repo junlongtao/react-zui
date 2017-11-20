@@ -38,10 +38,6 @@ var _Rater = require('./Rater');
 
 var _Rater2 = _interopRequireDefault(_Rater);
 
-var _Picker = require('./Picker');
-
-var _Picker2 = _interopRequireDefault(_Picker);
-
 var _Button = require('./Button');
 
 var _Button2 = _interopRequireDefault(_Button);
@@ -65,6 +61,10 @@ var _DatePicker2 = _interopRequireDefault(_DatePicker);
 var _MonthPicker = require('./MonthPicker');
 
 var _MonthPicker2 = _interopRequireDefault(_MonthPicker);
+
+var _OptionPicker = require('./OptionPicker');
+
+var _OptionPicker2 = _interopRequireDefault(_OptionPicker);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -766,17 +766,19 @@ var PickerItem = function (_React$Component12) {
                         _react2.default.createElement(_Icon2.default, { type: 'horizontal' })
                     )
                 ),
-                _react2.default.createElement(_Picker2.default, { name: _this12.props.name,
+                _react2.default.createElement(_OptionPicker2.default, {
+                    name: _this12.props.name,
                     data: _this12.props.data,
                     value: _this12.state.value,
                     status: _this12.state.status,
-                    onBackClick: function onBackClick() {
-                        _this12.setState({ status: 'close' });
-                    },
                     onChange: function onChange(value) {
                         _this12.props.onChange(value);
-                        _this12.setState({ value: value });
-                    } })
+                        _this12.setState({
+                            value: value,
+                            status: 'close'
+                        });
+                    }
+                })
             );
         }, _temp12), (0, _possibleConstructorReturn3.default)(_this12, _ret12);
     }
@@ -887,16 +889,18 @@ var CityPickerItem = function (_React$Component14) {
                         _react2.default.createElement(_Icon2.default, { type: 'horizontal' })
                     )
                 ),
-                _react2.default.createElement(_CityPicker2.default, { name: _this14.props.name,
+                _react2.default.createElement(_CityPicker2.default, {
+                    name: _this14.props.name,
                     value: _this14.state.value,
                     status: _this14.state.status,
                     onChange: function onChange(value) {
-                        _this14.setState({ value: value });
+                        _this14.setState({
+                            value: value,
+                            status: 'close'
+                        });
                         _this14.props.onChange(value);
-                    },
-                    onBackClick: function onBackClick() {
-                        _this14.setState({ status: 'close' });
-                    } })
+                    }
+                })
             );
         }, _temp14), (0, _possibleConstructorReturn3.default)(_this14, _ret14);
     }
@@ -931,10 +935,6 @@ var TagPickerItem = function (_React$Component15) {
         }, _this15.componentWillReceiveProps = function (nextProps) {
             _this15.setState({
                 value: nextProps.value
-            });
-        }, _this15.onPickerBackClick = function () {
-            _this15.setState({
-                status: 'close'
             });
         }, _this15.renderTags = function () {
             var value = {};
@@ -978,12 +978,19 @@ var TagPickerItem = function (_React$Component15) {
                         _react2.default.createElement(_Icon2.default, { type: 'horizontal' })
                     )
                 ),
-                _react2.default.createElement(_TagPicker2.default, { name: _this15.props.name,
+                _react2.default.createElement(_TagPicker2.default, {
+                    name: _this15.props.name,
                     data: _this15.props.data,
                     value: _this15.state.value,
                     status: _this15.state.status,
-                    onChange: _this15.props.onChange,
-                    onBackClick: _this15.onPickerBackClick })
+                    onChange: function onChange(value) {
+                        _this15.setState({
+                            value: value,
+                            status: 'close'
+                        });
+                        _this15.props.onChange(value);
+                    }
+                })
             );
         }, _temp15), (0, _possibleConstructorReturn3.default)(_this15, _ret15);
     }
@@ -1022,7 +1029,7 @@ var MonthPickerItem = function (_React$Component16) {
             var prefix = _this16.props.prefix;
             return _react2.default.createElement(
                 'div',
-                { className: prefix + "-item " + prefix + "-tag-picker-item" },
+                { className: prefix + "-item " + prefix + "-month-picker-item" },
                 _react2.default.createElement(
                     'div',
                     { className: prefix + "-label" },
@@ -1040,13 +1047,17 @@ var MonthPickerItem = function (_React$Component16) {
                         _react2.default.createElement(_Icon2.default, { type: 'horizontal' })
                     )
                 ),
-                _react2.default.createElement(_MonthPicker2.default, { value: _this16.state.value, status: _this16.state.status,
+                _react2.default.createElement(_MonthPicker2.default, {
+                    value: _this16.state.value,
+                    status: _this16.state.status,
                     onChange: function onChange(value) {
-                        _this16.setState({ value: value });
                         _this16.props.onChange(value);
-                    }, onBackClick: function onBackClick() {
-                        _this16.setState({ status: 'close' });
-                    } })
+                        _this16.setState({
+                            value: value,
+                            status: 'close'
+                        });
+                    }
+                })
             );
         }, _temp16), (0, _possibleConstructorReturn3.default)(_this16, _ret16);
     }
@@ -1076,7 +1087,12 @@ var DatePickerItem = function (_React$Component17) {
         }
 
         return _ret17 = (_temp17 = (_this17 = (0, _possibleConstructorReturn3.default)(this, (_ref17 = DatePickerItem.__proto__ || (0, _getPrototypeOf2.default)(DatePickerItem)).call.apply(_ref17, [this].concat(args))), _this17), _this17.state = {
-            datePickerVisible: false
+            value: '',
+            status: ''
+        }, _this17.componentWillReceiveProps = function (nextProps) {
+            _this17.setState({
+                value: nextProps.value
+            });
         }, _this17.render = function () {
             var prefix = _this17.props.prefix;
             return _react2.default.createElement(
@@ -1090,7 +1106,7 @@ var DatePickerItem = function (_React$Component17) {
                 _react2.default.createElement(
                     'div',
                     { className: prefix + "-control", onClick: function onClick() {
-                            _this17.setState({ datePickerVisible: true });
+                            _this17.setState({ status: 'open' });
                         } },
                     _react2.default.createElement(
                         'div',
@@ -1099,12 +1115,17 @@ var DatePickerItem = function (_React$Component17) {
                         _react2.default.createElement(_Icon2.default, { type: 'horizontal' })
                     )
                 ),
-                _react2.default.createElement(DatePickerItem, { visible: _this17.state.datePickerVisible, onBackClick: function onBackClick() {
-                        _this17.setState({ datePickerVisible: false });
-                    }, value: _this17.state.value, onChange: function onChange(val) {
-                        _this17.setState({ datePickerVisible: false });
-                        _this17.props.onChange(val);
-                    } })
+                _react2.default.createElement(_DatePicker2.default, {
+                    value: _this17.state.value,
+                    status: _this17.state.status,
+                    onChange: function onChange(value) {
+                        _this17.props.onChange(value);
+                        _this17.setState({
+                            value: value,
+                            status: 'close'
+                        });
+                    }
+                })
             );
         }, _temp17), (0, _possibleConstructorReturn3.default)(_this17, _ret17);
     }
@@ -1115,7 +1136,8 @@ var DatePickerItem = function (_React$Component17) {
 DatePickerItem.defaultProps = {
     value: '',
     name: '选择日期',
-    prefix: 'zui-list'
+    prefix: 'zui-list',
+    onChange: function onChange() {}
 };
 
 var RaterItem = function (_React$Component18) {

@@ -44,18 +44,18 @@ config.plugins = [
         name: 'vendors', 
         filename: 'vendors.min.js'
     }),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        },
-        output: {
-            comments: false
-        }
-    }),
-    new webpack.DefinePlugin({
-        ENV: `'dev'`,
-        'process.env.NODE_ENV': '"dev"'
-    })
+    // new webpack.optimize.UglifyJsPlugin({
+    //     compress: {
+    //         warnings: false
+    //     },
+    //     output: {
+    //         comments: false
+    //     }
+    // }),
+    // new webpack.DefinePlugin({
+    //     ENV: `'dev'`,
+    //     'process.env.NODE_ENV': '"dev"'
+    // })
 ]
 
 module.exports = config

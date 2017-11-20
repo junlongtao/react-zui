@@ -5,13 +5,13 @@ import React from 'react'
 import Icon from './Icon'
 import Radio from './Radio'
 import Rater from './Rater'
-import Picker from './Picker'
 import Button from './Button'
 import Switch from './Switch'
 import TagPicker from './TagPicker'
 import CityPicker from './CityPicker'
 import DatePicker from './DatePicker'
 import MonthPicker from './MonthPicker'
+import OptionPicker from './OptionPicker'
 
 class Header extends React.Component {
     static defaultProps = {
@@ -163,7 +163,7 @@ class FileItem extends React.Component {
                         }
                         this.props.onChange(e.target.files[0])
                     }}/>
-                    {this.state.value? <img src={this.state.value}/> : <span>请选择</span>}
+                    {this.state.value ? <img src={this.state.value}/> : <span>请选择</span>}
                     <Icon type="horizontal"/>
                 </div>
             </div>
@@ -177,9 +177,12 @@ class InputItem extends React.Component {
         type: 'text',
         prefix: 'zui-list',
         placeholder: '请输入',
-        onChange: () => {},
-        onClick: () => {}, 
-        onBlur: () => {},
+        onChange: () => {
+        },
+        onClick: () => {
+        },
+        onBlur: () => {
+        },
     }
 
     state = {
@@ -417,7 +420,8 @@ class PickerItem extends React.Component {
         name: '请选择',
         value: '',
         prefix: 'zui-list',
-        onChange: () => {}
+        onChange: () => {
+        }
     }
 
     state = {
@@ -445,17 +449,19 @@ class PickerItem extends React.Component {
                     <Icon type="horizontal"/>
                 </div>
             </div>
-            <Picker name={this.props.name}
-                    data={this.props.data}
-                    value={this.state.value}
-                    status={this.state.status}
-                    onBackClick={()=>{
-                        this.setState({status: 'close'})
-                    }}
-                    onChange={(value)=>{
-                        this.props.onChange(value)
-                        this.setState({value: value})
-                    }}/>
+            <OptionPicker
+                name={this.props.name}
+                data={this.props.data}
+                value={this.state.value}
+                status={this.state.status}
+                onChange={(value)=>{
+                    this.props.onChange(value)
+                    this.setState({
+                        value: value,
+                        status: 'close',
+                    })
+                }}
+            />
         </div>
     }
 }
@@ -465,7 +471,8 @@ class RadioItem extends React.Component {
         data: [],
         value: '',
         prefix: 'zui-list',
-        onChange: () => {}
+        onChange: () => {
+        }
     }
 
     state = {
@@ -474,7 +481,7 @@ class RadioItem extends React.Component {
 
     componentWillReceiveProps = (nextProps) => {
         this.setState({
-            value: nextProps.value||this.props.data[0]
+            value: nextProps.value || this.props.data[0]
         })
     }
 
@@ -499,7 +506,8 @@ class CityPickerItem extends React.Component {
         value: '请选择',
         name: '选择城市',
         prefix: 'zui-list',
-        onChange: () => {}
+        onChange: () => {
+        }
     }
 
     state = {
@@ -527,16 +535,18 @@ class CityPickerItem extends React.Component {
                     <Icon type="horizontal"/>
                 </div>
             </div>
-            <CityPicker name={this.props.name}
-                        value={this.state.value}
-                        status={this.state.status}
-                        onChange={(value)=>{
-                            this.setState({value: value})
-                            this.props.onChange(value)
-                        }}
-                        onBackClick={()=>{
-                            this.setState({status: 'close'})
-                        }}/>
+            <CityPicker
+                name={this.props.name}
+                value={this.state.value}
+                status={this.state.status}
+                onChange={(value)=>{
+                    this.setState({
+                        value: value,
+                        status: 'close',
+                    })
+                    this.props.onChange(value)
+                }}
+            />
         </div>
     }
 }
@@ -549,19 +559,13 @@ class TagPickerItem extends React.Component {
     }
 
     state = {
-        value: '', 
+        value: '',
         status: ''
     }
 
     componentWillReceiveProps = (nextProps) => {
         this.setState({
             value: nextProps.value
-        })
-    }
-
-    onPickerBackClick = () => {
-        this.setState({
-            status: 'close'
         })
     }
 
@@ -597,12 +601,19 @@ class TagPickerItem extends React.Component {
                     <Icon type="horizontal"/>
                 </div>
             </div>
-            <TagPicker name={this.props.name}
-                       data={this.props.data}
-                       value={this.state.value}
-                       status={this.state.status}
-                       onChange={this.props.onChange}
-                       onBackClick={this.onPickerBackClick}/>
+            <TagPicker
+                name={this.props.name}
+                data={this.props.data}
+                value={this.state.value}
+                status={this.state.status}
+                onChange={(value)=>{
+                    this.setState({
+                        value: value,
+                        status: 'close',
+                    })
+                    this.props.onChange(value)
+                }}
+            />
         </div>
     }
 }
@@ -612,7 +623,8 @@ class MonthPickerItem extends React.Component {
         value: '',
         name: '选择日期',
         prefix: 'zui-list',
-        onChange: () => {}
+        onChange: () => {
+        }
     }
 
     state = {
@@ -628,7 +640,7 @@ class MonthPickerItem extends React.Component {
 
     render = () => {
         const prefix = this.props.prefix
-        return <div className={prefix+"-item "+prefix+"-tag-picker-item"}>
+        return <div className={prefix+"-item "+prefix+"-month-picker-item"}>
             <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
@@ -640,13 +652,17 @@ class MonthPickerItem extends React.Component {
                     <Icon type="horizontal"/>
                 </div>
             </div>
-            <MonthPicker value={this.state.value} status={this.state.status}
-                         onChange={(value)=>{
-                            this.setState({value: value})
-                            this.props.onChange(value)
-                         }} onBackClick={()=>{
-                            this.setState({status: 'close'})
-                         }}/>
+            <MonthPicker
+                value={this.state.value}
+                status={this.state.status}
+                onChange={(value)=>{
+                    this.props.onChange(value)
+                    this.setState({
+                        value: value,
+                        status: 'close',
+                    })
+                }}
+            />
         </div>
     }
 }
@@ -656,10 +672,19 @@ class DatePickerItem extends React.Component {
         value: '',
         name: '选择日期',
         prefix: 'zui-list',
+        onChange: ()=> {
+        },
     }
 
     state = {
-        datePickerVisible: false
+        value: '',
+        status: '',
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value
+        })
     }
 
     render = () => {
@@ -669,19 +694,24 @@ class DatePickerItem extends React.Component {
                 {this.props.children}
             </div>
             <div className={prefix+"-control"} onClick={()=>{
-                this.setState({datePickerVisible: true})
+                this.setState({status: 'open'})
             }}>
                 <div>
                     {this.state.value || '请选择'}
                     <Icon type="horizontal"/>
                 </div>
             </div>
-            <DatePickerItem visible={this.state.datePickerVisible} onBackClick={()=>{
-                this.setState({datePickerVisible: false})
-            }} value={this.state.value} onChange={(val)=>{
-                this.setState({datePickerVisible: false})
-                this.props.onChange(val)
-            }}/>
+            <DatePicker
+                value={this.state.value}
+                status={this.state.status}
+                onChange={value=>{
+                    this.props.onChange(value)
+                    this.setState({
+                        value: value,
+                        status: 'close',
+                    })
+                }}
+            />
         </div>
     }
 }
@@ -691,7 +721,8 @@ class RaterItem extends React.Component {
     static defaultProps = {
         value: '',
         prefix: 'zui-list',
-        onChange: () => {}
+        onChange: () => {
+        }
     }
 
     state = {

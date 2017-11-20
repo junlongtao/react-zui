@@ -26,9 +26,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Icon = require('./Icon');
+var _Picker = require('./Picker');
 
-var _Icon2 = _interopRequireDefault(_Icon);
+var _Picker2 = _interopRequireDefault(_Picker);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52,6 +52,7 @@ var CityPicker = function (_React$Component) {
         }, _this.componentWillReceiveProps = function (nextProps) {
             var prefix = _this.props.prefix;
             _this.setState({
+                status: nextProps.status,
                 cityData: CityData.slice(0, 2),
                 letterListMarginLeft: document.getElementById(prefix + '-city-picker').scrollWidth / 2 - 40 + 'px'
             });
@@ -66,18 +67,12 @@ var CityPicker = function (_React$Component) {
         }, _this.render = function () {
             var scrollTop = 0;
             var scrollMap = {};
-            var status = _this.props.status;
+            var status = _this.state.status;
             var prefix = _this.props.prefix;
             var letters = ['★', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'W', 'X', 'Y', 'Z'];
             return _react2.default.createElement(
-                'div',
-                { id: prefix + '-city-picker', className: prefix + '-city-picker ' + status },
-                _react2.default.createElement(
-                    'div',
-                    { className: prefix + "-city-picker-name" },
-                    _react2.default.createElement(_Icon2.default, { type: 'back', onClick: _this.props.onBackClick }),
-                    _this.props.name
-                ),
+                _Picker2.default,
+                { id: prefix + '-city-picker', className: prefix + '-city-picker', status: status },
                 _react2.default.createElement(
                     'div',
                     { className: prefix + "-city-picker-city-list", id: prefix + '-city-picker-city-list' },
@@ -98,7 +93,6 @@ var CityPicker = function (_React$Component) {
                                     'div',
                                     { key: key, className: prefix + "-city-picker-city-item", onClick: function onClick() {
                                             _this.props.onChange(item.name);
-                                            _this.props.onBackClick();
                                         } },
                                     item.name
                                 );
