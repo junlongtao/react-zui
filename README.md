@@ -4,12 +4,11 @@ Mobile Web App Components build with [React@16](http://facebook.github.io/react/
  
 ## Documentation
 
-[documentation](http://zui.zhichou.com) with live examples.
+[http://zui.zhichou.com](http://zui.zhichou.com) with live examples.
 
 ## Installation 
 
-```
-npm install --save react react-dom
+``` 
 npm install --save react-zui
 ```  
 
@@ -34,8 +33,6 @@ ReactDOM.render((
 ## Mobile Demo
 
 ![react-zui](./docs/qrcode.png)
-
-[1.0.0](http://zui.zhichou.com)
 
 ## License
 
