@@ -59,7 +59,7 @@ var Rater = function (_React$Component) {
 
             var _loop = function _loop(i) {
                 var is_active = i < _this.props.value ? true : false;
-                var cls = "star " + (i % 2 == 0 ? 'left' : 'right') + ' ' + (is_active ? 'active' : '');
+                var cls = _this.props.prefix + "-rater-star " + (i % 2 == 0 ? 'left' : 'right') + ' ' + (is_active ? 'active' : '');
                 stars.push(_react2.default.createElement(
                     'div',
                     { key: i, className: cls, onClick: function onClick() {
@@ -93,20 +93,23 @@ var Rater = function (_React$Component) {
                 { className: prefix + "-rater clear" },
                 _react2.default.createElement(
                     'div',
-                    { className: "star left " + (_this.props.value > 0 ? 'active' : ''), onClick: _this.onFirstClick,
+                    { className: prefix + "-rater-star left " + (_this.props.value > 0 ? 'active' : ''),
+                        onClick: _this.onFirstClick,
                         onMouseEnter: function onMouseEnter() {
                             _this.onChange(1);
                         },
                         onMouseLeave: function onMouseLeave() {
                             _this.onChange(0);
-                        } },
+                        }
+                    },
                     _react2.default.createElement(_Icon2.default, { type: 'star' })
                 ),
                 _this.renderStars(),
                 _react2.default.createElement(
                     'span',
                     null,
-                    _this.props.value + '分'
+                    _this.props.value || '0',
+                    '\u5206'
                 )
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);

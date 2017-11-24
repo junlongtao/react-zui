@@ -24,29 +24,23 @@ class TabPane extends React.Component {
 class Tabs extends React.Component {
 
     static defaultProps = {
+        active: '',
         prefix: 'zui',
         className: '',
-        active: '',
         onChange: () => {
         }
     }
 
     state = {
-        active: ''
-    }
+        active: this.props.active
+    } 
 
-    componentWillReceiveProps = nextProps => {
-        this.setState({
-            active: parseInt(nextProps.active)
-        })
-    }
-
-    render = () => {
+    render = () => { 
         const prefix = this.props.prefix
         return <div className={prefix+'-tabs '+this.props.className}>
             <ul className={prefix+'-tabs-nav'}>
                 {this.props.children.map((item, key)=> {
-                    const active = key == this.state.active ? 'active' : ''
+                    const active = key === this.state.active ? 'active' : ''
                     return <li key={key} className={prefix+'-tabs-nav-item '+active} onClick={()=>{
                         key = (key === this.state.active?'':key)
                         this.setState({active: key})
@@ -58,7 +52,7 @@ class Tabs extends React.Component {
             </ul>
             <div className={prefix+'-tabs-content'}>
                 {this.props.children.map((item, key)=> {
-                    return key == this.state.active ? item : null
+                    return key === this.state.active ? item : null
                 })}
             </div>
         </div>

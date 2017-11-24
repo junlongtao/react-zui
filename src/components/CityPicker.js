@@ -3,6 +3,12 @@
 import './less/city-picker.less'
 import React from 'react'
 import Picker from './Picker'
+ 
+const Letters = [
+    '★', 'A', 'B', 'C', 'D', 'E', 'F', 
+    'G', 'H', 'J', 'K', 'L', 'M', 'N', 
+    'P', 'Q', 'R', 'S', 'T', 'W', 'X', 'Y', 'Z'
+]
 
 export default class CityPicker extends React.Component {
 
@@ -11,38 +17,24 @@ export default class CityPicker extends React.Component {
     }
 
     state = {
-        cityData: [],
         letterListMarginLeft: 0
     }
 
-    componentWillReceiveProps = (nextProps) => {
+    componentDidMount = () => {
         const prefix = this.props.prefix
-        this.setState({
-            status: nextProps.status,
-            cityData: CityData.slice(0, 2),
-            letterListMarginLeft: document.getElementById(prefix + '-city-picker').scrollWidth / 2 - 40 + 'px'
-        })
-        //延迟加载CityData,首次打开只渲染第一页
-        if (nextProps.status === 'open') {
-            window.setTimeout(()=> {
-                this.setState({
-                    cityData: CityData
-                })
-            }, 500)
-        } 
+        this.setState({  
+            letterListMarginLeft: document.getElementById(prefix + '-city-picker-city-list').scrollWidth / 2 - 40 + 'px'
+        }) 
     }
 
     render = () => {
         let scrollTop = 0
         const scrollMap = {}
-        const status = this.state.status
+        const status = this.props.status
         const prefix = this.props.prefix
-        const letters = ['★', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-            'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T',
-            'W', 'X', 'Y', 'Z']
-        return <Picker id={prefix+'-city-picker'} className={prefix+'-city-picker'} status={status}>
+        return <Picker className={prefix+'-city-picker'} status={status}>
             <div className={prefix+"-city-picker-city-list"} id={prefix+'-city-picker-city-list'}>
-                {this.state.cityData.map((item, key)=> {
+                {CityData.map((item, key)=> {
                     scrollMap[item.initial] = scrollTop
                     scrollTop = scrollTop + 40
                     return <div key={key} className={prefix+"-city-picker-city-set"}>
@@ -61,7 +53,7 @@ export default class CityPicker extends React.Component {
                 })}
             </div>
             <div className={prefix+'-city-picker-letter-list'} style={{marginLeft: this.state.letterListMarginLeft}}>
-                {letters.map((item, key)=> {
+                {Letters.map((item, key)=> {
                     return <div key={key} className={prefix+'-city-picker-letter-item'} onClick={()=>{
                         document.getElementById(prefix+'-city-picker-city-list').scrollTop = scrollMap[item]
                     }}>{item}</div>

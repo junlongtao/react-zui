@@ -37,6 +37,8 @@ var _Picker = require('./Picker');
 
 var _Picker2 = _interopRequireDefault(_Picker);
 
+var _util = require('../util');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TagPicker = function (_React$Component) {
@@ -54,78 +56,61 @@ var TagPicker = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TagPicker.__proto__ || (0, _getPrototypeOf2.default)(TagPicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            tagList: [],
-            category: ''
-        }, _this.componentWillReceiveProps = function (nextProps) {
-            if (!_this.state.category) {
-                var categoryList = _this.getCategoryList();
-                var category = categoryList[0];
-                _this.setState({
-                    category: category,
-                    tagList: nextProps.data[category]
-                });
-            }
-        }, _this.getCategoryList = function () {
-            var res = [];
+            category: '技术'
+        }, _this.renderCategoryList = function () {
+            var categoryList = [];
             for (var i in _this.props.data) {
-                res.push(i);
+                categoryList.push(i);
             }
-            return res;
-        }, _this.getActiveTags = function () {
-            var value = _this.getValue();
-            return value[_this.state.category] || [];
-        }, _this.getValue = function () {
-            try {
-                return JSON.parse(_this.props.value);
-            } catch (e) {
-                return {};
-            }
+
+            var prefix = _this.props.prefix;
+            return categoryList.map(function (item, key) {
+                var cls = item === _this.state.category ? 'active' : '';
+                return _react2.default.createElement(
+                    'li',
+                    { className: prefix + '-tag-picker-category-item ' + cls, key: key, onClick: function onClick() {
+                            _this.setState({ category: item });
+                        } },
+                    item
+                );
+            });
+        }, _this.renderTagList = function () {
+            var value = (0, _util.parsejson)(_this.props.value);
+            var valueTags = value[_this.state.category] || [];
+            var categoryTags = _this.props.data[_this.state.category];
+
+            var prefix = _this.props.prefix;
+            return categoryTags.map(function (item, key) {
+                var cls = valueTags.indexOf(item) === -1 ? '' : 'active';
+                return _react2.default.createElement(
+                    'li',
+                    { className: prefix + '-tag-picker-tag-item ' + cls, key: key, onClick: function onClick() {
+                            if (valueTags.indexOf(item) === -1) {
+                                valueTags.push(item);
+                            } else {
+                                valueTags.splice(valueTags.indexOf(item), 1);
+                            }
+                            value[_this.state.category] = valueTags;
+                            _this.props.onChange((0, _stringify2.default)(value));
+                        } },
+                    item
+                );
+            });
         }, _this.render = function () {
             var prefix = _this.props.prefix;
             var status = _this.props.status;
-            var categoryList = _this.getCategoryList();
             return _react2.default.createElement(
                 _Picker2.default,
                 { className: prefix + '-tag-picker', status: status },
                 _react2.default.createElement(
                     'ul',
                     { className: prefix + '-tag-picker-category-list' },
-                    categoryList.map(function (item, key) {
-                        var cls = item === _this.state.category ? 'active' : '';
-                        return _react2.default.createElement(
-                            'li',
-                            { className: prefix + '-tag-picker-category-list-item ' + cls, key: key, onClick: function onClick() {
-                                    _this.setState({
-                                        category: item,
-                                        tagList: _this.props.data[item]
-                                    });
-                                } },
-                            item
-                        );
-                    })
+                    _this.renderCategoryList()
                 ),
                 _react2.default.createElement(
                     'ul',
                     { className: prefix + '-tag-picker-tag-list' },
-                    _this.state.tagList.map(function (item, key) {
-                        var tags = _this.getActiveTags();
-                        var cls = tags.indexOf(item) === -1 ? '' : 'active';
-                        return _react2.default.createElement(
-                            'li',
-                            { className: prefix + '-tag-picker-tag-list-item ' + cls, key: key, onClick: function onClick() {
-                                    var value = _this.getValue();
-                                    var tags = _this.getActiveTags();
-                                    if (tags.indexOf(item) === -1) {
-                                        tags.push(item);
-                                    } else {
-                                        tags.splice(tags.indexOf(item), 1);
-                                    }
-                                    value[_this.state.category] = tags;
-                                    _this.props.onChange((0, _stringify2.default)(value));
-                                } },
-                            item
-                        );
-                    })
+                    _this.renderTagList()
                 )
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
@@ -141,16 +126,12 @@ TagPicker.defaultProps = {
     multiCategory: false,
     data: {
         '技术': ['技术总监', 'CTO', '项目经理', '测试', '架构师', '微信开发', '前端开发', '后端开发', '运维', '硬件研发', 'AR/VR', '算法', 'Android', 'iOS', 'Java', 'PHP', 'C/C++', 'HTML5', '.NET/C#', 'unity3d'],
-        // '产品' : ['产品总监', '产品经理', '移动产品经理', '游戏策划'],
         '产品': ['产品总监', '产品经理', '数据产品经理', '游戏策划', '需求疏理', '产品顾问'],
-        // '设计' : ['设计总监', 'UI', 'UE', 'APP设计师', '平面设计师'],
         '设计': ['设计总监', 'UI设计', 'UE/UX', '平面设计师', '动画设计', '工业设计', '结构设计'],
-        // '运营' : ['运营总监', 'COO', '用户运营', '产品运营', '数据运营', '新媒体运营', '文案策划'],
         '运营': ['运营总监', 'COO', '用户运营', '产品运营', '数据运营', '新媒体运营', '文案策划', '内容编辑', 'SEO'],
-        // '市场与销售' : ['市场总监', '销售总监', '市场策划', '市场推广', '地推',  'BD', '渠道资源'],
         '市场与销售': ['市场总监', '销售总监', '市场策划', '市场推广', '地面推广', 'BD', '品牌建设', '渠道资源'],
-        // '其他' : ['创业教练', '创业导师', '法律', '融资辅导', '融资顾问', '招聘', '其他'],
         '其他': ['创业教练', '创业导师', '法律', '融资辅导', '融资顾问', '招聘', '财务', '其他']
-    }
+    },
+    onChange: function onChange() {}
 };
 exports.default = TagPicker;

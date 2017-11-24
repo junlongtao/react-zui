@@ -10,6 +10,7 @@ exports.onScrollBottom = onScrollBottom;
 exports.addEvent = addEvent;
 exports.onWindowScroll = onWindowScroll;
 exports.getMonthDayCount = getMonthDayCount;
+exports.parsejson = parsejson;
 function preZero(str) {
     return parseInt(str) < 10 ? '0' + str : str;
 }
@@ -126,4 +127,12 @@ function getMonthDayCount(month) {
     date.setMonth(date.getMonth() + 1);
     date.setDate(0);
     return date.getDate();
+}
+
+function parsejson(str) {
+    try {
+        return JSON.parse(str);
+    } catch (e) {
+        return {};
+    }
 }

@@ -26,7 +26,7 @@ export default class Rater extends React.Component {
         let stars = []
         for (let i = 1; i < 10; i++) {
             let is_active = (i < this.props.value ? true : false)
-            let cls = "star " + (i % 2 == 0 ? 'left' : 'right') + ' ' + (is_active ? 'active' : '')
+            let cls = this.props.prefix+"-rater-star " + (i % 2 == 0 ? 'left' : 'right') + ' ' + (is_active ? 'active' : '')
             stars.push(<div key={i} className={cls} onClick={()=>{
                 this.onChange(i+1)
             }} onMouseOver={()=>{
@@ -54,18 +54,20 @@ export default class Rater extends React.Component {
     render = () => {
         const prefix = this.props.prefix
         return <div className={prefix+"-rater clear"}>
-            <div className={"star left "+(this.props.value>0?'active':'')} onClick={this.onFirstClick}
+            <div className={prefix+"-rater-star left "+(this.props.value>0?'active':'')}
+                 onClick={this.onFirstClick}
                  onMouseEnter={()=>{
                     this.onChange(1)
-                }}
+                 }}
                  onMouseLeave={()=>{
                     this.onChange(0)
-                }}>
+                 }}
+            >
                 <Icon type="star"/>
             </div>
             {this.renderStars()}
             <span>
-                {this.props.value + '分'}
+                {this.props.value||'0'}分
             </span>
         </div>
     }

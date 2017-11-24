@@ -81,11 +81,7 @@ var Tabs = function (_React$Component2) {
         }
 
         return _ret2 = (_temp2 = (_this2 = (0, _possibleConstructorReturn3.default)(this, (_ref2 = Tabs.__proto__ || (0, _getPrototypeOf2.default)(Tabs)).call.apply(_ref2, [this].concat(args))), _this2), _this2.state = {
-            active: ''
-        }, _this2.componentWillReceiveProps = function (nextProps) {
-            _this2.setState({
-                active: parseInt(nextProps.active)
-            });
+            active: _this2.props.active
         }, _this2.render = function () {
             var prefix = _this2.props.prefix;
             return _react2.default.createElement(
@@ -95,7 +91,7 @@ var Tabs = function (_React$Component2) {
                     'ul',
                     { className: prefix + '-tabs-nav' },
                     _this2.props.children.map(function (item, key) {
-                        var active = key == _this2.state.active ? 'active' : '';
+                        var active = key === _this2.state.active ? 'active' : '';
                         return _react2.default.createElement(
                             'li',
                             { key: key, className: prefix + '-tabs-nav-item ' + active, onClick: function onClick() {
@@ -111,7 +107,7 @@ var Tabs = function (_React$Component2) {
                     'div',
                     { className: prefix + '-tabs-content' },
                     _this2.props.children.map(function (item, key) {
-                        return key == _this2.state.active ? item : null;
+                        return key === _this2.state.active ? item : null;
                     })
                 )
             );
@@ -122,9 +118,9 @@ var Tabs = function (_React$Component2) {
 }(_react2.default.Component);
 
 Tabs.defaultProps = {
+    active: '',
     prefix: 'zui',
     className: '',
-    active: '',
     onChange: function onChange() {}
 };
 

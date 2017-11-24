@@ -23,18 +23,19 @@
         width: 70%;
         float: left;
         .@{prefix}-month-picker-month-list-item {
+            .float-clear();
             padding: 10px;
             font-size: 14px;
             line-height: 24px;
             background: #fff;
             border-radius: 5px;
             border-bottom: 1px solid #f4f4f4;
-            .float-clear();
+            &.active {
+                color: @colorMain; 
+            }
             .@{prefix}-icon {
                 float: right;
-            }
-            &.active {
-                color: @colorMain;
+                color: @colorMain; 
             }
         }
     }

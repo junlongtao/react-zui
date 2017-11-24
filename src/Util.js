@@ -111,3 +111,11 @@ export function getMonthDayCount(month){
     date.setDate(0) 
     return date.getDate()
 }
+
+export function parsejson (str) {
+    try{
+        return JSON.parse(str)
+    }catch(e){
+        return {}
+    }
+}

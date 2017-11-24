@@ -11,7 +11,8 @@ export default class Picker extends React.Component {
         prefix: 'zui',
         name: '请选择',
         onChange: () => {
-        }
+        }, 
+        onBackClick: () => {},
     }
 
     state = {

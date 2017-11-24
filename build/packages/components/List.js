@@ -311,6 +311,14 @@ var FileItem = function (_React$Component6) {
             _this6.setState({
                 value: nextProps.value
             });
+        }, _this6.renderFile = function () {
+            var filename = _this6.state.value.toString() == '[object File]' ? _this6.state.value.name : _this6.state.value;
+            var ext = filename.split('.')[1];
+            if (['png', 'jpg', 'jpeg', 'gif', 'svg', 'bmp', 'webp'].indexOf(ext) != -1) {
+                return _react2.default.createElement('img', { src: window.URL.createObjectURL(_this6.state.value) });
+            }
+
+            return filename || _this6.props.placeholder;
         }, _this6.render = function () {
             var prefix = _this6.props.prefix;
             return _react2.default.createElement(
@@ -328,17 +336,15 @@ var FileItem = function (_React$Component6) {
                         'div',
                         null,
                         _react2.default.createElement('input', { type: 'file', onChange: function onChange(e) {
-                                if (e.target.files[0].size > 8 * 1024 * 1024) {
-                                    alert('最大支持上传8MB大小的文件');
+                                var file = e.target.files[0];
+                                if (file.size > _this6.props.maxSize) {
+                                    alert('最大支持上传' + _this6.props.maxSize / 1024 / 1024 + 'MB大小的文件');
                                     return false;
                                 }
-                                _this6.props.onChange(e.target.files[0]);
+                                _this6.setState({ value: file });
+                                _this6.props.onChange(file);
                             } }),
-                        _this6.state.value ? _react2.default.createElement('img', { src: _this6.state.value }) : _react2.default.createElement(
-                            'span',
-                            null,
-                            '\u8BF7\u9009\u62E9'
-                        ),
+                        _this6.renderFile(),
                         _react2.default.createElement(_Icon2.default, { type: 'horizontal' })
                     )
                 )
@@ -350,8 +356,10 @@ var FileItem = function (_React$Component6) {
 }(_react2.default.Component);
 
 FileItem.defaultProps = {
-    value: '',
-    prefix: 'zui-list'
+    prefix: 'zui-list',
+    placeholder: '请选择',
+    maxSize: 8 * 1024 * 1024,
+    onChange: function onChange() {}
 };
 
 var InputItem = function (_React$Component7) {
@@ -387,12 +395,19 @@ var InputItem = function (_React$Component7) {
                 _react2.default.createElement(
                     'div',
                     { className: prefix + "-control" },
-                    _react2.default.createElement('input', { type: _this7.props.type, value: _this7.state.value, onChange: function onChange(e) {
+                    _react2.default.createElement('input', {
+                        type: _this7.props.type,
+                        value: _this7.state.value,
+                        placeholder: _this7.props.placeholder,
+                        onChange: function onChange(e) {
                             _this7.setState({ value: e.target.value });
                             _this7.props.onChange(e.target.value);
-                        }, onClick: _this7.props.onClick, onBlur: function onBlur(e) {
+                        },
+                        onBlur: function onBlur(e) {
                             _this7.props.onBlur(e.target.value);
-                        }, placeholder: _this7.props.placeholder })
+                        },
+                        onClick: _this7.props.onClick
+                    })
                 )
             );
         }, _temp7), (0, _possibleConstructorReturn3.default)(_this7, _ret7);
@@ -429,29 +444,30 @@ var CodeInputItem = function (_React$Component8) {
             value: '',
             countdown: 30
         }, _this8.componentWillReceiveProps = function (nextProps) {
-            _this8.setState({
-                value: nextProps.value
-            });
-        }, _this8.onButtonClick = function () {
-            if (_this8.renderButtonCls() != 'active') {
-                return false;
-            }
-            window.codeBtnInterval = window.setInterval(function () {
-                _this8.setState({
-                    countdown: _this8.state.countdown === 0 ? 30 : _this8.state.countdown - 1
-                });
-                if (_this8.state.countdown === 30) {
-                    window.clearInterval(window.codeBtnInterval);
-                    delete window.codeBtnInterval;
+            _this8.setState({ value: nextProps.value });
+
+            if (nextProps.startCountdown) {
+                if (_this8.state.countdown < 30) {
+                    return false;
                 }
-            }, 1000);
-            _this8.props.onButtonClick();
-        }, _this8.renderButtonCls = function () {
-            var mobile = _this8.props.mobile;
-            return _this8.state.countdown === 30 && mobile && /^1[34578]\d{9}$/.test(mobile) ? 'active' : '';
+
+                var countdown = function countdown() {
+                    _this8.setState({
+                        countdown: _this8.state.countdown === 0 ? 30 : _this8.state.countdown - 1
+                    });
+                    if (_this8.state.countdown === 30) {
+                        _this8.props.onCountdownEnd();
+                        window.clearInterval(window.codeBtnInterval);
+                    }
+                };
+                countdown();
+                window.clearInterval(window.codeBtnInterval);
+                window.codeBtnInterval = window.setInterval(countdown, 1000);
+            }
         }, _this8.render = function () {
             var prefix = _this8.props.prefix;
-            var buttonCls = _this8.renderButtonCls();
+            var countdown = _this8.state.countdown;
+            var buttonCls = countdown === 30 ? 'active' : '';
             return _react2.default.createElement(
                 'div',
                 { className: prefix + "-item " + prefix + "-code-input-item" },
@@ -463,14 +479,18 @@ var CodeInputItem = function (_React$Component8) {
                 _react2.default.createElement(
                     'div',
                     { className: prefix + "-control" },
-                    _react2.default.createElement('input', { type: _this8.props.type, value: _this8.state.value, onChange: function onChange(e) {
+                    _react2.default.createElement('input', {
+                        type: _this8.props.type,
+                        value: _this8.state.value,
+                        placeholder: _this8.props.placeholder,
+                        onChange: function onChange(e) {
                             _this8.props.onChange(e.target.value);
                             _this8.setState({ value: e.target.value });
-                        }, placeholder: _this8.props.placeholder }),
+                        } }),
                     _react2.default.createElement(
                         _Button2.default,
-                        { className: prefix + "-code-button " + buttonCls, onClick: _this8.onButtonClick },
-                        _this8.state.countdown === 30 ? '获取验证码' : _this8.state.countdown + 's'
+                        { className: prefix + "-code-button " + buttonCls, onClick: _this8.props.onButtonClick },
+                        countdown === 30 ? '获取验证码' : countdown + 's'
                     )
                 )
             );
@@ -487,7 +507,8 @@ CodeInputItem.defaultProps = {
     prefix: 'zui-list',
     placeholder: '请输入验证码',
     onChange: function onChange() {},
-    onButtonClick: function onButtonClick() {}
+    onButtonClick: function onButtonClick() {},
+    onCountdownEnd: function onCountdownEnd() {}
 };
 
 var TextAreaItem = function (_React$Component9) {
@@ -723,32 +744,31 @@ DoubleSelectItem.defaultProps = {
     onMinChange: function onMinChange() {}
 };
 
-var PickerItem = function (_React$Component12) {
-    (0, _inherits3.default)(PickerItem, _React$Component12);
+var RadioItem = function (_React$Component12) {
+    (0, _inherits3.default)(RadioItem, _React$Component12);
 
-    function PickerItem() {
+    function RadioItem() {
         var _ref12;
 
         var _temp12, _this12, _ret12;
 
-        (0, _classCallCheck3.default)(this, PickerItem);
+        (0, _classCallCheck3.default)(this, RadioItem);
 
         for (var _len12 = arguments.length, args = Array(_len12), _key12 = 0; _key12 < _len12; _key12++) {
             args[_key12] = arguments[_key12];
         }
 
-        return _ret12 = (_temp12 = (_this12 = (0, _possibleConstructorReturn3.default)(this, (_ref12 = PickerItem.__proto__ || (0, _getPrototypeOf2.default)(PickerItem)).call.apply(_ref12, [this].concat(args))), _this12), _this12.state = {
-            value: '',
-            status: ''
+        return _ret12 = (_temp12 = (_this12 = (0, _possibleConstructorReturn3.default)(this, (_ref12 = RadioItem.__proto__ || (0, _getPrototypeOf2.default)(RadioItem)).call.apply(_ref12, [this].concat(args))), _this12), _this12.state = {
+            value: ''
         }, _this12.componentWillReceiveProps = function (nextProps) {
             _this12.setState({
-                value: nextProps.value
+                value: nextProps.value || _this12.props.data[0]
             });
         }, _this12.render = function () {
             var prefix = _this12.props.prefix;
             return _react2.default.createElement(
                 'div',
-                { className: prefix + "-item " + prefix + "-picker-item" },
+                { className: prefix + "-item " + prefix + "-radio-item" },
                 _react2.default.createElement(
                     'div',
                     { className: prefix + "-label" },
@@ -757,83 +777,13 @@ var PickerItem = function (_React$Component12) {
                 _react2.default.createElement(
                     'div',
                     { className: prefix + "-control" },
-                    _react2.default.createElement(
-                        'div',
-                        { onClick: function onClick() {
-                                _this12.setState({ status: 'open' });
-                            } },
-                        _this12.state.value || '请选择',
-                        _react2.default.createElement(_Icon2.default, { type: 'horizontal' })
-                    )
-                ),
-                _react2.default.createElement(_OptionPicker2.default, {
-                    name: _this12.props.name,
-                    data: _this12.props.data,
-                    value: _this12.state.value,
-                    status: _this12.state.status,
-                    onChange: function onChange(value) {
-                        _this12.props.onChange(value);
-                        _this12.setState({
-                            value: value,
-                            status: 'close'
-                        });
-                    }
-                })
-            );
-        }, _temp12), (0, _possibleConstructorReturn3.default)(_this12, _ret12);
-    }
-
-    return PickerItem;
-}(_react2.default.Component);
-
-PickerItem.defaultProps = {
-    data: [],
-    name: '请选择',
-    value: '',
-    prefix: 'zui-list',
-    onChange: function onChange() {}
-};
-
-var RadioItem = function (_React$Component13) {
-    (0, _inherits3.default)(RadioItem, _React$Component13);
-
-    function RadioItem() {
-        var _ref13;
-
-        var _temp13, _this13, _ret13;
-
-        (0, _classCallCheck3.default)(this, RadioItem);
-
-        for (var _len13 = arguments.length, args = Array(_len13), _key13 = 0; _key13 < _len13; _key13++) {
-            args[_key13] = arguments[_key13];
-        }
-
-        return _ret13 = (_temp13 = (_this13 = (0, _possibleConstructorReturn3.default)(this, (_ref13 = RadioItem.__proto__ || (0, _getPrototypeOf2.default)(RadioItem)).call.apply(_ref13, [this].concat(args))), _this13), _this13.state = {
-            value: ''
-        }, _this13.componentWillReceiveProps = function (nextProps) {
-            _this13.setState({
-                value: nextProps.value || _this13.props.data[0]
-            });
-        }, _this13.render = function () {
-            var prefix = _this13.props.prefix;
-            return _react2.default.createElement(
-                'div',
-                { className: prefix + "-item " + prefix + "-radio-item" },
-                _react2.default.createElement(
-                    'div',
-                    { className: prefix + "-label" },
-                    _this13.props.children
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: prefix + "-control" },
-                    _react2.default.createElement(_Radio2.default, { data: _this13.props.data, value: _this13.state.value, onChange: function onChange(value) {
-                            _this13.setState({ value: value });
-                            _this13.props.onChange(value);
+                    _react2.default.createElement(_Radio2.default, { data: _this12.props.data, value: _this12.state.value, onChange: function onChange(value) {
+                            _this12.setState({ value: value });
+                            _this12.props.onChange(value);
                         } })
                 )
             );
-        }, _temp13), (0, _possibleConstructorReturn3.default)(_this13, _ret13);
+        }, _temp12), (0, _possibleConstructorReturn3.default)(_this12, _ret12);
     }
 
     return RadioItem;
@@ -842,6 +792,77 @@ var RadioItem = function (_React$Component13) {
 RadioItem.defaultProps = {
     data: [],
     value: '',
+    prefix: 'zui-list',
+    onChange: function onChange() {}
+};
+
+var PickerItem = function (_React$Component13) {
+    (0, _inherits3.default)(PickerItem, _React$Component13);
+
+    function PickerItem() {
+        var _ref13;
+
+        var _temp13, _this13, _ret13;
+
+        (0, _classCallCheck3.default)(this, PickerItem);
+
+        for (var _len13 = arguments.length, args = Array(_len13), _key13 = 0; _key13 < _len13; _key13++) {
+            args[_key13] = arguments[_key13];
+        }
+
+        return _ret13 = (_temp13 = (_this13 = (0, _possibleConstructorReturn3.default)(this, (_ref13 = PickerItem.__proto__ || (0, _getPrototypeOf2.default)(PickerItem)).call.apply(_ref13, [this].concat(args))), _this13), _this13.state = {
+            value: '',
+            status: ''
+        }, _this13.componentWillReceiveProps = function (nextProps) {
+            _this13.setState({
+                value: nextProps.value
+            });
+        }, _this13.render = function () {
+            var prefix = _this13.props.prefix;
+            return _react2.default.createElement(
+                'div',
+                { className: prefix + "-item " + prefix + "-picker-item" },
+                _react2.default.createElement(
+                    'div',
+                    { className: prefix + "-label" },
+                    _this13.props.children
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: prefix + "-control" },
+                    _react2.default.createElement(
+                        'div',
+                        { onClick: function onClick() {
+                                _this13.setState({ status: 'open' });
+                            } },
+                        _this13.state.value || '请选择',
+                        _react2.default.createElement(_Icon2.default, { type: 'horizontal' })
+                    )
+                ),
+                _react2.default.createElement(_OptionPicker2.default, {
+                    name: _this13.props.name,
+                    data: _this13.props.data,
+                    value: _this13.state.value,
+                    status: _this13.state.status,
+                    onChange: function onChange(value) {
+                        _this13.props.onChange(value);
+                        _this13.setState({
+                            value: value,
+                            status: 'close'
+                        });
+                    }
+                })
+            );
+        }, _temp13), (0, _possibleConstructorReturn3.default)(_this13, _ret13);
+    }
+
+    return PickerItem;
+}(_react2.default.Component);
+
+PickerItem.defaultProps = {
+    data: [],
+    value: '',
+    name: '请选择',
     prefix: 'zui-list',
     onChange: function onChange() {}
 };
@@ -984,11 +1005,8 @@ var TagPickerItem = function (_React$Component15) {
                     value: _this15.state.value,
                     status: _this15.state.status,
                     onChange: function onChange(value) {
-                        _this15.setState({
-                            value: value,
-                            status: 'close'
-                        });
                         _this15.props.onChange(value);
+                        _this15.setState({ value: value });
                     }
                 })
             );
@@ -1001,7 +1019,8 @@ var TagPickerItem = function (_React$Component15) {
 TagPickerItem.defaultProps = {
     value: '',
     name: '选择标签',
-    prefix: 'zui-list'
+    prefix: 'zui-list',
+    onChange: function onChange() {}
 };
 
 var MonthPickerItem = function (_React$Component16) {

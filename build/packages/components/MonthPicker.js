@@ -66,11 +66,10 @@ var MonthPicker = function (_React$Component) {
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MonthPicker.__proto__ || (0, _getPrototypeOf2.default)(MonthPicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             year: new Date().getFullYear()
-        }, _this.componentWillReceiveProps = function (nextProps) {
-            _this.setState({ status: nextProps.status });
         }, _this.render = function () {
             var prefix = _this.props.prefix;
-            var status = _this.state.status;
+            var status = _this.props.status;
+            var value = _this.props.value || '-';
             return _react2.default.createElement(
                 _Picker2.default,
                 { className: prefix + '-month-picker', status: status },
@@ -78,7 +77,7 @@ var MonthPicker = function (_React$Component) {
                     'ul',
                     { className: prefix + '-month-picker-year-list' },
                     YearData.map(function (item, key) {
-                        var cls = item === _this.state.year ? 'active' : '';
+                        var cls = item == _this.state.year ? 'active' : '';
                         return _react2.default.createElement(
                             'li',
                             { className: prefix + '-month-picker-year-list-item ' + cls, key: key, onClick: function onClick() {
@@ -93,7 +92,7 @@ var MonthPicker = function (_React$Component) {
                     'ul',
                     { className: prefix + '-month-picker-month-list' },
                     _this.state.year == '至今' ? null : MonthData.map(function (item, key) {
-                        var cls = item === _this.state.month ? 'active' : '';
+                        var cls = item == value.split('-')[1] ? 'active' : '';
                         return _react2.default.createElement(
                             'li',
                             { className: prefix + '-month-picker-month-list-item ' + cls, key: key, onClick: function onClick() {
@@ -101,7 +100,7 @@ var MonthPicker = function (_React$Component) {
                                 } },
                             item,
                             '\u6708',
-                            item == _this.state.month ? _react2.default.createElement(_Icon2.default, { type: 'check' }) : null
+                            cls == 'active' ? _react2.default.createElement(_Icon2.default, { type: 'check' }) : null
                         );
                     })
                 )
@@ -115,6 +114,7 @@ var MonthPicker = function (_React$Component) {
 MonthPicker.defaultProps = {
     status: '',
     prefix: 'zui',
-    name: '选择日期'
+    name: '选择日期',
+    onChange: function onChange() {}
 };
 exports.default = MonthPicker;

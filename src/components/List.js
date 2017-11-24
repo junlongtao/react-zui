@@ -134,8 +134,11 @@ class SwitchItem extends React.Component {
 
 class FileItem extends React.Component {
     static defaultProps = {
-        value: '',
         prefix: 'zui-list',
+        placeholder: '请选择',
+        maxSize: 8 * 1024 * 1024,
+        onChange: ()=> {
+        },
     }
 
     state = {
@@ -148,6 +151,16 @@ class FileItem extends React.Component {
         })
     }
 
+    renderFile = () => {
+        const filename = this.state.value.toString() == '[object File]' ? this.state.value.name : this.state.value
+        const ext = filename.split('.')[1]
+        if (['png', 'jpg', 'jpeg', 'gif', 'svg', 'bmp', 'webp'].indexOf(ext) != -1) {
+            return <img src={window.URL.createObjectURL(this.state.value)}/>
+        }
+
+        return filename || this.props.placeholder
+    }
+
     render = () => {
         const prefix = this.props.prefix
         return <div className={prefix+"-item "+prefix+"-file-item"}>
@@ -157,13 +170,15 @@ class FileItem extends React.Component {
             <div className={prefix+"-control"}>
                 <div>
                     <input type="file" onChange={(e)=>{
-                        if (e.target.files[0].size > (8 * 1024 * 1024)) {
-                            alert('最大支持上传8MB大小的文件')
+                        const file = e.target.files[0]
+                        if (file.size > this.props.maxSize) {
+                            alert('最大支持上传'+(this.props.maxSize/1024/1024)+'MB大小的文件')
                             return false
                         }
-                        this.props.onChange(e.target.files[0])
+                        this.setState({value: file})
+                        this.props.onChange(file)
                     }}/>
-                    {this.state.value ? <img src={this.state.value}/> : <span>请选择</span>}
+                    {this.renderFile()}
                     <Icon type="horizontal"/>
                 </div>
             </div>
@@ -202,12 +217,19 @@ class InputItem extends React.Component {
                 {this.props.children}
             </div>
             <div className={prefix+"-control"}>
-                <input type={this.props.type} value={this.state.value} onChange={(e)=>{
-                    this.setState({value: e.target.value})
-                    this.props.onChange(e.target.value)
-                }} onClick={this.props.onClick} onBlur={e => {
-                    this.props.onBlur(e.target.value)
-                }} placeholder={this.props.placeholder}/>
+                <input
+                    type={this.props.type}
+                    value={this.state.value}
+                    placeholder={this.props.placeholder}
+                    onChange={(e)=>{
+                        this.setState({value: e.target.value})
+                        this.props.onChange(e.target.value)
+                    }}
+                    onBlur={e => {
+                        this.props.onBlur(e.target.value)
+                    }}
+                    onClick={this.props.onClick}
+                />
             </div>
         </div>
     }
@@ -223,6 +245,8 @@ class CodeInputItem extends React.Component {
         onChange: () => {
         },
         onButtonClick: () => {
+        },
+        onCountdownEnd: () => {
         }
     }
 
@@ -232,46 +256,47 @@ class CodeInputItem extends React.Component {
     }
 
     componentWillReceiveProps = (nextProps) => {
-        this.setState({
-            value: nextProps.value
-        })
-    }
+        this.setState({value: nextProps.value})
 
-    onButtonClick = ()=> {
-        if (this.renderButtonCls() != 'active') {
-            return false
-        }
-        window.codeBtnInterval = window.setInterval(()=> {
-            this.setState({
-                countdown: this.state.countdown === 0 ? 30 : (this.state.countdown - 1)
-            })
-            if (this.state.countdown === 30) {
-                window.clearInterval(window.codeBtnInterval)
-                delete window.codeBtnInterval
+        if (nextProps.startCountdown) {
+            if (this.state.countdown < 30) {
+                return false
             }
-        }, 1000)
-        this.props.onButtonClick()
-    }
 
-    renderButtonCls = () => {
-        const mobile = this.props.mobile
-        return this.state.countdown === 30 && mobile && /^1[34578]\d{9}$/.test(mobile) ? 'active' : ''
+            const countdown = () => {
+                this.setState({
+                    countdown: this.state.countdown === 0 ? 30 : (this.state.countdown - 1)
+                })
+                if (this.state.countdown === 30) {
+                    this.props.onCountdownEnd()
+                    window.clearInterval(window.codeBtnInterval)
+                }
+            }
+            countdown()
+            window.clearInterval(window.codeBtnInterval)
+            window.codeBtnInterval = window.setInterval(countdown, 1000)
+        }
     }
 
     render = () => {
         const prefix = this.props.prefix
-        const buttonCls = this.renderButtonCls()
+        const countdown = this.state.countdown
+        const buttonCls = countdown === 30 ? 'active' : ''
         return <div className={prefix+"-item " +prefix+"-code-input-item"}>
             <div className={prefix+"-label"}>
                 {this.props.children}
             </div>
             <div className={prefix+"-control"}>
-                <input type={this.props.type} value={this.state.value} onChange={(e)=>{
-                    this.props.onChange(e.target.value)
-                    this.setState({value: e.target.value})
-                }} placeholder={this.props.placeholder}/>
-                <Button className={prefix+"-code-button "+buttonCls} onClick={this.onButtonClick}>
-                    {this.state.countdown === 30 ? '获取验证码' : (this.state.countdown + 's')}
+                <input
+                    type={this.props.type}
+                    value={this.state.value}
+                    placeholder={this.props.placeholder}
+                    onChange={(e)=>{
+                        this.props.onChange(e.target.value)
+                        this.setState({value: e.target.value})
+                    }}/>
+                <Button className={prefix+"-code-button "+buttonCls} onClick={this.props.onButtonClick}>
+                    {countdown === 30 ? '获取验证码' : (countdown + 's')}
                 </Button>
             </div>
         </div>
@@ -414,11 +439,46 @@ class DoubleSelectItem extends React.Component {
     }
 }
 
+class RadioItem extends React.Component {
+    static defaultProps = {
+        data: [],
+        value: '',
+        prefix: 'zui-list',
+        onChange: () => {
+        }
+    }
+
+    state = {
+        value: ''
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            value: nextProps.value || this.props.data[0]
+        })
+    }
+
+    render = () => {
+        const prefix = this.props.prefix
+        return <div className={prefix+"-item "+prefix+"-radio-item"}>
+            <div className={prefix+"-label"}>
+                {this.props.children}
+            </div>
+            <div className={prefix+"-control"}>
+                <Radio data={this.props.data} value={this.state.value} onChange={(value)=>{
+                    this.setState({value: value})
+                    this.props.onChange(value)
+                }}/>
+            </div>
+        </div>
+    }
+}
+
 class PickerItem extends React.Component {
     static defaultProps = {
         data: [],
-        name: '请选择',
         value: '',
+        name: '请选择',
         prefix: 'zui-list',
         onChange: () => {
         }
@@ -462,41 +522,6 @@ class PickerItem extends React.Component {
                     })
                 }}
             />
-        </div>
-    }
-}
-
-class RadioItem extends React.Component {
-    static defaultProps = {
-        data: [],
-        value: '',
-        prefix: 'zui-list',
-        onChange: () => {
-        }
-    }
-
-    state = {
-        value: ''
-    }
-
-    componentWillReceiveProps = (nextProps) => {
-        this.setState({
-            value: nextProps.value || this.props.data[0]
-        })
-    }
-
-    render = () => {
-        const prefix = this.props.prefix
-        return <div className={prefix+"-item "+prefix+"-radio-item"}>
-            <div className={prefix+"-label"}>
-                {this.props.children}
-            </div>
-            <div className={prefix+"-control"}>
-                <Radio data={this.props.data} value={this.state.value} onChange={(value)=>{
-                    this.setState({value: value})
-                    this.props.onChange(value)
-                }}/>
-            </div>
         </div>
     }
 }
@@ -556,6 +581,8 @@ class TagPickerItem extends React.Component {
         value: '',
         name: '选择标签',
         prefix: 'zui-list',
+        onChange: () => {
+        },
     }
 
     state = {
@@ -607,11 +634,8 @@ class TagPickerItem extends React.Component {
                 value={this.state.value}
                 status={this.state.status}
                 onChange={(value)=>{
-                    this.setState({
-                        value: value,
-                        status: 'close',
-                    })
                     this.props.onChange(value)
+                    this.setState({value: value})
                 }}
             />
         </div>

@@ -11,7 +11,7 @@ for (let i = (new Date()).getFullYear(); i > 1970; i--) {
 const MonthData = []
 for (let i = 1; i <= 12; i++) {
     MonthData.push(i < 10 ? '0' + i : i)
-}
+}  
 
 export default class DatePicker extends React.Component {
 
@@ -24,36 +24,8 @@ export default class DatePicker extends React.Component {
     }
 
     state = {
-        year: '',
-        days: [],
-        status: '',
-    }
-
-    componentDidMount = () => {
-        const year = (new Date()).getFullYear()
-        this.setState({
-            year: year,
-            days: this.getMonthDays(year)
-        })
-    }
-
-    componentWillReceiveProps = nextProps => {
-        this.setState({
-            status: nextProps.status,
-            year: nextProps.value ? nextProps.value.split('-')[0] : ''
-        })
-    }
-
-    getMonthDays = (year) => {
-        const days = []
-        for (let j = 1; j <= 12; j++) {
-            const monthDayCount = getMonthDayCount(year + '-' + j)
-            for (let k = 1; k < monthDayCount; k++) {
-                days.push(j + '-' + k)
-            }
-        }
-        return days
-    }
+        year: (new Date()).getFullYear()
+    } 
 
     renderMonthDays = (month) => {
         const days = []
@@ -77,16 +49,13 @@ export default class DatePicker extends React.Component {
 
     render = () => {
         const prefix = this.props.prefix
-        const status = this.state.status
+        const status = this.props.status
         return <Picker className={prefix+'-date-picker'} status={status}>
             <ul className={prefix+'-date-picker-year-list'}>
                 {YearData.map((item, key)=> {
                     const cls = item == this.state.year ? 'active' : ''
                     return <li className={prefix+'-date-picker-year-item '+cls} key={key} onClick={()=>{
-						this.setState({
-							year: item,
-							days: this.getMonthDays(item),
-						})
+						this.setState({year: item})
 					}}>{item}</li>
                 })}
             </ul>

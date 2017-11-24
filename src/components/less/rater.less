@@ -10,36 +10,36 @@
         line-height: 24px;
         display: inline-block;
     }
-    .star {
+    .@{prefix}-rater-star {
         float: left;
         width: 10px;
         overflow: hidden;
         position: relative;
         height: 23px;
-        .icon {
-            font-size: 20px;
-            color: #868686;
+        &.left {
+            .@{prefix}-icon {
+                left: 0;
+            }
+        }
+        &.right {
             margin-right: 0;
-            position: absolute;
+            .@{prefix}-icon {
+                left: -10px;
+            }
+        }
+        &.active {
+            .@{prefix}-icon {
+                color: #f59107;
+            }
+        }
+        .@{prefix}-icon {
             top: 0;
             left: 0;
             display: block;
-        }
-    }
-    .star.left {
-        .icon {
-            left: 0;
-        }
-    }
-    .star.right {
-        margin-right: 0;
-        .icon {
-            left: -10px;
-        }
-    }
-    .star.active {
-        .icon {
-            color: #f59107;
+            color: #868686;
+            font-size: 20px;
+            margin-right: 0;
+            position: absolute;
         }
     }
 }

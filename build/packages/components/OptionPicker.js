@@ -50,14 +50,10 @@ var OptionPicker = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = OptionPicker.__proto__ || (0, _getPrototypeOf2.default)(OptionPicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            status: ''
-        }, _this.componentWillReceiveProps = function (nextProps) {
-            _this.setState({ status: nextProps.status });
-        }, _this.render = function () {
-            var prefix = _this.props.prefix;
-            var status = _this.state.status;
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = OptionPicker.__proto__ || (0, _getPrototypeOf2.default)(OptionPicker)).call.apply(_ref, [this].concat(args))), _this), _this.render = function () {
             var value = _this.props.value;
+            var prefix = _this.props.prefix;
+            var status = _this.props.status;
             return _react2.default.createElement(
                 _Picker2.default,
                 { className: prefix + '-option-picker', name: '\u8BF7\u9009\u62E9', status: status },

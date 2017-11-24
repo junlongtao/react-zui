@@ -59,29 +59,7 @@ var DatePicker = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DatePicker.__proto__ || (0, _getPrototypeOf2.default)(DatePicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            year: '',
-            days: [],
-            status: ''
-        }, _this.componentDidMount = function () {
-            var year = new Date().getFullYear();
-            _this.setState({
-                year: year,
-                days: _this.getMonthDays(year)
-            });
-        }, _this.componentWillReceiveProps = function (nextProps) {
-            _this.setState({
-                status: nextProps.status,
-                year: nextProps.value ? nextProps.value.split('-')[0] : ''
-            });
-        }, _this.getMonthDays = function (year) {
-            var days = [];
-            for (var j = 1; j <= 12; j++) {
-                var monthDayCount = (0, _util.getMonthDayCount)(year + '-' + j);
-                for (var k = 1; k < monthDayCount; k++) {
-                    days.push(j + '-' + k);
-                }
-            }
-            return days;
+            year: new Date().getFullYear()
         }, _this.renderMonthDays = function (month) {
             var days = [];
             var max = (0, _util.getMonthDayCount)(_this.state.year + '-' + month);
@@ -104,7 +82,7 @@ var DatePicker = function (_React$Component) {
             });
         }, _this.render = function () {
             var prefix = _this.props.prefix;
-            var status = _this.state.status;
+            var status = _this.props.status;
             return _react2.default.createElement(
                 _Picker2.default,
                 { className: prefix + '-date-picker', status: status },
@@ -116,10 +94,7 @@ var DatePicker = function (_React$Component) {
                         return _react2.default.createElement(
                             'li',
                             { className: prefix + '-date-picker-year-item ' + cls, key: key, onClick: function onClick() {
-                                    _this.setState({
-                                        year: item,
-                                        days: _this.getMonthDays(item)
-                                    });
+                                    _this.setState({ year: item });
                                 } },
                             item
                         );

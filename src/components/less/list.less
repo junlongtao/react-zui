@@ -141,9 +141,9 @@
                     font-size: 12px;
                     min-width: 100px;
                     line-height: 35px; 
-                    background: #CCCCCC;
+                    background: #cccccc;
                 }
-                &.active {
+                &.active{
                     button{
                         background: @colorMain;
                     }
@@ -235,40 +235,12 @@
                     font-size: 12px;
                 }
             }
-        }
-        .@{prefix}-list-option-list {
-            width: 100%;
-            height: 100%;
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
-            position: fixed;
-            top: 0;
-            left: 0;
-
-            background: #fff;
-            z-index: 5;
-            .@{prefix}-list-option-name {
-                text-align: center;
-                font-size: 16px;
-                line-height: 50px;
-                .icon {
-                    position: absolute;
-                    top: 10px;
-                    left: 10px;
-                    font-size: 14px;
-                }
-            }
-            .@{prefix}-list-option-item {
-                border-bottom: 1px solid #fefefe;
-                font-size: 14px;
-                line-height: 40px;
-                padding: 0 10px;
-            }
-        }
+        } 
     }
     .@{prefix}-list-tag-picker-item {
         .@{prefix}-list-control {
             .box-flex(1);
+            padding: 10px 0;
             div {
                 text-align: right;
                 span {
@@ -306,6 +278,13 @@
             .float-clear();
             .@{prefix}-radio {
                 margin: 10px 0 0 20px;
+            }
+        }
+    }
+    .@{prefix}-list-rater-item {
+        .@{prefix}-list-extra {
+            .@{prefix}-rater {
+                float: right;
             }
         }
     }

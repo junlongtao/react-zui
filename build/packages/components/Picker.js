@@ -82,6 +82,7 @@ Picker.defaultProps = {
     status: '',
     prefix: 'zui',
     name: '请选择',
-    onChange: function onChange() {}
+    onChange: function onChange() {},
+    onBackClick: function onBackClick() {}
 };
 exports.default = Picker;

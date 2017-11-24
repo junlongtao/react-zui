@@ -5,7 +5,7 @@ import {Page, List, Tabs} from '../../../build/packages'
 export default class IndexPage extends React.Component {
     render = () => {
         return <Page title="标签页">
-            <Tabs active="1">
+            <Tabs>
                 <Tabs.TabPane name="项目管理">
                     <div style={{padding: '50px 0', textAlign: 'center'}}>
                         项目管理内容...
