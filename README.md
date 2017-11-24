@@ -1,4 +1,4 @@
-# React-ZUI 
+# React-ZUI (contributing...)
 
 Mobile Web App Components build with [React@16](http://facebook.github.io/react/).
  

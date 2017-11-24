@@ -5,7 +5,7 @@ import {Page, List} from '../../../build/packages'
 
 export default class IndexPage extends React.Component {
     render = () => {
-        return <Page title="React-ZUI" className="home-page" backVisible={false}>
+        return <Page title="React ZUI" className="home-page" backVisible={false}>
             <h2>
                 React ZUI
             </h2>
