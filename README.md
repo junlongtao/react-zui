@@ -2,28 +2,17 @@
 
 Mobile Web App Components build with [React@16](http://facebook.github.io/react/).
  
-## Docs
+## Documentation
 
 [documentation](http://zui.zhichou.com) with live examples.
 
-## Installation
-
-With [npm](http://npmjs.com/):
-
-If React is not installed
+## Installation 
 
 ```
 npm install --save react react-dom
 npm install --save react-zui
-```
+```  
 
-With React Installed
-
-```
-npm install react-zui --save
-```
-
-```
 ## Example
 
 We have several examples on the documentation. Here is the first one to get you started:
