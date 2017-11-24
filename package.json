@@ -3,7 +3,8 @@
   "scripts": {
     "babel": "rm -rf ./build/packages && NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files --watch",
     "build": "rm -rf ./build/packages && webpack --progress --config ./webpack.config.js",
-    "build-docs": "rm -rf ./docs/build && webpack --progress --config ./webpack.config.docs.js --watch"
+    "build-docs": "rm -rf ./docs/build && webpack --progress --config ./webpack.config.docs.js --watch",
+    "start": "node webpack.server.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -34,6 +35,7 @@
     "jest-runtime": "^19.0.2",
     "less": "^2.7.1",
     "less-loader": "^2.2.2",
+    "open-browser-webpack-plugin": "0.0.5",
     "postcss-loader": "^0.7.0",
     "react-error-overlay": "^1.0.9",
     "react-test-renderer": "^15.4.2",
@@ -74,5 +76,29 @@
     "react-router-redux": "^4.0.8",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.0"
-  }
+  },
+  "name": "react-zui",
+  "description": "React-zui(建设中...)",
+  "version": "1.0.8",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalentao/react-zui.git"
+  },
+  "keywords": [
+    "web",
+    "app",
+    "components",
+    "based",
+    "on",
+    "react"
+  ],
+  "author": "jalentao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jalentao/react-zui/issues"
+  },
+  "homepage": "https://github.com/jalentao/react-zui#readme"
 }

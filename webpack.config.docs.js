@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var config = {
 
     entry: {
-        index: './docs/index.js',
+        index: ['./docs/index.js'],
         vendors: [
             'react', 
             './build/packages'
