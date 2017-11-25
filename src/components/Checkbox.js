@@ -27,7 +27,7 @@ export default class Checkbox extends React.Component {
             this.props.onChange(!this.state.value)
             this.setState({value: !this.state.value})
         }}>
-            {this.state.value ? <Icon type="xuanze"/> : '■'}
+            {this.state.value ? <Icon type="xuanze"/> : '■■'}
         </span>
     }
 }

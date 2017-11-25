@@ -1,10 +1,10 @@
-
+import './less/label.less'
 import React from 'react'
 import {Page, List, Label} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="书签" className="label-page">
+        return <Page title="书签" className="example-page">
             <div className="label-list">
                 <Label>示例书签一</Label>
                 <Label>示例书签二</Label>

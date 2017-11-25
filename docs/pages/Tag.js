@@ -1,10 +1,10 @@
-
+import './less/tag.less'
 import React from 'react'
 import {Page, List, Tag} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="标签" className="tag-page">
+        return <Page title="标签" className="example-page">
             <div className="tag-list">
                 <Tag>测试标签一</Tag>
                 <Tag>测试标签二</Tag>

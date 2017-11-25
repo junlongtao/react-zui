@@ -61,7 +61,7 @@ var Checkbox = function (_React$Component) {
                         _this.props.onChange(!_this.state.value);
                         _this.setState({ value: !_this.state.value });
                     } },
-                _this.state.value ? _react2.default.createElement(_Icon2.default, { type: 'xuanze' }) : '■'
+                _this.state.value ? _react2.default.createElement(_Icon2.default, { type: 'xuanze' }) : '■■'
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
