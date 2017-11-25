@@ -50,7 +50,8 @@ var Countdown = function (_React$Component) {
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Countdown.__proto__ || (0, _getPrototypeOf2.default)(Countdown)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             leftsec: 0
         }, _this.componentDidMount = function () {
-            Util.setInterval(function () {
+            window.clearInterval(window.countdownInterval);
+            window.countdownInterval = window.setInterval(function () {
                 var current = new Date().getTime();
                 current = parseInt(current / 1000);
                 var leftsec = _this.props.endtime - current;
@@ -81,9 +82,9 @@ var Countdown = function (_React$Component) {
                 '\u5929 ',
                 (0, _util.preZero)(hour),
                 ':',
-                Util.preZero(minute),
+                (0, _util.preZero)(minute),
                 ':',
-                Util.preZero(second)
+                (0, _util.preZero)(second)
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }

@@ -17,7 +17,8 @@ export default class Countdown extends React.Component {
     }
 
     componentDidMount = () => {
-        Util.setInterval(()=> {
+        window.clearInterval(window.countdownInterval)
+        window.countdownInterval = window.setInterval(()=> {
             let current = (new Date()).getTime()
             current = parseInt(current / 1000)
             let leftsec = this.props.endtime - current
@@ -41,7 +42,7 @@ export default class Countdown extends React.Component {
 
         const prefix = this.props.prefix
         return <span className={prefix+"countdown "+this.props.className}>
-            {preZero(day)}天 {preZero(hour)}:{Util.preZero(minute)}:{Util.preZero(second)}
+            {preZero(day)}天 {preZero(hour)}:{preZero(minute)}:{preZero(second)}
         </span>
     }
 }

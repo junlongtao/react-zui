@@ -44,7 +44,7 @@ var Mask = function (_React$Component) {
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Mask.__proto__ || (0, _getPrototypeOf2.default)(Mask)).call.apply(_ref, [this].concat(args))), _this), _this.render = function () {
             var prefix = _this.props.prefix;
-            return _react2.default.createElement('div', { className: prefix + "-mask" });
+            return _react2.default.createElement('div', { className: prefix + "-mask", onClick: _this.props.onClick });
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
@@ -52,6 +52,7 @@ var Mask = function (_React$Component) {
 }(_react2.default.Component);
 
 Mask.defaultProps = {
-    prefix: 'zui'
+    prefix: 'zui',
+    onClick: function onClick() {}
 };
 exports.default = Mask;

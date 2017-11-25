@@ -449,7 +449,7 @@ class RadioItem extends React.Component {
     }
 
     state = {
-        value: ''
+        value: this.props.value
     }
 
     componentWillReceiveProps = (nextProps) => {
@@ -485,8 +485,8 @@ class PickerItem extends React.Component {
     }
 
     state = {
-        value: '',
-        status: ''
+        value: this.props.value,
+        status: this.props.status
     }
 
     componentWillReceiveProps = (nextProps) => {
@@ -536,8 +536,8 @@ class CityPickerItem extends React.Component {
     }
 
     state = {
-        status: '',
-        value: ''
+        value: this.props.value,
+        status: this.props.status
     }
 
     componentWillReceiveProps = (nextProps) => {
@@ -586,8 +586,8 @@ class TagPickerItem extends React.Component {
     }
 
     state = {
-        value: '',
-        status: ''
+        value: this.props.value,
+        status: this.props.status
     }
 
     componentWillReceiveProps = (nextProps) => {
@@ -652,8 +652,8 @@ class MonthPickerItem extends React.Component {
     }
 
     state = {
-        status: '',
-        value: ''
+        value: this.props.value,
+        status: this.props.status
     }
 
     componentWillReceiveProps = (nextProps) => {
@@ -701,8 +701,8 @@ class DatePickerItem extends React.Component {
     }
 
     state = {
-        value: '',
-        status: '',
+        value: this.props.value,
+        status: this.props.status
     }
 
     componentWillReceiveProps = (nextProps) => {
@@ -750,7 +750,7 @@ class RaterItem extends React.Component {
     }
 
     state = {
-        value: ''
+        value: this.props.value
     }
 
     componentWillReceiveProps = (nextProps) => {

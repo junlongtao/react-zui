@@ -2,6 +2,7 @@
 
 import './less/city-picker.less'
 import React from 'react'
+import CityData from 'chinese-city-data'
 import Picker from './Picker'
  
 const Letters = [

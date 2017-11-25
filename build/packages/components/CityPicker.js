@@ -26,6 +26,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _chineseCityData = require('chinese-city-data');
+
+var _chineseCityData2 = _interopRequireDefault(_chineseCityData);
+
 var _Picker = require('./Picker');
 
 var _Picker2 = _interopRequireDefault(_Picker);
@@ -66,7 +70,7 @@ var CityPicker = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     { className: prefix + "-city-picker-city-list", id: prefix + '-city-picker-city-list' },
-                    CityData.map(function (item, key) {
+                    _chineseCityData2.default.map(function (item, key) {
                         scrollMap[item.initial] = scrollTop;
                         scrollTop = scrollTop + 40;
                         return _react2.default.createElement(

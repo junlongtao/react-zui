@@ -22,6 +22,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "chinese-city-data": "^1.0.0",
     "compression": "^1.6.2",
     "css-loader": "^0.22.0",
     "eslint": "^4.5.0",
@@ -79,7 +80,7 @@
   },
   "name": "react-zui",
   "description": "React-zui(建设中...)",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "directories": {
     "doc": "docs"
   },

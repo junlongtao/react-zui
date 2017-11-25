@@ -759,7 +759,7 @@ var RadioItem = function (_React$Component12) {
         }
 
         return _ret12 = (_temp12 = (_this12 = (0, _possibleConstructorReturn3.default)(this, (_ref12 = RadioItem.__proto__ || (0, _getPrototypeOf2.default)(RadioItem)).call.apply(_ref12, [this].concat(args))), _this12), _this12.state = {
-            value: ''
+            value: _this12.props.value
         }, _this12.componentWillReceiveProps = function (nextProps) {
             _this12.setState({
                 value: nextProps.value || _this12.props.data[0]
@@ -811,8 +811,8 @@ var PickerItem = function (_React$Component13) {
         }
 
         return _ret13 = (_temp13 = (_this13 = (0, _possibleConstructorReturn3.default)(this, (_ref13 = PickerItem.__proto__ || (0, _getPrototypeOf2.default)(PickerItem)).call.apply(_ref13, [this].concat(args))), _this13), _this13.state = {
-            value: '',
-            status: ''
+            value: _this13.props.value,
+            status: _this13.props.status
         }, _this13.componentWillReceiveProps = function (nextProps) {
             _this13.setState({
                 value: nextProps.value
@@ -882,8 +882,8 @@ var CityPickerItem = function (_React$Component14) {
         }
 
         return _ret14 = (_temp14 = (_this14 = (0, _possibleConstructorReturn3.default)(this, (_ref14 = CityPickerItem.__proto__ || (0, _getPrototypeOf2.default)(CityPickerItem)).call.apply(_ref14, [this].concat(args))), _this14), _this14.state = {
-            status: '',
-            value: ''
+            value: _this14.props.value,
+            status: _this14.props.status
         }, _this14.componentWillReceiveProps = function (nextProps) {
             _this14.setState({
                 value: nextProps.value
@@ -951,8 +951,8 @@ var TagPickerItem = function (_React$Component15) {
         }
 
         return _ret15 = (_temp15 = (_this15 = (0, _possibleConstructorReturn3.default)(this, (_ref15 = TagPickerItem.__proto__ || (0, _getPrototypeOf2.default)(TagPickerItem)).call.apply(_ref15, [this].concat(args))), _this15), _this15.state = {
-            value: '',
-            status: ''
+            value: _this15.props.value,
+            status: _this15.props.status
         }, _this15.componentWillReceiveProps = function (nextProps) {
             _this15.setState({
                 value: nextProps.value
@@ -1038,8 +1038,8 @@ var MonthPickerItem = function (_React$Component16) {
         }
 
         return _ret16 = (_temp16 = (_this16 = (0, _possibleConstructorReturn3.default)(this, (_ref16 = MonthPickerItem.__proto__ || (0, _getPrototypeOf2.default)(MonthPickerItem)).call.apply(_ref16, [this].concat(args))), _this16), _this16.state = {
-            status: '',
-            value: ''
+            value: _this16.props.value,
+            status: _this16.props.status
         }, _this16.componentWillReceiveProps = function (nextProps) {
             _this16.setState({
                 value: nextProps.value
@@ -1106,8 +1106,8 @@ var DatePickerItem = function (_React$Component17) {
         }
 
         return _ret17 = (_temp17 = (_this17 = (0, _possibleConstructorReturn3.default)(this, (_ref17 = DatePickerItem.__proto__ || (0, _getPrototypeOf2.default)(DatePickerItem)).call.apply(_ref17, [this].concat(args))), _this17), _this17.state = {
-            value: '',
-            status: ''
+            value: _this17.props.value,
+            status: _this17.props.status
         }, _this17.componentWillReceiveProps = function (nextProps) {
             _this17.setState({
                 value: nextProps.value
@@ -1174,7 +1174,7 @@ var RaterItem = function (_React$Component18) {
         }
 
         return _ret18 = (_temp18 = (_this18 = (0, _possibleConstructorReturn3.default)(this, (_ref18 = RaterItem.__proto__ || (0, _getPrototypeOf2.default)(RaterItem)).call.apply(_ref18, [this].concat(args))), _this18), _this18.state = {
-            value: ''
+            value: _this18.props.value
         }, _this18.componentWillReceiveProps = function (nextProps) {
             _this18.setState({
                 value: nextProps.value

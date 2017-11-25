@@ -7,6 +7,9 @@ var config = {
         vendors: [
             'react', 
             './build/packages'
+        ],
+        citydata: [
+            'chinese-city-data'
         ]
     },
 
@@ -40,10 +43,7 @@ config.plugins = [
         inject: 'body',
         hash: true
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendors', 
-        filename: 'vendors.min.js'
-    }),
+    new webpack.optimize.CommonsChunkPlugin(['vendors', 'citydata']),
     // new webpack.optimize.UglifyJsPlugin({
     //     compress: {
     //         warnings: false
