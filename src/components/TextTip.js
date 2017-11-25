@@ -17,25 +17,23 @@ export default class TextTip extends React.Component {
         visible: false
     }
 
-    renderContent = () => {
-        return this.state.visible ? <div className="content">
-            <div className="title">
-                {this.props.title}
-                <Icon type="close" onClick={()=>{
-                    this.setState({visible: false})
-                }}/>
-            </div>
-            <div className="details">{this.props.children}</div>
-        </div> : null
-    }
-
     render = () => {
         const prefix = this.props.prefix
-        return <a href="javascript: void(0)" className={prefix+"text-tip"}>
-            <span className="clear" onClick={()=>{
+        return <a href="javascript: void(0)" className={prefix+"-text-tip"}>
+            <span onClick={()=>{
                 this.setState({visible: true})
             }}>{this.props.title}</span>
-            {this.renderContent()}
+            {this.state.visible ? <div className={prefix+"-text-tip-content"}>
+                <div className={prefix+'-text-tip-title'}>
+                    {this.props.title}
+                    <Icon type="close" onClick={()=>{
+                        this.setState({visible: false})
+                    }}/>
+                </div>
+                <div className={prefix+'-text-tip-details'}>
+                    {this.props.children}
+                </div>
+            </div> : null}
         </a>
     }
 }

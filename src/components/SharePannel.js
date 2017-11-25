@@ -8,7 +8,7 @@ import React from 'react'
 import Icon from './Icon'
 import Mask from './Mask'
 import Util from '../util'
-import QrCode from './Qrcode'
+import QRCode from './QRCode'
 
 export default class SharePannel extends React.Component {
     static defaultProps = {
@@ -69,7 +69,7 @@ export default class SharePannel extends React.Component {
             </div> : null}
             {this.state.qrVisible ? <div className={this.props.prefix+"-share-pannel-mask"}>
                 <Mask/>
-                <QrCode text={this.props.link}/>
+                <QRCode text={this.props.link}/>
                 <Icon type="close" onClick={()=>{
                     this.setState({qrVisible: false})
                 }}/>

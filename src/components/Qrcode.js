@@ -6,21 +6,23 @@ import './less/qr-code.less'
 import React from 'react'
 import qrcode from 'qrcode-generator'
 
-export default class Qrcode extends React.Component {
+export default class QRCode extends React.Component {
+
+    static defaultProps = {
+        text: '',
+        prefix: 'zui',
+        className: '',
+    }
 
     render = () => {
-        if(!this.props.text){
-            return null
-        }
-        
-        var typeNumber = 8;
-        var errorCorrectionLevel = 'L';
-        var qr = qrcode(typeNumber, errorCorrectionLevel);
+        var qr = qrcode(8, 'L');
         qr.addData(this.props.text);
         qr.make();
-        return <div className="zui-qr-code" dangerouslySetInnerHTML={{
+
+        const prefix = this.props.prefix
+        return this.props.text ? <div className={prefix+"-qr-code "+this.props.className} dangerouslySetInnerHTML={{
             __html: qr.createImgTag(4, 10)
-        }}></div>
+        }}></div> : null
     }
 
 }

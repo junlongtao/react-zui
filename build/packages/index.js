@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.SearchBar = exports.NoticeBar = exports.TextTip = exports.TagPicker = exports.Tag = exports.Tabs = exports.TabBar = exports.Switch = exports.ReturnTop = exports.Rater = exports.Radio = exports.Qrcode = exports.Picker = exports.Paragraph = exports.Page = exports.Notify = exports.NetworkStatusCheck = exports.MonthPicker = exports.DatePicker = exports.Modal = exports.Mask = exports.Loading = exports.PageLoading = exports.ListLoading = exports.List = exports.Link = exports.Label = exports.Image = exports.Icon = exports.Header = exports.EmptyTip = exports.Countdown = exports.Confirm = exports.CityPicker = exports.Checkbox = exports.Card = exports.Button = exports.Avatar = undefined;
+exports.SearchBar = exports.NoticeBar = exports.TextTip = exports.TagPicker = exports.Tag = exports.Tabs = exports.TabBar = exports.Switch = exports.ReturnTop = exports.Rater = exports.Radio = exports.QRCode = exports.Picker = exports.Paragraph = exports.Page = exports.Notify = exports.NetworkStatusCheck = exports.MonthPicker = exports.DatePicker = exports.Modal = exports.Mask = exports.Loading = exports.PageLoading = exports.ListLoading = exports.List = exports.Link = exports.Label = exports.Image = exports.Icon = exports.Header = exports.EmptyTip = exports.Countdown = exports.Confirm = exports.CityPicker = exports.Checkbox = exports.Card = exports.Button = exports.Avatar = undefined;
 
 var _Avatar = require('./components/Avatar');
 
@@ -109,9 +109,9 @@ var _Picker = require('./components/Picker');
 
 var _Picker2 = _interopRequireDefault(_Picker);
 
-var _Qrcode = require('./components/Qrcode');
+var _QRCode = require('./components/QRCode');
 
-var _Qrcode2 = _interopRequireDefault(_Qrcode);
+var _QRCode2 = _interopRequireDefault(_QRCode);
 
 var _Radio = require('./components/Radio');
 
@@ -185,7 +185,7 @@ exports.Notify = _Notify2.default;
 exports.Page = _Page2.default;
 exports.Paragraph = _Paragraph2.default;
 exports.Picker = _Picker2.default;
-exports.Qrcode = _Qrcode2.default;
+exports.QRCode = _QRCode2.default;
 exports.Radio = _Radio2.default;
 exports.Rater = _Rater2.default;
 exports.ReturnTop = _ReturnTop2.default;

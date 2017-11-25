@@ -18,34 +18,48 @@ ReactDOM.render(
                     </p>
 
                     <List>
+                        <List.Header>布局 Layout</List.Header>
+                        <List.Item arrow="horizontal" href="#page">Page 页面</List.Item>
+                        <List.Item arrow="horizontal" href="#header">Header 页头</List.Item>
+
                         <List.Header>导航 Navigation</List.Header>
-                        <List.Item arrow="horizontal" href="#tabs">标签页</List.Item>
-                        <List.Item arrow="horizontal" href="#tab-bar">导航栏</List.Item>
+                        <List.Item arrow="horizontal" href="#tabs">Tabs 标签页</List.Item>
+                        <List.Item arrow="horizontal" href="#tab-bar">TabBar 导航栏</List.Item>
 
                         <List.Header>数据展示 Data Display</List.Header>
-                        <List.Item arrow="horizontal" href="#tag">标签</List.Item>
-                        <List.Item arrow="horizontal" href="#icon">图标</List.Item>
-                        <List.Item arrow="horizontal" href="#card">卡片</List.Item>
-                        <List.Item arrow="horizontal" href="#label">书签</List.Item>
-                        <List.Item arrow="horizontal" href="#avatar">头像</List.Item>
-                        <List.Item arrow="horizontal" href="#notice-bar">通告栏</List.Item>
-                        <List.Item arrow="horizontal" href="#countdown">倒计时</List.Item>
-                        <List.Item arrow="horizontal" href="#paragraph">富文本</List.Item>
+                        <List.Item arrow="horizontal" href="#tag">Tag 标签</List.Item>
+                        <List.Item arrow="horizontal" href="#icon">Icon 图标</List.Item>
+                        <List.Item arrow="horizontal" href="#card">Card 卡片</List.Item>
+                        <List.Item arrow="horizontal" href="#label">Label 书签</List.Item>
+                        <List.Item arrow="horizontal" href="#avatar">Avatar 头像</List.Item>
+                        <List.Item arrow="horizontal" href="#notice-bar">NoticeBar 通告栏</List.Item>
+                        <List.Item arrow="horizontal" href="#countdown">Countdown 倒计时</List.Item>
+                        <List.Item arrow="horizontal" href="#paragraph">Paragraph 富文本</List.Item>
+                        <List.Item arrow="horizontal" href="#text-tip">TextTip 提示文本</List.Item>
+                        <List.Item arrow="horizontal" href="#qr-code">QrCode 二维码</List.Item>
+                        <List.Item arrow="horizontal" href="#empty-tip">EmptyTip 内容为空提示</List.Item>
+                        <List.Item arrow="horizontal" href="#list-loading">ListLoading 列表加载中</List.Item>
+                        <List.Item arrow="horizontal" href="#loading">Loading 请求加载中</List.Item>
 
                         <List.Header>数据录入 Data Entry</List.Header>
-                        <List.Item arrow="horizontal" href="#checkbox">复选框</List.Item>
-                        <List.Item arrow="horizontal" href="#list">表单</List.Item>
+                        <List.Item arrow="horizontal" href="#list">List 表单</List.Item>
+                        <List.Item arrow="horizontal" href="#switch">Switch 切换器</List.Item>
+                        <List.Item arrow="horizontal" href="#checkbox">Checkbox 复选框</List.Item>
+                        <List.Item arrow="horizontal" href="#search-bar">SearchBar 搜索框</List.Item>
 
                         <List.Header>操作反馈 Feedback</List.Header>
-                        <List.Item arrow="horizontal" href="#modal">对话框</List.Item>
-                        <List.Item arrow="horizontal" href="#confirm">操作确认</List.Item>
+                        <List.Item arrow="horizontal" href="#modal">Modal 对话框</List.Item>
+                        <List.Item arrow="horizontal" href="#confirm">Confirm 操作确认</List.Item>
 
                         <List.Header>其他 Other</List.Header>
-                        <List.Item arrow="horizontal" href="#mask">遮罩</List.Item>
-                        <List.Item arrow="horizontal" href="#return-top">返回顶部</List.Item>
+                        <List.Item arrow="horizontal" href="#mask">Mask 遮罩</List.Item>
+                        <List.Item arrow="horizontal" href="#return-top">ReturnTop 返回顶部</List.Item>
                     </List>
                 </Page>
             </Route>
+
+            <Route exact path='/page' component={asyncComponent(() => import('./pages/Page'))}/>
+            <Route exact path='/header' component={asyncComponent(() => import('./pages/Header'))}/>
 
             <Route exact path='/tabs' component={asyncComponent(() => import('./pages/Tabs'))}/>
             <Route exact path='/tab-bar' component={asyncComponent(() => import('./pages/TabBar'))}/>
@@ -58,9 +72,16 @@ ReactDOM.render(
             <Route exact path='/notice-bar' component={asyncComponent(() => import('./pages/NoticeBar'))}/>
             <Route exact path='/countdown' component={asyncComponent(() => import('./pages/Countdown'))}/>
             <Route exact path='/paragraph' component={asyncComponent(() => import('./pages/Paragraph'))}/>
+            <Route exact path='/text-tip' component={asyncComponent(() => import('./pages/TextTip'))}/>
+            <Route exact path='/qr-code' component={asyncComponent(() => import('./pages/QRCode'))}/>
+            <Route exact path='/empty-tip' component={asyncComponent(() => import('./pages/EmptyTip'))}/>
+            <Route exact path='/list-loading' component={asyncComponent(() => import('./pages/ListLoading'))}/>
+            <Route exact path='/loading' component={asyncComponent(() => import('./pages/Loading'))}/>
 
-            <Route exact path='/checkbox' component={asyncComponent(() => import('./pages/Checkbox'))}/>
             <Route exact path='/list' component={asyncComponent(() => import('./pages/List'))}/>
+            <Route exact path='/switch' component={asyncComponent(() => import('./pages/Switch'))}/>
+            <Route exact path='/checkbox' component={asyncComponent(() => import('./pages/Checkbox'))}/>
+            <Route exact path='/search-bar' component={asyncComponent(() => import('./pages/SearchBar'))}/>
 
             <Route exact path='/modal' component={asyncComponent(() => import('./pages/Modal'))}/>
             <Route exact path='/confirm' component={asyncComponent(() => import('./pages/Confirm'))}/>

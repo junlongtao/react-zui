@@ -41,9 +41,9 @@ var _util = require('../util');
 
 var _util2 = _interopRequireDefault(_util);
 
-var _Qrcode = require('./Qrcode');
+var _QRCode = require('./QRCode');
 
-var _Qrcode2 = _interopRequireDefault(_Qrcode);
+var _QRCode2 = _interopRequireDefault(_QRCode);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -129,7 +129,7 @@ var SharePannel = function (_React$Component) {
                     'div',
                     { className: _this.props.prefix + "-share-pannel-mask" },
                     _react2.default.createElement(_Mask2.default, null),
-                    _react2.default.createElement(_Qrcode2.default, { text: _this.props.link }),
+                    _react2.default.createElement(_QRCode2.default, { text: _this.props.link }),
                     _react2.default.createElement(_Icon2.default, { type: 'close', onClick: function onClick() {
                             _this.setState({ qrVisible: false });
                         } })

@@ -24,7 +24,7 @@ import Notify from './components/Notify'
 import Page from './components/Page'
 import Paragraph from './components/Paragraph'
 import Picker from './components/Picker'
-import Qrcode from './components/Qrcode'
+import QRCode from './components/QRCode'
 import Radio from './components/Radio'
 import Rater from './components/Rater'
 import ReturnTop from './components/ReturnTop'
@@ -64,7 +64,7 @@ export {
     Page,
     Paragraph,
     Picker,
-    Qrcode,
+    QRCode,
     Radio,
     Rater,
     ReturnTop,
