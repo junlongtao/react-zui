@@ -1,28 +1,26 @@
 # React-ZUI (contributing...)
 
-Mobile Web App Components build with [React@16](http://facebook.github.io/react/).
+Mobile web app 组件库， 基于[React@16](http://facebook.github.io/react/).
  
-## Documentation
+## 文档及代码演示
 
-[http://zui.zhichou.com](http://zui.zhichou.com) with live examples.
+[http://zui.zhichou.com](http://zui.zhichou.com) 
 
-## Installation 
+## 安装和使用
 
 ``` 
 npm install --save react-zui
 ```  
 
-## Example
+## 代码示例
 
-We have several examples on the documentation. Here is the first one to get you started:
-```javascript
-// app.js
+```javascript 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Button} from 'react-zui'; 
+import {Page} from 'react-zui'; 
 
-const App = () => <Button>hello world</Button>;
+const App = () => <Page>hello world</Page>;
 
 ReactDOM.render((
     <App/>
