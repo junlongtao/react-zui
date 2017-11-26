@@ -23,7 +23,7 @@ import NetworkStatusCheck from './components/NetworkStatusCheck'
 import Notify from './components/Notify'
 import Page from './components/Page'
 import Paragraph from './components/Paragraph'
-import Picker from './components/Picker'
+import OptionPicker from './components/OptionPicker'
 import QRCode from './components/QRCode'
 import Radio from './components/Radio'
 import Rater from './components/Rater'
@@ -63,7 +63,7 @@ export {
     Notify,
     Page,
     Paragraph,
-    Picker,
+    OptionPicker,
     QRCode,
     Radio,
     Rater,

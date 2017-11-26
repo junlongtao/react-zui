@@ -46,6 +46,11 @@ ReactDOM.render(
                         <List.Item arrow="horizontal" href="#switch">Switch 切换器</List.Item>
                         <List.Item arrow="horizontal" href="#checkbox">Checkbox 复选框</List.Item>
                         <List.Item arrow="horizontal" href="#search-bar">SearchBar 搜索框</List.Item>
+                        <List.Item arrow="horizontal" href="#option-picker">OptionPicker 选择器</List.Item>
+                        <List.Item arrow="horizontal" href="#date-picker">DatePicker 日期选择器</List.Item>
+                        <List.Item arrow="horizontal" href="#month-picker">MonthPicker 月份选择器</List.Item>
+                        <List.Item arrow="horizontal" href="#city-picker">CityPicker 城市选择器</List.Item>
+                        <List.Item arrow="horizontal" href="#tag-picker">TagPicker 标签选择器</List.Item>
 
                         <List.Header>操作反馈 Feedback</List.Header>
                         <List.Item arrow="horizontal" href="#modal">Modal 对话框</List.Item>
@@ -82,6 +87,11 @@ ReactDOM.render(
             <Route exact path='/switch' component={asyncComponent(() => import('./pages/Switch'))}/>
             <Route exact path='/checkbox' component={asyncComponent(() => import('./pages/Checkbox'))}/>
             <Route exact path='/search-bar' component={asyncComponent(() => import('./pages/SearchBar'))}/>
+            <Route exact path='/option-picker' component={asyncComponent(() => import('./pages/OptionPicker'))}/>
+            <Route exact path='/date-picker' component={asyncComponent(() => import('./pages/DatePicker'))}/>
+            <Route exact path='/month-picker' component={asyncComponent(() => import('./pages/MonthPicker'))}/>
+            <Route exact path='/city-picker' component={asyncComponent(() => import('./pages/CityPicker'))}/>
+            <Route exact path='/tag-picker' component={asyncComponent(() => import('./pages/TagPicker'))}/>
 
             <Route exact path='/modal' component={asyncComponent(() => import('./pages/Modal'))}/>
             <Route exact path='/confirm' component={asyncComponent(() => import('./pages/Confirm'))}/>
