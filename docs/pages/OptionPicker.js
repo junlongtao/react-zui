@@ -66,9 +66,6 @@ export default class ExamplePage extends React.Component {
                 <List.Item extra="status为'open'时选择器打开,'close'时选择器关闭">
                     status
                 </List.Item>
-                <List.Item extra="value发生改变时的回调事件">
-                    onChange(value)
-                </List.Item>
             </List>
 
             <List>

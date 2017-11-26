@@ -38,8 +38,8 @@ export default class Example extends React.Component {
                 <List.Header>
                     属性
                 </List.Header>
-                <List.Item extra="当前激活的tab index">
-                    active
+                <List.Item extra="需要转换为二维码的文本内容">
+                    text
                 </List.Item>
             </List>
 
@@ -47,8 +47,8 @@ export default class Example extends React.Component {
                 <List.Header>
                     事件
                 </List.Header>
-                <List.Item extra="index改变时的回调事件">
-                    onChange(active)
+                <List.Item>
+                    暂无
                 </List.Item>
             </List>
         </Page>
