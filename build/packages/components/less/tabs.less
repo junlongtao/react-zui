@@ -1,0 +1,26 @@
+@import './base/mixin';
+ 
+.@{prefix}-tabs {
+    background: #fff;
+    .@{prefix}-tabs-nav {
+        width: 100%;
+        overflow-x: scroll;
+        .display-box();
+        .@{prefix}-tabs-nav-item {
+            .cursor();
+            .box-flex();
+            min-width: 100px;
+            font-size: 12px;
+            line-height: 40px;
+            text-align: center;
+            border-bottom: 1px solid #dcdcdc;
+            &.active {
+                color: @colorMain;
+                border-bottom: 1px solid @colorMain;
+            }
+        }
+    }
+    .@{prefix}-tabs-content {
+
+    }
+}

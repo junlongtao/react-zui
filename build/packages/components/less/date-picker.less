@@ -1,0 +1,53 @@
+@import './base/mixin';
+
+.@{prefix}-date-picker {
+    .@{prefix}-date-picker-year-list {
+        width: 20%;
+        float: left;
+        height: 100%;
+        max-height: 100%;
+        background: #f6f4f5;
+        .overflow-scroll();
+        .@{prefix}-date-picker-year-item {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 20px;
+            background: #f6f4f5;
+            &.active {
+                border-left: 2px solid @colorMain;
+                background: #fff;
+            }
+        }
+    }
+    .@{prefix}-date-picker-month-list {
+        width: 80%;
+        float: left;
+        height: 100%;
+        .overflow-scroll();
+        .@{prefix}-date-picker-month-item {
+            .@{prefix}-date-picker-month-name {
+                padding: 5px 10px;
+                color: #6ac2b6;
+                text-align: center;
+                border: 1px solid #f4f4f4;
+            }
+            .@{prefix}-date-picker-day-list {
+                .float-clear();
+                .@{prefix}-date-picker-day-item {
+                    .cursor();
+                    float: left;
+                    width: 20%;
+                    font-size: 14px;
+                    line-height: 40px;
+                    text-align: center;
+                    position: relative;
+                    background: #ffffff;
+                    border: 1px solid #f4f4f4;
+                    &.active {
+                        border-color: @colorMain;
+                    }
+                }
+            }
+        }
+    }
+}

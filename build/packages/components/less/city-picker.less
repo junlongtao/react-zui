@@ -1,0 +1,50 @@
+@import './base/mixin';
+
+.@{prefix}-city-picker {
+    .@{prefix}-city-picker-city-list {
+        width: 100%;
+        height: 100%;
+        .overflow-scroll();
+        .@{prefix}-city-picker-city-set {
+            .@{prefix}-city-picker-city-letter {
+                background: #eee;
+                line-height: 40px;
+                padding: 0 10px;
+            }
+            .@{prefix}-city-picker-city-item {
+                border-bottom: 1px solid #eee;
+                font-size: 14px;
+                line-height: 39px;
+                padding-left: 10px;
+                &:last-child {
+                    border-bottom: none;
+                    line-height: 40px;
+                }
+                &:active, &:hover {
+                    background: #eee;
+                    -webkit-tap-highlight-color: transparent;
+                }
+                .@{prefix}-icon {
+                    position: absolute;
+                    right: 10px;
+                    font-size: 14px;
+                    color: #00a0e3;
+                }
+            }
+        }
+    }
+    .@{prefix}-city-picker-letter-list {
+        top: 50%;
+        left: 50%;
+        margin-top: -184px;
+        position: fixed;
+        transition: opacity 1s ease;
+        .@{prefix}-city-picker-letter-item {
+            padding: 0px 10px;
+            font-size: 14px;
+            letter-spacing: 0;
+            text-align: center;
+        }
+    }
+
+}

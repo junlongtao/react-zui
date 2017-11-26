@@ -1,0 +1,57 @@
+@import './base/mixin';
+
+.@{prefix}-page-loading {
+    width: 100%;
+    height: 100%;
+
+    background: #f3f4f6;
+    .@{prefix}-page-loading-content{
+        width: 100%;
+        height: 70px;
+        color: #000;
+        opacity: .1;
+        display: block;
+        text-align: center;
+        top: 45%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        animation: pageLoadingContentFadeIn 2.5s ease infinite;
+        @keyframes pageLoadingContentFadeIn {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: .1;
+            }
+        }
+        h4 {
+            font-size: 35px;
+            line-height: 45px;
+            font-weight: normal;
+        }
+        .slogan{
+            font-size: 16px;
+        }
+        .mask {
+            width: 10px;
+            height: 45px;
+            background: #fff;
+            top: 0;
+            left: 0;
+            position: absolute;
+            -webkit-transform: skew(-20deg, 0deg);
+            -webkit-animation: movename 1.5s ease-in-out infinite; /* Safari and Chrome */
+            @-webkit-keyframes movename /* Safari and Chrome */
+            {
+                0% {
+                    left: 0;
+                }
+                100% {
+                    left: 100%;
+                }
+            }
+        }
+    }
+}

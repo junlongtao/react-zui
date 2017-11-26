@@ -1,0 +1,35 @@
+@import './base/mixin';
+
+.@{prefix}-radio {
+    .float-clear();
+    .@{prefix}-radio-item {
+        float: left;
+        text-align: left;
+        min-width: 85px;
+        margin: 0 10px 10px 0;
+        .@{prefix}-radio-item-circle {
+            width: 14px;
+            height: 14px;
+            border: 1px solid #6ac2b6;
+            border-radius: 50%;
+            background: #fff;
+            padding: 1px;
+            margin-right: 7px;
+            display: inline-block;
+            .inner {
+                width: 10px;
+                height: 10px;
+                background: #fff;
+                border-radius: 50%;
+                display: block;
+            }
+        }
+        &.active {
+            .@{prefix}-radio-item-circle {
+                .inner {
+                    background: #6ac2b6;
+                }
+            }
+        }
+    }
+}

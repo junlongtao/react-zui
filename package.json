@@ -2,7 +2,6 @@
   "main": "./build/packages/index.js",
   "scripts": {
     "babel": "rm -rf ./build/packages && NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files --watch",
-    "build": "rm -rf ./build/packages && webpack --progress --config ./webpack.config.js",
     "build-docs": "rm -rf ./docs/build && webpack --progress --config ./webpack.config.docs.js --watch",
     "start": "node webpack.server.js"
   },

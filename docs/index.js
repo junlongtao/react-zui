@@ -42,6 +42,7 @@ ReactDOM.render(
                         <List.Item arrow="horizontal" href="#loading">Loading 请求加载中</List.Item>
 
                         <List.Header>数据录入 Data Entry</List.Header>
+                        <List.Item arrow="horizontal" href="#button">Button 按钮</List.Item>
                         <List.Item arrow="horizontal" href="#list">List 表单</List.Item>
                         <List.Item arrow="horizontal" href="#switch">Switch 切换器</List.Item>
                         <List.Item arrow="horizontal" href="#checkbox">Checkbox 复选框</List.Item>
@@ -83,6 +84,7 @@ ReactDOM.render(
             <Route exact path='/list-loading' component={asyncComponent(() => import('./pages/ListLoading'))}/>
             <Route exact path='/loading' component={asyncComponent(() => import('./pages/Loading'))}/>
 
+            <Route exact path='/button' component={asyncComponent(() => import('./pages/Button'))}/>
             <Route exact path='/list' component={asyncComponent(() => import('./pages/List'))}/>
             <Route exact path='/switch' component={asyncComponent(() => import('./pages/Switch'))}/>
             <Route exact path='/checkbox' component={asyncComponent(() => import('./pages/Checkbox'))}/>
