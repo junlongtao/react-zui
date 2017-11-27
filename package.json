@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "chinese-city-data": "^1.0.1",
     "core-js": "^2.5.1",
     "history": "^4.6.1",
     "html-webpack-plugin": "^2.30.1",
@@ -65,7 +66,7 @@
   },
   "name": "react-zui",
   "description": "React-zui(建设中...)",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "directories": {
     "doc": "docs"
   },
