@@ -1,9 +1,9 @@
 {
   "main": "./build/packages/index.js",
   "scripts": {
-    "babel": "rm -rf ./build/packages && NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files --watch",
+    "babel": "rm -rf ./build/packages && NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files",
     "build-docs": "rm -rf ./docs/build && webpack --progress --config ./webpack.config.docs.js --watch",
-    "start": "node webpack.server.js"
+    "start": "npm run babel && node webpack.server.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -27,7 +27,6 @@
     "eslint": "^4.5.0",
     "eslint-plugin-react": "^7.3.0",
     "expect": "^1.12.0",
-    "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.8.4",
     "image-webpack-loader": "^3.1.0",
@@ -39,38 +38,25 @@
     "postcss-loader": "^0.7.0",
     "react-error-overlay": "^1.0.9",
     "react-test-renderer": "^15.4.2",
-    "react-transition-group": "^1.1.1",
-    "redux-logger": "^2.8.2",
-    "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.6",
     "webpack": "^3.5.5",
+    "fastclick": "^1.0.6",
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "axios": "^0.16.2",
     "babel-runtime": "^6.26.0",
     "core-js": "^2.5.1",
-    "date-fns": "^1.29.0",
-    "fastclick": "^1.0.6",
     "history": "^4.6.1",
     "html-webpack-plugin": "^2.30.1",
     "http-proxy-middleware": "^0.17.4",
     "jroll": "^2.5.0",
-    "jsonp": "^0.2.1",
-    "pingpp-js": "^2.1.15",
-    "preact": "^8.2.5",
-    "preact-compat": "^3.17.0",
-    "prop-types": "^15.6.0",
     "qrcode-generator": "^1.3.1",
-    "rc-form": "^1.4.8",
     "react": "^16.0.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.0.0",
     "react-dynamic-swiper": "^1.1.2",
     "react-hot-loader": "^3.0.0-beta.7",
-    "react-infinite-calendar": "^2.3.1",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
@@ -79,7 +65,7 @@
   },
   "name": "react-zui",
   "description": "React-zui(建设中...)",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "directories": {
     "doc": "docs"
   },
