@@ -62,7 +62,7 @@ export default class TagPicker extends React.Component {
     renderTagList = () => {
         const value = parsejson(this.props.value)
         const valueTags = value[this.state.category] || []
-        const categoryTags = this.props.data[this.state.category]
+        const categoryTags = this.props.data[this.state.category]||[]
 
         const prefix = this.props.prefix
         return categoryTags.map((item, key)=> { 

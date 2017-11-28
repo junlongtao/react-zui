@@ -19,10 +19,7 @@ export default class ExamplePage extends React.Component {
                 status={this.state.status}
                 value={this.state.value}
                 onChange={value=>{
-                    this.setState({
-                        value: value,
-                        status: 'close'
-                    })
+                    this.setState({value: value})
                 }}/>
 
             <List>
@@ -40,10 +37,7 @@ export default class ExamplePage extends React.Component {
             status={this.state.status}
             value={this.state.value}
             onChange={value=>{
-                this.setState({
-                    value: value,
-                    status: 'close'
-                })
+                this.setState({value: value})
             }}/>
     }
 }

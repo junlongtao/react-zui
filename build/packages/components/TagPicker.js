@@ -77,7 +77,7 @@ var TagPicker = function (_React$Component) {
         }, _this.renderTagList = function () {
             var value = (0, _util.parsejson)(_this.props.value);
             var valueTags = value[_this.state.category] || [];
-            var categoryTags = _this.props.data[_this.state.category];
+            var categoryTags = _this.props.data[_this.state.category] || [];
 
             var prefix = _this.props.prefix;
             return categoryTags.map(function (item, key) {
