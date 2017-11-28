@@ -33,9 +33,13 @@ class Tabs extends React.Component {
 
     state = {
         active: this.props.active
-    } 
+    }
 
-    render = () => { 
+    componentWillReceiveProps = nextProps => {
+        this.setState({active: nextProps.active})
+    }
+
+    render = () => {
         const prefix = this.props.prefix
         return <div className={prefix+'-tabs '+this.props.className}>
             <ul className={prefix+'-tabs-nav'}>

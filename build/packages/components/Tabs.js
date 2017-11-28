@@ -82,6 +82,8 @@ var Tabs = function (_React$Component2) {
 
         return _ret2 = (_temp2 = (_this2 = (0, _possibleConstructorReturn3.default)(this, (_ref2 = Tabs.__proto__ || (0, _getPrototypeOf2.default)(Tabs)).call.apply(_ref2, [this].concat(args))), _this2), _this2.state = {
             active: _this2.props.active
+        }, _this2.componentWillReceiveProps = function (nextProps) {
+            _this2.setState({ active: nextProps.active });
         }, _this2.render = function () {
             var prefix = _this2.props.prefix;
             return _react2.default.createElement(
