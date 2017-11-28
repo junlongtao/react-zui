@@ -56,7 +56,7 @@ var TagPicker = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TagPicker.__proto__ || (0, _getPrototypeOf2.default)(TagPicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            category: '技术'
+            category: ''
         }, _this.renderCategoryList = function () {
             var categoryList = [];
             for (var i in _this.props.data) {

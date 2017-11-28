@@ -41,7 +41,7 @@ export default class TagPicker extends React.Component {
     }
 
     state = { 
-        category: '技术',
+        category: '',
     }   
 
     renderCategoryList = () => {
