@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md -->
+<html lang="en" class="octotree octotree-show" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" href="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/frameworks-c9193575f18b28be82c0a963e144ff6fa7a809dd8ae003a1d1e5979bed3f7f00.css" integrity="sha256-yRk1dfGLKL6CwKlj4UT/b6eoCd2K4AOh0eWXm+0/fwA=" media="all" rel="stylesheet">
+  <link crossorigin="anonymous" href="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/github-6536549f7712e1f35def45bde8e2dbb9c4304a1dd4d28e3368cceaab0deb093a.css" integrity="sha256-ZTZUn3cS4fNd70W96OLbucQwSh3U0o4zaMzqqw3rCTo=" media="all" rel="stylesheet">
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>FE-Interview-Questions/JavaScript.md at master · poetries/FE-Interview-Questions</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta content="https://avatars3.githubusercontent.com/u/16177576?s=400&amp;v=4" property="og:image"><meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="poetries/FE-Interview-Questions" property="og:title"><meta content="https://github.com/poetries/FE-Interview-Questions" property="og:url"><meta content="FE-Interview-Questions - 前端面试常考问题整理，按模块知识点分类 Front-end-Developer-Questions by Modules and knowledge " property="og:description">
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MTk5Mzk5OTA4OjNlODZjNDcwYmI4OTQ2NmI0NGRlNTgxYjRiYzMzYzZmM2Y3NDMyNTRjMmFiMjgwYWYzZThiMTExMWI0MjFlZjI=--22a6c03eca449fd5f7866046bd3267d1c4d3766b">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
+  <meta name="request-id" content="1ADC:950E:3F9CE7:6094AB:5A1E318D" data-pjax-transient="">
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient="">
+
+  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host"><meta content="github" name="octolytics-app-id"><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url"><meta content="1ADC:950E:3F9CE7:6094AB:5A1E318D" name="octolytics-dimension-request_id"><meta content="sea" name="octolytics-dimension-region_edge"><meta content="iad" name="octolytics-dimension-region_render"><meta content="3701664" name="octolytics-actor-id"><meta content="junlongtao" name="octolytics-actor-login"><meta content="2925855cbdd44a5786f6056708928d0c0d3f331c5c096c047ca472439cbbac2b" name="octolytics-actor-hash">
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location">
+
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+  
+
+      <meta name="hostname" content="github.com">
+  <meta name="user-login" content="junlongtao">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="YjIxNWQ4ODVhNzk2OTYzMDY0NDdjYzM2NGUyODAyNWU4ZDdiNmMxZDgzNjY4ZGUyZGE3NGUxNDhiNWVlYTZhMnx7InJlbW90ZV9hZGRyZXNzIjoiMTgzLjI0MC4xOTYuOTEiLCJyZXF1ZXN0X2lkIjoiMUFEQzo5NTBFOjNGOUNFNzo2MDk0QUI6NUExRTMxOEQiLCJ0aW1lc3RhbXAiOjE1MTE5MjgyMDUsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+    <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS">
+
+  <meta name="html-safe-nonce" content="723533e2852da25de20ef8abef1f688b338f517f">
+
+  <meta http-equiv="x-pjax-version" content="0e2a4c1df76905f111dfbb9010eb7ec6">
+  
+
+      <link href="https://github.com/poetries/FE-Interview-Questions/commits/master.atom" rel="alternate" title="Recent Commits to FE-Interview-Questions:master" type="application/atom+xml">
+
+  <meta name="description" content="FE-Interview-Questions - 前端面试常考问题整理，按模块知识点分类 Front-end-Developer-Questions by Modules and knowledge ">
+  <meta name="go-import" content="github.com/poetries/FE-Interview-Questions git https://github.com/poetries/FE-Interview-Questions.git">
+
+  <meta content="16177576" name="octolytics-dimension-user_id"><meta content="poetries" name="octolytics-dimension-user_login"><meta content="81963142" name="octolytics-dimension-repository_id"><meta content="poetries/FE-Interview-Questions" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="81963142" name="octolytics-dimension-repository_network_root_id"><meta content="poetries/FE-Interview-Questions" name="octolytics-dimension-repository_network_root_nwo"><meta content="false" name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown">
+
+
+    <link rel="canonical" href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md" data-pjax-transient="">
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  </head>
+
+  <body class="logged-in env-production emoji-size-boost page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md#start-of-content" tabindex="1" class="bg-black text-white p-3 show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        
+<header class="Header  f5" role="banner">
+  <div class="d-flex px-3 flex-justify-between container-lg">
+    <div class="d-flex flex-justify-between">
+      <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+
+
+    </div>
+
+    <div class="HeaderMenu d-flex flex-justify-between flex-auto">
+      <div class="d-flex">
+            <div class="">
+              <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/poetries/FE-Interview-Questions/search" class="js-site-search-form" data-scoped-search-url="/poetries/FE-Interview-Questions/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+        <a href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md" class="header-search-scope no-underline">This repository</a>
+      <input type="text" class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable" data-hotkey="s" name="q" value="" placeholder="Search" aria-label="Search this repository" data-unscoped-placeholder="Search GitHub" data-scoped-placeholder="Search" autocapitalize="off">
+        <input type="hidden" class="js-site-search-type-field" name="type">
+    </label>
+</form></div>
+
+            </div>
+
+          <ul class="d-flex pl-2 flex-items-center text-bold list-style-none" role="navigation">
+            <li>
+              <a href="https://github.com/pulls" aria-label="Pull requests you created" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+                Pull requests
+</a>            </li>
+            <li>
+              <a href="https://github.com/issues" aria-label="Issues you created" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+                Issues
+</a>            </li>
+                <li>
+                  <a href="https://github.com/marketplace" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-selected-links=" /marketplace">
+                    Marketplace
+</a>                </li>
+            <li>
+              <a href="https://github.com/explore" class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore">
+                Explore
+</a>            </li>
+          </ul>
+      </div>
+
+      <div class="d-flex">
+        
+<ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
+  <li class="dropdown js-menu-container">
+    <span class="d-inline-block  px-2">
+      
+    <a href="https://github.com/notifications" aria-label="You have unread notifications" class="notification-indicator tooltipped tooltipped-s  js-socket-channel js-notification-indicator" data-channel="notification-changed:3701664" data-ga-click="Header, go to notifications, icon:unread" data-hotkey="g n">
+        <span class="mail-status unread"></span>
+        <svg aria-hidden="true" class="octicon octicon-bell" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"></path></svg>
+</a>
+    </span>
+  </li>
+
+  <li class="dropdown js-menu-container">
+    <details class="dropdown-details details-reset js-dropdown-details d-flex px-2 flex-items-center">
+      <summary class="HeaderNavlink" aria-label="Create new…" data-ga-click="Header, create new, icon:add">
+        <svg aria-hidden="true" class="octicon octicon-plus float-left mr-1 mt-1" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"></path></svg>
+        <span class="dropdown-caret mt-1"></span>
+      </summary>
+
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="https://github.com/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a class="dropdown-item" href="https://github.com/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a class="dropdown-item" href="https://github.com/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="poetries/FE-Interview-Questions">This repository</span>
+  </div>
+    <a class="dropdown-item" href="https://github.com/poetries/FE-Interview-Questions/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </details>
+  </li>
+
+  <li class="dropdown js-menu-container">
+
+    <details class="dropdown-details details-reset js-dropdown-details d-flex pl-2 flex-items-center">
+      <summary class="HeaderNavlink name mt-1" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar">
+        <img alt="@junlongtao" class="avatar float-left mr-1" src="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/3701664" height="20" width="20">
+        <span class="dropdown-caret"></span>
+      </summary>
+
+      <ul class="dropdown-menu dropdown-menu-sw">
+        <li class="dropdown-header header-nav-current-user css-truncate">
+          Signed in as <strong class="css-truncate-target">junlongtao</strong>
+        </li>
+
+        <li class="dropdown-divider"></li>
+
+        <li><a class="dropdown-item" href="https://github.com/junlongtao" data-ga-click="Header, go to profile, text:your profile">
+          Your profile
+        </a></li>
+        <li><a class="dropdown-item" href="https://github.com/junlongtao?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a></li>
+          <li><a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, your gists, text:your gists">Your Gists</a></li>
+
+        <li class="dropdown-divider"></li>
+
+        <li><a class="dropdown-item" href="https://help.github.com/" data-ga-click="Header, go to help, text:help">
+          Help
+        </a></li>
+
+        <li><a class="dropdown-item" href="https://github.com/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+          Settings
+        </a></li>
+
+        <li><!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="N6Hzo+ciqhMKAE6kafjpoCeOwfptsx0aCq6ioKWycNVVGelVnKUlaWWNuCFWlJlPfZgVTn9m1jN11FhQeb2Clw=="></div>
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+        </form></li>
+      </ul>
+    </details>
+  </li>
+</ul>
+
+
+        <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/logout" class="sr-only right-0" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="Yeb/E0SsmajU84PUkDzrmSDgnahcbbZ/WXz6l9OboAsDXuXlPysW0rt+dVGvUJt2evZJHE64fVYmBgBnD5RSSQ=="></div>
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </div>
+</header>
+
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+
+  <div role="main">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container="">
+      
+
+
+
+
+
+    <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav ">
+      <div class="repohead-details-container clearfix container " style="">
+
+        <ul class="pagehead-actions">
+  <li>
+        <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="wJ7QWdPbEd8V1eiBM5sIAw8xH+5Lo/Ic9CKdGNXiprBy0cSwuhSOlyX+ZB28NTMrgMW08JbGvIFewul5JGS0MQ=="></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="81963142">
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="https://github.com/poetries/FE-Interview-Questions/subscription" class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Toggle repository notifications menu" data-ga-click="Repository, click Watch settings, action:blob#show">
+            <span class="js-select-button">
+                <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                Watch
+            </span>
+          </a>
+            <a class="social-count js-social-count" href="https://github.com/poetries/FE-Interview-Questions/watchers" aria-label="7 users are watching this repository">
+              7
+            </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" type="radio" value="included">
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" type="radio" value="subscribed">
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                        Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore">
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"></path></svg>
+                        Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container on">
+    <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/poetries/FE-Interview-Questions/unstar" class="starred js-social-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="pJ0Mn1LR2p+VEoOh62cbcaNEdbM+u/v1PbbvRxiqQkFwcVzz7SUqYrL4OqX/kjxVQnlihHAg+tk9ZS2jSPyDpA=="></div>
+      <input type="hidden" name="context" value="repository">
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar poetries/FE-Interview-Questions" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/poetries/FE-Interview-Questions/stargazers" aria-label="156 users starred this repository">
+          156
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/poetries/FE-Interview-Questions/star" class="unstarred js-social-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="UUs1XmHKbhOeKF5K0BUbXw3uPKwyjHD+q1lUlVmVqulTg9v0x9JZq/R+U/OZg320gsGvFIFsR6zoPLSZ4X1RGw=="></div>
+      <input type="hidden" name="context" value="repository">
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Star this repository" title="Star poetries/FE-Interview-Questions" data-ga-click="Repository, click star button, action:blob#show; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/poetries/FE-Interview-Questions/stargazers" aria-label="156 users starred this repository">
+          156
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/poetries/FE-Interview-Questions/fork" class="btn-with-count" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="TqfCHW0z8KfS2KCivib13pJGdyjh0VR8wGkQhEo8VsjG0z879v4sHhG9jpVJNug0nR/5ENuAnaVDGvU7N/cWNQ=="></div>
+            <button type="submit" class="btn btn-sm btn-with-count" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" title="Fork your own copy of poetries/FE-Interview-Questions to your account" aria-label="Fork your own copy of poetries/FE-Interview-Questions to your account">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+              Fork
+            </button>
+</form>
+    <a href="https://github.com/poetries/FE-Interview-Questions/network" class="social-count" aria-label="76 users forked this repository">
+      76
+    </a>
+  </li>
+</ul>
+
+        <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a href="https://github.com/poetries" class="url fn" rel="author">poetries</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="https://github.com/poetries/FE-Interview-Questions" data-pjax="#js-repo-pjax-container">FE-Interview-Questions</a></strong>
+
+</h1>
+
+      </div>
+      
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" data-pjax="#js-repo-pjax-container" style="">
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="https://github.com/poetries/FE-Interview-Questions" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /poetries/FE-Interview-Questions" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="https://github.com/poetries/FE-Interview-Questions/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /poetries/FE-Interview-Questions/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">1</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="https://github.com/poetries/FE-Interview-Questions/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /poetries/FE-Interview-Questions/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a href="https://github.com/poetries/FE-Interview-Questions/projects" class="js-selected-navigation-item reponav-item" data-hotkey="g b" data-selected-links="repo_projects new_repo_project repo_project /poetries/FE-Interview-Questions/projects">
+      <svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewBox="0 0 15 16" width="15"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      Projects
+      <span class="Counter">0</span>
+</a>
+    <a href="https://github.com/poetries/FE-Interview-Questions/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /poetries/FE-Interview-Questions/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+      Wiki
+</a>
+
+  <a href="https://github.com/poetries/FE-Interview-Questions/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse /poetries/FE-Interview-Questions/pulse">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+    Insights
+</a>
+
+</nav>
+
+
+    </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav" style="">
+  <div class="repository-content">
+
+    
+  <a href="https://github.com/poetries/FE-Interview-Questions/blob/601095b794590408298c6fdf81a723d3419c58c0/JavaScript.md" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <!-- blob contrib key: blob_contributors:v21:5f3c194fe9e22c457cd77b436fc73356 -->
+
+  <div class="file-navigation js-zeroclipboard-container">
+    
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w" type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+      <i>Branch:</i>
+      <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected" href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md" data-name="master" data-skip-pjax="true" rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="BtnGroup float-right">
+      <a href="https://github.com/poetries/FE-Interview-Questions/find/master" class="js-pjax-capture-input btn btn-sm BtnGroup-item" data-pjax="" data-hotkey="t">
+        Find file
+      </a>
+      <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm BtnGroup-item tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
+    </div>
+    <div class="breadcrumb js-zeroclipboard-target">
+      <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="https://github.com/poetries/FE-Interview-Questions"><span>FE-Interview-Questions</span></a></span></span><span class="separator">/</span><strong class="final-path">JavaScript.md</strong>
+    </div>
+  </div>
+
+
+  
+  <div class="commit-tease">
+      <span class="float-right">
+        <a class="commit-tease-sha" href="https://github.com/poetries/FE-Interview-Questions/commit/da2c3cfaa00e064fcef12d737de0cce67b433c07" data-pjax="">
+          da2c3cf
+        </a>
+        <relative-time datetime="2017-02-15T11:17:14Z" title="2017年2月15日 GMT+8 下午7:17">on 15 Feb</relative-time>
+      </span>
+      <div>
+        <img alt="@poetries" class="avatar" height="20" src="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/16177576" width="20">
+        <a href="https://github.com/poetries" class="user-mention" rel="author">poetries</a>
+          <a href="https://github.com/poetries/FE-Interview-Questions/commit/da2c3cfaa00e064fcef12d737de0cce67b433c07" class="message" data-pjax="true" title="add some interview Question">add some interview Question</a>
+      </div>
+
+    <div class="commit-tease-contributors">
+      <button type="button" class="btn-link muted-link contributors-toggle" data-facebox="#blob_contributors_box">
+        <strong>1</strong>
+         contributor
+      </button>
+      
+    </div>
+
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header" data-facebox-id="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list" data-facebox-id="facebox-description">
+          <li class="facebox-user-list-item">
+            <img alt="@poetries" height="24" src="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/16177576(1)" width="24">
+            <a href="https://github.com/poetries">poetries</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="file">
+    <div class="file-header">
+  <div class="file-actions">
+
+    <div class="BtnGroup">
+      <a href="https://github.com/poetries/FE-Interview-Questions/raw/master/JavaScript.md" class="btn btn-sm BtnGroup-item" id="raw-url">Raw</a>
+        <a href="https://github.com/poetries/FE-Interview-Questions/blame/master/JavaScript.md" class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b">Blame</a>
+      <a href="https://github.com/poetries/FE-Interview-Questions/commits/master/JavaScript.md" class="btn btn-sm BtnGroup-item" rel="nofollow">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw" href="github-mac://openRepo/https://github.com/poetries/FE-Interview-Questions?branch=master&amp;filepath=JavaScript.md" aria-label="Open this file in GitHub Desktop" data-ga-click="Repository, open with desktop, type:mac">
+            <svg aria-hidden="true" class="octicon octicon-device-desktop" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"></path></svg>
+        </a>
+
+        <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/poetries/FE-Interview-Questions/edit/master/JavaScript.md" class="inline-form js-update-url-with-hash" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="OiIkWFkSyRfXQ1dY7nVqDBZZTarWvUdisNgtQrDtfzoMvaRXCYKzqKRkrAXbv8Xj6ZnsriyS3DkwGUP+KtpTcA=="></div>
+          <button class="btn-octicon tooltipped tooltipped-nw" type="submit" aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with="">
+            <svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
+          </button>
+</form>        <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/poetries/FE-Interview-Questions/delete/master/JavaScript.md" class="inline-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="AVpoE3n0bFmRb5omFp4G8M2Ane+Ta8S5MsaJGNEXGF+2YrT2Yq9r7WP8I32T1PQVq2v5iSgXXAR56Ze/WTUlEw=="></div>
+          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit" aria-label="Fork this project and delete the file" data-disable-with="">
+            <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
+          </button>
+</form>  </div>
+
+  <div class="file-info">
+      1191 lines (872 sloc)
+      <span class="file-info-divider"></span>
+    45.4 KB
+  </div>
+</div>
+
+    
+  <div id="readme" class="readme blob instapaper_body">
+    <article class="markdown-body entry-content" itemprop="text"><h3><a href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md#javascript" aria-hidden="true" class="anchor" id="user-content-javascript"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript</h3>
+<hr>
+<p><strong>JavaScript的组成</strong></p>
+<ul>
+<li>JavaScript 由以下三部分组成：
+<ul>
+<li>ECMAScript（核心）：JavaScript 语言基础</li>
+<li>DOM（文档对象模型）：规定了访问HTML和XML的接口</li>
+<li>BOM（浏览器对象模型）：提供了浏览器窗口之间进行交互的对象和方法</li>
+</ul>
+</li>
+</ul>
+<p><strong>JS的基本数据类型和引用数据类型</strong></p>
+<ul>
+<li>基本数据类型：undefined、null、boolean、number、string、symbol</li>
+<li>引用数据类型：object、array、function</li>
+</ul>
+<p><strong>检测浏览器版本版本有哪些方式？</strong></p>
+<ul>
+<li>根据 navigator.userAgent   //  UA.toLowerCase().indexOf('chrome')</li>
+<li>根据 window 对象的成员       // 'ActiveXObject' in window</li>
+</ul>
+<p><strong>介绍JS有哪些内置对象？</strong></p>
+<ul>
+<li>数据封装类对象：Object、Array、Boolean、Number、String</li>
+<li>其他对象：Function、Arguments、Math、Date、RegExp、Error</li>
+<li>ES6新增对象：Symbol、Map、Set、Promises、Proxy、Reflect</li>
+</ul>
+<p><strong>说几条写JavaScript的基本规范？</strong></p>
+<ul>
+<li>代码缩进，建议使用“四个空格”缩进</li>
+<li>代码段使用花括号{}包裹</li>
+<li>语句结束使用分号;</li>
+<li>变量和函数在使用前进行声明</li>
+<li>以大写字母开头命名构造函数，全大写命名常量</li>
+<li>规范定义JSON对象，补全双引号</li>
+<li>用{}和[]声明对象和数组</li>
+</ul>
+<p><strong>如何编写高性能的JavaScript？</strong></p>
+<ul>
+<li>遵循严格模式："use strict";</li>
+<li>将js脚本放在页面底部，加快渲染页面</li>
+<li>将js脚本将脚本成组打包，减少请求</li>
+<li>使用非阻塞方式下载js脚本</li>
+<li>尽量使用局部变量来保存全局变量</li>
+<li>尽量减少使用闭包</li>
+<li>使用 window 对象属性方法时，省略 window</li>
+<li>尽量减少对象成员嵌套</li>
+<li>缓存 DOM 节点的访问</li>
+<li>通过避免使用 eval() 和 Function() 构造器</li>
+<li>给 setTimeout() 和 setInterval() 传递函数而不是字符串作为参数</li>
+<li>尽量使用直接量创建对象和数组</li>
+<li>最小化重绘(repaint)和回流(reflow)</li>
+</ul>
+<p><strong>描述浏览器的渲染过程，DOM树和渲染树的区别？</strong></p>
+<ul>
+<li>
+<p>浏览器的渲染过程：</p>
+<ul>
+<li>解析HTML构建 DOM(DOM树)，并行请求 css/image/js</li>
+<li>CSS 文件下载完成，开始构建 CSSOM(CSS树)</li>
+<li>CSSOM 构建结束后，和 DOM 一起生成 Render Tree(渲染树)</li>
+<li>布局(Layout)：计算出每个节点在屏幕中的位置</li>
+<li>显示(Painting)：通过显卡把页面画到屏幕上</li>
+</ul>
+</li>
+<li>
+<p>DOM树 和 渲染树 的区别：</p>
+<ul>
+<li>DOM树与HTML标签一一对应，包括head和隐藏元素</li>
+<li>渲染树不包括head和隐藏元素，大段文本的每一个行都是独立节点，每一个节点都有对应的css属性</li>
+</ul>
+</li>
+</ul>
+<p><strong>重绘和回流（重排）的区别和关系？</strong></p>
+<ul>
+<li>重绘：当渲染树中的元素外观（如：颜色）发生改变，不影响布局时，产生重绘</li>
+<li>回流：当渲染树中的元素的布局（如：尺寸、位置、隐藏/状态状态）发生改变时，产生重绘回流</li>
+<li>注意：JS获取Layout属性值（如：offsetLeft、scrollTop、getComputedStyle等）也会引起回流。因为浏览器需要通过回流计算最新值</li>
+<li>回流必将引起重绘，而重绘不一定会引起回流</li>
+</ul>
+<p><strong>如何最小化重绘(repaint)和回流(reflow)？</strong></p>
+<ul>
+<li>需要要对元素进行复杂的操作时，可以先隐藏(display:"none")，操作完成后再显示</li>
+<li>需要创建多个DOM节点时，使用DocumentFragment创建完后一次性的加入document</li>
+<li>缓存Layout属性值，如：var left = elem.offsetLeft; 这样，多次使用 left 只产生一次回流</li>
+<li>尽量避免用table布局（table元素一旦触发回流就会导致table里所有的其它元素回流）</li>
+<li>避免使用css表达式(expression)，因为每次调用都会重新计算值（包括加载页面）</li>
+<li>尽量使用 css 属性简写，如：用 border 代替 border-width, border-style, border-color</li>
+<li>批量修改元素样式：elem.className 和 elem.style.cssText 代替 elem.style.xxx</li>
+</ul>
+<p><strong>script 的位置是否会影响首屏显示时间？</strong></p>
+<ul>
+<li>在解析 HTML 生成 DOM 过程中，js 文件的下载是并行的，不需要 DOM 处理到 script 节点。因此，script的位置不影响首屏显示的开始时间。</li>
+<li>浏览器解析 HTML 是自上而下的线性过程，script作为 HTML 的一部分同样遵循这个原则</li>
+<li>因此，script 会延迟 DomContentLoad，只显示其上部分首屏内容，从而影响首屏显示的完成时间</li>
+</ul>
+<p><strong>解释JavaScript中的作用域与变量声明提升？</strong></p>
+<ul>
+<li>
+<p>JavaScript作用域：</p>
+<ul>
+<li>在Java、C等语言中，作用域为for语句、if语句或{}内的一块区域，称为作用域；</li>
+<li>而在 JavaScript 中，作用域为function(){}内的区域，称为函数作用域。</li>
+</ul>
+</li>
+<li>
+<p>JavaScript变量声明提升：</p>
+<ul>
+<li>在JavaScript中，函数声明与变量声明经常被JavaScript引擎隐式地提升到当前作用域的顶部。</li>
+<li>声明语句中的赋值部分并不会被提升，只有名称被提升</li>
+<li>函数声明的优先级高于变量，如果变量名跟函数名相同且未赋值，则函数声明会覆盖变量声明</li>
+<li>如果函数有多个同名参数，那么最后一个参数（即使没有定义）会覆盖前面的同名参数</li>
+</ul>
+</li>
+</ul>
+<p><strong>介绍JavaScript的原型，原型链？有什么特点？</strong></p>
+<ul>
+<li>
+<p>原型：</p>
+<ul>
+<li>JavaScript的所有对象中都包含了一个 [<strong>proto</strong>] 内部属性，这个属性所对应的就是该对象的原型</li>
+<li>JavaScript的函数对象，除了原型 [<strong>proto</strong>] 之外，还预置了 prototype 属性</li>
+<li>当函数对象作为构造函数创建实例时，该 prototype 属性值将被作为实例对象的原型 [<strong>proto</strong>]。</li>
+</ul>
+</li>
+<li>
+<p>原型链：</p>
+<ul>
+<li>当一个对象调用的属性/方法自身不存在时，就会去自己 [<strong>proto</strong>] 关联的前辈 prototype 对象上去找</li>
+<li>如果没找到，就会去该 prototype 原型 [<strong>proto</strong>] 关联的前辈 prototype 去找。依次类推，直到找到属性/方法或 undefined 为止。从而形成了所谓的“原型链”</li>
+</ul>
+</li>
+<li>
+<p>原型特点：</p>
+<ul>
+<li>JavaScript对象是通过引用来传递的，当修改原型时，与之相关的对象也会继承这一改变</li>
+</ul>
+</li>
+</ul>
+<p><strong>JavaScript有几种类型的值？，你能画一下他们的内存图吗</strong></p>
+<ul>
+<li>原始数据类型（Undefined，Null，Boolean，Number、String）-- 栈</li>
+<li>引用数据类型（对象、数组和函数）-- 堆</li>
+<li>两种类型的区别是：存储位置不同：</li>
+<li>原始数据类型是直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据；</li>
+<li>引用数据类型存储在堆(heap)中的对象，占据空间大、大小不固定，如果存储在栈中，将会影响程序运行的性能；</li>
+<li>引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。</li>
+<li>当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。</li>
+</ul>
+<p><strong>JavaScript如何实现一个类，怎么实例化这个类？</strong></p>
+<ul>
+<li>构造函数法（this + prototype） -- 用 new 关键字 生成实例对象
+<ul>
+<li>缺点：用到了 this 和 prototype，编写复杂，可读性差</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-source-js"><pre>  <span class="pl-k">function</span> <span class="pl-en">Mobile</span>(<span class="pl-smi">name</span>, <span class="pl-smi">price</span>){
+     <span class="pl-c1">this</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> name;
+     <span class="pl-c1">this</span>.<span class="pl-smi">price</span> <span class="pl-k">=</span> price;
+   }
+   <span class="pl-smi">Mobile</span>.<span class="pl-c1">prototype</span>.<span class="pl-en">sell</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(){
+      <span class="pl-en">alert</span>(<span class="pl-c1">this</span>.<span class="pl-c1">name</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>，售价 $<span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-c1">this</span>.<span class="pl-smi">price</span>);
+   }
+   <span class="pl-k">var</span> iPhone7 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Mobile</span>(<span class="pl-s"><span class="pl-pds">"</span>iPhone7<span class="pl-pds">"</span></span>, <span class="pl-c1">1000</span>);
+   <span class="pl-smi">iPhone7</span>.<span class="pl-en">sell</span>();</pre></div>
+<ul>
+<li>Object.create 法 -- 用 Object.create() 生成实例对象</li>
+<li>缺点：不能实现私有属性和私有方法，实例对象之间也不能共享数据</li>
+</ul>
+<div class="highlight highlight-source-js"><pre> <span class="pl-k">var</span> Person <span class="pl-k">=</span> {
+     firstname<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Mark<span class="pl-pds">"</span></span>,
+     lastname<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Yun<span class="pl-pds">"</span></span>,
+     age<span class="pl-k">:</span> <span class="pl-c1">25</span>,
+     <span class="pl-en">introduce</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){
+         <span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>I am <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-smi">Person</span>.<span class="pl-smi">firstname</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span> <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-smi">Person</span>.<span class="pl-smi">lastname</span>);
+     }
+ };
+
+ <span class="pl-k">var</span> person <span class="pl-k">=</span> <span class="pl-c1">Object</span>.<span class="pl-en">create</span>(Person);
+ <span class="pl-smi">person</span>.<span class="pl-en">introduce</span>();
+
+ <span class="pl-c"><span class="pl-c">//</span> Object.create 要求 IE9+，低版本浏览器可以自行部署：</span>
+ <span class="pl-k">if</span> (<span class="pl-k">!</span><span class="pl-c1">Object</span>.<span class="pl-smi">create</span>) {
+　   <span class="pl-c1">Object</span>.<span class="pl-en">create</span> <span class="pl-k">=</span> <span class="pl-k">function</span> (<span class="pl-smi">o</span>) {
+　　　 <span class="pl-k">function</span> <span class="pl-en">F</span>() {}
+　　　 <span class="pl-c1">F</span>.<span class="pl-c1">prototype</span> <span class="pl-k">=</span> o;
+　　　 <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">F</span>();
+　　};
+　}</pre></div>
+<ul>
+<li>极简主义法（消除 this 和 prototype） -- 调用 createNew() 得到实例对象
+<ul>
+<li>优点：容易理解，结构清晰优雅，符合传统的"面向对象编程"的构造</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-source-js"><pre> <span class="pl-k">var</span> Cat <span class="pl-k">=</span> {
+   age<span class="pl-k">:</span> <span class="pl-c1">3</span>, <span class="pl-c"><span class="pl-c">//</span> 共享数据 -- 定义在类对象内，createNew() 外</span>
+   <span class="pl-en">createNew</span><span class="pl-k">:</span> <span class="pl-k">function</span> () {
+     <span class="pl-k">var</span> cat <span class="pl-k">=</span> {};
+     <span class="pl-c"><span class="pl-c">//</span> var cat = Animal.createNew(); // 继承 Animal 类</span>
+     <span class="pl-smi">cat</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>小咪<span class="pl-pds">"</span></span>;
+     <span class="pl-k">var</span> sound <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>喵喵喵<span class="pl-pds">"</span></span>; <span class="pl-c"><span class="pl-c">//</span> 私有属性--定义在 createNew() 内，输出对象外</span>
+     <span class="pl-smi">cat</span>.<span class="pl-en">makeSound</span> <span class="pl-k">=</span> <span class="pl-k">function</span> () {
+       <span class="pl-en">alert</span>(sound);  <span class="pl-c"><span class="pl-c">//</span> 暴露私有属性</span>
+     };
+     <span class="pl-smi">cat</span>.<span class="pl-en">changeAge</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">num</span>){
+       <span class="pl-smi">Cat</span>.<span class="pl-smi">age</span> <span class="pl-k">=</span> num; <span class="pl-c"><span class="pl-c">//</span> 修改共享数据</span>
+     };
+     <span class="pl-k">return</span> cat; <span class="pl-c"><span class="pl-c">//</span> 输出对象</span>
+   }
+ };
+
+ <span class="pl-k">var</span> cat <span class="pl-k">=</span> <span class="pl-smi">Cat</span>.<span class="pl-en">createNew</span>();
+ <span class="pl-smi">cat</span>.<span class="pl-en">makeSound</span>();</pre></div>
+<ul>
+<li>ES6 语法糖 class -- 用 new 关键字 生成实例对象</li>
+</ul>
+<div class="highlight highlight-source-js"><pre>     <span class="pl-k">class</span> <span class="pl-en">Point</span> {
+       <span class="pl-en">constructor</span>(<span class="pl-smi">x</span>, <span class="pl-smi">y</span>) {
+         <span class="pl-c1">this</span>.<span class="pl-c1">x</span> <span class="pl-k">=</span> x;
+         <span class="pl-c1">this</span>.<span class="pl-c1">y</span> <span class="pl-k">=</span> y;
+       }
+       <span class="pl-en">toString</span>() {
+         <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">'</span>(<span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-c1">this</span>.<span class="pl-c1">x</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>, <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-c1">this</span>.<span class="pl-c1">y</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>)<span class="pl-pds">'</span></span>;
+       }
+     }
+
+  <span class="pl-k">var</span> point <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Point</span>(<span class="pl-c1">2</span>, <span class="pl-c1">3</span>);</pre></div>
+<p><strong>Javascript如何实现继承？</strong></p>
+<ul>
+<li>构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上</li>
+</ul>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">Cat</span>(<span class="pl-smi">name</span>,<span class="pl-smi">color</span>){
+ 　<span class="pl-smi">Animal</span>.<span class="pl-c1">apply</span>(<span class="pl-c1">this</span>, <span class="pl-c1">arguments</span>);
+ 　<span class="pl-c1">this</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> name;
+ 　<span class="pl-c1">this</span>.<span class="pl-c1">color</span> <span class="pl-k">=</span> color;
+}</pre></div>
+<ul>
+<li>实例继承：将子对象的 prototype 指向父对象的一个实例</li>
+</ul>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">Cat</span>.<span class="pl-c1">prototype</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Animal</span>();
+<span class="pl-smi">Cat</span>.<span class="pl-c1">prototype</span>.<span class="pl-c1">constructor</span> <span class="pl-k">=</span> Cat;</pre></div>
+<ul>
+<li>拷贝继承：如果把父对象的所有属性和方法，拷贝进子对象</li>
+</ul>
+<div class="highlight highlight-source-js"><pre>    <span class="pl-k">function</span> <span class="pl-en">extend</span>(<span class="pl-smi">Child</span>, <span class="pl-smi">Parent</span>) {
+  　　　<span class="pl-k">var</span> p <span class="pl-k">=</span> <span class="pl-smi">Parent</span>.<span class="pl-c1">prototype</span>;
+  　　　<span class="pl-k">var</span> c <span class="pl-k">=</span> <span class="pl-smi">Child</span>.<span class="pl-c1">prototype</span>;
+  　　　<span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">in</span> p) {
+  　　　   c[i] <span class="pl-k">=</span> p[i];
+  　　　}
+  　　　<span class="pl-smi">c</span>.<span class="pl-smi">uber</span> <span class="pl-k">=</span> p;
+  　 }</pre></div>
+<ul>
+<li>原型继承：将子对象的 prototype 指向父对象的 prototype</li>
+</ul>
+<div class="highlight highlight-source-js"><pre>    <span class="pl-k">function</span> <span class="pl-en">extend</span>(<span class="pl-smi">Child</span>, <span class="pl-smi">Parent</span>) {
+        <span class="pl-k">var</span> <span class="pl-en">F</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(){};
+      　<span class="pl-c1">F</span>.<span class="pl-c1">prototype</span> <span class="pl-k">=</span> <span class="pl-smi">Parent</span>.<span class="pl-c1">prototype</span>;
+      　<span class="pl-smi">Child</span>.<span class="pl-c1">prototype</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">F</span>();
+      　<span class="pl-smi">Child</span>.<span class="pl-c1">prototype</span>.<span class="pl-c1">constructor</span> <span class="pl-k">=</span> Child;
+      　<span class="pl-smi">Child</span>.<span class="pl-smi">uber</span> <span class="pl-k">=</span> <span class="pl-smi">Parent</span>.<span class="pl-c1">prototype</span>;
+    }</pre></div>
+<ul>
+<li>ES6 语法糖 extends：class ColorPoint extends Point {}</li>
+</ul>
+<div class="highlight highlight-source-js"><pre>    <span class="pl-k">class</span> <span class="pl-en">ColorPoint</span> <span class="pl-k">extends</span> <span class="pl-e">Point</span> {
+       <span class="pl-en">constructor</span>(<span class="pl-smi">x</span>, <span class="pl-smi">y</span>, <span class="pl-smi">color</span>) {
+          <span class="pl-c1">super</span>(x, y); <span class="pl-c"><span class="pl-c">//</span> 调用父类的constructor(x, y)</span>
+          <span class="pl-c1">this</span>.<span class="pl-c1">color</span> <span class="pl-k">=</span> color;
+       }
+       <span class="pl-en">toString</span>() {
+          <span class="pl-k">return</span> <span class="pl-c1">this</span>.<span class="pl-c1">color</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span> <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-c1">super</span>.<span class="pl-c1">toString</span>(); <span class="pl-c"><span class="pl-c">//</span> 调用父类的toString()</span>
+       }
+    }</pre></div>
+<p><strong>Javascript作用链域?</strong></p>
+<ul>
+<li>全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节</li>
+<li>如果当前作用域没有找到属性或方法，会向上层作用域查找，直至全局函数，这种形式就是作用域链</li>
+</ul>
+<p><strong>谈谈this对象的理解</strong></p>
+<ul>
+<li>this 总是指向函数的直接调用者</li>
+<li>如果有 new 关键字，this 指向 new 出来的实例对象</li>
+<li>在事件中，this指向触发这个事件的对象</li>
+<li>IE下 attachEvent 中的this总是指向全局对象Window</li>
+</ul>
+<p><strong>eval是做什么的？</strong></p>
+<p><strong>eval的功能是把对应的字符串解析成JS代码并运行</strong></p>
+<ul>
+<li>应该避免使用eval，不安全，非常耗性能（先解析成js语句，再执行）</li>
+<li>由JSON字符串转换为JSON对象的时候可以用 eval('('+ str +')');</li>
+</ul>
+<p><strong>什么是 Window 对象? 什么是 Document 对象?</strong></p>
+<ul>
+<li>Window 对象表示当前浏览器的窗口，是JavaScript的顶级对象。</li>
+<li>我们创建的所有对象、函数、变量都是 Window 对象的成员。</li>
+<li>Window 对象的方法和属性是在全局范围内有效的。</li>
+<li>Document 对象是 HTML 文档的根节点与所有其他节点（元素节点，文本节点，属性节点, 注释节点）</li>
+<li>Document 对象使我们可以通过脚本对 HTML 页面中的所有元素进行访问</li>
+<li>Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问</li>
+</ul>
+<p><strong>介绍 DOM 的发展</strong></p>
+<ul>
+<li>DOM：文档对象模型（Document Object Model），定义了访问HTML和XML文档的标准，与编程语言及平台无关</li>
+<li>DOM0：提供了查询和操作Web文档的内容API。未形成标准，实现混乱。如：document.forms['login']</li>
+<li>DOM1：W3C提出标准化的DOM，简化了对文档中任意部分的访问和操作。如：JavaScript中的Document对象</li>
+<li>DOM2：原来DOM基础上扩充了鼠标事件等细分模块，增加了对CSS的支持。如：getComputedStyle(elem, pseudo)</li>
+<li>DOM3：增加了XPath模块和加载与保存（Load and Save）模块。如：XPathEvaluator</li>
+</ul>
+<p><strong>介绍DOM0，DOM2，DOM3事件处理方式区别</strong></p>
+<ul>
+<li>DOM0级事件处理方式：
+<ul>
+<li><code>btn.onclick = func;</code></li>
+<li><code>btn.onclick = null;</code></li>
+</ul>
+</li>
+<li>DOM2级事件处理方式：
+<ul>
+<li><code>btn.addEventListener('click', func, false);</code></li>
+<li><code>btn.removeEventListener('click', func, false);</code></li>
+<li><code>btn.attachEvent("onclick", func);</code></li>
+<li><code>btn.detachEvent("onclick", func);</code></li>
+</ul>
+</li>
+<li>DOM3级事件处理方式：
+<ul>
+<li><code>eventUtil.addListener(input, "textInput", func);</code></li>
+<li><code>eventUtil</code> 是自定义对象，<code>textInput</code> 是DOM3级事件</li>
+</ul>
+</li>
+</ul>
+<p><strong>事件的三个阶段</strong></p>
+<ul>
+<li>捕获、目标、冒泡</li>
+</ul>
+<p><strong>介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？</strong></p>
+<ul>
+<li>按照W3C标准的事件：首是进入捕获阶段，直到达到目标元素，再进入冒泡阶段</li>
+<li>事件执行次数（DOM2-addEventListener）：元素上绑定事件的个数
+<ul>
+<li>注意1：前提是事件被确实触发</li>
+<li>注意2：事件绑定几次就算几个事件，即使类型和功能完全一样也不会“覆盖”</li>
+</ul>
+</li>
+<li>事件执行顺序：判断的关键是否目标元素
+<ul>
+<li>非目标元素：根据W3C的标准执行：捕获-&gt;目标元素-&gt;冒泡（不依据事件绑定顺序）</li>
+<li>目标元素：依据事件绑定顺序：先绑定的事件先执行（不依据捕获冒泡标准）</li>
+<li>最终顺序：父元素捕获-&gt;目标元素事件1-&gt;目标元素事件2-&gt;子元素捕获-&gt;子元素冒泡-&gt;父元素冒泡</li>
+<li>注意：子元素事件执行前提    事件确实“落”到子元素布局区域上，而不是简单的具有嵌套关系</li>
+</ul>
+</li>
+</ul>
+<p><strong>在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？</strong></p>
+<ul>
+<li>该DOM上的事件如果被触发，会执行两次（执行次数等于绑定次数）</li>
+<li>如果该DOM是目标元素，则按事件绑定顺序执行，不区分冒泡/捕获</li>
+<li>如果该DOM是处于事件流中的非目标元素，则先执行捕获，后执行冒泡</li>
+</ul>
+<p><strong>事件的代理/委托</strong></p>
+<ul>
+<li>事件委托是指将事件绑定目标元素的到父元素上，利用冒泡机制触发该事件
+<ul>
+<li>优点：
+<ul>
+<li>可以减少事件注册，节省大量内存占用</li>
+<li>可以将事件应用于动态添加的子元素上</li>
+</ul>
+</li>
+<li>缺点：
+使用不当会造成事件在不应该触发时触发</li>
+<li>示例：</li>
+</ul>
+</li>
+</ul>
+<pre><code>ulEl.addEventListener('click', function(e){
+    var target = event.target || event.srcElement;
+    if(!!target &amp;&amp; target.nodeName.toUpperCase() === "LI"){
+        console.log(target.innerHTML);
+    }
+}, false);
+</code></pre>
+<p><strong>IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</strong></p>
+<ul>
+<li>IE只事件冒泡，不支持事件捕获；火狐同时支持件冒泡和事件捕获</li>
+</ul>
+<p><strong>IE的事件处理和W3C的事件处理有哪些区别？</strong></p>
+<ul>
+<li>
+<p>绑定事件</p>
+<ul>
+<li>W3C: targetEl.addEventListener('click', handler, false);</li>
+<li>IE: targetEl.attachEvent('onclick', handler);</li>
+</ul>
+</li>
+<li>
+<p>删除事件</p>
+<ul>
+<li>W3C: targetEl.removeEventListener('click', handler, false);</li>
+<li>IE: targetEl.detachEvent(event, handler);</li>
+</ul>
+</li>
+<li>
+<p>事件对象</p>
+<ul>
+<li>W3C: var e = arguments.callee.caller.arguments[0]</li>
+<li>IE: window.event</li>
+</ul>
+</li>
+<li>
+<p>事件目标</p>
+<ul>
+<li>W3C: e.target</li>
+<li>IE: window.event.srcElement</li>
+</ul>
+</li>
+<li>
+<p>阻止事件默认行为</p>
+<ul>
+<li>W3C: window.event.cancelBubble = true</li>
+<li>IE: window.event.returnValue = false</li>
+</ul>
+</li>
+<li>
+<p>阻止事件传播</p>
+<ul>
+<li>W3C: e.stopPropagation()</li>
+<li>IE: window.event</li>
+</ul>
+</li>
+</ul>
+<p><strong>W3C事件的 target 与 currentTarget 的区别？</strong></p>
+<ul>
+<li>target 只会出现在事件流的目标阶段</li>
+<li>currentTarget 可能出现在事件流的任何阶段</li>
+<li>当事件流处在目标阶段时，二者的指向相同</li>
+<li>当事件流处于捕获或冒泡阶段时：currentTarget 指向当前事件活动的对象(一般为父级)</li>
+</ul>
+<p><strong>如何派发事件(dispatchEvent)？（如何进行事件广播？）</strong></p>
+<ul>
+<li>W3C: 使用 dispatchEvent 方法</li>
+<li>IE: 使用 fireEvent 方法</li>
+</ul>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-en">fireEvent</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">element</span>, <span class="pl-c1">event</span>){
+    <span class="pl-k">if</span> (<span class="pl-c1">document</span>.<span class="pl-smi">createEventObject</span>){
+        <span class="pl-k">var</span> mockEvent <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">createEventObject</span>();
+        <span class="pl-k">return</span> <span class="pl-smi">element</span>.<span class="pl-en">fireEvent</span>(<span class="pl-s"><span class="pl-pds">'</span>on<span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-c1">event</span>, mockEvent)
+    }<span class="pl-k">else</span>{
+        <span class="pl-k">var</span> mockEvent <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">createEvent</span>(<span class="pl-s"><span class="pl-pds">'</span>HTMLEvents<span class="pl-pds">'</span></span>);
+        <span class="pl-smi">mockEvent</span>.<span class="pl-c1">initEvent</span>(<span class="pl-c1">event</span>, <span class="pl-c1">true</span>, <span class="pl-c1">true</span>);
+        <span class="pl-k">return</span> <span class="pl-k">!</span><span class="pl-smi">element</span>.<span class="pl-c1">dispatchEvent</span>(mockEvent);
+    }
+}</pre></div>
+<p><strong>什么是函数节流？介绍一下应用场景和原理？</strong></p>
+<ul>
+<li>
+<p>函数节流(throttle)是指阻止一个函数在很短时间间隔内连续调用。
+只有当上一次函数执行后达到规定的时间间隔，才能进行下一次调用。
+但要保证一个累计最小调用间隔（否则拖拽类的节流都将无连续效果）</p>
+</li>
+<li>
+<p>函数节流用于 onresize, onscroll 等短时间内会多次触发的事件</p>
+</li>
+<li>
+<p>函数节流的原理：使用定时器做时间节流。
+当触发一个事件时，先用 setTimout 让这个事件延迟一小段时间再执行。
+如果在这个时间间隔内又触发了事件，就 clearTimeout 原来的定时器，
+再 setTimeout 一个新的定时器重复以上流程。</p>
+</li>
+<li>
+<p>函数节流简单实现：</p>
+</li>
+</ul>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">throttle</span>(<span class="pl-smi">method</span>, <span class="pl-smi">context</span>) {
+     <span class="pl-c1">clearTimeout</span>(<span class="pl-smi">methor</span>.<span class="pl-smi">tId</span>);
+     <span class="pl-smi">method</span>.<span class="pl-smi">tId</span> <span class="pl-k">=</span> <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span>(){
+         <span class="pl-smi">method</span>.<span class="pl-c1">call</span>(context);
+     }， <span class="pl-c1">100</span>); <span class="pl-c"><span class="pl-c">//</span> 两次调用至少间隔 100ms</span>
+}
+<span class="pl-c"><span class="pl-c">//</span> 调用</span>
+<span class="pl-c1">window</span>.<span class="pl-en">onresize</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(){
+    <span class="pl-en">throttle</span>(myFunc, <span class="pl-c1">window</span>);
+}</pre></div>
+<p><strong>区分什么是“客户区坐标”、“页面坐标”、“屏幕坐标”？</strong></p>
+<ul>
+<li>客户区坐标：鼠标指针在可视区中的水平坐标(clientX)和垂直坐标(clientY)</li>
+<li>页面坐标：鼠标指针在页面布局中的水平坐标(pageX)和垂直坐标(pageY)</li>
+<li>屏幕坐标：设备物理屏幕的水平坐标(screenX)和垂直坐标(screenY)</li>
+</ul>
+<p><strong>如何获得一个DOM元素的绝对位置？</strong></p>
+<ul>
+<li>elem.offsetLeft：返回元素相对于其定位父级左侧的距离</li>
+<li>elem.offsetTop：返回元素相对于其定位父级顶部的距离</li>
+<li>elem.getBoundingClientRect()：返回一个DOMRect对象，包含一组描述边框的只读属性，单位像素</li>
+</ul>
+<p><strong>分析 ['1', '2', '3'].map(parseInt) 答案是多少？</strong></p>
+<ul>
+<li>答案:[1, NaN, NaN]</li>
+</ul>
+<ul>
+<li>parseInt(string, radix) 第2个参数 radix 表示进制。省略 radix 或 radix = 0，则数字将以十进制解析</li>
+<li>map 每次为 parseInt 传3个参数(elem, index, array)，其中 index 为数组索引</li>
+<li>因此，map 遍历 ["1", "2", "3"]，相应 parseInt 接收参数如下</li>
+</ul>
+<pre><code>parseInt('1', 0);  // 1
+parseInt('2', 1);  // NaN
+parseInt('3', 2);  // NaN
+</code></pre>
+<ul>
+<li>所以，parseInt 参数 radix 不合法，导致返回值为 NaN</li>
+</ul>
+<p><strong>new 操作符具体干了什么？</strong></p>
+<ul>
+<li>创建实例对象，this 变量引用该对象，同时还继承了构造函数的原型</li>
+<li>属性和方法被加入到 this 引用的对象中</li>
+<li>新创建的对象由 this 所引用，并且最后隐式的返回 this</li>
+</ul>
+<p><strong>用原生JavaScript的实现过什么功能吗？</strong></p>
+<ul>
+<li>封装选择器、调用第三方API、设置和获取样式</li>
+</ul>
+<p><strong>解释一下这段代码的意思吗？</strong></p>
+<div class="highlight highlight-source-js"><pre>  [].<span class="pl-smi">forEach</span>.<span class="pl-c1">call</span>(<span class="pl-en">$$</span>(<span class="pl-s"><span class="pl-pds">"</span>*<span class="pl-pds">"</span></span>), <span class="pl-k">function</span>(<span class="pl-smi">el</span>){
+      <span class="pl-smi">el</span>.<span class="pl-c1">style</span>.<span class="pl-smi">outline</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>1px solid #<span class="pl-pds">"</span></span> <span class="pl-k">+</span> (<span class="pl-k">~~</span>(<span class="pl-c1">Math</span>.<span class="pl-c1">random</span>()<span class="pl-k">*</span>(<span class="pl-c1">1</span><span class="pl-k">&lt;&lt;</span><span class="pl-c1">24</span>))).<span class="pl-c1">toString</span>(<span class="pl-c1">16</span>);
+  })</pre></div>
+<ul>
+<li>解释：获取页面所有的元素，遍历这些元素，为它们添加1像素随机颜色的轮廓(outline)</li>
+<li>
+<ol>
+<li><code>$$(sel)</code> // $$函数被许多现代浏览器命令行支持，等价于 document.querySelectorAll(sel)</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><code>[].forEach.call(NodeLists)</code> // 使用 call 函数将数组遍历函数 forEach 应到节点元素列表</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><code>el.style.outline = "1px solid #333"</code> // 样式 outline 位于盒模型之外，不影响元素布局位置</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li><code>(1&lt;&lt;24)</code> // parseInt("ffffff", 16) == 16777215 == 2^24 - 1 // 1&lt;&lt;24 == 2^24 == 16777216</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li><code>Math.random()*(1&lt;&lt;24)</code> // 表示一个位于 0 到 16777216 之间的随机浮点数</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li><code>~~Math.random()*(1&lt;&lt;24)</code> // <code>~~</code> 作用相当于 parseInt 取整</li>
+</ol>
+</li>
+<li>
+<ol start="7">
+<li><code>(~~(Math.random()*(1&lt;&lt;24))).toString(16)</code> // 转换为一个十六进制-</li>
+</ol>
+</li>
+</ul>
+<p>** JavaScript实现异步编程的方法？**</p>
+<ul>
+<li>回调函数</li>
+<li>事件监听</li>
+<li>发布/订阅</li>
+<li>Promises对象</li>
+<li>Async函数[ES7]</li>
+</ul>
+<p><strong>web开发中会话跟踪的方法有哪些</strong></p>
+<ul>
+<li>cookie</li>
+<li>session</li>
+<li>url重写</li>
+<li>隐藏input</li>
+<li>ip地址</li>
+</ul>
+<p><strong>介绍js的基本数据类型</strong></p>
+<ul>
+<li>Undefined、Null、Boolean、Number、String</li>
+</ul>
+<p><strong>介绍js有哪些内置对象？</strong></p>
+<ul>
+<li>Object 是 JavaScript 中所有对象的父对象</li>
+<li>数据封装类对象：Object、Array、Boolean、Number 和 String</li>
+<li>其他对象：Function、Arguments、Math、Date、RegExp、Error</li>
+</ul>
+<p><strong>说几条写JavaScript的基本规范？</strong></p>
+<ul>
+<li>不要在同一行声明多个变量</li>
+<li>请使用 ===/!==来比较true/false或者数值</li>
+<li>使用对象字面量替代new Array这种形式</li>
+<li>不要使用全局函数</li>
+<li>Switch语句必须带有default分支</li>
+<li>函数不应该有时候有返回值，有时候没有返回值</li>
+<li>If语句必须使用大括号</li>
+<li>for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污</li>
+</ul>
+<p><strong>JavaScript原型，原型链 ? 有什么特点？</strong></p>
+<ul>
+<li>
+<p>每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时</p>
+</li>
+<li>
+<p>如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念</p>
+</li>
+<li>
+<p>关系：<code>instance.constructor.prototype = instance.__proto__</code></p>
+</li>
+<li>
+<p>特点：</p>
+<ul>
+<li>JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。</li>
+</ul>
+</li>
+<li>
+<p>当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的</p>
+</li>
+<li>
+<p>就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象</p>
+</li>
+</ul>
+<p><strong>JavaScript有几种类型的值？，你能画一下他们的内存图吗？</strong></p>
+<ul>
+<li>
+<p>栈：原始数据类型（Undefined，Null，Boolean，Number、String）</p>
+</li>
+<li>
+<p>堆：引用数据类型（对象、数组和函数）</p>
+</li>
+<li>
+<p>两种类型的区别是：存储位置不同；</p>
+</li>
+<li>
+<p>原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；</p>
+</li>
+<li>
+<p>引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其</p>
+</li>
+<li>
+<p>在栈中的地址，取得地址后从堆中获得实体</p>
+</li>
+</ul>
+<p><a href="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/687474703a2f2f7777772e77337363686f6f6c2e636f6d2e636e2f692f63745f6a735f76616c75652e676966" target="_blank"><img src="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/687474703a2f2f7777772e77337363686f6f6c2e636f6d2e636e2f692f63745f6a735f76616c75652e676966" alt="" style="max-width:100%;"></a></p>
+<p><strong>Javascript如何实现继承？</strong></p>
+<ul>
+<li>
+<p>构造继承</p>
+</li>
+<li>
+<p>原型继承</p>
+</li>
+<li>
+<p>实例继承</p>
+</li>
+<li>
+<p>拷贝继承</p>
+</li>
+<li>
+<p>原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式</p>
+</li>
+</ul>
+<pre><code> function Parent(){
+        this.name = 'wang';
+    }
+
+    function Child(){
+        this.age = 28;
+    }
+    Child.prototype = new Parent();//继承了Parent，通过原型
+
+    var demo = new Child();
+    alert(demo.age);
+    alert(demo.name);//得到被继承的属性
+  }
+</code></pre>
+<p><strong>javascript创建对象的几种方式？</strong></p>
+<blockquote>
+<p>javascript创建对象简单的说,无非就是使用内置对象或各种自定义对象，当然还可以用JSON；但写法有很多种，也能混合使用</p>
+</blockquote>
+<ul>
+<li>对象字面量的方式</li>
+</ul>
+<pre><code>person={firstname:"Mark",lastname:"Yun",age:25,eyecolor:"black"};
+</code></pre>
+<ul>
+<li>用function来模拟无参的构造函数</li>
+</ul>
+<pre><code> function Person(){}
+    var person=new Person();//定义一个function，如果使用new"实例化",该function可以看作是一个Class
+        person.name="Mark";
+        person.age="25";
+        person.work=function(){
+        alert(person.name+" hello...");
+    }
+person.work();
+</code></pre>
+<ul>
+<li>用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）</li>
+</ul>
+<pre><code>function Pet(name,age,hobby){
+       this.name=name;//this作用域：当前对象
+       this.age=age;
+       this.hobby=hobby;
+       this.eat=function(){
+          alert("我叫"+this.name+",我喜欢"+this.hobby+",是个程序员");
+       }
+    }
+    var maidou =new Pet("麦兜",25,"coding");//实例化、创建对象
+    maidou.eat();//调用eat方法
+</code></pre>
+<ul>
+<li>用工厂方式来创建（内置对象）</li>
+</ul>
+<pre><code>var wcDog =new Object();
+     wcDog.name="旺财";
+     wcDog.age=3;
+     wcDog.work=function(){
+       alert("我是"+wcDog.name+",汪汪汪......");
+     }
+     wcDog.work();
+</code></pre>
+<ul>
+<li>用原型方式来创建</li>
+</ul>
+<pre><code>function Dog(){
+
+     }
+     Dog.prototype.name="旺财";
+     Dog.prototype.eat=function(){
+     alert(this.name+"是个吃货");
+     }
+     var wangcai =new Dog();
+     wangcai.eat();
+
+</code></pre>
+<ul>
+<li>用混合方式来创建</li>
+</ul>
+<pre><code> function Car(name,price){
+      this.name=name;
+      this.price=price; 
+    }
+     Car.prototype.sell=function(){
+       alert("我是"+this.name+"，我现在卖"+this.price+"万元");
+      }
+    var camry =new Car("凯美瑞",27);
+    camry.sell(); 
+</code></pre>
+<p><strong>Javascript作用链域?</strong></p>
+<ul>
+<li>全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节</li>
+<li>当需要从局部函数查找某一属性或方法时，如果当前作用域没有找到，就会上溯到上层作用域查找</li>
+<li>直至全局函数，这种组织形式就是作用域链</li>
+</ul>
+<p><strong>谈谈This对象的理解</strong></p>
+<ul>
+<li>this总是指向函数的直接调用者（而非间接调用者）</li>
+<li>如果有new关键字，this指向new出来的那个对象</li>
+<li>在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window</li>
+</ul>
+<p><strong>eval是做什么的？</strong></p>
+<ul>
+<li>它的功能是把对应的字符串解析成JS代码并运行</li>
+<li>应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）</li>
+<li>由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')')</li>
+</ul>
+<p><strong>null，undefined 的区别？</strong></p>
+<ul>
+<li>
+<p>undefined   表示不存在这个值。</p>
+</li>
+<li>
+<p>undefined :是一个表示"无"的原始值或者说表示"缺少值"，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined</p>
+</li>
+<li>
+<p>例如变量被声明了，但没有赋值时，就等于undefined</p>
+</li>
+<li>
+<p>null 表示一个对象被定义了，值为“空值”</p>
+</li>
+<li>
+<p>null : 是一个对象(空对象, 没有任何属性和方法)</p>
+</li>
+<li>
+<p>例如作为函数的参数，表示该函数的参数不是对象；</p>
+</li>
+<li>
+<p>在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined</p>
+</li>
+</ul>
+<p><strong>写一个通用的事件侦听器函数</strong></p>
+<pre><code> // event(事件)工具集，来源：github.com/markyun
+    markyun.Event = {
+        // 页面加载完成后
+        readyEvent : function(fn) {
+            if (fn==null) {
+                fn=document;
+            }
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = fn;
+            } else {
+                window.onload = function() {
+                    oldonload();
+                    fn();
+                };
+            }
+        },
+        // 视能力分别使用dom0||dom2||IE方式 来绑定事件
+        // 参数： 操作的元素,事件名称 ,事件处理程序
+        addEvent : function(element, type, handler) {
+            if (element.addEventListener) {
+                //事件类型、需要执行的函数、是否捕捉
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + type, function() {
+                    handler.call(element);
+                });
+            } else {
+                element['on' + type] = handler;
+            }
+        },
+        // 移除事件
+        removeEvent : function(element, type, handler) {
+            if (element.removeEventListener) {
+                element.removeEventListener(type, handler, false);
+            } else if (element.datachEvent) {
+                element.detachEvent('on' + type, handler);
+            } else {
+                element['on' + type] = null;
+            }
+        },
+        // 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
+        stopPropagation : function(ev) {
+            if (ev.stopPropagation) {
+                ev.stopPropagation();
+            } else {
+                ev.cancelBubble = true;
+            }
+        },
+        // 取消事件的默认行为
+        preventDefault : function(event) {
+            if (event.preventDefault) {
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }
+        },
+        // 获取事件目标
+        getTarget : function(event) {
+            return event.target || event.srcElement;
+        },
+        // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
+        getEvent : function(e) {
+            var ev = e || window.event;
+            if (!ev) {
+                var c = this.getEvent.caller;
+                while (c) {
+                    ev = c.arguments[0];
+                    if (ev &amp;&amp; Event == ev.constructor) {
+                        break;
+                    }
+                    c = c.caller;
+                }
+            }
+            return ev;
+        }
+    };
+</code></pre>
+<p><strong>["1", "2", "3"].map(parseInt) 答案是多少？</strong></p>
+<ul>
+<li>[1, NaN, NaN] 因为 parseInt 需要两个参数 (val, radix)，其中 radix 表示解析时用的基数。</li>
+<li>map 传了 3 个 (element, index, array)，对应的 radix 不合法导致解析失败。</li>
+</ul>
+<p><strong>事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</strong></p>
+<ul>
+<li>我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为</li>
+<li>事件处理机制：IE是事件冒泡、Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件</li>
+<li>ev.stopPropagation();（旧ie的方法 ev.cancelBubble = true;）</li>
+</ul>
+<p><strong>什么是闭包（closure），为什么要用它？</strong></p>
+<ul>
+<li>
+<p>闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域</p>
+</li>
+<li>
+<p>闭包的特性：</p>
+<ul>
+<li>函数内再嵌套函数</li>
+<li>内部函数可以引用外层的参数和变量</li>
+<li>参数和变量不会被垃圾回收机制回收</li>
+</ul>
+</li>
+</ul>
+<p><strong>javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？</strong></p>
+<ul>
+<li>use strict是一种ECMAscript 5 添加的（严格）运行模式,这种模式使得 Javascript 在更严格的条件下运行,使JS编码更加规范化的模式,消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为</li>
+</ul>
+<p><strong>如何判断一个对象是否属于某个类？</strong></p>
+<pre><code>// 使用instanceof （待完善）
+   if(a instanceof Person){
+       alert('yes');
+   }
+</code></pre>
+<p><strong>new操作符具体干了什么呢?</strong></p>
+<ul>
+<li>创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型</li>
+<li>属性和方法被加入到 this 引用的对象中</li>
+<li>新创建的对象由 this 所引用，并且最后隐式的返回 this</li>
+</ul>
+<pre><code>var obj  = {};
+obj.__proto__ = Base.prototype;
+Base.call(obj);
+</code></pre>
+<p><strong>js延迟加载的方式有哪些？</strong></p>
+<ul>
+<li>defer和async、动态创建DOM方式（用得最多）、按需异步载入js</li>
+</ul>
+<p><strong>Ajax 是什么? 如何创建一个Ajax？</strong></p>
+<blockquote>
+<p>ajax的全称：Asynchronous Javascript And XML</p>
+</blockquote>
+<ul>
+<li>
+<p>异步传输+js+xml</p>
+</li>
+<li>
+<p>所谓异步，在这里简单地解释就是：向服务器发送请求的时候，我们不必等待结果，而是可以同时做其他的事情，等到有了结果它自己会根据设定进行后续操作，与此同时，页面是不会发生整页刷新的，提高了用户体验</p>
+</li>
+<li>
+<p>创建XMLHttpRequest对象,也就是创建一个异步调用对象</p>
+</li>
+<li>
+<p>建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息</p>
+</li>
+<li>
+<p>设置响应HTTP请求状态变化的函数</p>
+</li>
+<li>
+<p>发送HTTP请求</p>
+</li>
+<li>
+<p>获取异步调用返回的数据</p>
+</li>
+<li>
+<p>用JavaScript和DOM实现局部刷新</p>
+</li>
+</ul>
+<p><strong>同步和异步的区别?</strong></p>
+<ul>
+<li>同步：浏览器访问服务器请求，用户看得到页面刷新，重新发请求,等请求完，页面刷新，新内容出现，用户看到新内容,进行下一步操作</li>
+<li>异步：浏览器访问服务器请求，用户正常操作，浏览器后端进行请求。等请求完，页面不刷新，新内容也会出现，用户看到新内容</li>
+</ul>
+<p><strong>异步加载JS的方式有哪些？</strong></p>
+<ul>
+<li>defer，只支持IE</li>
+<li>async：</li>
+<li>创建script，插入到DOM中，加载完毕后callBack</li>
+</ul>
+<p><strong>documen.write和 innerHTML的区别</strong></p>
+<ul>
+<li>document.write只能重绘整个页面</li>
+<li>innerHTML可以重绘页面的一部分</li>
+</ul>
+<p><strong>DOM操作——怎样添加、移除、移动、复制、创建和查找节点?</strong></p>
+<ul>
+<li>（1）创建新节点
+<ul>
+<li>createDocumentFragment() //创建一个DOM片段</li>
+<li>createElement()   //创建一个具体的元素</li>
+<li>createTextNode()   //创建一个文本节点</li>
+</ul>
+</li>
+<li>（2）添加、移除、替换、插入
+<ul>
+<li>appendChild()</li>
+<li>removeChild()</li>
+<li>replaceChild()</li>
+<li>insertBefore() //在已有的子节点前插入一个新的子节点</li>
+</ul>
+</li>
+<li>（3）查找
+<ul>
+<li>getElementsByTagName()    //通过标签名称</li>
+<li>getElementsByName()    // 通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)</li>
+<li>getElementById()    //通过元素Id，唯一性</li>
+</ul>
+</li>
+</ul>
+<p><strong>那些操作会造成内存泄漏？</strong></p>
+<ul>
+<li>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在</li>
+<li>垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收</li>
+<li>setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏</li>
+<li>闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）</li>
+</ul>
+<p><strong>渐进增强和优雅降级</strong></p>
+<ul>
+<li>
+<p>渐进增强 ：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p>
+</li>
+<li>
+<p>优雅降级 ：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容</p>
+</li>
+</ul>
+<p><strong>Javascript垃圾回收方法</strong></p>
+<ul>
+<li>标记清除（mark and sweep）</li>
+</ul>
+<blockquote>
+<ul>
+<li>这是JavaScript最常见的垃圾回收方式，当变量进入执行环境的时候，比如函数中声明一个变量，垃圾回收器将其标记为“进入环境”，当变量离开环境的时候（函数执行结束）将其标记为“离开环境”</li>
+<li>垃圾回收器会在运行的时候给存储在内存中的所有变量加上标记，然后去掉环境中的变量以及被环境中变量所引用的变量（闭包），在这些完成之后仍存在标记的就是要删除的变量了</li>
+</ul>
+</blockquote>
+<p><strong>引用计数(reference counting)</strong></p>
+<blockquote>
+<p>在低版本IE中经常会出现内存泄露，很多时候就是因为其采用引用计数方式进行垃圾回收。引用计数的策略是跟踪记录每个值被使用的次数，当声明了一个 变量并将一个引用类型赋值给该变量的时候这个值的引用次数就加1，如果该变量的值变成了另外一个，则这个值得引用次数减1，当这个值的引用次数变为0的时 候，说明没有变量在使用，这个值没法被访问了，因此可以将其占用的空间回收，这样垃圾回收器会在运行的时候清理掉引用次数为0的值占用的空间</p>
+</blockquote>
+<p><strong>js继承方式及其优缺点</strong></p>
+<ul>
+<li>
+<p>原型链继承的缺点</p>
+<ul>
+<li>一是字面量重写原型会中断关系，使用引用类型的原型，并且子类型还无法给超类型传递参数。</li>
+</ul>
+</li>
+<li>
+<p>借用构造函数（类式继承）</p>
+<ul>
+<li>借用构造函数虽然解决了刚才两种问题，但没有原型，则复用无从谈起。所以我们需要原型链+借用构造函数的模式，这种模式称为组合继承</li>
+</ul>
+</li>
+<li>
+<p>组合式继承</p>
+<ul>
+<li>组合式继承是比较常用的一种继承方法，其背后的思路是使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承。这样，既通过在原型上定义方法实现了函数复用，又保证每个实例都有它自己的属性。</li>
+</ul>
+</li>
+</ul>
+<p><strong>defer和async</strong></p>
+<ul>
+<li>defer并行加载js文件，会按照页面上script标签的顺序执行async并行加载js文件，下载完成立即执行，不会按照页面上script标签的顺序执行</li>
+</ul>
+<p><strong>用过哪些设计模式？</strong></p>
+<ul>
+<li>工厂模式：
+<ul>
+<li>主要好处就是可以消除对象间的耦合，通过使用工程方法而不是new关键字。将所有实例化的代码集中在一个位置防止代码重复</li>
+<li>工厂模式解决了重复实例化的问题 ，但还有一个问题,那就是识别问题，因为根本无法 搞清楚他们到底是哪个对象的实例</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<pre><code>function createObject(name,age,profession){//集中实例化的函数var obj = new Object();
+    obj.name = name;
+    obj.age = age;
+    obj.profession = profession;
+    obj.move = function () {
+        return this.name + ' at ' + this.age + ' engaged in ' + this.profession;
+    };
+    return obj;
+}
+var test1 = createObject('trigkit4',22,'programmer');//第一个实例var test2 = createObject('mike',25,'engineer');//第二个实例
+
+</code></pre>
+<ul>
+<li>
+<p>构造函数模式</p>
+<ul>
+<li>使用构造函数的方法 ，即解决了重复实例化的问题 ，又解决了对象识别的问题，该模式与工厂模式的不同之处在于</li>
+</ul>
+</li>
+<li>
+<p>构造函数方法没有显示的创建对象 (new Object());</p>
+</li>
+<li>
+<p>直接将属性和方法赋值给 this 对象;</p>
+</li>
+<li>
+<p>没有 renturn 语句</p>
+</li>
+</ul>
+<p><strong>说说你对闭包的理解</strong></p>
+<ul>
+<li>
+<p>使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。在js中，函数即闭包，只有函数才会产生作用域的概念</p>
+</li>
+<li>
+<p>闭包有三个特性：</p>
+<ul>
+<li>
+<p>1.函数嵌套函数</p>
+</li>
+<li>
+<p>2.函数内部可以引用外部的参数和变量</p>
+</li>
+<li>
+<p>3.参数和变量不会被垃圾回收机制回收</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>请解释一下 JavaScript 的同源策略</strong></p>
+<ul>
+<li>概念:同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。这里的同源策略指的是：协议，域名，端口相同，同源策略是一种安全协议</li>
+<li>指一段脚本只能读取来自同一来源的窗口和文档的属性</li>
+</ul>
+<p><strong>为什么要有同源限制？</strong></p>
+<ul>
+<li>我们举例说明：比如一个黑客程序，他利用Iframe把真正的银行登录页面嵌到他的页面上，当你使用真实的用户名，密码登录时，他的页面就可以通过Javascript读取到你的表单中input中的内容，这样用户名，密码就轻松到手了。</li>
+<li>缺点
+<ul>
+<li>现在网站的JS都会进行压缩，一些文件用了严格模式，而另一些没有。这时这些本来是严格模式的文件，被 merge后，这个串就到了文件的中间，不仅没有指示严格模式，反而在压缩后浪费了字节</li>
+</ul>
+</li>
+</ul>
+<p><strong>实现一个函数clone，可以对JavaScript中的5种主要的数据类型（包括Number、String、Object、Array、Boolean）进行值复制</strong></p>
+<pre><code>Object.prototype.clone = function(){
+
+            var o = this.constructor === Array ? [] : {};
+
+            for(var e in this){
+
+                    o[e] = typeof this[e] === "object" ? this[e].clone() : this[e];
+
+            }
+
+            return o;
+    }
+    
+</code></pre>
+<p><strong>说说严格模式的限制</strong></p>
+<ul>
+<li>
+<p>严格模式主要有以下限制：</p>
+</li>
+<li>
+<p>变量必须声明后再使用</p>
+</li>
+<li>
+<p>函数的参数不能有同名属性，否则报错</p>
+</li>
+<li>
+<p>不能使用with语句</p>
+</li>
+<li>
+<p>不能对只读属性赋值，否则报错</p>
+</li>
+<li>
+<p>不能使用前缀0表示八进制数，否则报错</p>
+</li>
+<li>
+<p>不能删除不可删除的属性，否则报错</p>
+</li>
+<li>
+<p>不能删除变量delete prop，会报错，只能删除属性delete global[prop]</p>
+</li>
+<li>
+<p>eval不会在它的外层作用域引入变量</p>
+</li>
+<li>
+<p>eval和arguments不能被重新赋值</p>
+</li>
+<li>
+<p>arguments不会自动反映函数参数的变化</p>
+</li>
+<li>
+<p>不能使用arguments.callee</p>
+</li>
+<li>
+<p>不能使用arguments.caller</p>
+</li>
+<li>
+<p>禁止this指向全局对象</p>
+</li>
+<li>
+<p>不能使用fn.caller和fn.arguments获取函数调用的堆栈</p>
+</li>
+<li>
+<p>增加了保留字（比如protected、static和interface）</p>
+</li>
+</ul>
+<p><strong>如何删除一个cookie</strong></p>
+<ul>
+<li>将时间设为当前时间往前一点</li>
+</ul>
+<pre><code>var date = new Date();
+
+date.setDate(date.getDate() - 1);//真正的删除
+</code></pre>
+<p>setDate()方法用于设置一个月的某一天</p>
+<ul>
+<li>expires的设置</li>
+</ul>
+<pre><code>  document.cookie = 'user='+ encodeURIComponent('name')  + ';expires = ' + new Date(0)
+</code></pre>
+<p><strong>编写一个方法 求一个字符串的字节长度</strong></p>
+<ul>
+<li>假设：一个英文字符占用一个字节，一个中文字符占用两个字节</li>
+</ul>
+<pre><code>function GetBytes(str){
+
+        var len = str.length;
+
+        var bytes = len;
+
+        for(var i=0; i&lt;len; i++){
+
+            if (str.charCodeAt(i) &gt; 255) bytes++;
+
+        }
+
+        return bytes;
+
+    }
+
+alert(GetBytes("你好,as"));
+
+</code></pre>
+<p><strong>请解释什么是事件代理</strong></p>
+<ul>
+<li>事件代理（Event Delegation），又称之为事件委托。是 JavaScript 中常用绑定事件的常用技巧。顾名思义，“事件代理”即是把原本需要绑定的事件委托给父元素，让父元素担当事件监听的职务。事件代理的原理是DOM元素的事件冒泡。使用事件代理的好处是可以提高性能</li>
+</ul>
+<p><strong>attribute和property的区别是什么？</strong></p>
+<ul>
+<li>
+<p>attribute是dom元素在文档中作为html标签拥有的属性；</p>
+</li>
+<li>
+<p>property就是dom元素在js中作为对象拥有的属性。</p>
+</li>
+<li>
+<p>对于html的标准属性来说，attribute和property是同步的，是会自动更新的</p>
+</li>
+<li>
+<p>但是对于自定义的属性来说，他们是不同步的</p>
+</li>
+</ul>
+<p><strong>页面编码和被请求的资源编码如果不一致如何处理？</strong></p>
+<ul>
+<li>后端响应头设置 charset</li>
+<li>前端页面<code>&lt;meta&gt;</code>设置 charset</li>
+</ul>
+<p><strong>把<code>&lt;script&gt;</code>放在<code>&lt;/body&gt;</code>之前和之后有什么区别？浏览器会如何解析它们？</strong></p>
+<ul>
+<li>按照HTML标准，在<code>&lt;/body&gt;</code>结束后出现<code>&lt;script&gt;</code>或任何元素的开始标签，都是解析错误</li>
+<li>虽然不符合HTML标准，但浏览器会自动容错，使实际效果与写在<code>&lt;/body&gt;</code>之前没有区别</li>
+<li>浏览器的容错机制会忽略&lt;script&gt;之前的<code>&lt;/body&gt;</code>，视作<code>&lt;script&gt;</code>仍在 body 体内。省略<code>&lt;/body&gt;</code>和<code>&lt;/html&gt;</code>闭合标签符合HTML标准，服务器可以利用这一标准尽可能少输出内容</li>
+</ul>
+<p><strong>延迟加载JS的方式有哪些？</strong></p>
+<ul>
+<li>设置<code>&lt;script&gt;</code>属性 defer="defer" （脚本将在页面完成解析时执行）</li>
+<li>动态创建 script DOM：document.createElement('script');</li>
+<li>XmlHttpRequest 脚本注入</li>
+<li>延迟加载工具 LazyLoad</li>
+</ul>
+<p><strong>异步加载JS的方式有哪些？</strong></p>
+<ul>
+<li>设置<code>&lt;script&gt;</code>属性 async="async" （一旦脚本可用，则会异步执行）</li>
+<li>动态创建 script DOM：document.createElement('script');</li>
+<li>XmlHttpRequest 脚本注入</li>
+<li>异步加载库 LABjs</li>
+<li>模块加载器 Sea.js</li>
+</ul>
+<p><strong>JavaScript 中，调用函数有哪几种方式？</strong></p>
+<ul>
+<li>方法调用模式          Foo.foo(arg1, arg2);</li>
+<li>函数调用模式          foo(arg1, arg2);</li>
+<li>构造器调用模式        (new Foo())(arg1, arg2);</li>
+<li>call/applay调用模式   Foo.foo.call(that, arg1, arg2);</li>
+<li>bind调用模式          Foo.foo.bind(that)(arg1, arg2)();</li>
+</ul>
+<p><strong>简单实现 Function.bind 函数？</strong></p>
+<div class="highlight highlight-source-js"><pre>  <span class="pl-k">if</span> (<span class="pl-k">!</span><span class="pl-c1">Function</span>.<span class="pl-c1">prototype</span>.<span class="pl-smi">bind</span>) {
+    <span class="pl-c1">Function</span>.<span class="pl-c1">prototype</span>.<span class="pl-en">bind</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">that</span>) {
+      <span class="pl-k">var</span> func <span class="pl-k">=</span> <span class="pl-c1">this</span>, args <span class="pl-k">=</span> <span class="pl-c1">arguments</span>;
+      <span class="pl-k">return</span> <span class="pl-k">function</span>() {
+        <span class="pl-k">return</span> <span class="pl-smi">func</span>.<span class="pl-c1">apply</span>(that, <span class="pl-c1">Array</span>.<span class="pl-c1">prototype</span>.<span class="pl-smi">slice</span>.<span class="pl-c1">call</span>(args, <span class="pl-c1">1</span>));
+      }
+    }
+  }
+  <span class="pl-c"><span class="pl-c">//</span> 只支持 bind 阶段的默认参数：</span>
+  <span class="pl-smi">func</span>.<span class="pl-en">bind</span>(that, arg1, arg2)();
+
+  <span class="pl-c"><span class="pl-c">//</span> 不支持以下调用阶段传入的参数：</span>
+  <span class="pl-smi">func</span>.<span class="pl-en">bind</span>(that)(arg1, arg2);</pre></div>
+<p>** 列举一下JavaScript数组和对象有哪些原生方法？**</p>
+<ul>
+<li>
+<p>数组：</p>
+<ul>
+<li>arr.concat(arr1, arr2, arrn);</li>
+<li>arr.join(",");</li>
+<li>arr.sort(func);</li>
+<li>arr.pop();</li>
+<li>arr.push(e1, e2, en);</li>
+<li>arr.shift();</li>
+<li>unshift(e1, e2, en);</li>
+<li>arr.reverse();</li>
+<li>arr.slice(start, end);</li>
+<li>arr.splice(index, count, e1, e2, en);</li>
+<li>arr.indexOf(el);</li>
+<li>arr.includes(el);   // ES6</li>
+</ul>
+</li>
+<li>
+<p>对象：</p>
+<ul>
+<li>object.hasOwnProperty(prop);</li>
+<li>object.propertyIsEnumerable(prop);</li>
+<li>object.valueOf();</li>
+<li>object.toString();</li>
+<li>object.toLocaleString();</li>
+<li>Class.prototype.isPropertyOf(object);</li>
+</ul>
+</li>
+</ul>
+<p><strong>Array.splice() 与 Array.splice() 的区别？</strong></p>
+<ul>
+<li>
+<p>slice -- “读取”数组指定的元素，不会对原数组进行修改</p>
+<ul>
+<li>语法：arr.slice(start, end)</li>
+<li>start 指定选取开始位置（含）</li>
+<li>end 指定选取结束位置（不含）</li>
+</ul>
+</li>
+<li>
+<p>splice</p>
+<ul>
+<li>“操作”数组指定的元素，会修改原数组，返回被删除的元素</li>
+<li>语法：arr.splice(index, count, [insert Elements])</li>
+<li>index 是操作的起始位置</li>
+<li>count = 0 插入元素，count &gt; 0 删除元素</li>
+<li>[insert Elements] 向数组新插入的元素</li>
+</ul>
+</li>
+</ul>
+<p><strong>JavaScript 对象生命周期的理解？</strong></p>
+<ul>
+<li>当创建一个对象时，JavaScript 会自动为该对象分配适当的内存</li>
+<li>垃圾回收器定期扫描对象，并计算引用了该对象的其他对象的数量</li>
+<li>如果被引用数量为 0，或惟一引用是循环的，那么该对象的内存即可回收</li>
+</ul>
+<p><strong>哪些操作会造成内存泄漏？</strong></p>
+<ul>
+<li>
+<p>JavaScript 内存泄露指对象在不需要使用它时仍然存在，导致占用的内存不能使用或回收</p>
+</li>
+<li>
+<p>未使用 var 声明的全局变量</p>
+</li>
+<li>
+<p>闭包函数(Closures)</p>
+</li>
+<li>
+<p>循环引用(两个对象相互引用)</p>
+</li>
+<li>
+<p>控制台日志(console.log)</p>
+</li>
+<li>
+<p>移除存在绑定事件的DOM元素(IE)</p>
+</li>
+</ul>
+</article>
+  </div>
+
+  </div>
+
+  <button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
+  <div id="jump-to-line" style="display:none">
+    <!-- '"` --><!-- </textarea></xmp> --><form accept-charset="UTF-8" action="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line…" aria-label="Jump to line" autofocus="">
+      <button type="submit" class="btn">Go</button>
+</form>  </div>
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+      
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between py-6 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">© 2017 <span title="0.18109s from unicorn-4024668356-d9k0l">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li class="mr-3"><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li class="mr-3"><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com/" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+
+    <a href="https://github.com/" aria-label="Homepage" class="footer-octicon" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+    <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li class="mr-3"><a href="https://shop.github.com/" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li class="mr-3"><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+    </button>
+    You can't perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha256-R7c3eUp64zkx0aUKgHD8RyBMQTxCRYqXgUMLHeA4450=" src="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/frameworks-47b737794a7ae33931d1a50a8070fc47204c413c42458a9781430b1de038e39d.js"></script>
+    
+    <script async="async" crossorigin="anonymous" integrity="sha256-2SXbOQbClm5PqyyQtrELszP12o+Heu5lfY4EhUqqPSU=" src="./FE-Interview-Questions_JavaScript.md at master · poetries_FE-Interview-Questions_files/github-d925db3906c2966e4fab2c90b6b10bb333f5da8f877aee657d8e04854aaa3d25.js"></script>
+    
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+    </button>
+  </div>
+</div>
+
+
+  
+
+
+<nav class="octotree_sidebar ui-resizable octotree_github_sidebar" style="width: 266px;">
+    <a class="octotree_toggle btn">
+      <div class="loader"></div>
+      <span></span>
+
+      
+    </a>
+
+    <a class="octotree_opts" href="javascript:void(0)">
+      <span></span>
+    </a>
+
+    <div class="octotree_views">
+      <div class="octotree_view octotree_treeview current">
+        <div class="octotree_view_header"><div class="octotree_header_repo"><a href="https://github.com/poetries">poetries</a> / <a data-pjax="" href="https://github.com/poetries/FE-Interview-Questions">FE-Interview-Questions</a></div><div class="octotree_header_branch">master</div></div>
+        <div class="octotree_view_body jstree jstree-1 jstree-default jstree-leaf" role="tree" tabindex="0" aria-activedescendant="octotreeInterview-Questions" aria-busy="false"><ul class="jstree-container-ul jstree-children jstree-wholerow-ul jstree-no-dots" role="group"><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeInterview-Questions_anchor" aria-expanded="false" id="octotreeInterview-Questions" class="jstree-node  jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/tree/master/Interview-Questions" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/tree/master/Interview-Questions" data-download-filename="Interview-Questions" id="octotreeInterview-Questions_anchor"><i class="jstree-icon jstree-themeicon tree jstree-themeicon-custom" role="presentation"></i>Interview-Questions</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeAjax.md_anchor" id="octotreeAjax.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/Ajax.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/Ajax.md" data-download-filename="Ajax.md" id="octotreeAjax.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>Ajax.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeCSS.md_anchor" id="octotreeCSS.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/CSS.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/CSS.md" data-download-filename="CSS.md" id="octotreeCSS.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>CSS.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeES6.md_anchor" id="octotreeES6.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/ES6.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/ES6.md" data-download-filename="ES6.md" id="octotreeES6.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>ES6.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeFront-end-frame-relative.md_anchor" id="octotreeFront-end-frame-relative.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/Front-end-frame-relative.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/Front-end-frame-relative.md" data-download-filename="Front-end-frame-relative.md" id="octotreeFront-end-frame-relative.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>Front-end-frame-relative.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeGit.md_anchor" id="octotreeGit.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/Git.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/Git.md" data-download-filename="Git.md" id="octotreeGit.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>Git.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeHTML.md_anchor" id="octotreeHTML.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/HTML.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/HTML.md" data-download-filename="HTML.md" id="octotreeHTML.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>HTML.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeHTTP.md_anchor" id="octotreeHTTP.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/HTTP.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/HTTP.md" data-download-filename="HTTP.md" id="octotreeHTTP.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>HTTP.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeHandwritten-code.md_anchor" id="octotreeHandwritten-code.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/Handwritten-code.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/Handwritten-code.md" data-download-filename="Handwritten-code.md" id="octotreeHandwritten-code.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>Handwritten-code.md</a></li><li role="treeitem" aria-selected="true" aria-level="1" aria-labelledby="octotreeJavaScript.md_anchor" id="octotreeJavaScript.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow jstree-wholerow-clicked">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor jstree-clicked" href="https://github.com/poetries/FE-Interview-Questions/blob/master/JavaScript.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/JavaScript.md" data-download-filename="JavaScript.md" id="octotreeJavaScript.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>JavaScript.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeJson-XML.md_anchor" id="octotreeJson-XML.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/Json-XML.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/Json-XML.md" data-download-filename="Json-XML.md" id="octotreeJson-XML.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>Json-XML.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeMVC.md_anchor" id="octotreeMVC.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/MVC.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/MVC.md" data-download-filename="MVC.md" id="octotreeMVC.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>MVC.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeModules.md_anchor" id="octotreeModules.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/Modules.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/Modules.md" data-download-filename="Modules.md" id="octotreeModules.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>Modules.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreePS.md_anchor" id="octotreePS.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/PS.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/PS.md" data-download-filename="PS.md" id="octotreePS.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>PS.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeREADME.md_anchor" id="octotreeREADME.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/README.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/README.md" data-download-filename="README.md" id="octotreeREADME.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>README.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeSEO.md_anchor" id="octotreeSEO.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/SEO.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/SEO.md" data-download-filename="SEO.md" id="octotreeSEO.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>SEO.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreecomprehensive.md_anchor" id="octotreecomprehensive.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/comprehensive.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/comprehensive.md" data-download-filename="comprehensive.md" id="octotreecomprehensive.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>comprehensive.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreecomputer-basic-knowledge.md_anchor" id="octotreecomputer-basic-knowledge.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/computer-basic-knowledge.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/computer-basic-knowledge.md" data-download-filename="computer-basic-knowledge.md" id="octotreecomputer-basic-knowledge.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>computer-basic-knowledge.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreecookie.md_anchor" id="octotreecookie.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/cookie.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/cookie.md" data-download-filename="cookie.md" id="octotreecookie.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>cookie.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreecross-domain.md_anchor" id="octotreecross-domain.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/cross-domain.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/cross-domain.md" data-download-filename="cross-domain.md" id="octotreecross-domain.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>cross-domain.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreedata-structure.md_anchor" id="octotreedata-structure.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/data-structure.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/data-structure.md" data-download-filename="data-structure.md" id="octotreedata-structure.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>data-structure.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreedataBase.md_anchor" id="octotreedataBase.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/dataBase.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/dataBase.md" data-download-filename="dataBase.md" id="octotreedataBase.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>dataBase.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreejQuery.md_anchor" id="octotreejQuery.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/jQuery.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/jQuery.md" data-download-filename="jQuery.md" id="octotreejQuery.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>jQuery.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreelocalStorage.md_anchor" id="octotreelocalStorage.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/localStorage.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/localStorage.md" data-download-filename="localStorage.md" id="octotreelocalStorage.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>localStorage.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreemobile-terminal.md_anchor" id="octotreemobile-terminal.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/mobile-terminal.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/mobile-terminal.md" data-download-filename="mobile-terminal.md" id="octotreemobile-terminal.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>mobile-terminal.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeother.md_anchor" id="octotreeother.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/other.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/other.md" data-download-filename="other.md" id="octotreeother.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>other.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeperformance-optimization.md_anchor" id="octotreeperformance-optimization.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/performance-optimization.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/performance-optimization.md" data-download-filename="performance-optimization.md" id="octotreeperformance-optimization.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>performance-optimization.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeweb-security.md_anchor" id="octotreeweb-security.md" class="jstree-node  jstree-leaf jstree-last"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/poetries/FE-Interview-Questions/blob/master/web-security.md" tabindex="-1" data-download-url="/poetries/FE-Interview-Questions/blob/master/web-security.md" data-download-filename="web-security.md" id="octotreeweb-security.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>web-security.md</a></li></ul></div>
+      </div>
+
+      <div class="octotree_view octotree_errorview">
+        <div class="octotree_view_header"></div>
+        <form class="octotree_view_body">
+          <div class="message"></div>
+          <div>
+            <input name="token" type="text" placeholder="Paste access token here" autocomplete="off">
+          </div>
+          <div>
+            <button type="submit" class="btn">Save</button>
+            <a href="https://github.com/buunguyen/octotree#access-token" target="_blank" tabindex="-1">Why is this required?</a>
+          </div>
+          <div class="error"></div>
+        </form>
+      </div>
+
+      <div class="octotree_view octotree_optsview">
+        <div class="octotree_view_header">Settings</div>
+        <form class="octotree_view_body">
+          <div>
+            <label>Site access token</label>
+            <a class="octotree_help" href="https://github.com/buunguyen/octotree#settings" target="_blank" tabindex="-1">
+              <span></span>
+            </a>
+            <input type="text" data-store="TOKEN" data-perhost="true">
+          </div>
+
+          <div>
+            <div>
+              <label>Hotkeys</label>
+            </div>
+            <input type="text" data-store="HOTKEYS">
+          </div>
+
+          <div class="octotree_github_only">
+            <div>
+              <label>GitHub Enterprise URLs</label>
+            </div>
+            <textarea data-store="GHEURLS" placeholder="https://github.mysite1.com                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   https://github.mysite2.com">            </textarea>
+          </div>
+          <div>
+            <label><input type="checkbox" data-store="REMEMBER"> Remember sidebar visibility</label>
+          </div>
+
+          <div>
+            <label><input type="checkbox" data-store="NONCODE"> Show in non-code pages</label>
+          </div>
+
+          <div class="octotree_github_only">
+            <label><input type="checkbox" data-store="LOADALL"> Load entire tree at once</label>
+          </div>
+
+          <div class="octotree_github_only">
+            <label>
+              <input type="checkbox" data-store="PR">
+                Show only pull request changes
+              <span class="octotree_opts_disclaimer">Note: maximum of 300 files</span>
+            </label>
+          </div>
+
+          <div>
+            <button type="submit" class="btn">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div></nav></body></html>

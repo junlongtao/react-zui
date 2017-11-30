@@ -134,6 +134,7 @@ class SwitchItem extends React.Component {
 
 class FileItem extends React.Component {
     static defaultProps = {
+        type: 'img',
         prefix: 'zui-list',
         placeholder: '请选择',
         maxSize: 8 * 1024 * 1024,
@@ -152,10 +153,11 @@ class FileItem extends React.Component {
     }
 
     renderFile = () => {
-        const filename = this.state.value.toString() == '[object File]' ? this.state.value.name : this.state.value
-        const ext = filename.split('.')[1]
-        if (['png', 'jpg', 'jpeg', 'gif', 'svg', 'bmp', 'webp'].indexOf(ext) != -1) {
-            return <img src={window.URL.createObjectURL(this.state.value)}/>
+        const value = this.state.value
+        const filename = value.toString() == '[object File]' ? value.name : value
+        if(this.props.type==='img'){
+            const src = value.toString() == '[object File]' ? window.URL.createObjectURL(value) : value
+            return <img src={src}/> 
         }
 
         return filename || this.props.placeholder

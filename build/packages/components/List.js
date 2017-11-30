@@ -312,10 +312,11 @@ var FileItem = function (_React$Component6) {
                 value: nextProps.value
             });
         }, _this6.renderFile = function () {
-            var filename = _this6.state.value.toString() == '[object File]' ? _this6.state.value.name : _this6.state.value;
-            var ext = filename.split('.')[1];
-            if (['png', 'jpg', 'jpeg', 'gif', 'svg', 'bmp', 'webp'].indexOf(ext) != -1) {
-                return _react2.default.createElement('img', { src: window.URL.createObjectURL(_this6.state.value) });
+            var value = _this6.state.value;
+            var filename = value.toString() == '[object File]' ? value.name : value;
+            if (_this6.props.type === 'img') {
+                var src = value.toString() == '[object File]' ? window.URL.createObjectURL(value) : value;
+                return _react2.default.createElement('img', { src: src });
             }
 
             return filename || _this6.props.placeholder;
@@ -356,6 +357,7 @@ var FileItem = function (_React$Component6) {
 }(_react2.default.Component);
 
 FileItem.defaultProps = {
+    type: 'img',
     prefix: 'zui-list',
     placeholder: '请选择',
     maxSize: 8 * 1024 * 1024,
