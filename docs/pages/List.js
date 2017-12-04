@@ -206,7 +206,7 @@ export default class Example extends React.Component {
                         <List.Header>
                             文件选择器
                         </List.Header>
-                        <List.FileItem maxSize={5*1024*1024}>
+                        <List.FileItem type="file" maxSize={5*1024*1024}>
                             营业执照
                         </List.FileItem>
 
@@ -226,7 +226,7 @@ import {List} from "react-zui"
 export default class Example extends React.Component {
     render = () => {
         return <List>
-            <List.FileItem maxSize="5*1024*1024">
+            <List.FileItem type="file" maxSize={5*1024*1024}>
                 营业执照
             </List.FileItem>
         </List>
@@ -237,6 +237,9 @@ export default class Example extends React.Component {
                         <List.Header>
                             属性
                         </List.Header>
+                        <List.Item extra="文件类型，默认为img，选中图片后可以预览，其他类型选中文件后显示文件名">
+                            type
+                        </List.Item>
                         <List.Item extra="最大允许上传的文件大小,单位Byte">
                             maxSize
                         </List.Item>
