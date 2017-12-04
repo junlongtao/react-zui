@@ -52,9 +52,17 @@ var SearchBar = function (_React$Component) {
                 'div',
                 { className: prefix + '-search-bar ' + _this.props.className },
                 _react2.default.createElement(_Icon2.default, { type: 'sousuo', className: prefix + '-search-bar-icon' }),
-                _react2.default.createElement('input', { type: 'text', value: _this.props.value, className: prefix + '-search-bar-input', placeholder: _this.props.placeholder, onChange: function onChange(e) {
+                _react2.default.createElement('input', {
+                    type: 'text',
+                    value: _this.props.value,
+                    className: prefix + '-search-bar-input',
+                    placeholder: _this.props.placeholder,
+                    onClick: _this.props.onClick,
+                    onFocus: _this.props.onFocus,
+                    onChange: function onChange(e) {
                         _this.props.onChange(e.target.value);
-                    } })
+                    }
+                })
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
@@ -65,7 +73,9 @@ var SearchBar = function (_React$Component) {
 SearchBar.defaultProps = {
     prefix: 'zui',
     className: '',
-    placeholder: '请输入',
-    onChange: function onChange() {}
+    onClick: function onClick() {},
+    onFocus: function onFocus() {},
+    onChange: function onChange() {},
+    placeholder: '请输入'
 };
 exports.default = SearchBar;
