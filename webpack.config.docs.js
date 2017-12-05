@@ -1,5 +1,7 @@
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
 var config = {
 
     entry: {
@@ -43,15 +45,8 @@ config.plugins = [
         inject: 'body',
         hash: true
     }),
+    new UglifyJsPlugin(),
     new webpack.optimize.CommonsChunkPlugin(['vendors', 'citydata']),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        },
-        output: {
-            comments: false
-        }
-    }),
     new webpack.DefinePlugin({
         ENV: `'dev'`,
         'process.env.NODE_ENV': '"dev"'

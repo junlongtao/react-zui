@@ -3,7 +3,7 @@
   "scripts": {
     "packages-build": "NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files",
     "packages-dev": "NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files --watch",
-    "docs-build": "webpack --progress --config ./webpack.config.docs.js",
+    "docs-build": "webpack -p --progress --config ./webpack.config.docs.js",
     "docs-dev": "webpack --progress --config ./webpack.config.docs.js --watch",
     "start": "node webpack.server.js && npm run dev-packages"
   },
@@ -30,6 +30,7 @@
     "eslint-plugin-react": "^7.3.0",
     "expect": "^1.12.0",
     "extract-text-webpack-plugin": "^2.1.2",
+    "fastclick": "^1.0.6",
     "file-loader": "^0.8.4",
     "image-webpack-loader": "^3.1.0",
     "jest": "^19.0.2",
@@ -41,9 +42,9 @@
     "react-error-overlay": "^1.0.9",
     "react-test-renderer": "^15.4.2",
     "style-loader": "^0.13.2",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "url-loader": "^0.5.6",
     "webpack": "^3.5.5",
-    "fastclick": "^1.0.6",
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
