@@ -106,3 +106,6 @@ ReactDOM.render(
     </HashRouter>,
     document.getElementById('container')
 )
+
+
+FastClick.attach(document.body)
