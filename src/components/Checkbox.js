@@ -23,11 +23,12 @@ export default class Checkbox extends React.Component {
 
     render = () => {
         const prefix = this.props.prefix
-        return <span className={prefix+'-checkbox '+this.props.className} onClick={()=>{
+        const active = this.props.value?'active':''
+        return <span className={prefix+'-checkbox '+active+' '+this.props.className} onClick={()=>{
             this.props.onChange(!this.state.value)
             this.setState({value: !this.state.value})
         }}>
-            {this.state.value ? <Icon type="xuanze"/> : '■■'}
+            <Icon type="xuanze"/>
         </span>
     }
 }

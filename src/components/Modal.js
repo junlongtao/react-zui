@@ -10,6 +10,7 @@ export default class Modal extends React.Component {
     static defaultProps = {
         prefix: 'zui',
         visible: false,
+        onClose: ()=>{}
     }
 
     state = {
@@ -27,6 +28,7 @@ export default class Modal extends React.Component {
         return <div className={prefix+'-modal '+this.props.className+' '+this.state.status}>
             <Mask onClick={()=>{
                 this.setState({status: 'close'})
+                this.props.onClose()
             }}/>
             <div className={prefix+'-modal-content'}>
                 <div className={prefix+'-modal-header'}>
@@ -37,6 +39,7 @@ export default class Modal extends React.Component {
                 </div>
                 <div className={prefix+'-modal-close'} onClick={()=>{
                     this.setState({status: 'close'})
+                    this.props.onClose()
                 }}>
                     <div className={prefix+"-modal-close-line"}></div>
                     <Icon type="guanbi"/>

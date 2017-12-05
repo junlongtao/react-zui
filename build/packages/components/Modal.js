@@ -63,6 +63,7 @@ var Modal = function (_React$Component) {
                 { className: prefix + '-modal ' + _this.props.className + ' ' + _this.state.status },
                 _react2.default.createElement(_Mask2.default, { onClick: function onClick() {
                         _this.setState({ status: 'close' });
+                        _this.props.onClose();
                     } }),
                 _react2.default.createElement(
                     'div',
@@ -81,6 +82,7 @@ var Modal = function (_React$Component) {
                         'div',
                         { className: prefix + '-modal-close', onClick: function onClick() {
                                 _this.setState({ status: 'close' });
+                                _this.props.onClose();
                             } },
                         _react2.default.createElement('div', { className: prefix + "-modal-close-line" }),
                         _react2.default.createElement(_Icon2.default, { type: 'guanbi' })
@@ -95,6 +97,7 @@ var Modal = function (_React$Component) {
 
 Modal.defaultProps = {
     prefix: 'zui',
-    visible: false
+    visible: false,
+    onClose: function onClose() {}
 };
 exports.default = Modal;

@@ -4,9 +4,14 @@
     color: #fff;
     margin-right: 5px;
     border: 1px solid @colorMain;
+    &.active{
+    	.@{prefix}-icon{
+    		color: @colorMain;
+    	}
+    }
     .@{prefix}-icon {
-        font-size: 14px;
-        color: @colorMain;
+        color: #fff;
         margin: 0 1px;
+        font-size: 14px;
     }
 }

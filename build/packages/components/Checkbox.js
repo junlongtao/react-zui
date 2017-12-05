@@ -55,13 +55,14 @@ var Checkbox = function (_React$Component) {
             });
         }, _this.render = function () {
             var prefix = _this.props.prefix;
+            var active = _this.props.value ? 'active' : '';
             return _react2.default.createElement(
                 'span',
-                { className: prefix + '-checkbox ' + _this.props.className, onClick: function onClick() {
+                { className: prefix + '-checkbox ' + active + ' ' + _this.props.className, onClick: function onClick() {
                         _this.props.onChange(!_this.state.value);
                         _this.setState({ value: !_this.state.value });
                     } },
-                _this.state.value ? _react2.default.createElement(_Icon2.default, { type: 'xuanze' }) : '■■'
+                _react2.default.createElement(_Icon2.default, { type: 'xuanze' })
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }

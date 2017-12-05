@@ -1,10 +1,10 @@
 {
   "main": "./build/packages/index.js",
   "scripts": {
-    "build-packages": "NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files",
-    "dev-packages": "NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files --watch",
-    "build-docs": "webpack --progress --config ./webpack.config.docs.js --watch",
-    "dev-docs": "webpack --progress --config ./webpack.config.docs.js",
+    "packages-build": "NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files",
+    "packages-dev": "NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files --watch",
+    "docs-build": "webpack --progress --config ./webpack.config.docs.js",
+    "docs-dev": "webpack --progress --config ./webpack.config.docs.js --watch",
     "start": "node webpack.server.js && npm run dev-packages"
   },
   "devDependencies": {
@@ -68,7 +68,7 @@
   },
   "name": "react-zui",
   "description": "React-zui(建设中...)",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "directories": {
     "doc": "docs"
   },

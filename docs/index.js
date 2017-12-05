@@ -42,8 +42,8 @@ ReactDOM.render(
                         <List.Item arrow="horizontal" href="#loading">Loading 请求加载中</List.Item>
 
                         <List.Header>数据录入 Data Entry</List.Header>
-                        <List.Item arrow="horizontal" href="#button">Button 按钮</List.Item>
                         <List.Item arrow="horizontal" href="#list">List 表单</List.Item>
+                        <List.Item arrow="horizontal" href="#button">Button 按钮</List.Item>
                         <List.Item arrow="horizontal" href="#switch">Switch 切换器</List.Item>
                         <List.Item arrow="horizontal" href="#checkbox">Checkbox 复选框</List.Item>
                         <List.Item arrow="horizontal" href="#search-bar">SearchBar 搜索框</List.Item>

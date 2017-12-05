@@ -2,20 +2,21 @@
 
 .@{prefix}-option-picker {
     .@{prefix}-option-picker-option-list {
+        height: 100%;
         .overflow-scroll();
         .@{prefix}-option-picker-option-item {
-            border-bottom: 1px solid #dcdcdc;
             font-size: 14px;
             line-height: 40px;
             padding-left: 10px;
+            border-bottom: 1px solid #dcdcdc;
             &:active, &:hover {
                 background: #eee;
                 -webkit-tap-highlight-color: transparent;
             }
             .@{prefix}-icon {
                 right: 10px;
-                color: @colorMain;
                 font-size: 14px;
+                color: @colorMain;
                 position: absolute;
             }
         }
