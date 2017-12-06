@@ -21,6 +21,10 @@ export default class Page extends React.Component {
         setDocumentTitle(this.props.title)
     }
 
+    componentDidMount = () => {
+        window.scrollTo(0,0)
+    }
+
     render = () => {
         const prefix = this.props.prefix
         return <div className={prefix+'-page '+this.props.className}>

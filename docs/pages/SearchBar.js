@@ -49,6 +49,12 @@ export default class Example extends React.Component {
                 <List.Item extra="value改变时的回调事件">
                     onChange(value)
                 </List.Item>
+                <List.Item extra="input click事件">
+                    onClick()
+                </List.Item>
+                <List.Item extra="input focus事件">
+                    onFocus()
+                </List.Item>
             </List>
         </BasePage>
     }

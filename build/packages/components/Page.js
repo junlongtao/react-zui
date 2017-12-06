@@ -57,6 +57,8 @@ var Page = function (_React$Component) {
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Page.__proto__ || (0, _getPrototypeOf2.default)(Page)).call.apply(_ref, [this].concat(args))), _this), _this.componentWillMount = function () {
             (0, _util.setDocumentTitle)(_this.props.title);
+        }, _this.componentDidMount = function () {
+            window.scrollTo(0, 0);
         }, _this.render = function () {
             var prefix = _this.props.prefix;
             return _react2.default.createElement(
