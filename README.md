@@ -4,6 +4,8 @@ Mobile web app 组件库， 基于[React@16](http://facebook.github.io/react/).
  
 ## 文档及代码演示
 
+![react-zui](./docs/qrcode.png)
+
 [http://zui.zhichou.com](http://zui.zhichou.com) 
 
 ## 安装和使用
@@ -27,11 +29,7 @@ ReactDOM.render((
 ), document.getElementById('container'));
 
 ```
-
-## Mobile Demo
-
-![react-zui](./docs/qrcode.png)
-
+ 
 ## License
 
 The MIT License([http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT))
