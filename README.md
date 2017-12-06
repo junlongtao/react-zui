@@ -77,9 +77,13 @@ export default class HomePage extends React.Component {
 ```
 
 ## 使用帮助
+
 wechat t782570386
+
 mobile 15001374270
+
 email 782570386@qq.com
+
 欢迎骚扰 ^_^
  
 ## License
