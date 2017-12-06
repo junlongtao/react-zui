@@ -35,6 +35,46 @@ ReactDOM.render((
 ), document.getElementById('container'));
 
 ```
+
+## 结合React Router 4.0
+
+```javascript
+//index.js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import FastClick from 'fastclick'
+import {HashRouter, BrowserRouter, Route, Switch} from 'react-router-dom' 
+import asyncComponent from './asyncComponent'
+
+ReactDOM.render(
+    <HashRouter>
+        <Switch> 
+            <Route exact path='/' component={asyncComponent(() => import('./pages/HomePage'))}/>
+            <Route exact path='/me' component={asyncComponent(() => import('./pages/MePage'))}/>
+            <Route exact path='/login' component={asyncComponent(() => import('./pages/LoginPage'))}/>
+        </Switch>
+    </HashRouter>,
+    document.getElementById('container')
+)
+FastClick.attach(document.body)
+
+
+//HomePage.js 
+import React from 'react' 
+import {Page, List, Button} from 'react-zui'
+
+export default class HomePage extends React.Component {
+
+    render = () => {
+        return <Page title="home">
+            <Button type="primary" padding="10px">
+                hello, this is home page.
+            </Button> 
+        </Page>
+    }
+    
+}
+```
  
 ## License
 
