@@ -1,4 +1,4 @@
-# React-ZUI (contributing...)
+# React-ZUI
 
 Mobile web app 组件库， 基于[React@16](http://facebook.github.io/react/).
  
@@ -20,9 +20,15 @@ npm install --save react-zui
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Page} from 'react-zui'; 
+import {Page, List} from 'react-zui'; 
 
-const App = () => <Page>hello world</Page>;
+const App = () => <Page title="hello page" className="hello-page">
+    <List>
+        <List.Item>
+            Hello World!
+        </List.Item>
+    </List>
+</Page>;
 
 ReactDOM.render((
     <App/>
