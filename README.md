@@ -1,8 +1,10 @@
-# React-ZUI (contributing...)
+# React-ZUI
 
 Mobile web app 组件库， 基于[React@16](http://facebook.github.io/react/).
  
 ## 文档及代码演示
+
+![react-zui](./docs/qrcode.png)
 
 [http://zui.zhichou.com](http://zui.zhichou.com) 
 
@@ -18,9 +20,15 @@ npm install --save react-zui
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Page} from 'react-zui'; 
+import {Page, List} from 'react-zui'; 
 
-const App = () => <Page>hello world</Page>;
+const App = () => <Page title="hello page" className="hello-page">
+    <List>
+        <List.Item>
+            Hello World!
+        </List.Item>
+    </List>
+</Page>;
 
 ReactDOM.render((
     <App/>
@@ -28,10 +36,46 @@ ReactDOM.render((
 
 ```
 
-## Mobile Demo
+## 结合React Router 4.0
 
-![react-zui](./docs/qrcode.png)
+```javascript
+//index.js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import FastClick from 'fastclick'
+import {HashRouter, BrowserRouter, Route, Switch} from 'react-router-dom' 
+import asyncComponent from './asyncComponent'
 
+ReactDOM.render(
+    <HashRouter>
+        <Switch> 
+            <Route exact path='/' component={asyncComponent(() => import('./pages/HomePage'))}/>
+            <Route exact path='/me' component={asyncComponent(() => import('./pages/MePage'))}/>
+            <Route exact path='/login' component={asyncComponent(() => import('./pages/LoginPage'))}/>
+        </Switch>
+    </HashRouter>,
+    document.getElementById('container')
+)
+FastClick.attach(document.body)
+
+
+//HomePage.js 
+import React from 'react' 
+import {Page, List, Button} from 'react-zui'
+
+export default class HomePage extends React.Component {
+
+    render = () => {
+        return <Page title="home">
+            <Button type="primary" padding="10px">
+                hello, this is home page.
+            </Button> 
+        </Page>
+    }
+    
+}
+```
+ 
 ## License
 
 The MIT License([http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT))
