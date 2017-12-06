@@ -1,10 +1,10 @@
 
 import React from 'react'
-import {Page, List, Avatar} from '../../build/packages'
-
+import BasePage from './BasePage'
+import {List, Avatar} from '../../build/packages'
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="头像">
+        return <BasePage title="头像">
             <Avatar src="" width="60px" style={{display: 'block', margin: '50px auto'}}/>
             <List>
                 <List.Header>
@@ -53,6 +53,6 @@ export default class Example extends React.Component {
                     onClick()
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

@@ -1,9 +1,10 @@
 import React from 'react'
-import {Page, List, SearchBar} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, SearchBar} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="搜索框">
+        return <BasePage title="搜索框">
             <SearchBar placeholder="搜索更多简历, 多个关键词空格隔开"/>
             <List>
                 <List.Header>
@@ -49,6 +50,6 @@ export default class Example extends React.Component {
                     onChange(value)
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

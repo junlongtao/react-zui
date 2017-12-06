@@ -1,10 +1,11 @@
 import './less/icon.less'
 import React from 'react'
-import {Page, List, Icon} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Icon} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="图标" className="example-page">
+        return <BasePage title="图标" className="example-page">
             <div className="icon-list">
                 <Icon type="bianji"/>
                 <Icon type="message"/>
@@ -72,6 +73,6 @@ export default class Example extends React.Component {
                     onClick()
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

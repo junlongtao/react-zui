@@ -1,11 +1,12 @@
 import React from 'react'
-import {Page, List, Card, Paragraph} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Card, Paragraph} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     state = {}
 
     render = () => {
-        return <Page title="文本段落">
+        return <BasePage title="文本段落">
             <Card title="服务介绍">
                 <Paragraph>{`
 【如果您有这些问题】
@@ -92,6 +93,6 @@ export default class Example extends React.Component {
                     暂无
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

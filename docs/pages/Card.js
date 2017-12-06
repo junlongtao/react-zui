@@ -1,10 +1,11 @@
 
 import React from 'react'
-import {Page, List, Card} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Card} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="卡片">
+        return <BasePage title="卡片">
             <Card title="示例卡片" collapseVisible={true} collapsed={true}>
                 1
                 他送了一篮子异域水果和一张卡片。
@@ -139,6 +140,6 @@ export default class Example extends React.Component {
                     onClick()
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

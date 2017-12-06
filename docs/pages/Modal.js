@@ -1,12 +1,13 @@
 
 import React from 'react'
-import {Page, List, Button, Modal} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Button, Modal} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     state = {}
 
     render = () => {
-        return <Page title="对话框">
+        return <BasePage title="对话框">
             <Button type="plain" padding="10px" onClick={()=>{
                 this.setState({modalVisible: true})
             }}>立即预约</Button>
@@ -84,6 +85,6 @@ export default class Example extends React.Component {
                     暂无
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

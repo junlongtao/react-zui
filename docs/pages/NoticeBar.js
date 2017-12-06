@@ -1,10 +1,11 @@
 
 import React from 'react'
-import {Page, List, NoticeBar} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, NoticeBar} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="通知条" className="notice-bar-page">
+        return <BasePage title="通知条" className="notice-bar-page">
             <NoticeBar>
                 注意: 请详细阅读通知内容...
             </NoticeBar>
@@ -54,6 +55,6 @@ export default class Example extends React.Component {
                     onClose()
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

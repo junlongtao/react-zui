@@ -34,23 +34,21 @@ var config = {
             test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
             loader: 'url-loader?limit=50000&name=[path][name].[ext]'
         }]
-    } 
+    },
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            env: process.env.NODE_ENV,
+            filename: __dirname+'/build/docs/index.html',
+            template: './docs/index.html',
+            inject: 'body',
+            hash: true
+        }),
+        new webpack.optimize.CommonsChunkPlugin(['vendors', 'citydata'])
+    ]
 }
 
-config.plugins = [
-    new HtmlWebpackPlugin({
-        env: 'dev',
-        filename: __dirname+'/build/docs/index.html',
-        template: './docs/index.html',
-        inject: 'body',
-        hash: true
-    }),
-    new UglifyJsPlugin(),
-    new webpack.optimize.CommonsChunkPlugin(['vendors', 'citydata']),
-    new webpack.DefinePlugin({
-        ENV: `'dev'`,
-        'process.env.NODE_ENV': '"dev"'
-    })
-]
-
+if (process.env.NODE_ENV === 'production') {
+    config.plugins.push(new UglifyJsPlugin())
+}
 module.exports = config

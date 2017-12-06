@@ -1,5 +1,6 @@
 import React from 'react'
-import {Page, List, Button, DatePicker} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Button, DatePicker} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
 
@@ -9,7 +10,7 @@ export default class ExamplePage extends React.Component {
     }
 
     render = () => {
-        return <Page title="日期选择器">
+        return <BasePage title="日期选择器">
             <Button type="plain" padding="10px" onClick={()=>{
                 this.setState({status: 'open'})
             }}>
@@ -71,6 +72,6 @@ export default class ExamplePage extends React.Component {
                     onChange(value)
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

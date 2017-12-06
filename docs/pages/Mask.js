@@ -1,12 +1,13 @@
 
 import React from 'react'
-import {Page, List, Button, Mask} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Button, Mask} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     state = {}
 
     render = () => {
-        return <Page title="遮罩">
+        return <BasePage title="遮罩">
             <Button type="plain" padding="10px" onClick={()=>{
                 this.setState({maskVisible: true})
             }}>显示遮罩</Button>
@@ -47,6 +48,6 @@ export default class Example extends React.Component {
                     onClick()
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

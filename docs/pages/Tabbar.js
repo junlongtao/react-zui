@@ -1,6 +1,7 @@
 
 import React from 'react'
-import {Page, List, Icon, TabBar} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Icon, TabBar} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
 
@@ -10,7 +11,7 @@ export default class ExamplePage extends React.Component {
 
     render = () => {
         const active = this.state.active
-        return <Page title="标签栏" className="tab-bar-page">
+        return <BasePage title="标签栏" className="tab-bar-page">
             <TabBar onChange={index=>{
                 this.setState({active: index})
             }}>
@@ -83,6 +84,6 @@ export default class TabBarExample extends React.Component {
                     onChange(index)
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

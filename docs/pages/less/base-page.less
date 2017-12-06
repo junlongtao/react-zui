@@ -1,0 +1,31 @@
+.base-page {
+    padding-bottom: 50px;
+    &.slidein {
+        -webkit-animation: slidein .3s ease; /* Safari and Chrome */
+        @-webkit-keyframes slidein /* Safari and Chrome */
+        {
+            0% {
+                opacity: .8;
+                -webkit-transform: translate(50px, 0);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+            }
+        }
+    }
+    &.slideup {
+        -webkit-animation: slideup .5s ease; /* Safari and Chrome */
+        @-webkit-keyframes slideup /* Safari and Chrome */
+        {
+            0% {
+                opacity: .8;
+                -webkit-transform: translate(0, 100px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+            }
+        }
+    }   
+}

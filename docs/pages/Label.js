@@ -1,10 +1,11 @@
 import './less/label.less'
 import React from 'react'
-import {Page, List, Label} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Label} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="书签" className="example-page">
+        return <BasePage title="书签" className="example-page">
             <div className="label-list">
                 <Label>示例书签一</Label>
                 <Label>示例书签二</Label>
@@ -51,6 +52,6 @@ export default class Example extends React.Component {
                     onClick()
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

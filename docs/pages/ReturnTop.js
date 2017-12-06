@@ -1,12 +1,13 @@
 
 import React from 'react'
-import {Page, List, ReturnTop} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, ReturnTop} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     state = {}
 
     render = () => {
-        return <Page title="返回顶部">
+        return <BasePage title="返回顶部">
             <div style={{height: '1000px'}}>
                 测试内容....<br/>
                 滚动至底部时,自动显示返回顶部
@@ -46,6 +47,6 @@ export default class Example extends React.Component {
                     暂无
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

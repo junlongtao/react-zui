@@ -1,12 +1,13 @@
 
 import React from 'react'
-import {Page, List, Countdown} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Countdown} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
         const endtime = new Date()
         endtime.setTime(endtime.getTime()/1000+24*60*60)
-        return <Page title="倒计时">
+        return <BasePage title="倒计时">
             <h4 style={{padding: '10px'}}>
                 付款倒计时: <Countdown endtime={endtime}/>
             </h4>
@@ -55,6 +56,6 @@ export default class TabBarExample extends React.Component {
                     暂无
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

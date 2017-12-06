@@ -1,11 +1,12 @@
 import './less/button.less'
 import React from 'react'
-import {Page, List, Button} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Button} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
 
     render = () => {
-        return <Page title="按钮">
+        return <BasePage title="按钮" animate="slide-in">
             <Button type="primary" padding="10px">
                 primary button
             </Button>
@@ -57,6 +58,6 @@ export default class ExamplePage extends React.Component {
                     onClick()
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

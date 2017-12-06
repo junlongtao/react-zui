@@ -1,11 +1,12 @@
 
 import React from 'react'
-import {Page, List, Switch} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Switch} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
 
     render = () => {
-        return <Page title="切换器">
+        return <BasePage title="切换器">
             <List>
                 <List.Item extra={<Switch value="1"/>}>
                     公开简历
@@ -51,6 +52,6 @@ export default class ExamplePage extends React.Component {
                     onChange(value)
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

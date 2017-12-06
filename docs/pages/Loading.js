@@ -1,9 +1,10 @@
 import React from 'react'
-import {Page, List, Loading} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Loading} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="请求加载中">
+        return <BasePage title="请求加载中">
             <Loading/>
             <List>
                 <List.Header>
@@ -46,6 +47,6 @@ export default class Example extends React.Component {
                     暂无
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

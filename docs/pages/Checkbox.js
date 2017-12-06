@@ -1,6 +1,7 @@
 
 import React from 'react'
-import {Page, List, Checkbox} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Checkbox} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
 
@@ -9,7 +10,7 @@ export default class ExamplePage extends React.Component {
     }
 
     render = () => {
-        return <Page title="复选框">
+        return <BasePage title="复选框">
             <List>
                 <List.Item>
                     <Checkbox value={this.state.value} onChange={(value)=>this.setState({value: value})}/>
@@ -58,6 +59,6 @@ export default class Example extends React.Component {
                     onChange(value)
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

@@ -1,10 +1,11 @@
 
 import React from 'react'
-import {Page, List, EmptyTip} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, EmptyTip} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="内容为空提示">
+        return <BasePage title="内容为空提示">
             <EmptyTip>~ 您暂未收到新消息 ~</EmptyTip>
 
             <List>
@@ -41,6 +42,6 @@ export default class Example extends React.Component {
                     暂无
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

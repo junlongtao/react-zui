@@ -1,12 +1,13 @@
 
 import React from 'react'
-import {Page, List, Button, Confirm} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Button, Confirm} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     state = {}
 
     render = () => {
-        return <Page title="操作确认">
+        return <BasePage title="操作确认">
             <Button type="plain" padding="10px" onClick={()=>{
                 this.setState({confirmVisible: true})
             }}>下载简历</Button>
@@ -86,6 +87,6 @@ export default class Example extends React.Component {
                     onSubmit()
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

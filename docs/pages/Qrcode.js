@@ -1,10 +1,11 @@
 import './less/qr-code.less'
 import React from 'react'
-import {Page, List, QRCode} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, QRCode} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     render = () => {
-        return <Page title="二维码" className="example-page">
+        return <BasePage title="二维码" className="example-page">
 
             <QRCode text="http://zui.zhichou.com"/>
             <List>
@@ -51,6 +52,6 @@ export default class Example extends React.Component {
                     暂无
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

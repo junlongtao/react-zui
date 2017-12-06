@@ -1,17 +1,18 @@
 
 import React from 'react'
-import {Page, List} from '../../build/packages'
+import BasePage from './BasePage'
+import {List} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
 
     render = () => {
-        return <Page title="页面">
+        return <BasePage title="页面" animate="slide-in">
 
             <List>
                 <List.Header>
                     使用说明
                 </List.Header>
-                <List.Item>
+                <List.Item href="#button">
                     Page组件展现内容为App的一个页面,一个应用由多个Page构成,具体使用见代码演示
                 </List.Item>
                 <List.Header>
@@ -63,6 +64,6 @@ export default class ExamplePage extends React.Component {
                     暂无
                 </List.Item>
             </List>
-        </Page>
+        </BasePage>
     }
 }

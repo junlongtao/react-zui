@@ -1,6 +1,7 @@
 
 import React from 'react'
-import {Page, List, Tabs} from '../../build/packages'
+import BasePage from './BasePage'
+import {List, Tabs} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
 
@@ -9,7 +10,7 @@ export default class ExamplePage extends React.Component {
     }
 
     render = () => {
-        return <Page title="表单">
+        return <BasePage title="表单">
             <Tabs active={0}>
                 <Tabs.TabPane name="InputItem">
                     <List>
@@ -604,6 +605,6 @@ export default class Example extends React.Component {
                     </List>
                 </Tabs.TabPane>
             </Tabs>
-        </Page>
+        </BasePage>
     }
 }
