@@ -4,12 +4,13 @@ import FastClick from 'fastclick'
 import {HashRouter, BrowserRouter, Route, Switch} from 'react-router-dom'
 import {Page, List} from '../../react-zui/build/packages'
 import asyncComponent from './asyncComponent'
+import './pages/less/home-page.less'
 
 ReactDOM.render(
     <HashRouter>
         <Switch>
             <Route exact path="/">
-                <Page title="React ZUI" className="example-page" backVisible={false}>
+                <Page title="React ZUI" className="home-page" backVisible={false}>
                     <h2 style={{padding:'50px 0 0 0',textAlign:'center'}}>
                         React ZUI
                     </h2>

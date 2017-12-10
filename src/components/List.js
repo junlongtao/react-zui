@@ -59,19 +59,20 @@ class ListItem extends React.Component {
         style: {},
         arrow: '',
         className: '',
-        onClick: null,
+        onClick: ()=>{},
         prefix: 'zui-list'
     }
 
     render = () => {
         const prefix = this.props.prefix
         const checkCls = this.props.arrow === 'check' ? 'active ' : ' '
-        return <div className={prefix+"-item "+checkCls+this.props.className} style={this.props.style} onClick={()=>{
+        const clickCls = this.props.onChange || this.props.href ? 'clickable ' : ' '
+        return <div className={prefix+"-item "+checkCls+clickCls+this.props.className} style={this.props.style} onClick={()=>{
             if(this.props.href){
-                location.assign(this.props.href)
-                return false
+                location.assign(this.props.href) 
+            }else{
+                this.props.onClick()
             }
-            this.props.onClick && this.props.onClick()
         }}>
             <div className={prefix+"-content"}>
                 {this.props.children}

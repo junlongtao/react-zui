@@ -43,6 +43,13 @@
         &:last-child {
             border-bottom: none;
         } 
+        &.clickable {
+            &:active, &:hover{
+                margin-left: 0;
+                padding-left: 10px;
+                background: #f2f2f2;
+            }
+        }
         .cursor();
         .display-box;
         .box-align(center);

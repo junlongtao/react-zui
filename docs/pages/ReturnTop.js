@@ -8,7 +8,7 @@ export default class ExamplePage extends React.Component {
 
     render = () => {
         return <BasePage title="返回顶部">
-            <div style={{height: '1000px'}}>
+            <div style={{height: '1000px', textAlign: 'center'}}>
                 测试内容....<br/>
                 滚动至底部时,自动显示返回顶部
             </div>

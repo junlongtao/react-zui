@@ -169,14 +169,15 @@ var ListItem = function (_React$Component3) {
         return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = ListItem.__proto__ || (0, _getPrototypeOf2.default)(ListItem)).call.apply(_ref3, [this].concat(args))), _this3), _this3.render = function () {
             var prefix = _this3.props.prefix;
             var checkCls = _this3.props.arrow === 'check' ? 'active ' : ' ';
+            var clickCls = _this3.props.onChange || _this3.props.href ? 'clickable ' : ' ';
             return _react2.default.createElement(
                 'div',
-                { className: prefix + "-item " + checkCls + _this3.props.className, style: _this3.props.style, onClick: function onClick() {
+                { className: prefix + "-item " + checkCls + clickCls + _this3.props.className, style: _this3.props.style, onClick: function onClick() {
                         if (_this3.props.href) {
                             location.assign(_this3.props.href);
-                            return false;
+                        } else {
+                            _this3.props.onClick();
                         }
-                        _this3.props.onClick && _this3.props.onClick();
                     } },
                 _react2.default.createElement(
                     'div',
@@ -201,7 +202,7 @@ ListItem.defaultProps = {
     style: {},
     arrow: '',
     className: '',
-    onClick: null,
+    onClick: function onClick() {},
     prefix: 'zui-list'
 };
 

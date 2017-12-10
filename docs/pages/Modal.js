@@ -81,8 +81,8 @@ export default class Example extends React.Component {
                 <List.Header>
                     事件
                 </List.Header>
-                <List.Item>
-                    暂无
+                <List.Item extra="modal关闭时的回调事件">
+                    onClose()
                 </List.Item>
             </List>
         </BasePage>
