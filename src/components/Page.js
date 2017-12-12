@@ -14,6 +14,7 @@ export default class Page extends React.Component {
     static defaultProps = {
         prefix: 'zui',
         className: '',
+        headerVisible: true,
         returnTopVisible: false
     }
 
@@ -28,9 +29,9 @@ export default class Page extends React.Component {
     render = () => {
         const prefix = this.props.prefix
         return <div className={prefix+'-page '+this.props.className}>
-            <Header backVisible={this.props.backVisible}>
+            {this.props.headerVisible?<Header backVisible={this.props.backVisible}>
                 {this.props.title}
-            </Header>
+            </Header>:null}
             {this.props.children}
             {this.props.returnTopVisible ? <ReturnTop/> : null}
         </div>

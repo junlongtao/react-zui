@@ -64,11 +64,11 @@ var Page = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { className: prefix + '-page ' + _this.props.className },
-                _react2.default.createElement(
+                _this.props.headerVisible ? _react2.default.createElement(
                     _Header2.default,
                     { backVisible: _this.props.backVisible },
                     _this.props.title
-                ),
+                ) : null,
                 _this.props.children,
                 _this.props.returnTopVisible ? _react2.default.createElement(_ReturnTop2.default, null) : null
             );
@@ -81,6 +81,7 @@ var Page = function (_React$Component) {
 Page.defaultProps = {
     prefix: 'zui',
     className: '',
+    headerVisible: true,
     returnTopVisible: false
 };
 exports.default = Page;
