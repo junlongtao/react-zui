@@ -13,13 +13,12 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
         server.close()
 
         config.entry.index.unshift("webpack-dev-server/client?http://localhost:" + port);
-        config.plugins.push(new OpenBrowserPlugin({url: 'http://localhost:' + port}));
+        config.plugins.push(new OpenBrowserPlugin({url: 'http://localhost:' + port})); 
         var webpackDevServer = new WebpackDevServer(webpack(config), {
             contentBase: 'build/docs',
         });
         webpackDevServer.listen(port);
-        console.log('webpack-dev-server started, listenning at http://localhost:' + port)
-        console.log('opening browser... ... please wait... ...')
+        console.log('webpack-dev-server started, listenning at http://localhost:' + port, 'opening browser... ... please wait... ...')
     })
     server.on('error', function(err){
         if(err.code=='EADDRINUSE'){

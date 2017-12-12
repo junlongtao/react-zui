@@ -4,6 +4,7 @@
     padding: 10px;
     background: #fff;
     position: relative;
+    .display-box;
     .@{prefix}-search-bar-icon{
 	    top: 15px;
 	    left: 18px;
@@ -14,9 +15,20 @@
     .@{prefix}-search-bar-input{
     	font-size: 14px;
     	line-height: 30px;
+        padding-left: 30px; 
     	border-radius: 20px;
     	border: 1px solid #cbcbcb;
-    	padding-left: 30px;
-    	width: 100%;
+        .box-flex(1);
+    }
+    .@{prefix}-search-bar-cancel{
+        line-height: 30px;
+        padding: 0 0 0 5px;
+        color: @colorMain;
+        .cursor();
+    }
+    &.focus{
+        .@{prefix}-search-bar-input{
+            border-color: @colorMain;
+        }
     }
 }

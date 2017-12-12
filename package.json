@@ -5,7 +5,7 @@
     "packages-dev": "NODE_ENV=dev babel ./src --out-dir ./build/packages --copy-files --watch",
     "docs-build": "NODE_ENV=production webpack -p --progress --config ./webpack.config.docs.js",
     "docs-dev": "NODE_ENV=dev webpack --progress --config ./webpack.config.docs.js --watch",
-    "start": "node webpack.server.js && npm run packages-dev"
+    "start": "node webpack.server.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

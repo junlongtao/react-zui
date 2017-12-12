@@ -55,6 +55,9 @@ export default class Example extends React.Component {
                 <List.Item extra="input focus事件">
                     onFocus()
                 </List.Item>
+                <List.Item extra="点击取消时的回调事件">
+                    onCancel()
+                </List.Item>
             </List>
         </BasePage>
     }

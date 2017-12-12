@@ -11,12 +11,18 @@ export default class SearchBar extends React.Component {
         onClick: ()=>{},
         onFocus: ()=>{},
         onChange: ()=>{},
+        onCancel: ()=>{},
         placeholder: '请输入',
     } 
 
+    state = {
+        focus: false
+    }
+
     render = () => {
         const prefix = this.props.prefix
-        return <div className={prefix+'-search-bar '+this.props.className}>
+        const focusCls = this.state.focus?'focus ':' '
+        return <div className={prefix+'-search-bar '+focusCls+this.props.className}>
             <Icon type="sousuo" className={prefix+'-search-bar-icon'}/>
             <input 
                 type="text" 
@@ -24,11 +30,18 @@ export default class SearchBar extends React.Component {
                 className={prefix+'-search-bar-input'} 
                 placeholder={this.props.placeholder} 
                 onClick={this.props.onClick}
-                onFocus={this.props.onFocus}
+                onFocus={e=>{
+                    this.setState({focus: true})
+                    this.props.onFocus()
+                }}
                 onChange={(e)=>{
                     this.props.onChange(e.target.value)
                 }}
             />
+            {this.state.focus?<span className={prefix+"-search-bar-cancel"} onClick={()=>{
+                this.setState({focus: false})
+                this.props.onCancel()
+            }}>取消</span>:null}
         </div>
     }
 }

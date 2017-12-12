@@ -46,11 +46,14 @@ var SearchBar = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = SearchBar.__proto__ || (0, _getPrototypeOf2.default)(SearchBar)).call.apply(_ref, [this].concat(args))), _this), _this.render = function () {
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = SearchBar.__proto__ || (0, _getPrototypeOf2.default)(SearchBar)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            focus: false
+        }, _this.render = function () {
             var prefix = _this.props.prefix;
+            var focusCls = _this.state.focus ? 'focus ' : ' ';
             return _react2.default.createElement(
                 'div',
-                { className: prefix + '-search-bar ' + _this.props.className },
+                { className: prefix + '-search-bar ' + focusCls + _this.props.className },
                 _react2.default.createElement(_Icon2.default, { type: 'sousuo', className: prefix + '-search-bar-icon' }),
                 _react2.default.createElement('input', {
                     type: 'text',
@@ -58,11 +61,22 @@ var SearchBar = function (_React$Component) {
                     className: prefix + '-search-bar-input',
                     placeholder: _this.props.placeholder,
                     onClick: _this.props.onClick,
-                    onFocus: _this.props.onFocus,
+                    onFocus: function onFocus(e) {
+                        _this.setState({ focus: true });
+                        _this.props.onFocus();
+                    },
                     onChange: function onChange(e) {
                         _this.props.onChange(e.target.value);
                     }
-                })
+                }),
+                _this.state.focus ? _react2.default.createElement(
+                    'span',
+                    { className: prefix + "-search-bar-cancel", onClick: function onClick() {
+                            _this.setState({ focus: false });
+                            _this.props.onCancel();
+                        } },
+                    '\u53D6\u6D88'
+                ) : null
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
@@ -76,6 +90,7 @@ SearchBar.defaultProps = {
     onClick: function onClick() {},
     onFocus: function onFocus() {},
     onChange: function onChange() {},
+    onCancel: function onCancel() {},
     placeholder: '请输入'
 };
 exports.default = SearchBar;
