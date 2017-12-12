@@ -82,9 +82,7 @@ wechat t782570386
 
 mobile 15001374270
 
-email 782570386@qq.com
-
-欢迎骚扰 ^_^
+email 782570386@qq.com 
  
 ## License
 
