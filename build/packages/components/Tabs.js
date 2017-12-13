@@ -29,10 +29,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TabBar = require('./TabBar');
-
-var _TabBar2 = _interopRequireDefault(_TabBar);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TabPane = function (_React$Component) {
@@ -81,9 +77,11 @@ var Tabs = function (_React$Component2) {
         }
 
         return _ret2 = (_temp2 = (_this2 = (0, _possibleConstructorReturn3.default)(this, (_ref2 = Tabs.__proto__ || (0, _getPrototypeOf2.default)(Tabs)).call.apply(_ref2, [this].concat(args))), _this2), _this2.state = {
-            active: _this2.props.active
+            activeIndex: ''
+        }, _this2.componentDidMount = function () {
+            _this2.setState({ activeIndex: parseInt(_this2.props.activeIndex) });
         }, _this2.componentWillReceiveProps = function (nextProps) {
-            _this2.setState({ active: nextProps.active });
+            _this2.setState({ activeIndex: parseInt(nextProps.activeIndex) });
         }, _this2.render = function () {
             var prefix = _this2.props.prefix;
             return _react2.default.createElement(
@@ -93,12 +91,12 @@ var Tabs = function (_React$Component2) {
                     'ul',
                     { className: prefix + '-tabs-nav' },
                     _this2.props.children.map(function (item, key) {
-                        var active = key === _this2.state.active ? 'active' : '';
+                        var activeCls = key === _this2.state.activeIndex ? 'active' : '';
                         return _react2.default.createElement(
                             'li',
-                            { key: key, className: prefix + '-tabs-nav-item ' + active, onClick: function onClick() {
-                                    key = key === _this2.state.active ? '' : key;
-                                    _this2.setState({ active: key });
+                            { key: key, className: prefix + '-tabs-nav-item ' + activeCls, onClick: function onClick() {
+                                    key = key === _this2.state.activeIndex ? '' : key;
+                                    _this2.setState({ activeIndex: key });
                                     _this2.props.onChange(key);
                                 } },
                             item.props.name
@@ -109,7 +107,7 @@ var Tabs = function (_React$Component2) {
                     'div',
                     { className: prefix + '-tabs-content' },
                     _this2.props.children.map(function (item, key) {
-                        return key === _this2.state.active ? item : null;
+                        return key === _this2.state.activeIndex ? item : null;
                     })
                 )
             );
@@ -120,9 +118,9 @@ var Tabs = function (_React$Component2) {
 }(_react2.default.Component);
 
 Tabs.defaultProps = {
-    active: '',
     prefix: 'zui',
     className: '',
+    activeIndex: '',
     onChange: function onChange() {}
 };
 

@@ -4,8 +4,7 @@
 'use strict'
 
 import './less/tabs.less'
-import React from 'react'
-import TabBar from './TabBar'
+import React from 'react' 
 
 class TabPane extends React.Component {
 
@@ -24,19 +23,23 @@ class TabPane extends React.Component {
 class Tabs extends React.Component {
 
     static defaultProps = {
-        active: '',
         prefix: 'zui',
         className: '',
+        activeIndex: '',
         onChange: () => {
         }
     }
 
     state = {
-        active: this.props.active
+        activeIndex: ''
+    }
+
+    componentDidMount = () => {
+        this.setState({activeIndex: parseInt(this.props.activeIndex)})
     }
 
     componentWillReceiveProps = nextProps => {
-        this.setState({active: nextProps.active})
+        this.setState({activeIndex: parseInt(nextProps.activeIndex)})
     }
 
     render = () => {
@@ -44,10 +47,10 @@ class Tabs extends React.Component {
         return <div className={prefix+'-tabs '+this.props.className}>
             <ul className={prefix+'-tabs-nav'}>
                 {this.props.children.map((item, key)=> {
-                    const active = key === this.state.active ? 'active' : ''
-                    return <li key={key} className={prefix+'-tabs-nav-item '+active} onClick={()=>{
-                        key = (key === this.state.active?'':key)
-                        this.setState({active: key})
+                    const activeCls = key === this.state.activeIndex ? 'active' : ''
+                    return <li key={key} className={prefix+'-tabs-nav-item '+activeCls} onClick={()=>{
+                        key = (key === this.state.activeIndex?'':key)
+                        this.setState({activeIndex: key})
                         this.props.onChange(key)
                     }}>
                         {item.props.name}
@@ -56,7 +59,7 @@ class Tabs extends React.Component {
             </ul>
             <div className={prefix+'-tabs-content'}>
                 {this.props.children.map((item, key)=> {
-                    return key === this.state.active ? item : null
+                    return key === this.state.activeIndex ? item : null
                 })}
             </div>
         </div>
