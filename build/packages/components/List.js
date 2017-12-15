@@ -1009,7 +1009,10 @@ var TagPickerItem = function (_React$Component15) {
                     status: _this15.state.status,
                     onChange: function onChange(value) {
                         _this15.props.onChange(value);
-                        _this15.setState({ value: value });
+                        _this15.setState({
+                            value: value,
+                            status: 'close'
+                        });
                     }
                 })
             );
