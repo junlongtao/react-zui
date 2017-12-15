@@ -38,6 +38,7 @@ export default class TagPicker extends React.Component {
             ],
         },
         onChange: ()=>{},
+        onBackClick: ()=>{},
     }
 
     state = { 
@@ -82,7 +83,7 @@ export default class TagPicker extends React.Component {
     render = () => {
         const prefix = this.props.prefix
         const status = this.props.status 
-        return <Picker className={prefix+'-tag-picker'} status={status}>
+        return <Picker className={prefix+'-tag-picker'} status={status} onBackClick={this.props.onBackClick}>
             <ul className={prefix+'-tag-picker-category-list'}>
                 {this.renderCategoryList()}
             </ul>

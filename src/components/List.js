@@ -638,10 +638,10 @@ class TagPickerItem extends React.Component {
                 status={this.state.status}
                 onChange={(value)=>{
                     this.props.onChange(value)
-                    this.setState({
-                        value: value,
-                        status: 'close',
-                    })
+                    this.setState({value: value})
+                }}
+                onBackClick={()=>{
+                    this.setState({status: 'close'})
                 }}
             />
         </div>
