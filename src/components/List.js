@@ -154,11 +154,11 @@ class FileItem extends React.Component {
     }
 
     renderFile = () => {
-        const value = this.state.value
-        const filename = value.toString() == '[object File]' ? value.name : value
+        const value = this.state.value||''
+        const filename = Object.prototype.toString.call(value) == '[object File]' ? value.name : value
         if(this.props.type==='img'){
-            const src = value.toString() == '[object File]' ? window.URL.createObjectURL(value) : value
-            return <img src={src}/> 
+            const src = Object.prototype.toString.call(value) == '[object File]' ? window.URL.createObjectURL(value) : value
+            return src?<img src={src}/>:this.props.placeholder
         }
 
         return filename || this.props.placeholder

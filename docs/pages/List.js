@@ -207,9 +207,9 @@ export default class Example extends React.Component {
                         <List.Header>
                             文件选择器
                         </List.Header>
-                        <List.FileItem type="file" maxSize={5*1024*1024}>
+                        <List.FileItem type="img" maxSize={5*1024*1024}>
                             营业执照
-                        </List.FileItem>
+                        </List.FileItem>    
 
                         <List.Header>
                             使用说明
@@ -227,7 +227,7 @@ import {List} from "react-zui"
 export default class Example extends React.Component {
     render = () => {
         return <List>
-            <List.FileItem type="file" maxSize={5*1024*1024}>
+            <List.FileItem type="img" maxSize={5*1024*1024}>
                 营业执照
             </List.FileItem>
         </List>

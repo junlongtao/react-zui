@@ -101,7 +101,7 @@ var TagPicker = function (_React$Component) {
             var status = _this.props.status;
             return _react2.default.createElement(
                 _Picker2.default,
-                { className: prefix + '-tag-picker', status: status },
+                { className: prefix + '-tag-picker', status: status, onBackClick: _this.props.onBackClick },
                 _react2.default.createElement(
                     'ul',
                     { className: prefix + '-tag-picker-category-list' },
@@ -132,6 +132,7 @@ TagPicker.defaultProps = {
         '市场与销售': ['市场总监', '销售总监', '市场策划', '市场推广', '地面推广', 'BD', '品牌建设', '渠道资源'],
         '其他': ['创业教练', '创业导师', '法律', '融资辅导', '融资顾问', '招聘', '财务', '其他']
     },
-    onChange: function onChange() {}
+    onChange: function onChange() {},
+    onBackClick: function onBackClick() {}
 };
 exports.default = TagPicker;

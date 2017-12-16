@@ -313,11 +313,11 @@ var FileItem = function (_React$Component6) {
                 value: nextProps.value
             });
         }, _this6.renderFile = function () {
-            var value = _this6.state.value;
-            var filename = value.toString() == '[object File]' ? value.name : value;
+            var value = _this6.state.value || '';
+            var filename = Object.prototype.toString.call(value) == '[object File]' ? value.name : value;
             if (_this6.props.type === 'img') {
-                var src = value.toString() == '[object File]' ? window.URL.createObjectURL(value) : value;
-                return _react2.default.createElement('img', { src: src });
+                var src = Object.prototype.toString.call(value) == '[object File]' ? window.URL.createObjectURL(value) : value;
+                return src ? _react2.default.createElement('img', { src: src }) : _this6.props.placeholder;
             }
 
             return filename || _this6.props.placeholder;
@@ -1009,10 +1009,10 @@ var TagPickerItem = function (_React$Component15) {
                     status: _this15.state.status,
                     onChange: function onChange(value) {
                         _this15.props.onChange(value);
-                        _this15.setState({
-                            value: value,
-                            status: 'close'
-                        });
+                        _this15.setState({ value: value });
+                    },
+                    onBackClick: function onBackClick() {
+                        _this15.setState({ status: 'close' });
                     }
                 })
             );
