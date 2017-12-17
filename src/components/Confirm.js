@@ -33,9 +33,9 @@ export default class Confirm extends React.Component {
         return visible ? <div className={prefix+'-confirm'}>
             <Mask/>
             <div className={prefix+'-confirm-wrap'} style={{top: this.props.top}}>
-                <div className={prefix+'-confirm-header'}>
+                {this.props.title && <div className={prefix+'-confirm-header'}>
                     {this.props.title}
-                </div>
+                </div>}
                 <div className={prefix+'-confirm-content'}>
                     {this.props.children}
                 </div>

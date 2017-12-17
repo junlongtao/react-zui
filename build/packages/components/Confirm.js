@@ -64,7 +64,7 @@ var Confirm = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     { className: prefix + '-confirm-wrap', style: { top: _this.props.top } },
-                    _react2.default.createElement(
+                    _this.props.title && _react2.default.createElement(
                         'div',
                         { className: prefix + '-confirm-header' },
                         _this.props.title
