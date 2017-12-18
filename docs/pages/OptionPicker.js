@@ -14,7 +14,7 @@ export default class ExamplePage extends React.Component {
             <Button type="plain" padding="10px" onClick={()=>{
                 this.setState({status: 'open'})
             }}>
-                打开选择器
+                打开选择器 {this.state.value && ("已选择："+this.state.value)}
             </Button>
             <OptionPicker
                 data={['选项一', '选项二', '选项三', '选项四', '其他']}
@@ -35,7 +35,7 @@ export default class ExamplePage extends React.Component {
                     {`
 import React from 'react'
 import {OptionPicker} from "react-zui"
-export default class ExamplePage extends React.Component {
+export default class Example extends React.Component {
 
     render = () => {
         return <OptionPicker

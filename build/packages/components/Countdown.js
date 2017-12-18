@@ -59,6 +59,8 @@ var Countdown = function (_React$Component) {
                     leftsec: leftsec < 0 ? 0 : leftsec
                 });
             }, 1000);
+        }, _this.componentWillUnmount = function () {
+            window.clearInterval(window.countdownInterval);
         }, _this.render = function () {
             var day = void 0,
                 hour = void 0,

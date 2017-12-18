@@ -53,11 +53,11 @@ var Button = function (_React$Component) {
             var className = _this.props.className;
             return _react2.default.createElement(
                 'div',
-                { className: prefix + '-button ' + type + ' ' + className, onClick: function onClick() {
+                { className: prefix + '-button ' + type + ' ' + className, onClick: function onClick(e) {
                         if (_this.props.type === 'disabled') {
                             return false;
                         } else {
-                            _this.props.onClick();
+                            _this.props.onClick(e);
                         }
                     }, style: { padding: padding } },
                 _react2.default.createElement(
@@ -81,6 +81,6 @@ Button.defaultProps = {
     prefix: 'zui',
     size: 'normal',
     type: 'primary',
-    onClick: function onClick() {}
+    onClick: function onClick(e) {}
 };
 exports.default = Button;

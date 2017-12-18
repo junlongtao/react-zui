@@ -25,7 +25,7 @@ export default class ExamplePage extends React.Component {
                     {`
 import React from 'react'
 import {Button} from "react-zui"
-export default class ExamplePage extends React.Component {
+export default class Example extends React.Component {
 
     render = () => {
         return <Button type="primary">示例按钮</Button>
@@ -55,7 +55,7 @@ export default class ExamplePage extends React.Component {
                     事件
                 </List.Header>
                 <List.Item extra="点击回调事件">
-                    onClick()
+                    onClick(e)
                 </List.Item>
             </List>
         </BasePage>

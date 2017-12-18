@@ -14,7 +14,7 @@ export default class ExamplePage extends React.Component {
             <Button type="plain" padding="10px" onClick={()=>{
                 this.setState({status: 'open'})
             }}>
-                选择开始日期
+                选择开始日期 {this.state.value && ("已选择："+this.state.value)}
             </Button>
             <DatePicker
                 status={this.state.status}
@@ -34,7 +34,7 @@ export default class ExamplePage extends React.Component {
                     {`
 import React from 'react'
 import {DatePicker} from "react-zui"
-export default class ExamplePage extends React.Component {
+export default class Example extends React.Component {
 
     render = () => {
         return <DatePicker

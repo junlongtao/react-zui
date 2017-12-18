@@ -50,7 +50,7 @@ export default class ExamplePage extends React.Component {
                     {`
 import React from 'react'
 import {List, TextTip} from "react-zui"
-export default class ExamplePage extends React.Component {
+export default class Example extends React.Component {
 
     render = () => {
         return <List>

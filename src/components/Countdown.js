@@ -28,6 +28,10 @@ export default class Countdown extends React.Component {
         }, 1000);
     }
 
+    componentWillUnmount = () => {
+        window.clearInterval(window.countdownInterval)
+    }
+
     render = () => {
         let day, hour, minute, second
         const leftsecond = this.state.leftsec

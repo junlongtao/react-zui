@@ -37,7 +37,7 @@ export default class ExamplePage extends React.Component {
                     {`
 import React from 'react'
 import {TabBar} from "react-zui"
-export default class TabBarExample extends React.Component {
+export default class Example extends React.Component {
     
     state = {
         active: 0

@@ -14,7 +14,7 @@ export default class ExamplePage extends React.Component {
             <Button type="plain" padding="10px" onClick={()=>{
                 this.setState({status: 'open'})
             }}>
-                选择所在地
+                选择所在地 {this.state.value && ("已选择："+this.state.value)}
             </Button>
             <CityPicker
                 status={this.state.status}
@@ -42,7 +42,7 @@ export default class ExamplePage extends React.Component {
                     {`
 import React from 'react'
 import {CityPicker} from "react-zui"
-export default class ExamplePage extends React.Component {
+export default class Example extends React.Component {
 
     render = () => {
         return <CityPicker

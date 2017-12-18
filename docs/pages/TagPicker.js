@@ -14,7 +14,7 @@ export default class ExamplePage extends React.Component {
             <Button type="plain" padding="10px" onClick={()=>{
                 this.setState({status: 'open'})
             }}>
-                选择技能标签
+                选择技能标签 {this.state.value && ("已选择："+this.state.value)}
             </Button>
             <TagPicker
                 status={this.state.status}
@@ -31,7 +31,7 @@ export default class ExamplePage extends React.Component {
                     {`
 import React from 'react'
 import {TagPicker} from "react-zui"
-export default class ExamplePage extends React.Component {
+export default class Example extends React.Component {
 
     render = () => {
         return <TagPicker

@@ -22,7 +22,7 @@ export default class ExamplePage extends React.Component {
                     {`
 import React from 'react'
 import {Page} from "react-zui"
-export default class ExamplePage extends React.Component {
+export default class Example extends React.Component {
 
     render = () => {
         return <Page>

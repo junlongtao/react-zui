@@ -12,7 +12,7 @@ export default class Button extends React.Component {
         prefix: 'zui',
         size: 'normal',
         type: 'primary',
-        onClick: ()=>{},
+        onClick: e=>{},
     }
 
     render = () => {
@@ -21,11 +21,11 @@ export default class Button extends React.Component {
         const prefix = this.props.prefix
         const padding = this.props.padding
         const className = this.props.className
-        return <div  className={prefix+'-button '+type+' '+className} onClick={()=>{
+        return <div  className={prefix+'-button '+type+' '+className} onClick={e=>{
             if(this.props.type==='disabled'){
                 return false
             }else{
-                this.props.onClick()
+                this.props.onClick(e)
             }
         }} style={{padding: padding}}>
             <button>
