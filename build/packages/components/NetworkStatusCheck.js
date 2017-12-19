@@ -26,6 +26,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Button = require('./Button');
+
+var _Button2 = _interopRequireDefault(_Button);
+
 var _network = require('./img/network.jpg');
 
 var _network2 = _interopRequireDefault(_network);
@@ -62,7 +66,7 @@ var NetworkStatusCheck = function (_React$Component) {
             }, false);
         }, _this.render = function () {
             var prefix = _this.props.prefix;
-            return !_this.state.online ? _react2.default.createElement(
+            return !_this.state.online && _react2.default.createElement(
                 'div',
                 { className: prefix + '-network-status-check' },
                 _react2.default.createElement(
@@ -80,14 +84,14 @@ var NetworkStatusCheck = function (_React$Component) {
                         '\u8BF7\u68C0\u67E5\u60A8\u7684\u7F51\u7EDC\u8FDE\u63A5'
                     ),
                     _react2.default.createElement(
-                        Button,
+                        _Button2.default,
                         { onClick: function onClick() {
                                 window.location.reload();
                             } },
                         '\u70B9\u51FB\u91CD\u8BD5'
                     )
                 )
-            ) : null;
+            );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
