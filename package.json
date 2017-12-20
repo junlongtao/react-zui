@@ -3,8 +3,7 @@
   "scripts": {
     "packages-build": "NODE_ENV=production babel ./src --out-dir ./build/packages --copy-files",
     "packages-dev": "NODE_ENV=dev babel ./src --out-dir ./build/packages --copy-files --watch",
-    "docs-build": "NODE_ENV=production webpack -p --progress --config ./webpack.config.docs.js",
-    "docs-dev": "NODE_ENV=dev webpack --progress --config ./webpack.config.docs.js --watch",
+    "docs-build": "npm run packages-build & NODE_ENV=production webpack -p --progress --config ./webpack.config.docs.js", 
     "start": "node webpack.server.js"
   },
   "devDependencies": {
