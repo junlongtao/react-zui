@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import FastClick from 'fastclick'
+import FastClick from 'fastclick' 
 import {HashRouter, BrowserRouter, Route, Switch} from 'react-router-dom'
 import {Page, List} from '../../react-zui/build/packages'
 import asyncComponent from './asyncComponent'

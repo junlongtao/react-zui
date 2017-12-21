@@ -11,7 +11,7 @@ export default class ExamplePage extends React.Component {
 
     render = () => {
         return <BasePage title="表单">
-            <Tabs active={0}>
+            <Tabs activeIndex={0}>
                 <Tabs.TabPane name="InputItem">
                     <List>
                         <List.Header>
