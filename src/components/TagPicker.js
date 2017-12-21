@@ -5,6 +5,7 @@
 
 import './less/tag-picker.less'
 import React from 'react'
+import Button from './Button'
 import Picker from './Picker'
 import {parsejson} from '../util'
 
@@ -38,6 +39,7 @@ export default class TagPicker extends React.Component {
             ],
         },
         onChange: ()=>{},
+        onSubmit: ()=>{},
         onBackClick: ()=>{},
     }
 
@@ -76,7 +78,9 @@ export default class TagPicker extends React.Component {
                 }
                 value[this.state.category] = valueTags
                 this.props.onChange(JSON.stringify(value))
-            }}>{item}</li>
+            }}>
+                {item}
+            </li>
         })
     }
 
@@ -90,6 +94,9 @@ export default class TagPicker extends React.Component {
             <ul className={prefix+'-tag-picker-tag-list'}>
                 {this.renderTagList()}
             </ul>
+            <Button type="plain" className={prefix+'-tag-picker-submit-button'} onClick={this.props.onSubmit}>
+                确定
+            </Button>
         </Picker>
     }
 }

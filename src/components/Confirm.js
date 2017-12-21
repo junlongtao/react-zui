@@ -11,6 +11,8 @@ export default class Confirm extends React.Component {
         top: '40%',
         prefix: 'zui',
         visible: false,
+        cancelText: '取消',
+        submitText: '确认',
         onCancel: ()=> {
 
         },
@@ -43,11 +45,11 @@ export default class Confirm extends React.Component {
                     <Button type="plain" className={prefix+'-confirm-button'} onClick={()=>{
                         this.setState({visible: false})
                         this.props.onCancel()
-                    }}>取消</Button>
+                    }}>{this.props.cancelText}</Button>
                     <Button className={prefix+'-confirm-button'} onClick={()=>{
                         this.setState({visible: false})
                         this.props.onSubmit()
-                    }}>确认</Button>
+                    }}>{this.props.submitText}</Button>
                 </div>
             </div>
         </div> : null

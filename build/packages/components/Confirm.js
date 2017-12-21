@@ -83,7 +83,7 @@ var Confirm = function (_React$Component) {
                                     _this.setState({ visible: false });
                                     _this.props.onCancel();
                                 } },
-                            '\u53D6\u6D88'
+                            _this.props.cancelText
                         ),
                         _react2.default.createElement(
                             _Button2.default,
@@ -91,7 +91,7 @@ var Confirm = function (_React$Component) {
                                     _this.setState({ visible: false });
                                     _this.props.onSubmit();
                                 } },
-                            '\u786E\u8BA4'
+                            _this.props.submitText
                         )
                     )
                 )
@@ -107,6 +107,8 @@ Confirm.defaultProps = {
     top: '40%',
     prefix: 'zui',
     visible: false,
+    cancelText: '取消',
+    submitText: '确认',
     onCancel: function onCancel() {},
     onSubmit: function onSubmit() {}
 };

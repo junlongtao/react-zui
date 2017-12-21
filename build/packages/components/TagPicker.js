@@ -33,6 +33,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Button = require('./Button');
+
+var _Button2 = _interopRequireDefault(_Button);
+
 var _Picker = require('./Picker');
 
 var _Picker2 = _interopRequireDefault(_Picker);
@@ -111,6 +115,11 @@ var TagPicker = function (_React$Component) {
                     'ul',
                     { className: prefix + '-tag-picker-tag-list' },
                     _this.renderTagList()
+                ),
+                _react2.default.createElement(
+                    _Button2.default,
+                    { type: 'plain', className: prefix + '-tag-picker-submit-button', onClick: _this.props.onSubmit },
+                    '\u786E\u5B9A'
                 )
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
@@ -133,6 +142,7 @@ TagPicker.defaultProps = {
         '其他': ['创业教练', '创业导师', '法律', '融资辅导', '融资顾问', '招聘', '财务', '其他']
     },
     onChange: function onChange() {},
+    onSubmit: function onSubmit() {},
     onBackClick: function onBackClick() {}
 };
 exports.default = TagPicker;

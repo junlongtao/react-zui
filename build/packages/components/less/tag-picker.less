@@ -1,6 +1,18 @@
 @import './base/mixin'; 
 
 .@{prefix}-tag-picker {  
+    .@{prefix}-tag-picker-submit-button{
+        width: 50px; 
+        top: 10px;
+        right: 5px;
+        position: fixed;
+        button{
+            border-color: #fff;
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+        }
+    }
     .@{prefix}-tag-picker-category-list {
         width: 30%;
         float: left;
@@ -38,7 +50,17 @@
      		.cursor();
   	        &.active {
                 color: #fff;
-                background: @colorMain;
+                position: relative;
+                background: @colorMain; 
+            }
+            .@{prefix}-icon{
+                color: red;
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: bold;
+                top: -5px;
+                right: -5px;
+                position: absolute; 
             }
         }
     }  
