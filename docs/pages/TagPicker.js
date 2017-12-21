@@ -21,7 +21,11 @@ export default class ExamplePage extends React.Component {
                 value={this.state.value}
                 onChange={value=>{
                     this.setState({value: value})
-                }}/>
+                }}
+                onSubmitClick={()=>{
+                    alert('submit click!')
+                }}
+            />
 
             <List>
                 <List.Header>
@@ -67,6 +71,9 @@ export default class Example extends React.Component {
                 </List.Header>
                 <List.Item extra="value发生改变时的回调事件">
                     onChange(value)
+                </List.Item>
+                <List.Item extra="点击‘确定’按钮时的回调事件">
+                    onSubmitClick()
                 </List.Item>
             </List>
         </BasePage>

@@ -1015,7 +1015,7 @@ var TagPickerItem = function (_React$Component15) {
                         _this15.setState({ status: 'close' });
                     },
                     onSubmitClick: function onSubmitClick() {
-                        _this15.props.onSubmit();
+                        _this15.props.onSubmitClick();
                         _this15.setState({ status: 'close' });
                     }
                 })
@@ -1030,8 +1030,8 @@ TagPickerItem.defaultProps = {
     value: '',
     name: '选择标签',
     prefix: 'zui-list',
-    onSubmit: function onSubmit() {},
-    onChange: function onChange() {}
+    onChange: function onChange() {},
+    onSubmitClick: function onSubmitClick() {}
 };
 
 var MonthPickerItem = function (_React$Component16) {
