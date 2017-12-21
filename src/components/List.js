@@ -584,8 +584,8 @@ class TagPickerItem extends React.Component {
         value: '',
         name: '选择标签',
         prefix: 'zui-list',
-        onChange: () => {
-        },
+        onSubmit: () => {},
+        onChange: () => {},
     }
 
     state = {
@@ -641,6 +641,10 @@ class TagPickerItem extends React.Component {
                     this.setState({value: value})
                 }}
                 onBackClick={()=>{
+                    this.setState({status: 'close'})
+                }}
+                onSubmitClick={()=>{
+                    this.props.onSubmit()
                     this.setState({status: 'close'})
                 }}
             />

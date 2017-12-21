@@ -118,7 +118,7 @@ var TagPicker = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     _Button2.default,
-                    { type: 'plain', className: prefix + '-tag-picker-submit-button', onClick: _this.props.onSubmit },
+                    { type: 'plain', className: prefix + '-tag-picker-submit-button', onClick: _this.props.onSubmitClick },
                     '\u786E\u5B9A'
                 )
             );
@@ -142,7 +142,7 @@ TagPicker.defaultProps = {
         '其他': ['创业教练', '创业导师', '法律', '融资辅导', '融资顾问', '招聘', '财务', '其他']
     },
     onChange: function onChange() {},
-    onSubmit: function onSubmit() {},
-    onBackClick: function onBackClick() {}
+    onBackClick: function onBackClick() {},
+    onSubmitClick: function onSubmitClick() {}
 };
 exports.default = TagPicker;

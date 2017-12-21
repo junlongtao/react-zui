@@ -39,8 +39,8 @@ export default class TagPicker extends React.Component {
             ],
         },
         onChange: ()=>{},
-        onSubmit: ()=>{},
         onBackClick: ()=>{},
+        onSubmitClick: ()=>{},
     }
 
     state = { 
@@ -94,7 +94,7 @@ export default class TagPicker extends React.Component {
             <ul className={prefix+'-tag-picker-tag-list'}>
                 {this.renderTagList()}
             </ul>
-            <Button type="plain" className={prefix+'-tag-picker-submit-button'} onClick={this.props.onSubmit}>
+            <Button type="plain" className={prefix+'-tag-picker-submit-button'} onClick={this.props.onSubmitClick}>
                 确定
             </Button>
         </Picker>
