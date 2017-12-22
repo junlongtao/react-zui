@@ -76,6 +76,22 @@ export default class HomePage extends React.Component {
 }
 ```
 
+## 二次开发
+```
+//克隆到本地
+git clone git@github.com:junlongtao/react-zui.git
+
+//安装依赖
+cd react-zui & npm install
+
+//构建package
+npm run packages-dev
+ 
+//构建doc及完整项目示例，自动打开浏览器，开始探索！
+npm run start
+
+```
+
 ## 使用帮助
 
 wechat t782570386

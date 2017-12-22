@@ -7,6 +7,7 @@ import './less/tag-picker.less'
 import React from 'react'
 import Button from './Button'
 import Picker from './Picker'
+import EmptyTip from './EmptyTip'
 import {parsejson} from '../util'
 
 export default class TagPicker extends React.Component {
@@ -84,6 +85,22 @@ export default class TagPicker extends React.Component {
         })
     }
 
+    renderActiveTagList = () => {
+        let tags = []
+        const prefix = this.props.prefix
+        const value = parsejson(this.props.value)
+        for(let i in value){ 
+            tags = tags.concat(value[i].map((item, key)=>{
+                return <li className={prefix+'-tag-picker-tag-item active'} key={i+key} onClick={()=>{
+                    value[i].splice(key, 1)
+                    this.props.onChange(JSON.stringify(value))
+                }}>{item}</li>
+            }))
+        }
+
+        return tags.length>0?tags:<EmptyTip>~ 您暂未选择标签 ~</EmptyTip>
+    }
+
     render = () => {
         const prefix = this.props.prefix
         const status = this.props.status 
@@ -93,6 +110,10 @@ export default class TagPicker extends React.Component {
             </ul>
             <ul className={prefix+'-tag-picker-tag-list'}>
                 {this.renderTagList()}
+            </ul> 
+            <ul className={prefix+'-tag-picker-active-tag-list'}>
+                <li className={prefix+'-tag-picker-active-tag-list-title'}>已选择标签</li>
+                {this.renderActiveTagList()}
             </ul>
             <Button type="plain" className={prefix+'-tag-picker-submit-button'} onClick={this.props.onSubmitClick}>
                 确定

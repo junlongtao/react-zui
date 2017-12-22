@@ -41,6 +41,10 @@ var _Picker = require('./Picker');
 
 var _Picker2 = _interopRequireDefault(_Picker);
 
+var _EmptyTip = require('./EmptyTip');
+
+var _EmptyTip2 = _interopRequireDefault(_EmptyTip);
+
 var _util = require('../util');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -100,6 +104,33 @@ var TagPicker = function (_React$Component) {
                     item
                 );
             });
+        }, _this.renderActiveTagList = function () {
+            var tags = [];
+            var prefix = _this.props.prefix;
+            var value = (0, _util.parsejson)(_this.props.value);
+
+            var _loop = function _loop(i) {
+                tags = tags.concat(value[i].map(function (item, key) {
+                    return _react2.default.createElement(
+                        'li',
+                        { className: prefix + '-tag-picker-tag-item active', key: i + key, onClick: function onClick() {
+                                value[i].splice(key, 1);
+                                _this.props.onChange((0, _stringify2.default)(value));
+                            } },
+                        item
+                    );
+                }));
+            };
+
+            for (var i in value) {
+                _loop(i);
+            }
+
+            return tags.length > 0 ? tags : _react2.default.createElement(
+                _EmptyTip2.default,
+                null,
+                '~ \u60A8\u6682\u672A\u9009\u62E9\u6807\u7B7E ~'
+            );
         }, _this.render = function () {
             var prefix = _this.props.prefix;
             var status = _this.props.status;
@@ -115,6 +146,16 @@ var TagPicker = function (_React$Component) {
                     'ul',
                     { className: prefix + '-tag-picker-tag-list' },
                     _this.renderTagList()
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    { className: prefix + '-tag-picker-active-tag-list' },
+                    _react2.default.createElement(
+                        'li',
+                        { className: prefix + '-tag-picker-active-tag-list-title' },
+                        '\u5DF2\u9009\u62E9\u6807\u7B7E'
+                    ),
+                    _this.renderActiveTagList()
                 ),
                 _react2.default.createElement(
                     _Button2.default,
