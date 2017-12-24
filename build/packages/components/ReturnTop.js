@@ -63,13 +63,15 @@ var ReturnTop = function (_React$Component) {
         }, _this.componentWillUnmount = function () {
             _this.returnTopMounted = false;
         }, _this.onClick = function () {
+            var step = (document.documentElement.scrollTop || document.body.scrollTop) / 10;
             window.returnTopInterval = setInterval(function () {
                 var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-                window.scrollTo(0, currentPosition - 100);
-                if (currentPosition - 100 <= 0) {
+                console.log(currentPosition);
+                window.scrollTo(0, currentPosition - step);
+                if (currentPosition - step <= 0) {
                     clearInterval(window.returnTopInterval);
                 }
-            }, 1);
+            }, 10);
             _this.setState({ status: 'fly-out' });
         }, _this.render = function () {
             var prefix = _this.props.prefix;
