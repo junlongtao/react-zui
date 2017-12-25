@@ -35,8 +35,7 @@ export default class ReturnTop extends React.Component {
     onClick = () => { 
         const step = (document.documentElement.scrollTop||document.body.scrollTop)/10
         window.returnTopInterval = setInterval(()=> { 
-            const currentPosition = document.documentElement.scrollTop || document.body.scrollTop  
-            console.log(currentPosition)
+            const currentPosition = document.documentElement.scrollTop || document.body.scrollTop   
             window.scrollTo(0, currentPosition-step)
             if(currentPosition-step<=0){
                 clearInterval(window.returnTopInterval)

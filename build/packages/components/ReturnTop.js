@@ -66,7 +66,6 @@ var ReturnTop = function (_React$Component) {
             var step = (document.documentElement.scrollTop || document.body.scrollTop) / 10;
             window.returnTopInterval = setInterval(function () {
                 var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-                console.log(currentPosition);
                 window.scrollTo(0, currentPosition - step);
                 if (currentPosition - step <= 0) {
                     clearInterval(window.returnTopInterval);
