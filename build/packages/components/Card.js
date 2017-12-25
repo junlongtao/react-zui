@@ -57,19 +57,24 @@ var Card = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { className: prefix + "-card " + _this.props.className, onClick: _this.props.onClick },
-                _this.props.title ? _react2.default.createElement(
+                _this.props.title && _react2.default.createElement(
                     'div',
                     { className: prefix + '-card-header' },
                     _this.props.title
-                ) : null,
+                ),
                 _react2.default.createElement(
                     'div',
                     { className: prefix + '-card-content', style: { maxHeight: _this.state.collapsed ? '200px' : '10000px' } },
                     _this.props.children
                 ),
-                _this.props.collapseVisible ? _react2.default.createElement(_Icon2.default, { type: _this.state.collapsed ? 'xiala' : 'shouqi', className: 'cursor', onClick: function onClick() {
+                _react2.default.createElement(_Icon2.default, { type: _this.props.arrow, className: prefix + '-card-arrow-icon' }),
+                _this.props.collapseVisible && _react2.default.createElement(_Icon2.default, {
+                    className: prefix + '-card-collapse-icon',
+                    type: _this.state.collapsed ? 'xiala' : 'shouqi',
+                    onClick: function onClick() {
                         _this.setState({ collapsed: !_this.state.collapsed });
-                    } }) : null
+                    }
+                })
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
@@ -81,6 +86,7 @@ var Card = function (_React$Component) {
 
 
 Card.defaultProps = {
-    prefix: 'zui'
+    prefix: 'zui',
+    arrow: ''
 };
 exports.default = Card;

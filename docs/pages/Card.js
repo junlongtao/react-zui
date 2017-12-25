@@ -6,7 +6,7 @@ import {List, Card} from '../../build/packages'
 export default class ExamplePage extends React.Component {
     render = () => {
         return <BasePage title="卡片">
-            <Card title="示例卡片" collapseVisible={true} collapsed={true}>
+            <Card title="示例卡片" collapseVisible={true} collapsed={true} arrow="horizontal">
                 1
                 他送了一篮子异域水果和一张卡片。
                 He sent a basket of exotic fruit and a card
@@ -129,6 +129,9 @@ export default class Example extends React.Component {
                 </List.Item>
                 <List.Item extra="是否显示折叠图标">
                     collapseVisible
+                </List.Item>
+                <List.Item extra="默认为空，'arrow=\'horizontal\''时显示右侧的箭头图标">
+                    arrow
                 </List.Item>
             </List>
 
