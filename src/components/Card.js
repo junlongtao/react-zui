@@ -30,8 +30,8 @@ export default class Card extends React.Component {
             </div>}
             <div className={prefix+'-card-content'} style={{maxHeight: this.state.collapsed?'200px':'10000px'}}> 
                 {this.props.children}
+                <Icon type={this.props.arrow} className={prefix+'-card-arrow-icon'}/>
             </div>
-            <Icon type={this.props.arrow} className={prefix+'-card-arrow-icon'}/>
             {this.props.collapseVisible && <Icon 
                 className={prefix+'-card-collapse-icon'}
                 type={this.state.collapsed?'xiala':'shouqi'} 

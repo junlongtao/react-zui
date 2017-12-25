@@ -65,9 +65,9 @@ var Card = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     { className: prefix + '-card-content', style: { maxHeight: _this.state.collapsed ? '200px' : '10000px' } },
-                    _this.props.children
+                    _this.props.children,
+                    _react2.default.createElement(_Icon2.default, { type: _this.props.arrow, className: prefix + '-card-arrow-icon' })
                 ),
-                _react2.default.createElement(_Icon2.default, { type: _this.props.arrow, className: prefix + '-card-arrow-icon' }),
                 _this.props.collapseVisible && _react2.default.createElement(_Icon2.default, {
                     className: prefix + '-card-collapse-icon',
                     type: _this.state.collapsed ? 'xiala' : 'shouqi',
