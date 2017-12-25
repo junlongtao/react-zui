@@ -6,7 +6,7 @@ import {List, Card} from '../../build/packages'
 export default class ExamplePage extends React.Component {
     render = () => {
         return <BasePage title="卡片">
-            <Card title="示例卡片" collapseVisible={true} collapsed={true} arrow="horizontal">
+            <Card title="示例卡片" collapseVisible={true} collapsed={true}>
                 1
                 他送了一篮子异域水果和一张卡片。
                 He sent a basket of exotic fruit and a card
