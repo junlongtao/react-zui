@@ -85,7 +85,7 @@ git clone git@github.com:junlongtao/react-zui.git
 cd react-zui & npm install
 
 //构建package
-npm run packages-dev
+npm run packages-build
  
 //构建doc及完整项目示例，自动打开浏览器，开始探索！
 npm run start
@@ -93,10 +93,6 @@ npm run start
 ```
 
 ## 使用帮助
-
-wechat t782570386
-
-mobile 15001374270
 
 email 782570386@qq.com 
  
