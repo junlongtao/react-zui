@@ -23,7 +23,7 @@ export default class ExamplePage extends React.Component {
                     this.setState({value: value})
                 }}
                 onSubmitClick={()=>{
-                    alert('submit click!')
+                    this.setState({status: 'close'})
                 }}
             />
 

@@ -48,6 +48,16 @@ export default class TagPicker extends React.Component {
         category: '',
     }   
 
+    componentDidMount = () => { 
+        if(this.props.value){
+            const keys = Object.keys(parsejson(this.props.value))
+            this.setState({category: keys[0]})
+        }else if(this.props.data){
+            const keys = Object.keys(this.props.data)
+            this.setState({category: keys[0]})
+        }
+    }
+
     renderCategoryList = () => {
         const categoryList = []
         for (let i in this.props.data) {

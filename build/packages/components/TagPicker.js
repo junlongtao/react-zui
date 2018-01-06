@@ -11,6 +11,10 @@ var _stringify = require('babel-runtime/core-js/json/stringify');
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
+var _keys2 = require('babel-runtime/core-js/object/keys');
+
+var _keys3 = _interopRequireDefault(_keys2);
+
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -65,6 +69,14 @@ var TagPicker = function (_React$Component) {
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TagPicker.__proto__ || (0, _getPrototypeOf2.default)(TagPicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             category: ''
+        }, _this.componentDidMount = function () {
+            if (_this.props.value) {
+                var keys = (0, _keys3.default)((0, _util.parsejson)(_this.props.value));
+                _this.setState({ category: keys[0] });
+            } else if (_this.props.data) {
+                var _keys = (0, _keys3.default)(_this.props.data);
+                _this.setState({ category: _keys[0] });
+            }
         }, _this.renderCategoryList = function () {
             var categoryList = [];
             for (var i in _this.props.data) {
