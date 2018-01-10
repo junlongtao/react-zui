@@ -22,7 +22,10 @@ export default class ExamplePage extends React.Component {
                     this.setState({confirmVisible: false})
                 }}
             >
-                <div style={{padding: '25px'}}>认证企业身份后才能下载简历, 是否去认证</div>
+                <div style={{padding: '25px'}}>
+                    认证企业身份后才能下载简历<br/>
+                    是否去认证
+                </div>
             </Confirm>
             <List>
                 <List.Header>
@@ -49,7 +52,9 @@ export default class Example extends React.Component {
                     this.setState({confirmVisible: false})
                 }}
             >
-                <div style={{padding: '25px'}}>认证企业身份后才能下载简历, 是否去认证</div>
+                <div style={{padding: '25px'}}>
+                    认证企业身份后才能下载简历<br/>是否去认证
+                </div>
             </Confirm>
         </div>
     }
