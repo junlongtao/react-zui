@@ -12,7 +12,8 @@ export default class Rater extends React.Component {
         max: 5,
         value: 0,
         static: false,
-        prefix: 'zui'
+        prefix: 'zui', 
+        onChange: ()=>{}
     }
 
     onChange = (value) => {

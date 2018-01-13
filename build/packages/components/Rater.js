@@ -122,6 +122,7 @@ Rater.defaultProps = {
     max: 5,
     value: 0,
     static: false,
-    prefix: 'zui'
+    prefix: 'zui',
+    onChange: function onChange() {}
 };
 exports.default = Rater;

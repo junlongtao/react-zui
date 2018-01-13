@@ -44,6 +44,7 @@ ReactDOM.render(
 
                         <List.Header>数据录入 Data Entry</List.Header>
                         <List.Item arrow="horizontal" href="#list?page_animate=slidein">List 表单</List.Item>
+                        <List.Item arrow="horizontal" href="#rater?page_animate=slidein">Rater 评分器</List.Item>
                         <List.Item arrow="horizontal" href="#button?page_animate=slidein">Button 按钮</List.Item>
                         <List.Item arrow="horizontal" href="#switch?page_animate=slidein">Switch 切换器</List.Item>
                         <List.Item arrow="horizontal" href="#checkbox?page_animate=slidein">Checkbox 复选框</List.Item>
@@ -87,6 +88,7 @@ ReactDOM.render(
 
             <Route exact path='/button' component={asyncComponent(() => import('./pages/Button'))}/>
             <Route exact path='/list' component={asyncComponent(() => import('./pages/List'))}/>
+            <Route exact path='/rater' component={asyncComponent(() => import('./pages/Rater'))}/>
             <Route exact path='/switch' component={asyncComponent(() => import('./pages/Switch'))}/>
             <Route exact path='/checkbox' component={asyncComponent(() => import('./pages/Checkbox'))}/>
             <Route exact path='/search-bar' component={asyncComponent(() => import('./pages/SearchBar'))}/>
