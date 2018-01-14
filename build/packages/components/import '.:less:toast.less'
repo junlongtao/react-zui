@@ -1,0 +1,13 @@
+import './less/toast.less'
+import React from 'react'
+
+export default class Message extends React.Component{
+	
+	static defaultProps = {
+		prefix: 'zui'
+	}
+
+	render = () => {
+		return <div class={prefix+'-message'}></div>
+	}
+}

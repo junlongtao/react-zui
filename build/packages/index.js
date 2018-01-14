@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.SearchBar = exports.NoticeBar = exports.TextTip = exports.TagPicker = exports.Tag = exports.Tabs = exports.TabBar = exports.Switch = exports.ReturnTop = exports.Rater = exports.Radio = exports.QRCode = exports.OptionPicker = exports.Paragraph = exports.Page = exports.Notify = exports.NetworkStatusCheck = exports.MonthPicker = exports.DatePicker = exports.Modal = exports.Mask = exports.Loading = exports.PageLoading = exports.ListLoading = exports.List = exports.Link = exports.Label = exports.Image = exports.Icon = exports.Header = exports.EmptyTip = exports.Countdown = exports.Confirm = exports.CityPicker = exports.Checkbox = exports.Card = exports.Button = exports.Avatar = undefined;
+exports.SearchBar = exports.NoticeBar = exports.TextTip = exports.TagPicker = exports.Tag = exports.Tabs = exports.TabBar = exports.Switch = exports.ReturnTop = exports.Rater = exports.Radio = exports.QRCode = exports.OptionPicker = exports.Paragraph = exports.Page = exports.Notify = exports.NetworkStatusCheck = exports.MonthPicker = exports.DatePicker = exports.Modal = exports.Mask = exports.Message = exports.Loading = exports.PageLoading = exports.ListLoading = exports.List = exports.Link = exports.Label = exports.Image = exports.Icon = exports.Header = exports.EmptyTip = exports.Countdown = exports.Confirm = exports.CityPicker = exports.Checkbox = exports.Card = exports.Button = exports.Avatar = undefined;
 
 var _Avatar = require('./components/Avatar');
 
@@ -72,6 +72,10 @@ var _PageLoading2 = _interopRequireDefault(_PageLoading);
 var _Loading = require('./components/Loading');
 
 var _Loading2 = _interopRequireDefault(_Loading);
+
+var _Message = require('./components/Message');
+
+var _Message2 = _interopRequireDefault(_Message);
 
 var _Mask = require('./components/Mask');
 
@@ -176,6 +180,7 @@ exports.List = _List2.default;
 exports.ListLoading = _ListLoading2.default;
 exports.PageLoading = _PageLoading2.default;
 exports.Loading = _Loading2.default;
+exports.Message = _Message2.default;
 exports.Mask = _Mask2.default;
 exports.Modal = _Modal2.default;
 exports.DatePicker = _DatePicker2.default;

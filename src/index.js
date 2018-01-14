@@ -15,6 +15,7 @@ import List from './components/List'
 import ListLoading from './components/ListLoading'
 import PageLoading from './components/PageLoading'
 import Loading from './components/Loading'
+import Message from './components/Message'
 import Mask from './components/Mask'
 import Modal from './components/Modal'
 import DatePicker from './components/DatePicker'
@@ -55,6 +56,7 @@ export {
     ListLoading,
     PageLoading,
     Loading,
+    Message,
     Mask,
     Modal,
     DatePicker,
