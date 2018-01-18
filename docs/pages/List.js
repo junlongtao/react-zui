@@ -150,7 +150,7 @@ export default class Example extends React.Component {
                         <List.Header>
                             文本输入框
                         </List.Header>
-                        <List.TextareaItem count="500">
+                        <List.TextareaItem count="500" rule="required:int">
                             自我介绍
                         </List.TextareaItem>
 
