@@ -1,0 +1,14 @@
+@import './base/mixin.less';
+
+.@{prefix}-carousel{
+	width: 100%;
+	overflow:hidden;
+	.@{prefix}-carousel-list{
+		.float-clear();
+		position: relative;
+		min-width: 10000px; 
+		.@{prefix}-carousel-item{
+			float: left;
+		} 
+	}
+}

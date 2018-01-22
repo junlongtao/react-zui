@@ -42,6 +42,7 @@ ReactDOM.render(
                         <List.Item arrow="horizontal" href="#list-loading?page_animate=slidein">ListLoading 列表加载中</List.Item>
                         <List.Item arrow="horizontal" href="#loading?page_animate=slidein">Loading 请求加载中</List.Item>
                         <List.Item arrow="horizontal" href="#message?page_animate=slidein">Message 消息提示</List.Item>
+                        <List.Item arrow="horizontal" href="#carousel?page_animate=slidein">Carousel 轮播图</List.Item>
 
 
                         <List.Header>数据录入 Data Entry</List.Header>
@@ -88,6 +89,7 @@ ReactDOM.render(
             <Route exact path='/list-loading' component={asyncComponent(() => import('./pages/ListLoading'))}/>
             <Route exact path='/loading' component={asyncComponent(() => import('./pages/Loading'))}/>
             <Route exact path='/message' component={asyncComponent(() => import('./pages/Message'))}/>
+            <Route exact path='/carousel' component={asyncComponent(() => import('./pages/Carousel'))}/>
 
             <Route exact path='/button' component={asyncComponent(() => import('./pages/Button'))}/>
             <Route exact path='/list' component={asyncComponent(() => import('./pages/List'))}/>

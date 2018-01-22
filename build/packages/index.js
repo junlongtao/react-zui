@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.SearchBar = exports.NoticeBar = exports.TextTip = exports.TagPicker = exports.Tag = exports.Tabs = exports.TabBar = exports.Switch = exports.ReturnTop = exports.Rater = exports.Radio = exports.QRCode = exports.OptionPicker = exports.Paragraph = exports.Page = exports.Notify = exports.NetworkStatusCheck = exports.MonthPicker = exports.DatePicker = exports.Modal = exports.Mask = exports.Message = exports.Loading = exports.PageLoading = exports.ListLoading = exports.List = exports.Link = exports.Label = exports.Image = exports.Icon = exports.Header = exports.EmptyTip = exports.Countdown = exports.Confirm = exports.CityPicker = exports.Checkbox = exports.Card = exports.Button = exports.Avatar = undefined;
+exports.Carousel = exports.SearchBar = exports.NoticeBar = exports.TextTip = exports.TagPicker = exports.Tag = exports.Tabs = exports.TabBar = exports.Switch = exports.ReturnTop = exports.Rater = exports.Radio = exports.QRCode = exports.OptionPicker = exports.Paragraph = exports.Page = exports.Notify = exports.NetworkStatusCheck = exports.MonthPicker = exports.DatePicker = exports.Modal = exports.Mask = exports.Message = exports.Loading = exports.PageLoading = exports.ListLoading = exports.List = exports.Link = exports.Label = exports.Image = exports.Icon = exports.Header = exports.EmptyTip = exports.Countdown = exports.Confirm = exports.CityPicker = exports.Checkbox = exports.Card = exports.Button = exports.Avatar = undefined;
 
 var _Avatar = require('./components/Avatar');
 
@@ -161,6 +161,10 @@ var _SearchBar = require('./components/SearchBar');
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
+var _Carousel = require('./components/Carousel');
+
+var _Carousel2 = _interopRequireDefault(_Carousel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.Avatar = _Avatar2.default;
@@ -202,3 +206,4 @@ exports.TagPicker = _TagPicker2.default;
 exports.TextTip = _TextTip2.default;
 exports.NoticeBar = _NoticeBar2.default;
 exports.SearchBar = _SearchBar2.default;
+exports.Carousel = _Carousel2.default;

@@ -37,6 +37,7 @@ import TagPicker from './components/TagPicker'
 import TextTip from './components/TextTip'
 import NoticeBar from './components/NoticeBar'
 import SearchBar from './components/SearchBar'
+import Carousel from './components/Carousel'
 
 export {
     Avatar,
@@ -78,4 +79,5 @@ export {
     TextTip,
     NoticeBar,
     SearchBar,
+    Carousel
 }
