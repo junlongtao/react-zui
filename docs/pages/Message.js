@@ -7,7 +7,9 @@ export default class ExamplePage extends React.Component {
     render = () => {
         return <BasePage title="消息提示">
             <Button padding="10px" onClick={()=>{
-                Message.info('测试提示消息测试提示消息测试提示消息测试提示消息测试提示消息测试提示消息测试提示消息测试提示消息')
+                Message.info('测试消息测，3s后关闭，弹出第二个消息', 3, ()=>{
+                    Message.info('这是第二个消息')
+                })
             }}>弹出提示消息</Button>
 
             <List>
@@ -22,7 +24,9 @@ export default class Example extends React.Component {
     render = () => {
         return <Page>
             <Button onClick={()=>{
-                Message.info('测试消息测试消息测试消息')
+                Message.info('测试消息测，3s后关闭，弹出第二个消息', 3, ()=>{
+                    Message.info('这是第二个消息')
+                })
             }}>
                 弹出消息提示
             </Button>

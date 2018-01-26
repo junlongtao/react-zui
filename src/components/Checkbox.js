@@ -12,6 +12,7 @@ export default class Checkbox extends React.Component {
     static defaultProps = {
         prefix: 'zui',
         value: false,
+        className: '',
         onChange: () => {}
     }
 

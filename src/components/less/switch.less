@@ -5,7 +5,7 @@
     border-radius: 20px;
     border: 1px solid #dcdcdc;
     width: 50px;
-    height: 25px;
+    height: 24px;
     padding: 1px;
     display: inline-block;
     position: relative;
@@ -18,13 +18,13 @@
         top: 1px;
         left: 1px;
         position: absolute;
+        transition: left .2s ease;
     }
     &.active {
         border-color: @colorMain;
         .@{prefix}-switch-circle {
             background: @colorMain;
-            left: unset;
-            right: 1px;
+            left: 27px;
         }
     }
 }

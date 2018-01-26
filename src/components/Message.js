@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 class Message extends React.Component {
 
     static defaultProps = {
-        prefix: 'zui'
+        prefix: 'zui', 
     }
 
     render = () => {
@@ -16,7 +16,7 @@ class Message extends React.Component {
     }
 }
 
-Message.info = (text, time) => {
+Message.info = (text, time, callback) => {
     clearTimeout(window.messageTimeout)
 
     let message = document.getElementById('message-div')
@@ -32,6 +32,9 @@ Message.info = (text, time) => {
     window.messageTimeout = setTimeout(()=> {
         const message = document.getElementById('message-div')
         message && document.body.removeChild(message)
+        if(callback){
+            callback.call()
+        }
     }, (time || 1.5) * 1000)
 }
 

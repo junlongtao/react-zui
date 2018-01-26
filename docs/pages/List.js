@@ -5,6 +5,15 @@ import {List, Tabs} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
 
+    static defaultProps = {
+        rules: {
+            mobile: [
+                {required: true, message: '请输入手机号码'},
+                {type: 'mobile'}
+            ]
+        }
+    }
+
     state = {
         startCountdown: false
     }
@@ -13,7 +22,7 @@ export default class ExamplePage extends React.Component {
         return <BasePage title="表单">
             <Tabs activeIndex={0}>
                 <Tabs.TabPane name="InputItem">
-                    <List>
+                    <List ref="form" rules={this.props.rules}>
                         <List.Header>
                             输入框
                         </List.Header>

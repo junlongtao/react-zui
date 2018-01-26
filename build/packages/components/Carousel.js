@@ -83,22 +83,14 @@ var Carousel = function (_React$Component2) {
             activeIndex: 0,
             transition: 'left .5s ease'
         }, _this2.componentDidMount = function () {
-            _this2.slideToIndex(1, 'none');
+            _this2.slideToIndex(_this2.props.activeIndex || 1, 'none');
         }, _this2.componentWillUnmount = function () {
             clearInterval(_this2.intervalId);
         }, _this2.slideToIndex = function (index) {
-            var transition = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'left .5s ease';
+            var transition = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'left ' + _this2.props.interval + 's ease';
 
             var left = 0;
             var items = _this2.refs.carousel.childNodes;
-            if (index === items.length) {
-                _this2.slideToIndex(1, 'none');
-                return false;
-            }
-            if (index === -1) {
-                _this2.slideToIndex(items.length - 2, 'none');
-                return false;
-            }
             Array.prototype.slice.call(items, 0, index).map(function (item, key) {
                 left += item.clientWidth;
             });
@@ -107,36 +99,44 @@ var Carousel = function (_React$Component2) {
                 activeIndex: index,
                 transition: transition
             });
+            if (index === items.length - 1) {
+                setTimeout(function () {
+                    return _this2.slideToIndex(1, 'none');
+                }, 500);
+                return false;
+            }
+            if (index === 0) {
+                setTimeout(function () {
+                    return _this2.slideToIndex(items.length - 2, 'none');
+                }, 500);
+                return false;
+            }
+            _this2.props.onChange(index);
+        }, _this2.onTouchStart = function (e) {
+            _this2.startX = e.targetTouches[0].pageX;
+        }, _this2.onTouchMove = function (e) {
+            _this2.endX = e.targetTouches[0].pageX;
+        }, _this2.onTouchEnd = function (e) {
+            var distanceX = _this2.endX - _this2.startX;
+            if (distanceX < -30) {
+                _this2.slideToIndex(_this2.state.activeIndex + 1);
+            } else if (distanceX > 30) {
+                _this2.slideToIndex(_this2.state.activeIndex - 1);
+            }
         }, _this2.render = function () {
             var prefix = _this2.props.prefix;
             var children = _this2.props.children;
+            var className = _this2.props.className;
             var activeIndex = _this2.state.activeIndex;
             return _react2.default.createElement(
                 'div',
-                { className: prefix + '-carousel' },
+                { className: prefix + '-carousel ' + className },
                 _react2.default.createElement(
                     'div',
                     { className: prefix + '-carousel-list', ref: 'carousel', style: {
                             left: _this2.state.left,
                             transition: _this2.state.transition
-                        }, onTouchStart: function onTouchStart(e) {
-                            var touch = e.targetTouches[0];
-                            //滑动起点的坐标
-                            _this2.startX = touch.pageX;
-                        }, onTouchMove: function onTouchMove(e) {
-
-                            var touch = e.targetTouches[0];
-                            //手势滑动时，手势坐标不断变化，取最后一点的坐标为最终的终点坐标
-                            _this2.endX = touch.pageX;
-                        }, onTouchEnd: function onTouchEnd(e) {
-
-                            var distanceX = _this2.endX - _this2.startX;
-                            if (distanceX < -50) {
-                                _this2.slideToIndex(_this2.state.activeIndex + 1);
-                            } else if (distanceX > 50) {
-                                _this2.slideToIndex(_this2.state.activeIndex - 1);
-                            }
-                        } },
+                        }, onTouchStart: _this2.onTouchStart, onTouchMove: _this2.onTouchMove, onTouchEnd: _this2.onTouchEnd },
                     children[children.length - 1],
                     children.map(function (item, key) {
                         return _react2.default.createElement(
@@ -146,6 +146,16 @@ var Carousel = function (_React$Component2) {
                         );
                     }),
                     children[0]
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    { className: prefix + '-carousel-pagination' },
+                    children.map(function (item, key) {
+                        var cls = activeIndex - 1 === key ? 'active' : '';
+                        return _react2.default.createElement('li', { className: cls, key: key, onClick: function onClick() {
+                                return _this2.slideToIndex(key + 1);
+                            } });
+                    })
                 )
             );
         }, _temp2), (0, _possibleConstructorReturn3.default)(_this2, _ret2);
@@ -156,7 +166,9 @@ var Carousel = function (_React$Component2) {
 
 Carousel.defaultProps = {
     prefix: 'zui',
-    interval: 1000
+    interval: '.5',
+    activeIndex: 0,
+    onChange: function onChange() {}
 };
 
 

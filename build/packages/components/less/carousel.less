@@ -3,12 +3,31 @@
 .@{prefix}-carousel{
 	width: 100%;
 	overflow:hidden;
+	position: relative;
 	.@{prefix}-carousel-list{
-		.float-clear();
+		.float-clear;
 		position: relative;
 		min-width: 10000px; 
 		.@{prefix}-carousel-item{
 			float: left;
 		} 
+	}
+	.@{prefix}-carousel-pagination{
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		.float-clear();
+		li{
+			float: left;
+			width: 8px;
+			height: 8px;
+			margin: 0 5px;
+			border-radius: 50%;
+			border: 1px solid @colorMain;
+			background: transparent;
+			&.active{
+				background: @colorMain;
+			}
+		}
 	}
 }

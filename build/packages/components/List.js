@@ -4,6 +4,14 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _promise = require('babel-runtime/core-js/promise');
+
+var _promise2 = _interopRequireDefault(_promise);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -1244,13 +1252,43 @@ var List = function (_React$Component19) {
         }, _temp19), (0, _possibleConstructorReturn3.default)(_this19, _ret19);
     }
 
+    (0, _createClass3.default)(List, [{
+        key: 'validate',
+        value: function validate() {
+            var form = this.props.form;
+            var rules = this.props.rules;
+            var defaultMessage = this.props.defaultMessage;
+            var promise = _promise2.default.resolve();
+
+            var _loop = function _loop(i) {
+                promise.then(function () {
+                    rules[i].map(function (item) {
+                        if (item.required && !form.getFieldValue(i)) {
+                            reject(item.message);
+                        }
+                    });
+                });
+            };
+
+            for (var i in rules) {
+                _loop(i);
+            }
+
+            promise.catch(function (err) {
+                Message.info(err || defaultMessage);
+            });
+            return promise;
+        }
+    }]);
     return List;
 }(_react2.default.Component);
 
 List.defaultProps = {
     style: {},
     className: '',
-    prefix: 'zui'
+    prefix: 'zui',
+    rules: {},
+    defaultMessage: '抱歉，您的输入有误'
 };
 
 

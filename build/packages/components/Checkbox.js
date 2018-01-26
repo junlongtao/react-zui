@@ -73,6 +73,7 @@ var Checkbox = function (_React$Component) {
 Checkbox.defaultProps = {
     prefix: 'zui',
     value: false,
+    className: '',
     onChange: function onChange() {}
 };
 exports.default = Checkbox;

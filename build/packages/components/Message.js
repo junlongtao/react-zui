@@ -64,7 +64,7 @@ Message.defaultProps = {
 };
 
 
-Message.info = function (text, time) {
+Message.info = function (text, time, callback) {
     clearTimeout(window.messageTimeout);
 
     var message = document.getElementById('message-div');
@@ -81,6 +81,9 @@ Message.info = function (text, time) {
     window.messageTimeout = setTimeout(function () {
         var message = document.getElementById('message-div');
         message && document.body.removeChild(message);
+        if (callback) {
+            callback.call();
+        }
     }, (time || 1.5) * 1000);
 };
 

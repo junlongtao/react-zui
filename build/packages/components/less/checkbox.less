@@ -3,15 +3,18 @@
 .@{prefix}-checkbox {
     color: #fff;
     margin-right: 5px;
-    border: 1px solid @colorMain;
-    &.active{
-    	.@{prefix}-icon{
-    		color: @colorMain;
-    	}
-    }
+    border-radius: 5px;
+    border: 2px solid @colorMain;
     .@{prefix}-icon {
         color: #fff;
         margin: 0 1px;
         font-size: 14px;
+    }
+    &.active{
+        background: @colorMain;
+        .@{prefix}-icon{
+            color: #fff;
+            font-weight: bold;
+        }
     }
 }

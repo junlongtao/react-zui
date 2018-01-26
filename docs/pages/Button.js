@@ -10,7 +10,7 @@ export default class ExamplePage extends React.Component {
             <Button type="primary" padding="10px">
                 primary button
             </Button>
-            <Button type="plain" padding="10px">
+            <Button type="plain" padding="0 10px">
                 plain button
             </Button>
             <Button type="bottom">

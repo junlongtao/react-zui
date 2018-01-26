@@ -11,16 +11,17 @@
         line-height: 20px;
         text-align: center;
         background: #ffe133;
-        padding: 0 10px 0 15px;
+        padding: 0 10px;
     }
     .@{prefix}-label-triangle {
         top: 0;
-        left: 0;
+        left: -10px;
         width: 0;
         height: 0;
+        z-index: 0;
+        font-size: 0;  
         position: absolute;
-        border-left: 8px solid #fff;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
+        border: 10px solid black;
+        border-color: #ffe133 transparent;
     }
 }

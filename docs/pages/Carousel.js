@@ -2,19 +2,43 @@
 import './less/carousel.less'
 import React from 'react'
 import BasePage from './BasePage'
-import {List, Carousel} from '../../build/packages'
+import {List, Carousel, Button} from '../../build/packages'
+import Carousel1 from './img/carousel1.jpg'
+import Carousel2 from './img/carousel2.jpg'
+import Carousel3 from './img/carousel3.jpg'
+import Carousel4 from './img/carousel4.jpg'
+import Carousel5 from './img/carousel5.jpg'
+import Carousel6 from './img/carousel6.jpg'
 
 export default class ExamplePage extends React.Component {
+
+    state = {
+        index: 3
+    }
+
     render = () => {
         return <BasePage title="轮播图">
-            <Carousel>
-                <Carousel.Item className="red">item1</Carousel.Item>
-                <Carousel.Item className="blue">item2</Carousel.Item>
-                <Carousel.Item className="black">item3</Carousel.Item>
-                <Carousel.Item className="black">item4</Carousel.Item>
-                <Carousel.Item className="black">item5</Carousel.Item>
-                <Carousel.Item className="black">item6</Carousel.Item>
-            </Carousel>
+            <Carousel activeIndex={this.state.index} onChange={index=>this.setState({index: index})}>
+                <Carousel.Item>
+                    <img src={Carousel1}/>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src={Carousel2}/>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src={Carousel3}/>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src={Carousel4}/>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src={Carousel5}/>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src={Carousel6}/>
+                </Carousel.Item>
+            </Carousel> 
+            <Button padding="10px">activeIndex:{this.state.index}</Button>
             <List>
                 <List.Header>
                     使用说明
@@ -28,11 +52,29 @@ export default class ExamplePage extends React.Component {
                 <List.PreItem>
                     {`
 import React from 'react'
-import {Avatar} from "react-zui"
+import {Carousel} from "react-zui"
 export default class Example extends React.Component {
     render = () => {
-        return <Avatar src="user avatar img src value"
-            width="60px" style={{display: 'block', margin: '50px auto'}}/>
+        return <Carousel>
+            <Carousel.Item>
+                <img src={Carousel1}/>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img src={Carousel2}/>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img src={Carousel3}/>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img src={Carousel4}/>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img src={Carousel5}/>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img src={Carousel6}/>
+            </Carousel.Item>
+        </Carousel>
     }
 }
                     `}
@@ -43,23 +85,20 @@ export default class Example extends React.Component {
                 <List.Header>
                     属性
                 </List.Header>
-                <List.Item extra="图片地址">
-                    src
+                <List.Item extra="className">
+                    className
                 </List.Item>
-                <List.Item extra="图片宽度">
-                    width
-                </List.Item>
-                <List.Item extra="样式表">
-                    style
-                </List.Item>
+                <List.Item extra="当前索引">
+                    activeIndex
+                </List.Item>  
             </List>
 
             <List>
                 <List.Header>
                     事件
                 </List.Header>
-                <List.Item extra="点击事件">
-                    onClick()
+                <List.Item extra="activeIndex改变时的回调">
+                    onChange(activeIndex)
                 </List.Item>
             </List>
         </BasePage>

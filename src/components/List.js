@@ -790,6 +790,30 @@ class List extends React.Component {
         style: {},
         className: '',
         prefix: 'zui',
+        rules: {},
+        defaultMessage: '抱歉，您的输入有误'
+    }
+
+    validate(){
+        const form = this.props.form
+        const rules = this.props.rules
+        const defaultMessage = this.props.defaultMessage
+        const promise = Promise.resolve()
+
+        for(let i in rules){
+            promise.then(function(){
+                rules[i].map(item=>{
+                    if(item.required && !form.getFieldValue(i)){ 
+                        reject(item.message)
+                    }
+                })
+            })
+        }
+
+        promise.catch(function(err){
+            Message.info(err||defaultMessage)
+        })
+        return promise
     }
 
     render = () => {
