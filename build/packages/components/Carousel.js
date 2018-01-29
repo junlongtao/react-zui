@@ -50,7 +50,10 @@ var CarouselItem = function (_React$Component) {
             var className = _this.props.className;
             return _react2.default.createElement(
                 'div',
-                { className: prefix + '-carousel-item ' + className },
+                { className: prefix + '-carousel-item ' + className, style: {
+                        width: document.body.clientWidth,
+                        maxWidth: _this.props.width
+                    } },
                 _this.props.children
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
@@ -61,6 +64,8 @@ var CarouselItem = function (_React$Component) {
 
 CarouselItem.defaultProps = {
     prefix: 'zui',
+    width: 'auto',
+    height: 'auto',
     className: ''
 };
 
@@ -130,7 +135,11 @@ var Carousel = function (_React$Component2) {
             var activeIndex = _this2.state.activeIndex;
             return _react2.default.createElement(
                 'div',
-                { className: prefix + '-carousel ' + className },
+                { className: prefix + '-carousel ' + className, style: {
+                        width: document.body.clientWidth,
+                        maxWidth: _this2.props.width,
+                        height: _this2.props.height
+                    } },
                 _react2.default.createElement(
                     'div',
                     { className: prefix + '-carousel-list', ref: 'carousel', style: {
@@ -141,7 +150,7 @@ var Carousel = function (_React$Component2) {
                     children.map(function (item, key) {
                         return _react2.default.createElement(
                             Carousel.Item,
-                            { key: key, className: item.props.className },
+                            { key: key, className: item.props.className, width: _this2.props.width },
                             item.props.children
                         );
                     }),
@@ -168,6 +177,7 @@ Carousel.defaultProps = {
     prefix: 'zui',
     interval: '.5',
     activeIndex: 0,
+    width: document.body.clientWidth,
     onChange: function onChange() {}
 };
 

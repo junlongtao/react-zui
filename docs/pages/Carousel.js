@@ -18,7 +18,7 @@ export default class ExamplePage extends React.Component {
 
     render = () => {
         return <BasePage title="轮播图">
-            <Carousel activeIndex={this.state.index} onChange={index=>this.setState({index: index})}>
+            <Carousel width="400px" height="175px" activeIndex={this.state.index} onChange={index=>this.setState({index: index})}>
                 <Carousel.Item>
                     <img src={Carousel1}/>
                 </Carousel.Item>
