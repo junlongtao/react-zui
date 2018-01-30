@@ -45,21 +45,23 @@ var Button = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Button.__proto__ || (0, _getPrototypeOf2.default)(Button)).call.apply(_ref, [this].concat(args))), _this), _this.render = function () {
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Button.__proto__ || (0, _getPrototypeOf2.default)(Button)).call.apply(_ref, [this].concat(args))), _this), _this.onClick = function (e) {
+            if (_this.props.type === 'disabled') {
+                return false;
+            } else {
+                _this.props.onClick(e);
+            }
+        }, _this.render = function () {
             var type = _this.props.type;
             var style = _this.props.style;
             var prefix = _this.props.prefix;
             var padding = _this.props.padding;
             var className = _this.props.className;
+            var widthCls = _this.props.width === 'auto' ? 'width-auto' : '';
+            var cls = prefix + '-button ' + type + ' ' + className + ' ' + widthCls;
             return _react2.default.createElement(
                 'div',
-                { className: prefix + '-button ' + type + ' ' + className, onClick: function onClick(e) {
-                        if (_this.props.type === 'disabled') {
-                            return false;
-                        } else {
-                            _this.props.onClick(e);
-                        }
-                    }, style: { padding: padding } },
+                { className: cls, onClick: _this.onClick, style: { padding: padding } },
                 _react2.default.createElement(
                     'button',
                     null,
@@ -81,6 +83,7 @@ Button.defaultProps = {
     prefix: 'zui',
     size: 'normal',
     type: 'primary',
+    width: 'fullfill',
     onClick: function onClick(e) {}
 };
 exports.default = Button;
