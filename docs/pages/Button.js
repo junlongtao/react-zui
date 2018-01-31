@@ -1,4 +1,3 @@
-import './less/button.less'
 import React from 'react'
 import BasePage from './BasePage'
 import {List, Button, Icon} from '../../build/packages'

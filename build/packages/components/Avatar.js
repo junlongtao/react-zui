@@ -15,6 +15,10 @@ var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
 var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
@@ -37,10 +41,6 @@ var _avatarFemale = require('./img/avatar-female.svg');
 
 var _avatarFemale2 = _interopRequireDefault(_avatarFemale);
 
-var _avatarDefault = require('./img/avatar-default.png');
-
-var _avatarDefault2 = _interopRequireDefault(_avatarDefault);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Avatar = function (_React$Component) {
@@ -57,39 +57,50 @@ var Avatar = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Avatar.__proto__ || (0, _getPrototypeOf2.default)(Avatar)).call.apply(_ref, [this].concat(args))), _this), _this.renderSrc = function () {
-            if (_this.props.src) {
-                return _this.props.src;
-            }
-            if (_this.props.sex === 'male') {
-                return _avatarMale2.default;
-            }
-            if (_this.props.sex === 'female') {
-                return _avatarFemale2.default;
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Avatar.__proto__ || (0, _getPrototypeOf2.default)(Avatar)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            src: ''
+        }, _this.renderSrc = function () {
+            if (_this.state.src) {
+                return _this.state.src;
             }
 
-            return _avatarDefault2.default;
+            return _this.props.sex === 'male' ? _avatarMale2.default : _avatarFemale2.default;
         }, _this.render = function () {
             var prefix = _this.props.prefix;
-            return _react2.default.createElement('img', { src: _this.renderSrc(),
+            var cls = prefix + '-avatar ' + _this.props.className + ' ' + _this.props.sex;
+            return _react2.default.createElement('img', { className: cls,
+                src: _this.renderSrc(),
                 style: _this.props.style,
                 width: _this.props.width,
                 height: _this.props.width || _this.props.height,
-                className: prefix + "-avatar " + _this.props.className,
                 onClick: _this.props.onClick });
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
+    (0, _createClass3.default)(Avatar, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            var _this2 = this;
+
+            var img = document.createElement('img');
+            img.onload = function () {
+                _this2.setState({ src: _this2.props.src });
+            };
+            img.src = this.props.src;
+            img.style = 'opacity: 0;';
+            document.body.appendChild(img);
+        }
+    }]);
     return Avatar;
 }(_react2.default.Component);
 
 Avatar.defaultProps = {
-    sex: '',
+    src: '',
     style: {},
+    sex: 'male',
     prefix: 'zui',
     width: '70px',
     className: '',
-    src: _avatarDefault2.default,
     onClick: function onClick() {}
 };
 exports.default = Avatar;
