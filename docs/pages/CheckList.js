@@ -8,7 +8,7 @@ export default class ExamplePage extends React.Component {
             <List>
                 <List.Item>
                     <CheckList name="人才期望职位（最多同时选择2个）" max={2} data={[
-                        '销售','JAVA','PHP','其他', 'kkk', 'jjj', 'ooo', 'jfkdjkdls', 'jkfldjfklds','jkfdjflksd'
+                        '销售','JAVA','PHP','其他'
                     ]}/>
                 </List.Item>
             </List>
