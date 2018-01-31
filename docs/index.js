@@ -51,6 +51,7 @@ ReactDOM.render(
                         <List.Item arrow="horizontal" href="#button?page_animate=slidein">Button 按钮</List.Item>
                         <List.Item arrow="horizontal" href="#switch?page_animate=slidein">Switch 切换器</List.Item>
                         <List.Item arrow="horizontal" href="#checkbox?page_animate=slidein">Checkbox 复选框</List.Item>
+                        <List.Item arrow="horizontal" href="#check-list?page_animate=slidein">CheckList 多选列表</List.Item>
                         <List.Item arrow="horizontal" href="#search-bar?page_animate=slidein">SearchBar 搜索框</List.Item>
                         <List.Item arrow="horizontal" href="#option-picker?page_animate=slidein">OptionPicker 选择器</List.Item>
                         <List.Item arrow="horizontal" href="#date-picker?page_animate=slidein">DatePicker 日期选择器</List.Item>
@@ -96,6 +97,7 @@ ReactDOM.render(
             <Route exact path='/rater' component={asyncComponent(() => import('./pages/Rater'))}/>
             <Route exact path='/switch' component={asyncComponent(() => import('./pages/Switch'))}/>
             <Route exact path='/checkbox' component={asyncComponent(() => import('./pages/Checkbox'))}/>
+            <Route exact path='/check-list' component={asyncComponent(() => import('./pages/CheckList'))}/>
             <Route exact path='/search-bar' component={asyncComponent(() => import('./pages/SearchBar'))}/>
             <Route exact path='/option-picker' component={asyncComponent(() => import('./pages/OptionPicker'))}/>
             <Route exact path='/date-picker' component={asyncComponent(() => import('./pages/DatePicker'))}/>
