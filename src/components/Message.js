@@ -1,6 +1,7 @@
-import './less/message.less'
+import './less/message.less' 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Loading from './Loading'
 
 class Message extends React.Component {
 
@@ -36,6 +37,27 @@ Message.info = (text, time, callback) => {
             callback.call()
         }
     }, (time || 1.5) * 1000)
+}
+
+Message.loading = function(visible=true){
+    if(!visible){
+        const message = document.getElementById('message-div')
+        message && document.body.removeChild(message)
+        return false
+    }
+
+    clearTimeout(window.messageTimeout)
+
+    let message = document.getElementById('message-div')
+    if (!message) {
+        message = document.createElement('div')
+        message.id = 'message-div'
+        document.body.appendChild(message)
+    }
+    ReactDOM.render(
+        <Loading/>,
+        message
+    )
 }
 
 export default Message

@@ -30,6 +30,10 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _Loading = require('./Loading');
+
+var _Loading2 = _interopRequireDefault(_Loading);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Message = function (_React$Component) {
@@ -85,6 +89,26 @@ Message.info = function (text, time, callback) {
             callback.call();
         }
     }, (time || 1.5) * 1000);
+};
+
+Message.loading = function () {
+    var visible = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
+    if (!visible) {
+        var _message = document.getElementById('message-div');
+        _message && document.body.removeChild(_message);
+        return false;
+    }
+
+    clearTimeout(window.messageTimeout);
+
+    var message = document.getElementById('message-div');
+    if (!message) {
+        message = document.createElement('div');
+        message.id = 'message-div';
+        document.body.appendChild(message);
+    }
+    _reactDom2.default.render(_react2.default.createElement(_Loading2.default, null), message);
 };
 
 exports.default = Message;
