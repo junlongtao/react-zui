@@ -95,17 +95,17 @@ Message.loading = function () {
     var visible = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
     if (!visible) {
-        var _message = document.getElementById('message-div');
+        var _message = document.getElementById('loading-div');
         _message && document.body.removeChild(_message);
         return false;
     }
 
     clearTimeout(window.messageTimeout);
 
-    var message = document.getElementById('message-div');
+    var message = document.getElementById('loading-div');
     if (!message) {
         message = document.createElement('div');
-        message.id = 'message-div';
+        message.id = 'loading-div';
         document.body.appendChild(message);
     }
     _reactDom2.default.render(_react2.default.createElement(_Loading2.default, null), message);

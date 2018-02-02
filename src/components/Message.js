@@ -41,17 +41,17 @@ Message.info = (text, time, callback) => {
 
 Message.loading = function(visible=true){
     if(!visible){
-        const message = document.getElementById('message-div')
+        const message = document.getElementById('loading-div')
         message && document.body.removeChild(message)
         return false
     }
 
     clearTimeout(window.messageTimeout)
 
-    let message = document.getElementById('message-div')
+    let message = document.getElementById('loading-div')
     if (!message) {
         message = document.createElement('div')
-        message.id = 'message-div'
+        message.id = 'loading-div'
         document.body.appendChild(message)
     }
     ReactDOM.render(
