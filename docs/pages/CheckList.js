@@ -10,6 +10,9 @@ export default class ExamplePage extends React.Component {
                     <CheckList name="人才期望职位（最多同时选择2个）" max={2} data={[
                         '销售','JAVA','PHP','其他'
                     ]}/>
+                    <CheckList name="人才期望城市" max={4} data={[
+                        '北京','上海','深圳','广州','其他'
+                    ]}/>
                 </List.Item>
             </List>
             <List>

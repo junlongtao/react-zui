@@ -22,10 +22,9 @@ export default class CheckList extends React.Component {
         value: []
     }
 
-    componentWillMount = () => {
-        this.setState({
-            value: this.props.value
-        })
+    componentWillReceiveProps = nextProps => {
+        const value = nextProps.value
+        value && this.setState({value: value})
     }
 
     onOptionClick = item => { 
@@ -46,7 +45,7 @@ export default class CheckList extends React.Component {
 
     render = () => {
         const prefix = this.props.prefix
-        const value = this.props.value
+        const value = this.state.value
         return <div className={prefix+'-check-list'+this.props.className}>
             <div className={prefix+'-check-list-name'}>
                 {this.props.name}

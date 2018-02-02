@@ -51,10 +51,9 @@ var CheckList = function (_React$Component) {
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = CheckList.__proto__ || (0, _getPrototypeOf2.default)(CheckList)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             value: []
-        }, _this.componentWillMount = function () {
-            _this.setState({
-                value: _this.props.value
-            });
+        }, _this.componentWillReceiveProps = function (nextProps) {
+            var value = nextProps.value;
+            value && _this.setState({ value: value });
         }, _this.onOptionClick = function (item) {
             var value = _this.state.value;
             var index = value.indexOf(item);
@@ -71,7 +70,7 @@ var CheckList = function (_React$Component) {
             _this.props.onChange(value);
         }, _this.render = function () {
             var prefix = _this.props.prefix;
-            var value = _this.props.value;
+            var value = _this.state.value;
             return _react2.default.createElement(
                 'div',
                 { className: prefix + '-check-list' + _this.props.className },
