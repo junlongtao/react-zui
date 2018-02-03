@@ -1,15 +1,24 @@
 
 import React from 'react'
+import {createForm} from 'rc-form'
 import BasePage from './BasePage'
-import {List, Tabs} from '../../build/packages'
+import {List, Button, Tabs, Message} from '../../build/packages'
 
-export default class ExamplePage extends React.Component {
+export default createForm()(class ExamplePage extends React.Component {
 
     static defaultProps = {
         rules: {
             mobile: [
                 {required: true, message: '请输入手机号码'},
                 {type: 'mobile'}
+            ],
+            password: [
+                {required: true},
+                {type: 'length', min: 6, max: 12}
+            ],
+            code: [
+                {required: true},
+                {type: 'length', len: 6}
             ]
         }
     }
@@ -18,17 +27,41 @@ export default class ExamplePage extends React.Component {
         startCountdown: false
     }
 
+    onSubmitClick = () => {
+        this.refs.form.validate().then(function(){
+            Message.info('输入数据校验通过')
+        })
+    }
+
     render = () => {
+        const {getFieldProps} = this.props.form
         return <BasePage title="表单">
             <Tabs activeIndex={0}>
                 <Tabs.TabPane name="InputItem">
-                    <List ref="form" rules={this.props.rules}>
+                    <List ref="form" form={this.props.form} rules={this.props.rules}>
                         <List.Header>
                             输入框
                         </List.Header>
-                        <List.InputItem type="tel" value="" placeholder="请输入手机号码">
+                        <List.InputItem 
+                            type="tel" 
+                            placeholder="请输入手机号码"
+                            {...getFieldProps('mobile')}
+                        >
                             手机号码
                         </List.InputItem>
+                        <List.InputItem 
+                            placeholder="请输入登录密码"
+                            {...getFieldProps('password')}
+                        >
+                            登录密码
+                        </List.InputItem>
+                        <List.InputItem 
+                            placeholder="请输入验证码"
+                            {...getFieldProps('code')}
+                        >
+                            验证码
+                        </List.InputItem>
+                        <Button padding="10px" onClick={this.onSubmitClick}>登录</Button>
 
                         <List.Header>
                             使用说明
@@ -616,4 +649,4 @@ export default class Example extends React.Component {
             </Tabs>
         </BasePage>
     }
-}
+})

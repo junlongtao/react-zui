@@ -12,6 +12,7 @@ import CityPicker from './CityPicker'
 import DatePicker from './DatePicker'
 import MonthPicker from './MonthPicker'
 import OptionPicker from './OptionPicker'
+import Message from './Message'
 
 class Header extends React.Component {
     static defaultProps = {
@@ -224,7 +225,7 @@ class InputItem extends React.Component {
                     type={this.props.type}
                     value={this.state.value}
                     placeholder={this.props.placeholder}
-                    onChange={(e)=>{
+                    onChange={e => {
                         this.setState({value: e.target.value})
                         this.props.onChange(e.target.value)
                     }}
@@ -787,33 +788,59 @@ class RaterItem extends React.Component {
 
 class List extends React.Component {
     static defaultProps = {
+        form: {},
         style: {},
+        rules: {},
         className: '',
         prefix: 'zui',
-        rules: {},
         defaultMessage: '抱歉，您的输入有误'
     }
 
     validate(){
         const form = this.props.form
         const rules = this.props.rules
-        const defaultMessage = this.props.defaultMessage
-        const promise = Promise.resolve()
 
+        let formValid = true
         for(let i in rules){
-            promise.then(function(){
-                rules[i].map(item=>{
-                    if(item.required && !form.getFieldValue(i)){ 
-                        reject(item.message)
-                    }
-                })
-            })
+            let valid = true
+            const value = form.getFieldValue(i)
+            for(let j in rules[i]){
+                const item = rules[i][j]
+                if(item.required && !value){ 
+                    Message.info(item.message||`${i}不能为空`)
+                    valid = false
+                }
+                if(item.type==='mobile' && !/^1[34578]\d{9}$/.test(value)){
+                    Message.info(item.message||'手机号格式错误')
+                    valid = false
+                }
+                if(item.type==='length' && item.min && value.length<item.min){
+                    Message.info(item.message||`${i}不能少于${item.min}个字符`)
+                    valid = false
+                }
+                if(item.type==='length' && item.max && value.length>item.max){
+                    Message.info(item.message||`${i}不能多于${item.max}个字符`)
+                    valid = false
+                }
+                if(item.type==='length' && item.len && value.length!==item.len){
+                    Message.info(item.message||`${i}只能包含${item.len}个字符`)
+                    valid = false
+                }
+                if(item.type==='email' && !/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(value)){
+                    Message.info(item.message||'邮箱格式错误')
+                    valid = false
+                }
+                if(!valid){
+                    break
+                }
+            }
+            if(!valid){
+                formValid = false
+                break
+            }
         }
 
-        promise.catch(function(err){
-            Message.info(err||defaultMessage)
-        })
-        return promise
+        return formValid?Promise.resolve():Promise.reject()
     }
 
     render = () => {

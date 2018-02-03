@@ -74,6 +74,10 @@ var _OptionPicker = require('./OptionPicker');
 
 var _OptionPicker2 = _interopRequireDefault(_OptionPicker);
 
+var _Message = require('./Message');
+
+var _Message2 = _interopRequireDefault(_Message);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = function (_React$Component) {
@@ -1257,37 +1261,59 @@ var List = function (_React$Component19) {
         value: function validate() {
             var form = this.props.form;
             var rules = this.props.rules;
-            var defaultMessage = this.props.defaultMessage;
-            var promise = _promise2.default.resolve();
 
-            var _loop = function _loop(i) {
-                promise.then(function () {
-                    rules[i].map(function (item) {
-                        if (item.required && !form.getFieldValue(i)) {
-                            reject(item.message);
-                        }
-                    });
-                });
-            };
-
+            var formValid = true;
             for (var i in rules) {
-                _loop(i);
+                var valid = true;
+                var value = form.getFieldValue(i);
+                for (var j in rules[i]) {
+                    var item = rules[i][j];
+                    if (item.required && !value) {
+                        _Message2.default.info(item.message || i + '\u4E0D\u80FD\u4E3A\u7A7A');
+                        valid = false;
+                    }
+                    if (item.type === 'mobile' && !/^1[34578]\d{9}$/.test(value)) {
+                        _Message2.default.info(item.message || '手机号格式错误');
+                        valid = false;
+                    }
+                    if (item.type === 'length' && item.min && value.length < item.min) {
+                        _Message2.default.info(item.message || i + '\u4E0D\u80FD\u5C11\u4E8E' + item.min + '\u4E2A\u5B57\u7B26');
+                        valid = false;
+                    }
+                    if (item.type === 'length' && item.max && value.length > item.max) {
+                        _Message2.default.info(item.message || i + '\u4E0D\u80FD\u591A\u4E8E' + item.max + '\u4E2A\u5B57\u7B26');
+                        valid = false;
+                    }
+                    if (item.type === 'length' && item.len && value.length !== item.len) {
+                        _Message2.default.info(item.message || i + '\u53EA\u80FD\u5305\u542B' + item.len + '\u4E2A\u5B57\u7B26');
+                        valid = false;
+                    }
+                    if (item.type === 'email' && !/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(value)) {
+                        _Message2.default.info(item.message || '邮箱格式错误');
+                        valid = false;
+                    }
+                    if (!valid) {
+                        break;
+                    }
+                }
+                if (!valid) {
+                    formValid = false;
+                    break;
+                }
             }
 
-            promise.catch(function (err) {
-                Message.info(err || defaultMessage);
-            });
-            return promise;
+            return formValid ? _promise2.default.resolve() : _promise2.default.reject();
         }
     }]);
     return List;
 }(_react2.default.Component);
 
 List.defaultProps = {
+    form: {},
     style: {},
+    rules: {},
     className: '',
     prefix: 'zui',
-    rules: {},
     defaultMessage: '抱歉，您的输入有误'
 };
 
