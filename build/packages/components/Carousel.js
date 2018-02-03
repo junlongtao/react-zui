@@ -121,6 +121,7 @@ var Carousel = function (_React$Component2) {
             _this2.startX = e.targetTouches[0].pageX;
         }, _this2.onTouchMove = function (e) {
             _this2.endX = e.targetTouches[0].pageX;
+            e.preventDefault();
         }, _this2.onTouchEnd = function (e) {
             var distanceX = _this2.endX - _this2.startX;
             if (distanceX < -30) {

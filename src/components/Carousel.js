@@ -73,11 +73,12 @@ class Carousel extends React.Component {
     }
 
     onTouchStart = e => { 
-        this.startX = e.targetTouches[0].pageX; 
+        this.startX = e.targetTouches[0].pageX
     }
 
     onTouchMove = e => {
-        this.endX = e.targetTouches[0].pageX; 
+        this.endX = e.targetTouches[0].pageX
+        e.preventDefault()
     }
 
     onTouchEnd = e => {

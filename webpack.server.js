@@ -12,13 +12,14 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
     }, function () {
         server.close()
 
-        config.entry.index.unshift("webpack-dev-server/client?http://localhost:" + port);
-        config.plugins.push(new OpenBrowserPlugin({url: 'http://localhost:' + port})); 
+        const url = "http://zui.zhichou.com:" + port
+        config.entry.index.unshift("webpack-dev-server/client?"+url);
+        config.plugins.push(new OpenBrowserPlugin({url: url})); 
         var webpackDevServer = new WebpackDevServer(webpack(config), {
             contentBase: 'build/docs',
         });
-        webpackDevServer.listen(port);
-        console.log('webpack-dev-server started, listenning at http://localhost:' + port, 'opening browser... ... please wait... ...')
+        webpackDevServer.listen(port, 'zui.zhichou.com');
+        console.log('webpack-dev-server started, listenning at '+url, 'opening browser... ... please wait... ...')
     })
     server.on('error', function(err){
         if(err.code=='EADDRINUSE'){
