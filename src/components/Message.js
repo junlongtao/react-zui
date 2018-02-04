@@ -18,7 +18,7 @@ class Message extends React.Component {
 }
 
 Message.info = (text, time, callback) => {
-    clearTimeout(window.messageTimeout)
+    clearTimeout(window.msgInfoTimer)
 
     let message = document.getElementById('message-div')
     if (!message) {
@@ -30,7 +30,7 @@ Message.info = (text, time, callback) => {
         <Message>{text}</Message>,
         message
     )
-    window.messageTimeout = setTimeout(()=> {
+    window.msgInfoTimer = setTimeout(()=> {
         const message = document.getElementById('message-div')
         message && document.body.removeChild(message)
         if(callback){
@@ -45,8 +45,6 @@ Message.loading = function(visible=true){
         message && document.body.removeChild(message)
         return false
     }
-
-    clearTimeout(window.messageTimeout)
 
     let message = document.getElementById('loading-div')
     if (!message) {

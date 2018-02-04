@@ -69,7 +69,7 @@ Message.defaultProps = {
 
 
 Message.info = function (text, time, callback) {
-    clearTimeout(window.messageTimeout);
+    clearTimeout(window.msgInfoTimer);
 
     var message = document.getElementById('message-div');
     if (!message) {
@@ -82,7 +82,7 @@ Message.info = function (text, time, callback) {
         null,
         text
     ), message);
-    window.messageTimeout = setTimeout(function () {
+    window.msgInfoTimer = setTimeout(function () {
         var message = document.getElementById('message-div');
         message && document.body.removeChild(message);
         if (callback) {
@@ -99,8 +99,6 @@ Message.loading = function () {
         _message && document.body.removeChild(_message);
         return false;
     }
-
-    clearTimeout(window.messageTimeout);
 
     var message = document.getElementById('loading-div');
     if (!message) {
