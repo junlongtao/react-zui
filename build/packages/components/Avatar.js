@@ -78,15 +78,25 @@ var Avatar = function (_React$Component) {
     }
 
     (0, _createClass3.default)(Avatar, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.renderExamSrc(this.props.src);
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            this.renderExamSrc(nextProps.src);
+        }
+    }, {
+        key: 'renderExamSrc',
+        value: function renderExamSrc(src) {
             var _this2 = this;
 
             var img = document.createElement('img');
             img.onload = function () {
-                _this2.setState({ src: _this2.props.src });
+                _this2.setState({ src: src });
             };
-            img.src = this.props.src;
+            img.src = src;
             img.style = 'opacity: 0;';
             document.body.appendChild(img);
         }

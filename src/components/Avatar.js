@@ -25,14 +25,22 @@ export default class Avatar extends React.Component {
         src: ''
     }
 
-    componentWillMount(){
+    componentDidMount(){
+        this.renderExamSrc(this.props.src)
+    }
+
+    componentWillReceiveProps(nextProps){
+        this.renderExamSrc(nextProps.src)
+    }
+
+    renderExamSrc(src){
         const img = document.createElement('img')
         img.onload = () => {
-            this.setState({src: this.props.src})
+            this.setState({src: src})
         }
-        img.src = this.props.src
+        img.src = src
         img.style = 'opacity: 0;'
-        document.body.appendChild(img) 
+        document.body.appendChild(img)
     }
 
     renderSrc = () => {

@@ -13,7 +13,7 @@ export default class ExamplePage extends React.Component {
                     头像加载成功,正常显示图片
                     </List.Item>
                 <List.Item extra={
-                    <Avatar src="Unknown img src" width="60px"/>
+                    <Avatar src="Unkown img src" width="60px"/>
                 }>
                     头像加载失败,显示默认头像
                 </List.Item>
