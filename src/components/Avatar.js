@@ -37,6 +37,10 @@ export default class Avatar extends React.Component {
         const img = document.createElement('img')
         img.onload = () => {
             this.setState({src: src})
+            document.body.removeChild(img)
+        }
+        img.onerror = function(){
+            document.body.removeChild(img)
         }
         img.src = src
         img.style = 'opacity: 0;'

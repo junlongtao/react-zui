@@ -95,6 +95,10 @@ var Avatar = function (_React$Component) {
             var img = document.createElement('img');
             img.onload = function () {
                 _this2.setState({ src: src });
+                document.body.removeChild(img);
+            };
+            img.onerror = function () {
+                document.body.removeChild(img);
             };
             img.src = src;
             img.style = 'opacity: 0;';
