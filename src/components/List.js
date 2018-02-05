@@ -796,12 +796,16 @@ class List extends React.Component {
         defaultMessage: '抱歉，您的输入有误'
     }
 
-    validate(){
+    validate(field){
         const form = this.props.form
         const rules = this.props.rules
 
         let formValid = true
         for(let i in rules){
+            if(field && i!==field){
+                continue
+            }
+            
             let valid = true
             const value = form.getFieldValue(i)
             for(let j in rules[i]){

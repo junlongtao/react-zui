@@ -1258,12 +1258,16 @@ var List = function (_React$Component19) {
 
     (0, _createClass3.default)(List, [{
         key: 'validate',
-        value: function validate() {
+        value: function validate(field) {
             var form = this.props.form;
             var rules = this.props.rules;
 
             var formValid = true;
             for (var i in rules) {
+                if (field && i !== field) {
+                    continue;
+                }
+
                 var valid = true;
                 var value = form.getFieldValue(i);
                 for (var j in rules[i]) {

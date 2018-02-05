@@ -33,6 +33,12 @@ export default createForm()(class ExamplePage extends React.Component {
         })
     }
 
+    onVerifyClick = () => {
+        this.refs.form.validate('mobile').then(function(){
+            Message.info('手机号校验通过')
+        })
+    }
+
     render = () => {
         const {getFieldProps} = this.props.form
         return <BasePage title="表单">
@@ -62,6 +68,7 @@ export default createForm()(class ExamplePage extends React.Component {
                             验证码
                         </List.InputItem>
                         <Button padding="10px" onClick={this.onSubmitClick}>登录</Button>
+                        <Button padding="0 10px" onClick={this.onVerifyClick}>只验证手机号</Button>
 
                         <List.Header>
                             使用说明
