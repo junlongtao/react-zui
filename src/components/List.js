@@ -805,13 +805,17 @@ class List extends React.Component {
             if(field && i!==field){
                 continue
             }
-            
+
             let valid = true
             const value = form.getFieldValue(i)
             for(let j in rules[i]){
                 const item = rules[i][j]
-                if(item.required && !value){ 
+                if(item.required && !(value instanceof Array) && !value){ 
                     Message.info(item.message||`${i}不能为空`)
+                    valid = false
+                }
+                if(item.required && value instanceof Array && value.length===0){ 
+                    Message.info(item.message||`${i}至少选择一项`)
                     valid = false
                 }
                 if(item.type==='mobile' && !/^1[34578]\d{9}$/.test(value)){

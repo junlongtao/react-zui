@@ -1272,8 +1272,12 @@ var List = function (_React$Component19) {
                 var value = form.getFieldValue(i);
                 for (var j in rules[i]) {
                     var item = rules[i][j];
-                    if (item.required && !value) {
+                    if (item.required && !(value instanceof Array) && !value) {
                         _Message2.default.info(item.message || i + '\u4E0D\u80FD\u4E3A\u7A7A');
+                        valid = false;
+                    }
+                    if (item.required && value instanceof Array && value.length === 0) {
+                        _Message2.default.info(item.message || i + '\u81F3\u5C11\u9009\u62E9\u4E00\u9879');
                         valid = false;
                     }
                     if (item.type === 'mobile' && !/^1[34578]\d{9}$/.test(value)) {
