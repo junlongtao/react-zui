@@ -1310,7 +1310,6 @@ var List = function (_React$Component19) {
                 }
             }
 
-            return formValid;
             return formValid ? _promise2.default.resolve() : _promise2.default.reject();
         }
     }]);

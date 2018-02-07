@@ -848,7 +848,6 @@ class List extends React.Component {
             }
         }
 
-        return formValid
         return formValid?Promise.resolve():Promise.reject()
     }
 
