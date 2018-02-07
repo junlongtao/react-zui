@@ -53,7 +53,7 @@ var CarouselItem = function (_React$Component) {
                 { className: prefix + '-carousel-item ' + className, style: {
                         width: document.body.clientWidth,
                         maxWidth: _this.props.width
-                    } },
+                    }, onClick: _this.props.onClick },
                 _this.props.children
             );
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
@@ -66,7 +66,8 @@ CarouselItem.defaultProps = {
     prefix: 'zui',
     width: 'auto',
     height: 'auto',
-    className: ''
+    className: '',
+    onClick: function onClick() {}
 };
 
 var Carousel = function (_React$Component2) {
@@ -88,11 +89,19 @@ var Carousel = function (_React$Component2) {
             activeIndex: 0,
             transition: 'left .5s ease'
         }, _this2.componentDidMount = function () {
-            _this2.slideToIndex(_this2.props.activeIndex || 1, 'none');
+            var children = _react2.default.Children.toArray(_this2.props.children);
+            var index = _this2.props.activeIndex || 1;
+            index = index > children.length ? children.length : index;
+            _this2.slideToIndex(index, 'none');
         }, _this2.componentWillUnmount = function () {
             clearInterval(_this2.intervalId);
         }, _this2.slideToIndex = function (index) {
             var transition = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'left ' + _this2.props.interval + 's ease';
+
+            var children = _react2.default.Children.toArray(_this2.props.children);
+            if (children.length <= 1) {
+                return false;
+            }
 
             var left = 0;
             var items = _this2.refs.carousel.childNodes;
@@ -131,7 +140,7 @@ var Carousel = function (_React$Component2) {
             }
         }, _this2.render = function () {
             var prefix = _this2.props.prefix;
-            var children = _this2.props.children;
+            var children = _react2.default.Children.toArray(_this2.props.children);
             var className = _this2.props.className;
             var activeIndex = _this2.state.activeIndex;
             return _react2.default.createElement(
@@ -147,11 +156,11 @@ var Carousel = function (_React$Component2) {
                             left: _this2.state.left,
                             transition: _this2.state.transition
                         }, onTouchStart: _this2.onTouchStart, onTouchMove: _this2.onTouchMove, onTouchEnd: _this2.onTouchEnd },
-                    children[children.length - 1],
+                    children.length > 1 && children[children.length - 1],
                     children.map(function (item, key) {
                         return _react2.default.createElement(
                             Carousel.Item,
-                            { key: key, className: item.props.className, width: _this2.props.width },
+                            { key: key, className: item.props.className, width: _this2.props.width, onClick: item.props.onClick },
                             item.props.children
                         );
                     }),

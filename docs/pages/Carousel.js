@@ -2,7 +2,7 @@
 import './less/carousel.less'
 import React from 'react'
 import BasePage from './BasePage'
-import {List, Carousel, Button} from '../../build/packages'
+import {List, Carousel, Button, Message} from '../../build/packages'
 import Carousel1 from './img/carousel1.jpg'
 import Carousel2 from './img/carousel2.jpg'
 import Carousel3 from './img/carousel3.jpg'
@@ -19,7 +19,9 @@ export default class ExamplePage extends React.Component {
     render = () => {
         return <BasePage title="轮播图">
             <Carousel width="400px" height="175px" activeIndex={this.state.index} onChange={index=>this.setState({index: index})}>
-                <Carousel.Item>
+                <Carousel.Item onClick={function(){
+                    Message.info('click item one')
+                }}>
                     <img src={Carousel1}/>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -52,11 +54,13 @@ export default class ExamplePage extends React.Component {
                 <List.PreItem>
                     {`
 import React from 'react'
-import {Carousel} from "react-zui"
+import {Carousel, Message} from "react-zui"
 export default class Example extends React.Component {
     render = () => {
         return <Carousel>
-            <Carousel.Item>
+            <Carousel.Item onClick={function(){
+                Message.info('click item one')
+            }}>
                 <img src={Carousel1}/>
             </Carousel.Item>
             <Carousel.Item>
@@ -99,6 +103,9 @@ export default class Example extends React.Component {
                 </List.Header>
                 <List.Item extra="activeIndex改变时的回调">
                     onChange(activeIndex)
+                </List.Item>
+                <List.Item extra="Carousel.Item的点击事件">
+                    Carousel.Item.onClick(e)
                 </List.Item>
             </List>
         </BasePage>

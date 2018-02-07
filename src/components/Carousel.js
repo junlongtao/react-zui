@@ -11,7 +11,8 @@ class CarouselItem extends React.Component{
         prefix: 'zui',
         width: 'auto',
         height: 'auto',
-        className: ''
+        className: '',
+        onClick(){}
     }
 
     render = () => {
@@ -20,7 +21,7 @@ class CarouselItem extends React.Component{
         return <div className={prefix+'-carousel-item '+className} style={{
             width: document.body.clientWidth,
             maxWidth: this.props.width
-        }}>
+        }} onClick={this.props.onClick}>
             {this.props.children}
         </div>
     }
@@ -43,7 +44,10 @@ class Carousel extends React.Component {
     }   
 
     componentDidMount = () => {
-        this.slideToIndex(this.props.activeIndex||1, 'none')
+        let children = React.Children.toArray(this.props.children)
+        let index = this.props.activeIndex||1
+        index = index>children.length?children.length:index
+        this.slideToIndex(index, 'none')
     }
 
     componentWillUnmount = () => {
@@ -51,6 +55,11 @@ class Carousel extends React.Component {
     } 
 
     slideToIndex = (index, transition=('left '+this.props.interval+'s ease')) => {
+        const children = React.Children.toArray(this.props.children)
+        if(children.length<=1){
+            return false
+        }
+
         let left = 0
         const items = this.refs.carousel.childNodes
         Array.prototype.slice.call(items, 0, index).map((item, key)=>{
@@ -92,7 +101,7 @@ class Carousel extends React.Component {
 
     render = () => {
         const prefix = this.props.prefix  
-        const children = this.props.children
+        const children = React.Children.toArray(this.props.children)
         const className = this.props.className
         const activeIndex = this.state.activeIndex 
         return <div className={prefix+'-carousel '+className} style={{ 
@@ -104,9 +113,9 @@ class Carousel extends React.Component {
                 left: this.state.left,
                 transition: this.state.transition
             }} onTouchStart={this.onTouchStart} onTouchMove={this.onTouchMove} onTouchEnd={this.onTouchEnd}>
-                {children[children.length-1]}
+                {children.length>1 && children[children.length-1]}
                 {children.map((item, key)=>{
-                    return <Carousel.Item key={key} className={item.props.className} width={this.props.width}>
+                    return <Carousel.Item key={key} className={item.props.className} width={this.props.width} onClick={item.props.onClick}>
                         {item.props.children}
                     </Carousel.Item>
                 })}
