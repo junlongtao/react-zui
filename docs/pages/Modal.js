@@ -1,7 +1,7 @@
 
 import React from 'react'
 import BasePage from './BasePage'
-import {List, Button, Modal} from '../../build/packages'
+import {List, Button, Modal, Message} from '../../build/packages'
 
 export default class ExamplePage extends React.Component {
     state = {}
@@ -26,7 +26,9 @@ export default class ExamplePage extends React.Component {
                         公司介绍
                     </List.TextAreaItem>
                 </List>
-                <Button padding="10px">提交, 立即开聊</Button>
+                <Button padding="10px" onClick={()=>{
+                    Message.info('提交表单')
+                }}>提交, 立即开聊</Button>
             </Modal>
 
             <List>

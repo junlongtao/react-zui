@@ -2,16 +2,17 @@
 
 .@{prefix}-message {
     color: #fff;
-    padding: 10px 20px;
     font-size: 14px;
     line-height: 20px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
     top: 50%;
     left: 50%;
+    z-index: 2;
     position: fixed;
-    transform: translate(-50%, -50%);
+    padding: 10px 20px;
     border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
 
     animation: messageFadeIn .5s ease;
     @keyframes messageFadeIn {
