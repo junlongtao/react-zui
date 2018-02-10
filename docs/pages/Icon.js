@@ -23,6 +23,9 @@ export default class ExamplePage extends React.Component {
                 <Icon type="identity"/>
                 <Icon type="invoice"/>
                 <Icon type="job"/>
+                <Icon type="girl"/>
+                <Icon type="boy"/>
+                <Icon type="report"/>
             </div>
             <List>
                 <List.Header>
