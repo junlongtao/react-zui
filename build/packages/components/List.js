@@ -1280,25 +1280,27 @@ var List = function (_React$Component19) {
                         _Message2.default.info(item.message || i + '\u81F3\u5C11\u9009\u62E9\u4E00\u9879');
                         valid = false;
                     }
-                    if (item.type === 'mobile' && !/^1[34578]\d{9}$/.test(value)) {
-                        _Message2.default.info(item.message || '手机号格式错误');
-                        valid = false;
-                    }
-                    if (item.type === 'length' && item.min && value.length < item.min) {
-                        _Message2.default.info(item.message || i + '\u4E0D\u80FD\u5C11\u4E8E' + item.min + '\u4E2A\u5B57\u7B26');
-                        valid = false;
-                    }
-                    if (item.type === 'length' && item.max && value.length > item.max) {
-                        _Message2.default.info(item.message || i + '\u4E0D\u80FD\u591A\u4E8E' + item.max + '\u4E2A\u5B57\u7B26');
-                        valid = false;
-                    }
-                    if (item.type === 'length' && item.len && value.length !== item.len) {
-                        _Message2.default.info(item.message || i + '\u53EA\u80FD\u5305\u542B' + item.len + '\u4E2A\u5B57\u7B26');
-                        valid = false;
-                    }
-                    if (item.type === 'email' && !/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(value)) {
-                        _Message2.default.info(item.message || '邮箱格式错误');
-                        valid = false;
+                    if (value) {
+                        if (item.type === 'mobile' && !/^1[34578]\d{9}$/.test(value)) {
+                            _Message2.default.info(item.message || '手机号格式错误');
+                            valid = false;
+                        }
+                        if (item.type === 'length' && item.min && value.length < item.min) {
+                            _Message2.default.info(item.message || i + '\u4E0D\u80FD\u5C11\u4E8E' + item.min + '\u4E2A\u5B57\u7B26');
+                            valid = false;
+                        }
+                        if (item.type === 'length' && item.max && value.length > item.max) {
+                            _Message2.default.info(item.message || i + '\u4E0D\u80FD\u591A\u4E8E' + item.max + '\u4E2A\u5B57\u7B26');
+                            valid = false;
+                        }
+                        if (item.type === 'length' && item.len && value.length !== item.len) {
+                            _Message2.default.info(item.message || i + '\u53EA\u80FD\u5305\u542B' + item.len + '\u4E2A\u5B57\u7B26');
+                            valid = false;
+                        }
+                        if (item.type === 'email' && !/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(value)) {
+                            _Message2.default.info(item.message || '邮箱格式错误');
+                            valid = false;
+                        }
                     }
                     if (!valid) {
                         break;

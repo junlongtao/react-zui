@@ -818,25 +818,27 @@ class List extends React.Component {
                     Message.info(item.message||`${i}至少选择一项`)
                     valid = false
                 }
-                if(item.type==='mobile' && !/^1[34578]\d{9}$/.test(value)){
-                    Message.info(item.message||'手机号格式错误')
-                    valid = false
-                }
-                if(item.type==='length' && item.min && value.length<item.min){
-                    Message.info(item.message||`${i}不能少于${item.min}个字符`)
-                    valid = false
-                }
-                if(item.type==='length' && item.max && value.length>item.max){
-                    Message.info(item.message||`${i}不能多于${item.max}个字符`)
-                    valid = false
-                }
-                if(item.type==='length' && item.len && value.length!==item.len){
-                    Message.info(item.message||`${i}只能包含${item.len}个字符`)
-                    valid = false
-                }
-                if(item.type==='email' && !/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(value)){
-                    Message.info(item.message||'邮箱格式错误')
-                    valid = false
+                if(value){
+                    if(item.type==='mobile' && !/^1[34578]\d{9}$/.test(value)){
+                        Message.info(item.message||'手机号格式错误')
+                        valid = false
+                    }
+                    if(item.type==='length' && item.min && value.length<item.min){
+                        Message.info(item.message||`${i}不能少于${item.min}个字符`)
+                        valid = false
+                    }
+                    if(item.type==='length' && item.max && value.length>item.max){
+                        Message.info(item.message||`${i}不能多于${item.max}个字符`)
+                        valid = false
+                    }
+                    if(item.type==='length' && item.len && value.length!==item.len){
+                        Message.info(item.message||`${i}只能包含${item.len}个字符`)
+                        valid = false
+                    }
+                    if(item.type==='email' && !/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(value)){
+                        Message.info(item.message||'邮箱格式错误')
+                        valid = false
+                    }
                 }
                 if(!valid){
                     break

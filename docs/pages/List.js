@@ -20,8 +20,11 @@ export default createForm()(class ExamplePage extends React.Component {
                 {required: true},
                 {type: 'length', len: 6}
             ],
-            city: [
+            position: [
                 {required: true},
+            ],
+            email: [
+                {type: 'email'}
             ]
         }   
     }
@@ -70,14 +73,18 @@ export default createForm()(class ExamplePage extends React.Component {
                         >
                             验证码
                         </List.InputItem>
+                        <List.InputItem 
+                            placeholder="请输入邮箱"
+                            {...getFieldProps('email')}
+                        >
+                            邮箱(选填)
+                        </List.InputItem>
                         <List.Item>
                             <CheckList
                                 max={2}
                                 name="人才期望职位（最多同时选择2个）"
                                 data={['销售','JAVA','PHP','其他']}
-                                {...getFieldProps('city', {
-                                    initialValue: this.state.city
-                                })}/>
+                                {...getFieldProps('position')}/>
                         </List.Item>
                         <Button padding="10px" onClick={this.onSubmitClick}>登录</Button>
                         <Button padding="0 10px" onClick={this.onVerifyClick}>只验证手机号</Button>
