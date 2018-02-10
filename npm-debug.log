@@ -1,0 +1,1194 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/taojunlong/.nvm/versions/node/v9.3.0/bin/node',
+1 verbose cli   '/usr/local/lib/node_modules/cnpm/node_modules/.bin/npm',
+1 verbose cli   '--userconfig=/Users/taojunlong/.cnpmrc',
+1 verbose cli   '--disturl=https://npm.taobao.org/mirrors/node',
+1 verbose cli   '--cache=/Users/taojunlong/.cnpm',
+1 verbose cli   '--registry=https://registry.npm.taobao.org',
+1 verbose cli   '--node-gyp=/usr/local/lib/node_modules/cnpm/node_modules/node-gyp/bin/node-gyp.js',
+1 verbose cli   'install',
+1 verbose cli   'react-zui' ]
+2 info using npm@2.14.15
+3 info using node@v9.3.0
+4 verbose install initial load of /Users/taojunlong/www/react-zui/package.json
+5 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/abab/package.json
+6 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/accepts/package.json
+7 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/acorn/package.json
+8 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/acorn-dynamic-import/package.json
+9 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/acorn-globals/package.json
+10 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/acorn-jsx/package.json
+11 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/address/package.json
+12 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ajv/package.json
+13 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ajv-keywords/package.json
+14 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/align-text/package.json
+15 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/alphanum-sort/package.json
+16 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/amdefine/package.json
+17 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/anser/package.json
+18 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ansi-escapes/package.json
+19 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ansi-html/package.json
+20 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ansi-regex/package.json
+21 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ansi-styles/package.json
+22 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/anymatch/package.json
+23 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/append-transform/package.json
+24 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/aproba/package.json
+25 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/archive-type/package.json
+26 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/argparse/package.json
+27 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/arr-diff/package.json
+28 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/arr-flatten/package.json
+29 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-differ/package.json
+30 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-equal/package.json
+31 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-filter/package.json
+32 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-find-index/package.json
+33 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-flatten/package.json
+34 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-includes/package.json
+35 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-map/package.json
+36 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-reduce/package.json
+37 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-union/package.json
+38 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-uniq/package.json
+39 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/array-unique/package.json
+40 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/arrify/package.json
+41 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/asap/package.json
+42 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/asn1/package.json
+43 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/asn1.js/package.json
+44 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/assert/package.json
+45 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/assert-plus/package.json
+46 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/async/package.json
+47 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/async-each/package.json
+48 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/async-each-series/package.json
+49 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/async-validator/package.json
+50 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/asynckit/package.json
+51 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/autoprefixer/package.json
+52 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/aws-sign2/package.json
+53 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/aws4/package.json
+54 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-cli/package.json
+55 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-code-frame/package.json
+56 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-core/package.json
+57 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-generator/package.json
+58 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-bindify-decorators/package.json
+59 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-builder-binary-assignment-operator-visitor/package.json
+60 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-builder-react-jsx/package.json
+61 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-call-delegate/package.json
+62 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-define-map/package.json
+63 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-explode-assignable-expression/package.json
+64 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-explode-class/package.json
+65 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-function-name/package.json
+66 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-get-function-arity/package.json
+67 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-hoist-variables/package.json
+68 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-optimise-call-expression/package.json
+69 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-regex/package.json
+70 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-remap-async-to-generator/package.json
+71 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helper-replace-supers/package.json
+72 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-helpers/package.json
+73 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-jest/package.json
+74 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-loader/package.json
+75 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-messages/package.json
+76 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-check-es2015-constants/package.json
+77 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-istanbul/package.json
+78 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-jest-hoist/package.json
+79 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-react-transform/package.json
+80 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-async-functions/package.json
+81 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-async-generators/package.json
+82 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-class-constructor-call/package.json
+83 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-class-properties/package.json
+84 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-decorators/package.json
+85 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-do-expressions/package.json
+86 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-dynamic-import/package.json
+87 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-exponentiation-operator/package.json
+88 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-export-extensions/package.json
+89 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-flow/package.json
+90 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-function-bind/package.json
+91 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-jsx/package.json
+92 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-object-rest-spread/package.json
+93 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-syntax-trailing-function-commas/package.json
+94 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-async-generator-functions/package.json
+95 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-async-to-generator/package.json
+96 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-class-constructor-call/package.json
+97 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-class-properties/package.json
+98 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-decorators/package.json
+99 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-decorators-legacy/package.json
+100 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-do-expressions/package.json
+101 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-arrow-functions/package.json
+102 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-block-scoped-functions/package.json
+103 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-block-scoping/package.json
+104 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-classes/package.json
+105 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-computed-properties/package.json
+106 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-destructuring/package.json
+107 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-duplicate-keys/package.json
+108 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-for-of/package.json
+109 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-function-name/package.json
+110 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-literals/package.json
+111 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-modules-amd/package.json
+112 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-modules-commonjs/package.json
+113 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-modules-systemjs/package.json
+114 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-modules-umd/package.json
+115 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-object-super/package.json
+116 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-parameters/package.json
+117 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-shorthand-properties/package.json
+118 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-spread/package.json
+119 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-sticky-regex/package.json
+120 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-template-literals/package.json
+121 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-typeof-symbol/package.json
+122 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-es2015-unicode-regex/package.json
+123 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-exponentiation-operator/package.json
+124 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-export-extensions/package.json
+125 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-flow-strip-types/package.json
+126 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-function-bind/package.json
+127 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-object-rest-spread/package.json
+128 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-react-display-name/package.json
+129 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-react-jsx/package.json
+130 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-react-jsx-self/package.json
+131 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-react-jsx-source/package.json
+132 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-regenerator/package.json
+133 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-runtime/package.json
+134 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-plugin-transform-strict-mode/package.json
+135 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-polyfill/package.json
+136 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-env/package.json
+137 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-es2015/package.json
+138 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-flow/package.json
+139 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-jest/package.json
+140 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-react/package.json
+141 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-react-hmre/package.json
+142 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-stage-0/package.json
+143 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-stage-1/package.json
+144 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-stage-2/package.json
+145 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-preset-stage-3/package.json
+146 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-register/package.json
+147 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-runtime/package.json
+148 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-template/package.json
+149 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-traverse/package.json
+150 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babel-types/package.json
+151 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/babylon/package.json
+152 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/balanced-match/package.json
+153 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/base64-js/package.json
+154 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/batch/package.json
+155 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bcrypt-pbkdf/package.json
+156 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/beeper/package.json
+157 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/big.js/package.json
+158 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bin-build/package.json
+159 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bin-check/package.json
+160 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bin-version/package.json
+161 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bin-version-check/package.json
+162 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bin-wrapper/package.json
+163 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/binary-extensions/package.json
+164 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bl/package.json
+165 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bluebird/package.json
+166 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bn.js/package.json
+167 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/body-parser/package.json
+168 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bonjour/package.json
+169 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/boolbase/package.json
+170 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/boom/package.json
+171 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/brace-expansion/package.json
+172 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/braces/package.json
+173 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/brorand/package.json
+174 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/browser-resolve/package.json
+175 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/browserify-aes/package.json
+176 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/browserify-cipher/package.json
+177 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/browserify-des/package.json
+178 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/browserify-rsa/package.json
+179 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/browserify-sign/package.json
+180 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/browserify-zlib/package.json
+181 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/browserslist/package.json
+182 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bser/package.json
+183 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/buffer/package.json
+184 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/buffer-crc32/package.json
+185 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/buffer-indexof/package.json
+186 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/buffer-to-vinyl/package.json
+187 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/buffer-xor/package.json
+188 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/builtin-modules/package.json
+189 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/builtin-status-codes/package.json
+190 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/bytes/package.json
+191 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cacache/package.json
+192 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/caller-path/package.json
+193 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/callsites/package.json
+194 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/camel-case/package.json
+195 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/camelcase/package.json
+196 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/camelcase-keys/package.json
+197 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/caniuse-api/package.json
+198 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/caniuse-db/package.json
+199 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/caniuse-lite/package.json
+200 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/capture-stack-trace/package.json
+201 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/caseless/package.json
+202 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/caw/package.json
+203 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/center-align/package.json
+204 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/chain-function/package.json
+205 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/chalk/package.json
+206 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/chardet/package.json
+207 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/chinese-city-data/package.json
+208 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/chokidar/package.json
+209 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/chownr/package.json
+210 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ci-info/package.json
+211 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cipher-base/package.json
+212 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/circular-json/package.json
+213 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/clap/package.json
+214 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/classnames/package.json
+215 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/clean-css/package.json
+216 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cli-cursor/package.json
+217 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cli-width/package.json
+218 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/clone/package.json
+219 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/clone-stats/package.json
+220 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/co/package.json
+221 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/coa/package.json
+222 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/code-point-at/package.json
+223 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/color/package.json
+224 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/color-convert/package.json
+225 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/color-name/package.json
+226 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/color-string/package.json
+227 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/colormin/package.json
+228 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/colors/package.json
+229 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/combined-stream/package.json
+230 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/commander/package.json
+231 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/commondir/package.json
+232 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/compressible/package.json
+233 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/compression/package.json
+234 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/concat-map/package.json
+235 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/concat-stream/package.json
+236 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/connect-history-api-fallback/package.json
+237 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/console-browserify/package.json
+238 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/console-stream/package.json
+239 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/constants-browserify/package.json
+240 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/content-disposition/package.json
+241 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/content-type/package.json
+242 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/content-type-parser/package.json
+243 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/convert-source-map/package.json
+244 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cookie/package.json
+245 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cookie-signature/package.json
+246 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/copy-concurrently/package.json
+247 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/core-js/package.json
+248 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/core-util-is/package.json
+249 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/create-ecdh/package.json
+250 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/create-error-class/package.json
+251 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/create-hash/package.json
+252 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/create-hmac/package.json
+253 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/create-react-class/package.json
+254 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cross-spawn/package.json
+255 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cryptiles/package.json
+256 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/crypto-browserify/package.json
+257 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/css-color-names/package.json
+258 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/css-loader/package.json
+259 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/css-select/package.json
+260 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/css-selector-tokenizer/package.json
+261 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/css-what/package.json
+262 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cssesc/package.json
+263 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cssnano/package.json
+264 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/csso/package.json
+265 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cssom/package.json
+266 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cssstyle/package.json
+267 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/currently-unhandled/package.json
+268 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cwebp-bin/package.json
+269 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/cyclist/package.json
+270 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/d/package.json
+271 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dashdash/package.json
+272 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/date-now/package.json
+273 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dateformat/package.json
+274 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/debug/package.json
+275 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/decamelize/package.json
+276 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/decompress/package.json
+277 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/decompress-tar/package.json
+278 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/decompress-tarbz2/package.json
+279 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/decompress-targz/package.json
+280 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/decompress-unzip/package.json
+281 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/deep-equal/package.json
+282 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/deep-extend/package.json
+283 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/deep-is/package.json
+284 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/default-require-extensions/package.json
+285 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/define-properties/package.json
+286 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/defined/package.json
+287 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/del/package.json
+288 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/delayed-stream/package.json
+289 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/depd/package.json
+290 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/des.js/package.json
+291 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/destroy/package.json
+292 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/detect-indent/package.json
+293 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/detect-node/package.json
+294 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/detect-port-alt/package.json
+295 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/diff/package.json
+296 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/diffie-hellman/package.json
+297 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dns-equal/package.json
+298 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dns-packet/package.json
+299 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dns-txt/package.json
+300 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/doctrine/package.json
+301 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dom-converter/package.json
+302 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dom-helpers/package.json
+303 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dom-scroll-into-view/package.json
+304 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dom-serializer/package.json
+305 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/dom-walk/package.json
+306 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/domain-browser/package.json
+307 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/domelementtype/package.json
+308 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/domhandler/package.json
+309 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/domutils/package.json
+310 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/download/package.json
+311 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/duplexer/package.json
+312 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/duplexer2/package.json
+313 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/duplexify/package.json
+314 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/each-async/package.json
+315 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ecc-jsbn/package.json
+316 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ee-first/package.json
+317 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/electron-to-chromium/package.json
+318 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/elliptic/package.json
+319 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/emojis-list/package.json
+320 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/encodeurl/package.json
+321 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/encoding/package.json
+322 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/end-of-stream/package.json
+323 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/enhanced-resolve/package.json
+324 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/entities/package.json
+325 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/errno/package.json
+326 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/error-ex/package.json
+327 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/error-stack-parser/package.json
+328 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/es-abstract/package.json
+329 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/es-to-primitive/package.json
+330 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/es5-ext/package.json
+331 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/es6-iterator/package.json
+332 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/es6-map/package.json
+333 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/es6-set/package.json
+334 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/es6-symbol/package.json
+335 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/es6-weak-map/package.json
+336 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/escape-html/package.json
+337 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/escape-string-regexp/package.json
+338 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/escodegen/package.json
+339 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/escope/package.json
+340 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/eslint/package.json
+341 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/eslint-plugin-react/package.json
+342 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/eslint-scope/package.json
+343 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/espree/package.json
+344 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/esprima/package.json
+345 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/esquery/package.json
+346 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/esrecurse/package.json
+347 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/estraverse/package.json
+348 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/esutils/package.json
+349 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/etag/package.json
+350 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/event-emitter/package.json
+351 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/eventemitter3/package.json
+352 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/events/package.json
+353 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/eventsource/package.json
+354 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/evp_bytestokey/package.json
+355 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/exec-buffer/package.json
+356 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/exec-series/package.json
+357 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/exec-sh/package.json
+358 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/execa/package.json
+359 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/executable/package.json
+360 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/expand-brackets/package.json
+361 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/expand-range/package.json
+362 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/expand-tilde/package.json
+363 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/expect/package.json
+364 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/express/package.json
+365 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/extend/package.json
+366 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/extend-shallow/package.json
+367 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/external-editor/package.json
+368 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/extglob/package.json
+369 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/extract-text-webpack-plugin/package.json
+370 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/extsprintf/package.json
+371 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fancy-log/package.json
+372 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fast-deep-equal/package.json
+373 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fast-json-stable-stringify/package.json
+374 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fast-levenshtein/package.json
+375 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fastclick/package.json
+376 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fastparse/package.json
+377 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/faye-websocket/package.json
+378 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fb-watchman/package.json
+379 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fbjs/package.json
+380 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fd-slicer/package.json
+381 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/figures/package.json
+382 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/file-entry-cache/package.json
+383 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/file-loader/package.json
+384 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/file-type/package.json
+385 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/filename-regex/package.json
+386 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/filename-reserved-regex/package.json
+387 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/filenamify/package.json
+388 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fileset/package.json
+389 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/filesize/package.json
+390 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fill-range/package.json
+391 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/finalhandler/package.json
+392 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/find-cache-dir/package.json
+393 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/find-up/package.json
+394 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/find-versions/package.json
+395 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/first-chunk-stream/package.json
+396 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/flat-cache/package.json
+397 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/flatten/package.json
+398 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/flush-write-stream/package.json
+399 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/for-in/package.json
+400 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/for-own/package.json
+401 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/foreach/package.json
+402 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/forever-agent/package.json
+403 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/form-data/package.json
+404 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/forwarded/package.json
+405 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fresh/package.json
+406 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/from2/package.json
+407 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fs-readdir-recursive/package.json
+408 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fs-write-stream-atomic/package.json
+409 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fs.realpath/package.json
+410 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/fsevents/package.json
+411 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/function-bind/package.json
+412 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/functional-red-black-tree/package.json
+413 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/get-caller-file/package.json
+414 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/get-proxy/package.json
+415 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/get-stdin/package.json
+416 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/get-stream/package.json
+417 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/getpass/package.json
+418 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/gifsicle/package.json
+419 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/glob/package.json
+420 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/glob-base/package.json
+421 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/glob-parent/package.json
+422 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/glob-stream/package.json
+423 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/global/package.json
+424 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/global-modules/package.json
+425 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/global-prefix/package.json
+426 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/globals/package.json
+427 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/globby/package.json
+428 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/glogg/package.json
+429 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/got/package.json
+430 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/graceful-fs/package.json
+431 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/graceful-readlink/package.json
+432 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/growly/package.json
+433 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/gulp-decompress/package.json
+434 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/gulp-rename/package.json
+435 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/gulp-sourcemaps/package.json
+436 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/gulp-util/package.json
+437 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/gulplog/package.json
+438 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/gzip-size/package.json
+439 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/handle-thing/package.json
+440 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/handlebars/package.json
+441 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/har-schema/package.json
+442 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/har-validator/package.json
+443 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/has/package.json
+444 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/has-ansi/package.json
+445 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/has-flag/package.json
+446 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/has-gulplog/package.json
+447 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/hash-base/package.json
+448 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/hash.js/package.json
+449 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/hawk/package.json
+450 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/he/package.json
+451 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/history/package.json
+452 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/hmac-drbg/package.json
+453 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/hoek/package.json
+454 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/hoist-non-react-statics/package.json
+455 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/home-or-tmp/package.json
+456 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/homedir-polyfill/package.json
+457 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/hosted-git-info/package.json
+458 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/hpack.js/package.json
+459 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/html-comment-regex/package.json
+460 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/html-encoding-sniffer/package.json
+461 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/html-entities/package.json
+462 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/html-minifier/package.json
+463 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/html-webpack-plugin/package.json
+464 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/htmlparser2/package.json
+465 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/http-deceiver/package.json
+466 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/http-errors/package.json
+467 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/http-parser-js/package.json
+468 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/http-proxy/package.json
+469 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/http-proxy-middleware/package.json
+470 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/http-signature/package.json
+471 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/https-browserify/package.json
+472 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/iconv-lite/package.json
+473 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/icss-replace-symbols/package.json
+474 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ieee754/package.json
+475 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/iferr/package.json
+476 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ignore/package.json
+477 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/image-size/package.json
+478 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/image-webpack-loader/package.json
+479 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/imagemin/package.json
+480 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/imagemin-gifsicle/package.json
+481 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/imagemin-mozjpeg/package.json
+482 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/imagemin-optipng/package.json
+483 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/imagemin-pngquant/package.json
+484 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/imagemin-svgo/package.json
+485 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/imagemin-webp/package.json
+486 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/import-local/package.json
+487 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/imurmurhash/package.json
+488 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/indent-string/package.json
+489 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/indexes-of/package.json
+490 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/indexof/package.json
+491 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/inflight/package.json
+492 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/inherits/package.json
+493 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ini/package.json
+494 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/inquirer/package.json
+495 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/internal-ip/package.json
+496 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/interpret/package.json
+497 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/invariant/package.json
+498 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/invert-kv/package.json
+499 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ip/package.json
+500 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ip-regex/package.json
+501 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ipaddr.js/package.json
+502 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-absolute/package.json
+503 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-absolute-url/package.json
+504 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-arrayish/package.json
+505 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-arrow-function/package.json
+506 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-binary-path/package.json
+507 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-boolean-object/package.json
+508 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-buffer/package.json
+509 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-builtin-module/package.json
+510 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-bzip2/package.json
+511 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-callable/package.json
+512 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-ci/package.json
+513 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-cwebp-readable/package.json
+514 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-date-object/package.json
+515 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-dotfile/package.json
+516 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-equal/package.json
+517 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-equal-shallow/package.json
+518 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-extendable/package.json
+519 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-extglob/package.json
+520 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-finite/package.json
+521 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-fullwidth-code-point/package.json
+522 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-generator-function/package.json
+523 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-gif/package.json
+524 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-glob/package.json
+525 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-gzip/package.json
+526 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-jpg/package.json
+527 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-natural-number/package.json
+528 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-number/package.json
+529 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-number-object/package.json
+530 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-obj/package.json
+531 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-path-cwd/package.json
+532 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-path-in-cwd/package.json
+533 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-path-inside/package.json
+534 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-plain-obj/package.json
+535 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-png/package.json
+536 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-posix-bracket/package.json
+537 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-primitive/package.json
+538 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-promise/package.json
+539 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-redirect/package.json
+540 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-regex/package.json
+541 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-relative/package.json
+542 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-resolvable/package.json
+543 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-retry-allowed/package.json
+544 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-root/package.json
+545 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-stream/package.json
+546 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-string/package.json
+547 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-svg/package.json
+548 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-symbol/package.json
+549 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-tar/package.json
+550 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-typedarray/package.json
+551 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-url/package.json
+552 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-utf8/package.json
+553 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-valid-glob/package.json
+554 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-windows/package.json
+555 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-wsl/package.json
+556 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/is-zip/package.json
+557 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/isarray/package.json
+558 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/isexe/package.json
+559 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/isobject/package.json
+560 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/isomorphic-fetch/package.json
+561 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/isstream/package.json
+562 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/istanbul-api/package.json
+563 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/istanbul-lib-coverage/package.json
+564 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/istanbul-lib-hook/package.json
+565 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/istanbul-lib-instrument/package.json
+566 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/istanbul-lib-report/package.json
+567 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/istanbul-lib-source-maps/package.json
+568 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/istanbul-reports/package.json
+569 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest/package.json
+570 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-changed-files/package.json
+571 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-config/package.json
+572 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-diff/package.json
+573 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-environment-jsdom/package.json
+574 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-environment-node/package.json
+575 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-file-exists/package.json
+576 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-haste-map/package.json
+577 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-jasmine2/package.json
+578 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-matcher-utils/package.json
+579 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-matchers/package.json
+580 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-message-util/package.json
+581 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-mock/package.json
+582 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-regex-util/package.json
+583 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-resolve/package.json
+584 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-resolve-dependencies/package.json
+585 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-runtime/package.json
+586 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-snapshot/package.json
+587 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-util/package.json
+588 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jest-validate/package.json
+589 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jroll/package.json
+590 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/js-base64/package.json
+591 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/js-tokens/package.json
+592 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/js-yaml/package.json
+593 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jsbn/package.json
+594 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jsdom/package.json
+595 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jsesc/package.json
+596 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/json-loader/package.json
+597 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/json-schema/package.json
+598 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/json-schema-traverse/package.json
+599 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/json-stable-stringify/package.json
+600 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/json-stable-stringify-without-jsonify/package.json
+601 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/json-stringify-safe/package.json
+602 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/json3/package.json
+603 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/json5/package.json
+604 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jsonify/package.json
+605 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jsprim/package.json
+606 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/jsx-ast-utils/package.json
+607 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/killable/package.json
+608 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/kind-of/package.json
+609 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lazy-cache/package.json
+610 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lazy-req/package.json
+611 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lazystream/package.json
+612 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lcid/package.json
+613 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/less/package.json
+614 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/less-loader/package.json
+615 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/leven/package.json
+616 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/levn/package.json
+617 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/load-json-file/package.json
+618 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/loader-runner/package.json
+619 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/loader-utils/package.json
+620 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/locate-path/package.json
+621 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash/package.json
+622 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash-es/package.json
+623 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._basecopy/package.json
+624 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._basetostring/package.json
+625 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._basevalues/package.json
+626 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._createcompounder/package.json
+627 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._getnative/package.json
+628 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._isiterateecall/package.json
+629 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._reescape/package.json
+630 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._reevaluate/package.json
+631 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._reinterpolate/package.json
+632 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash._root/package.json
+633 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.camelcase/package.json
+634 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.deburr/package.json
+635 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.escape/package.json
+636 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.isarguments/package.json
+637 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.isarray/package.json
+638 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.isequal/package.json
+639 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.keys/package.json
+640 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.memoize/package.json
+641 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.omit/package.json
+642 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.restparam/package.json
+643 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.template/package.json
+644 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.templatesettings/package.json
+645 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.uniq/package.json
+646 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lodash.words/package.json
+647 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/logalot/package.json
+648 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/loglevel/package.json
+649 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/longest/package.json
+650 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/loose-envify/package.json
+651 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/loud-rejection/package.json
+652 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lower-case/package.json
+653 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lowercase-keys/package.json
+654 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lpad-align/package.json
+655 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/lru-cache/package.json
+656 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/macaddress/package.json
+657 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/make-dir/package.json
+658 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/makeerror/package.json
+659 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/map-obj/package.json
+660 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/math-expression-evaluator/package.json
+661 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/md5.js/package.json
+662 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/media-typer/package.json
+663 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mem/package.json
+664 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/memory-fs/package.json
+665 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/meow/package.json
+666 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/merge/package.json
+667 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/merge-descriptors/package.json
+668 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/merge-stream/package.json
+669 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/methods/package.json
+670 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/micromatch/package.json
+671 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/miller-rabin/package.json
+672 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mime/package.json
+673 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mime-db/package.json
+674 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mime-types/package.json
+675 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mimic-fn/package.json
+676 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/min-document/package.json
+677 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/minimalistic-assert/package.json
+678 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/minimalistic-crypto-utils/package.json
+679 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/minimatch/package.json
+680 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/minimist/package.json
+681 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mississippi/package.json
+682 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mkdirp/package.json
+683 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/move-concurrently/package.json
+684 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mozjpeg/package.json
+685 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ms/package.json
+686 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/multicast-dns/package.json
+687 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/multicast-dns-service-types/package.json
+688 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/multipipe/package.json
+689 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/mute-stream/package.json
+690 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/nan/package.json
+691 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/natural-compare/package.json
+692 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ncname/package.json
+693 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/negotiator/package.json
+694 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/no-case/package.json
+695 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/node-fetch/package.json
+696 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/node-forge/package.json
+697 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/node-int64/package.json
+698 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/node-libs-browser/package.json
+699 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/node-notifier/package.json
+700 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/node-status-codes/package.json
+701 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/normalize-package-data/package.json
+702 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/normalize-path/package.json
+703 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/normalize-range/package.json
+704 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/normalize-url/package.json
+705 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/npm-run-path/package.json
+706 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/nth-check/package.json
+707 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/num2fraction/package.json
+708 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/number-is-nan/package.json
+709 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/nwmatcher/package.json
+710 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/oauth-sign/package.json
+711 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/object-assign/package.json
+712 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/object-inspect/package.json
+713 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/object-keys/package.json
+714 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/object.entries/package.json
+715 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/object.omit/package.json
+716 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/obuf/package.json
+717 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/on-finished/package.json
+718 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/on-headers/package.json
+719 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/once/package.json
+720 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/onetime/package.json
+721 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/open/package.json
+722 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/open-browser-webpack-plugin/package.json
+723 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/opn/package.json
+724 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/optimist/package.json
+725 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/optionator/package.json
+726 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/optipng-bin/package.json
+727 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ordered-read-streams/package.json
+728 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/original/package.json
+729 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/os-browserify/package.json
+730 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/os-filter-obj/package.json
+731 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/os-homedir/package.json
+732 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/os-locale/package.json
+733 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/os-tmpdir/package.json
+734 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/output-file-sync/package.json
+735 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/p-finally/package.json
+736 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/p-limit/package.json
+737 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/p-locate/package.json
+738 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/p-map/package.json
+739 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/p-pipe/package.json
+740 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pako/package.json
+741 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/parallel-transform/package.json
+742 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/param-case/package.json
+743 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/parse-asn1/package.json
+744 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/parse-glob/package.json
+745 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/parse-json/package.json
+746 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/parse-passwd/package.json
+747 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/parse5/package.json
+748 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/parseurl/package.json
+749 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-browserify/package.json
+750 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-dirname/package.json
+751 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-exists/package.json
+752 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-is-absolute/package.json
+753 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-is-inside/package.json
+754 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-key/package.json
+755 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-parse/package.json
+756 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-to-regexp/package.json
+757 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/path-type/package.json
+758 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pbkdf2/package.json
+759 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pend/package.json
+760 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/performance-now/package.json
+761 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pify/package.json
+762 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pinkie/package.json
+763 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pinkie-promise/package.json
+764 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pkg-dir/package.json
+765 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pluralize/package.json
+766 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pngquant-bin/package.json
+767 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/portfinder/package.json
+768 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss/package.json
+769 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-calc/package.json
+770 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-colormin/package.json
+771 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-convert-values/package.json
+772 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-discard-comments/package.json
+773 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-discard-duplicates/package.json
+774 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-discard-empty/package.json
+775 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-discard-overridden/package.json
+776 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-discard-unused/package.json
+777 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-filter-plugins/package.json
+778 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-loader/package.json
+779 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-merge-idents/package.json
+780 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-merge-longhand/package.json
+781 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-merge-rules/package.json
+782 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-message-helpers/package.json
+783 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-minify-font-values/package.json
+784 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-minify-gradients/package.json
+785 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-minify-params/package.json
+786 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-minify-selectors/package.json
+787 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-modules-extract-imports/package.json
+788 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-modules-local-by-default/package.json
+789 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-modules-scope/package.json
+790 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-modules-values/package.json
+791 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-normalize-charset/package.json
+792 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-normalize-url/package.json
+793 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-ordered-values/package.json
+794 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-reduce-idents/package.json
+795 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-reduce-initial/package.json
+796 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-reduce-transforms/package.json
+797 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-selector-parser/package.json
+798 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-svgo/package.json
+799 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-unique-selectors/package.json
+800 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-value-parser/package.json
+801 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/postcss-zindex/package.json
+802 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/prelude-ls/package.json
+803 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/prepend-http/package.json
+804 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/preserve/package.json
+805 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pretty-error/package.json
+806 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pretty-format/package.json
+807 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/private/package.json
+808 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/process/package.json
+809 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/process-nextick-args/package.json
+810 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/progress/package.json
+811 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/promise/package.json
+812 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/promise-inflight/package.json
+813 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/prop-types/package.json
+814 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/proxy-addr/package.json
+815 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/prr/package.json
+816 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pseudomap/package.json
+817 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/public-encrypt/package.json
+818 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pump/package.json
+819 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/pumpify/package.json
+820 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/punycode/package.json
+821 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/q/package.json
+822 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/qrcode-generator/package.json
+823 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/qs/package.json
+824 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/query-string/package.json
+825 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/querystring/package.json
+826 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/querystring-es3/package.json
+827 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/querystringify/package.json
+828 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/randomatic/package.json
+829 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/randombytes/package.json
+830 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/randomfill/package.json
+831 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/range-parser/package.json
+832 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/raw-body/package.json
+833 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/rc/package.json
+834 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/rc-form/package.json
+835 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react/package.json
+836 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-addons-css-transition-group/package.json
+837 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-deep-force-update/package.json
+838 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-dev-utils/package.json
+839 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-dom/package.json
+840 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-dynamic-swiper/package.json
+841 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-error-overlay/package.json
+842 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-hot-loader/package.json
+843 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-proxy/package.json
+844 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-redux/package.json
+845 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-router/package.json
+846 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-router-dom/package.json
+847 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-router-redux/package.json
+848 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-test-renderer/package.json
+849 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-transform-catch-errors/package.json
+850 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-transform-hmr/package.json
+851 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/react-transition-group/package.json
+852 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/read-all-stream/package.json
+853 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/read-pkg/package.json
+854 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/read-pkg-up/package.json
+855 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/readable-stream/package.json
+856 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/readdirp/package.json
+857 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/recursive-readdir/package.json
+858 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/redbox-react/package.json
+859 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/redent/package.json
+860 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/reduce-css-calc/package.json
+861 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/reduce-function-call/package.json
+862 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/redux/package.json
+863 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/redux-devtools-extension/package.json
+864 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/regenerate/package.json
+865 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/regenerator-runtime/package.json
+866 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/regenerator-transform/package.json
+867 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/regex-cache/package.json
+868 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/regexpu-core/package.json
+869 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/regjsgen/package.json
+870 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/regjsparser/package.json
+871 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/relateurl/package.json
+872 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/remove-trailing-separator/package.json
+873 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/renderkid/package.json
+874 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/repeat-element/package.json
+875 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/repeat-string/package.json
+876 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/repeating/package.json
+877 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/replace-ext/package.json
+878 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/request/package.json
+879 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/require-directory/package.json
+880 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/require-main-filename/package.json
+881 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/require-uncached/package.json
+882 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/requires-port/package.json
+883 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/resolve/package.json
+884 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/resolve-cwd/package.json
+885 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/resolve-dir/package.json
+886 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/resolve-from/package.json
+887 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/resolve-pathname/package.json
+888 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/restore-cursor/package.json
+889 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/right-align/package.json
+890 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/rimraf/package.json
+891 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ripemd160/package.json
+892 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/run-async/package.json
+893 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/run-queue/package.json
+894 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/rx-lite/package.json
+895 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/rx-lite-aggregates/package.json
+896 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/safe-buffer/package.json
+897 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sane/package.json
+898 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sax/package.json
+899 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/schema-utils/package.json
+900 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/seek-bzip/package.json
+901 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/select-hose/package.json
+902 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/selfsigned/package.json
+903 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/semver/package.json
+904 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/semver-regex/package.json
+905 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/semver-truncate/package.json
+906 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/send/package.json
+907 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/serve-index/package.json
+908 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/serve-static/package.json
+909 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/set-blocking/package.json
+910 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/set-immediate-shim/package.json
+911 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/setimmediate/package.json
+912 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/setprototypeof/package.json
+913 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/settle-promise/package.json
+914 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sha.js/package.json
+915 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/shebang-command/package.json
+916 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/shebang-regex/package.json
+917 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/shell-quote/package.json
+918 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/shellwords/package.json
+919 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/signal-exit/package.json
+920 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/slash/package.json
+921 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/slice-ansi/package.json
+922 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sntp/package.json
+923 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sockjs/package.json
+924 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sockjs-client/package.json
+925 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sort-keys/package.json
+926 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/source-list-map/package.json
+927 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/source-map/package.json
+928 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/source-map-support/package.json
+929 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sourcemapped-stacktrace/package.json
+930 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sparkles/package.json
+931 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/spdx-correct/package.json
+932 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/spdx-expression-parse/package.json
+933 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/spdx-license-ids/package.json
+934 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/spdy/package.json
+935 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/spdy-transport/package.json
+936 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sprintf-js/package.json
+937 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/squeak/package.json
+938 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sshpk/package.json
+939 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ssri/package.json
+940 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/stackframe/package.json
+941 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/stat-mode/package.json
+942 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/statuses/package.json
+943 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/stream-browserify/package.json
+944 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/stream-combiner2/package.json
+945 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/stream-each/package.json
+946 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/stream-http/package.json
+947 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/stream-shift/package.json
+948 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strict-uri-encode/package.json
+949 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/string-length/package.json
+950 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/string-width/package.json
+951 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/string_decoder/package.json
+952 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/stringstream/package.json
+953 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strip-ansi/package.json
+954 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strip-bom/package.json
+955 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strip-bom-stream/package.json
+956 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strip-dirs/package.json
+957 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strip-eof/package.json
+958 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strip-indent/package.json
+959 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strip-json-comments/package.json
+960 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/strip-outer/package.json
+961 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/style-loader/package.json
+962 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/sum-up/package.json
+963 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/supports-color/package.json
+964 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/svgo/package.json
+965 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/swiper/package.json
+966 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/symbol-observable/package.json
+967 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/symbol-tree/package.json
+968 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/table/package.json
+969 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tapable/package.json
+970 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tar-stream/package.json
+971 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/temp-dir/package.json
+972 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tempfile/package.json
+973 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/test-exclude/package.json
+974 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/text-table/package.json
+975 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/throat/package.json
+976 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/through/package.json
+977 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/through2/package.json
+978 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/through2-filter/package.json
+979 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/thunky/package.json
+980 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/time-stamp/package.json
+981 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/timed-out/package.json
+982 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/timers-browserify/package.json
+983 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tmatch/package.json
+984 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tmp/package.json
+985 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tmpl/package.json
+986 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/to-absolute-glob/package.json
+987 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/to-arraybuffer/package.json
+988 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/to-fast-properties/package.json
+989 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/toposort/package.json
+990 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tough-cookie/package.json
+991 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tr46/package.json
+992 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/trim-newlines/package.json
+993 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/trim-repeated/package.json
+994 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/trim-right/package.json
+995 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tryit/package.json
+996 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tty-browserify/package.json
+997 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tunnel-agent/package.json
+998 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/tweetnacl/package.json
+999 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/type-check/package.json
+1000 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/type-is/package.json
+1001 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/typedarray/package.json
+1002 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ua-parser-js/package.json
+1003 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/uglify-js/package.json
+1004 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/uglify-to-browserify/package.json
+1005 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/uglifyjs-webpack-plugin/package.json
+1006 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/uniq/package.json
+1007 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/uniqid/package.json
+1008 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/uniqs/package.json
+1009 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/unique-filename/package.json
+1010 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/unique-slug/package.json
+1011 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/unique-stream/package.json
+1012 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/unpipe/package.json
+1013 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/unzip-response/package.json
+1014 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/upper-case/package.json
+1015 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/url/package.json
+1016 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/url-loader/package.json
+1017 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/url-parse/package.json
+1018 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/url-parse-lax/package.json
+1019 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/url-regex/package.json
+1020 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/user-home/package.json
+1021 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/util/package.json
+1022 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/util-deprecate/package.json
+1023 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/utila/package.json
+1024 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/utils-merge/package.json
+1025 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/uuid/package.json
+1026 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/v8flags/package.json
+1027 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/vali-date/package.json
+1028 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/validate-npm-package-license/package.json
+1029 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/value-equal/package.json
+1030 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/vary/package.json
+1031 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/vendors/package.json
+1032 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/verror/package.json
+1033 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/vinyl/package.json
+1034 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/vinyl-assign/package.json
+1035 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/vinyl-fs/package.json
+1036 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/vm-browserify/package.json
+1037 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/walker/package.json
+1038 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/ware/package.json
+1039 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/warning/package.json
+1040 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/watch/package.json
+1041 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/watchpack/package.json
+1042 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/wbuf/package.json
+1043 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/webidl-conversions/package.json
+1044 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/webpack/package.json
+1045 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/webpack-dev-middleware/package.json
+1046 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/webpack-dev-server/package.json
+1047 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/webpack-sources/package.json
+1048 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/websocket-driver/package.json
+1049 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/websocket-extensions/package.json
+1050 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/whatwg-encoding/package.json
+1051 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/whatwg-fetch/package.json
+1052 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/whatwg-url/package.json
+1053 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/whet.extend/package.json
+1054 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/which/package.json
+1055 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/which-module/package.json
+1056 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/window-size/package.json
+1057 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/wordwrap/package.json
+1058 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/worker-farm/package.json
+1059 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/wrap-ansi/package.json
+1060 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/wrap-fn/package.json
+1061 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/wrappy/package.json
+1062 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/write/package.json
+1063 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/xml-char-classes/package.json
+1064 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/xml-name-validator/package.json
+1065 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/xtend/package.json
+1066 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/y18n/package.json
+1067 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/yallist/package.json
+1068 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/yargs/package.json
+1069 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/yargs-parser/package.json
+1070 verbose installManyTop reading scoped package data from /Users/taojunlong/www/react-zui/node_modules/yauzl/package.json
+1071 info package.json array-unique@0.2.1 license should be a valid SPDX license expression
+1072 info package.json assert@1.4.1 assert is also the name of a node core module.
+1073 info package.json bcrypt-pbkdf@1.0.1 No repository field.
+1074 info package.json buffer@4.9.1 buffer is also the name of a node core module.
+1075 info package.json coa@1.0.4 No license field.
+1076 info package.json console-stream@0.1.1 No license field.
+1077 info package.json console-browserify@1.1.0 No license field.
+1078 info package.json css-select@1.2.0 license should be a valid SPDX license expression
+1079 info package.json css-what@2.1.0 license should be a valid SPDX license expression
+1080 info package.json cssesc@0.1.0 No license field.
+1081 info package.json cyclist@0.2.2 No license field.
+1082 info package.json date-now@0.1.4 No license field.
+1083 info package.json deep-is@0.1.3 license should be a valid SPDX license expression
+1084 info package.json dom-walk@0.1.1 No license field.
+1085 info package.json domelementtype@1.3.0 No license field.
+1086 info package.json domutils@1.5.1 No license field.
+1087 info package.json domhandler@2.1.0 No license field.
+1088 info package.json duplexer@0.1.1 No license field.
+1089 info package.json enhanced-resolve@3.4.1 No license field.
+1090 info package.json entities@1.1.1 license should be a valid SPDX license expression
+1091 info package.json esquery@1.0.0 license should be a valid SPDX license expression
+1092 info package.json esutils@2.0.2 No license field.
+1093 info package.json events@1.1.1 events is also the name of a node core module.
+1094 info package.json eventsource@0.1.6 No license field.
+1095 info package.json exec-sh@0.2.1 license should be a valid SPDX license expression
+1096 info package.json fastclick@1.0.6 No license field.
+1097 info package.json glob-base@0.3.0 license should be a valid SPDX license expression
+1098 info package.json gulp-rename@1.2.2 No license field.
+1099 info package.json has@1.0.1 No license field.
+1100 info package.json htmlparser2@3.3.0 No license field.
+1101 info package.json indexof@0.0.1 No repository field.
+1102 info package.json indexof@0.0.1 No license field.
+1103 info package.json is-absolute@0.1.7 license should be a valid SPDX license expression
+1104 info package.json is-primitive@2.0.0 license should be a valid SPDX license expression
+1105 info package.json is-relative@0.1.3 No license field.
+1106 info package.json jest-environment-jsdom@19.0.2 No description
+1107 info package.json jest-config@19.0.4 No description
+1108 info package.json jest-diff@19.0.0 No description
+1109 info package.json jest-haste-map@19.0.2 No description
+1110 info package.json jest-environment-node@19.0.2 No description
+1111 info package.json jest-jasmine2@19.0.2 No description
+1112 info package.json jest-file-exists@19.0.0 No description
+1113 info package.json jest-matchers@19.0.0 No description
+1114 info package.json jest-message-util@19.0.0 No description
+1115 info package.json jest-regex-util@19.0.0 No description
+1116 info package.json jest-resolve@19.0.2 No description
+1117 info package.json jest-resolve-dependencies@19.0.0 No description
+1118 info package.json jest-runtime@19.0.4 No description
+1119 info package.json jest-snapshot@19.0.2 No description
+1120 info package.json jest-util@19.0.2 No description
+1121 info package.json json-schema@0.2.3 No license field.
+1122 info package.json json3@3.3.2 No license field.
+1123 info package.json jsonify@0.0.0 license should be a valid SPDX license expression
+1124 info package.json less-loader@2.2.3 No license field.
+1125 info package.json longest@1.0.1 license should be a valid SPDX license expression
+1126 info package.json min-document@2.19.0 No license field.
+1127 info package.json node-forge@0.6.33 No license field.
+1128 info package.json nth-check@1.0.1 license should be a valid SPDX license expression
+1129 info package.json obuf@1.1.1 No description
+1130 info package.json optimist@0.6.1 license should be a valid SPDX license expression
+1131 info package.json parse5@1.5.1 No license field.
+1132 info package.json prelude-ls@1.1.2 No license field.
+1133 info package.json preserve@0.2.0 license should be a valid SPDX license expression
+1134 info package.json process@0.5.2 process is also the name of a node core module.
+1135 info package.json process@0.5.2 No license field.
+1136 info package.json punycode@1.4.1 punycode is also the name of a node core module.
+1137 info package.json querystring@0.2.0 querystring is also the name of a node core module.
+1138 info package.json querystring@0.2.0 No license field.
+1139 info package.json querystring-es3@0.2.1 No license field.
+1140 info package.json regenerator-transform@0.10.1 license should be a valid SPDX license expression
+1141 info package.json regjsparser@0.1.5 license should be a valid SPDX license expression
+1142 info package.json repeat-element@1.1.2 license should be a valid SPDX license expression
+1143 info package.json rx-lite@4.0.8 No license field.
+1144 info package.json rx-lite-aggregates@4.0.8 No license field.
+1145 info package.json string_decoder@0.10.31 string_decoder is also the name of a node core module.
+1146 info package.json strip-dirs@1.1.1 No license field.
+1147 info package.json thunky@0.1.0 No license field.
+1148 info package.json timers-browserify@2.0.4 No license field.
+1149 info package.json url@0.11.0 url is also the name of a node core module.
+1150 info package.json util@0.10.3 util is also the name of a node core module.
+1151 info package.json v8flags@2.1.1 No license field.
+1152 info package.json watch@0.10.0 No license field.
+1153 info package.json window-size@0.1.0 No license field.
+1154 info package.json async-validator@1.8.2 No license field.
+1155 verbose readDependencies loading dependencies from /Users/taojunlong/www/react-zui/package.json
+1156 warn install Refusing to install react-zui as a dependency of itself
+1157 silly install resolved []
+1158 verbose validateInstall loading /Users/taojunlong/www/react-zui/package.json for validation
+1159 verbose stack Error: The package react@16.1.1 does not satisfy its siblings' peerDependencies requirements!
+1159 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/lib/install.js:125:32
+1159 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/lib/install.js:268:7
+1159 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+1159 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1159 verbose stack     at cb (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1159 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1159 verbose stack     at cb (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1159 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1159 verbose stack     at cb (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1159 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1160 verbose cwd /Users/taojunlong/www/react-zui
+1161 error Darwin 17.2.0
+1162 error argv "/Users/taojunlong/.nvm/versions/node/v9.3.0/bin/node" "/usr/local/lib/node_modules/cnpm/node_modules/.bin/npm" "--userconfig=/Users/taojunlong/.cnpmrc" "--disturl=https://npm.taobao.org/mirrors/node" "--cache=/Users/taojunlong/.cnpm" "--registry=https://registry.npm.taobao.org" "--node-gyp=/usr/local/lib/node_modules/cnpm/node_modules/node-gyp/bin/node-gyp.js" "install" "react-zui"
+1163 error node v9.3.0
+1164 error npm  v2.14.15
+1165 error code EPEERINVALID
+1166 error peerinvalid The package react@16.1.1 does not satisfy its siblings' peerDependencies requirements!
+1166 error peerinvalid Peer react-addons-css-transition-group@15.6.2 wants react@^15.4.2
+1166 error peerinvalid Peer react-dom@16.1.1 wants react@^16.0.0
+1166 error peerinvalid Peer react-redux@5.0.6 wants react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0
+1166 error peerinvalid Peer react-router-dom@4.2.2 wants react@>=15
+1166 error peerinvalid Peer react-router@4.2.0 wants react@>=15
+1166 error peerinvalid Peer react-test-renderer@15.6.2 wants react@^15.6.2
+1166 error peerinvalid Peer react-transition-group@1.2.1 wants react@^15.0.0 || ^16.0.0
+1166 error peerinvalid Peer redbox-react@1.5.0 wants react@^0.14.0 || ^15.0.0 || ^16.0.0-beta || ^16.0.0
+1167 verbose exit [ 1, true ]

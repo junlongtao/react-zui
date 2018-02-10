@@ -43,7 +43,7 @@ export default class Avatar extends React.Component {
             document.body.removeChild(img)
         }
         img.src = src
-        img.style = 'opacity: 0;'
+        img.style.cssText = 'opacity: 0;'
         document.body.appendChild(img)
     }
 

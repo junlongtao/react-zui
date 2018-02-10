@@ -8,7 +8,7 @@ export default class ExamplePage extends React.Component {
         return <BasePage title="头像">
             <List>
                 <List.Item extra={
-                    <Avatar src="http://img5.imgtn.bdimg.com/it/u=1922355689,2789722564&fm=27&gp=0.jpg" width="60px"/>
+                    <Avatar src="http://img1.gtimg.com/ent/pics/hv1/107/44/2251/146382602.jpg" width="60px"/>
                 }>
                     头像加载成功,正常显示图片
                     </List.Item>
