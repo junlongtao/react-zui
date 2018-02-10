@@ -56,8 +56,12 @@ var Modal = function (_React$Component) {
             _this.setState({
                 status: nextProps.visible ? 'open' : ''
             });
+        }, _this.onCloseClick = function () {
+            _this.setState({ status: 'close' });
+            _this.props.onClose();
         }, _this.render = function () {
             var prefix = _this.props.prefix;
+            var title = _this.props.title;
             return _react2.default.createElement(
                 'div',
                 { className: prefix + '-modal ' + _this.props.className + ' ' + _this.state.status },
@@ -70,22 +74,18 @@ var Modal = function (_React$Component) {
                     { className: prefix + '-modal-content' },
                     _react2.default.createElement(
                         'div',
+                        { className: prefix + '-modal-close', onClick: _this.onCloseClick },
+                        _react2.default.createElement(_Icon2.default, { type: 'close' })
+                    ),
+                    title && _react2.default.createElement(
+                        'div',
                         { className: prefix + '-modal-header' },
-                        _this.props.title
+                        title
                     ),
                     _react2.default.createElement(
                         'div',
                         null,
                         _this.props.children
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: prefix + '-modal-close', onClick: function onClick() {
-                                _this.setState({ status: 'close' });
-                                _this.props.onClose();
-                            } },
-                        _react2.default.createElement('div', { className: prefix + "-modal-close-line" }),
-                        _react2.default.createElement(_Icon2.default, { type: 'guanbi' })
                     )
                 )
             );

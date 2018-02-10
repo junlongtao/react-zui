@@ -6,7 +6,8 @@
     "docs-build": "npm run packages-build & NODE_ENV=production webpack -p --progress --config ./webpack.config.docs.js",
     "docs-dev": "NODE_ENV=dev webpack --progress --watch --config ./webpack.config.docs.js",
     "build": "npm run packages-build",
-    "start": "node webpack.server.js"
+    "start": "node webpack.server.js",
+    "publish": "npm config set registry http://registry.npmjs.org & npm publish"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -70,7 +71,7 @@
   },
   "name": "react-zui",
   "description": "React-zui(建设中...)",
-  "version": "1.0.72",
+  "version": "1.0.73",
   "directories": {
     "doc": "docs"
   },

@@ -23,26 +23,26 @@ export default class Modal extends React.Component {
         })
     }
 
+    onCloseClick = () => {
+        this.setState({status: 'close'})
+        this.props.onClose()
+    }
+
     render = () => { 
         const prefix = this.props.prefix
+        const title = this.props.title
         return <div className={prefix+'-modal '+this.props.className+' '+this.state.status}>
             <Mask onClick={()=>{
                 this.setState({status: 'close'})
                 this.props.onClose()
             }}/>
             <div className={prefix+'-modal-content'}>
-                <div className={prefix+'-modal-header'}>
-                    {this.props.title}
+                <div className={prefix+'-modal-close'} onClick={this.onCloseClick}>
+                    <Icon type="close"/>
                 </div>
+                {title&&<div className={prefix+'-modal-header'}>{title}</div>}
                 <div>
                     {this.props.children}
-                </div>
-                <div className={prefix+'-modal-close'} onClick={()=>{
-                    this.setState({status: 'close'})
-                    this.props.onClose()
-                }}>
-                    <div className={prefix+"-modal-close-line"}></div>
-                    <Icon type="guanbi"/>
                 </div>
             </div>
         </div>
