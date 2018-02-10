@@ -13,29 +13,24 @@ export default class Modal extends React.Component {
         onClose: ()=>{}
     }
 
-    state = {
-        status: ''
-    }
+    state = {}
 
     componentWillReceiveProps = (nextProps) => {
         this.setState({
-            status: nextProps.visible?'open':''
+            visible: nextProps.visible
         })
     }
 
     onCloseClick = () => {
-        this.setState({status: 'close'})
+        this.setState({visible:false})
         this.props.onClose()
     }
 
     render = () => { 
         const prefix = this.props.prefix
         const title = this.props.title
-        return <div className={prefix+'-modal '+this.props.className+' '+this.state.status}>
-            <Mask onClick={()=>{
-                this.setState({status: 'close'})
-                this.props.onClose()
-            }}/>
+        return this.state.visible? <div className={prefix+'-modal open '+this.props.className}>
+            <Mask onClick={this.onCloseClick}/>
             <div className={prefix+'-modal-content'}>
                 <div className={prefix+'-modal-close'} onClick={this.onCloseClick}>
                     <Icon type="close"/>
@@ -45,6 +40,6 @@ export default class Modal extends React.Component {
                     {this.props.children}
                 </div>
             </div>
-        </div>
+        </div>:null
     }
 }

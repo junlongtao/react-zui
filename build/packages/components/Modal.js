@@ -50,25 +50,20 @@ var Modal = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Modal.__proto__ || (0, _getPrototypeOf2.default)(Modal)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            status: ''
-        }, _this.componentWillReceiveProps = function (nextProps) {
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Modal.__proto__ || (0, _getPrototypeOf2.default)(Modal)).call.apply(_ref, [this].concat(args))), _this), _this.state = {}, _this.componentWillReceiveProps = function (nextProps) {
             _this.setState({
-                status: nextProps.visible ? 'open' : ''
+                visible: nextProps.visible
             });
         }, _this.onCloseClick = function () {
-            _this.setState({ status: 'close' });
+            _this.setState({ visible: false });
             _this.props.onClose();
         }, _this.render = function () {
             var prefix = _this.props.prefix;
             var title = _this.props.title;
-            return _react2.default.createElement(
+            return _this.state.visible ? _react2.default.createElement(
                 'div',
-                { className: prefix + '-modal ' + _this.props.className + ' ' + _this.state.status },
-                _react2.default.createElement(_Mask2.default, { onClick: function onClick() {
-                        _this.setState({ status: 'close' });
-                        _this.props.onClose();
-                    } }),
+                { className: prefix + '-modal open ' + _this.props.className },
+                _react2.default.createElement(_Mask2.default, { onClick: _this.onCloseClick }),
                 _react2.default.createElement(
                     'div',
                     { className: prefix + '-modal-content' },
@@ -88,7 +83,7 @@ var Modal = function (_React$Component) {
                         _this.props.children
                     )
                 )
-            );
+            ) : null;
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
